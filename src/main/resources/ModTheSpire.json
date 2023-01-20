@@ -1,0 +1,10 @@
+{
+  "modid": "jaina",
+  "name": "炉石传说-法师吉安娜 Mod",
+  "author_list": ["Arino"],
+  "description": "加入了《炉石传说》中的法师——吉安娜·普罗德摩尔",
+  "version": "0.1.2",
+  "sts_version": "12-18-2022",
+  "mts_version": "3.30.1",
+  "dependencies": ["basemod","stslib"]
+}

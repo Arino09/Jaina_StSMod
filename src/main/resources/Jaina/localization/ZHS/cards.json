@@ -1,0 +1,18 @@
+{
+  "jaina:Strike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "jaina:Defend": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "jaina:Fireball": {
+    "NAME": "火球术",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "jaina:Frostbolt": {
+    "NAME": "寒冰箭",
+    "DESCRIPTION": "造成 !D! 点伤害并 jaina:冻结 敌人。"
+  }
+}

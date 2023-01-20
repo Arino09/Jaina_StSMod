@@ -1,0 +1,9 @@
+{
+  "jades:Jade Charm": {
+    "NAME": "青玉护符",
+    "FLAVOR": "青玉护符，我从小戴到大。",
+    "DESCRIPTIONS": [
+      "每击杀3名敌人，增加 #g1 点血量上限。"
+    ]
+  }
+}
