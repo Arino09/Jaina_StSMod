@@ -29,7 +29,7 @@ public class JainaCharacter extends CustomPlayer {
     // 战斗时角色立绘
     private static final String STAND = "Jaina/img/char/character.png";
     // 火堆的角色立绘（行动前）
-    private static final String SHOULDER_1 = "Jaina/img/char/shoulder1.png";
+    private static final String SHOULDER_1 = "Jaina/img/char/shoulder.png";
     // 火堆的角色立绘（行动后）
     private static final String SHOULDER_2 = "Jaina/img/char/shoulder2.png";
     // 角色死亡图像

@@ -63,7 +63,6 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     // 当baseMod开始注册mod遗物时，便会调用这个函数
     @Override
     public void receiveEditRelics() {
-        //将青玉护符注册为Jaina专用遗物
         //BaseMod.addRelicToCustomPool(new JadeCharm(), JainaEnums.JAINA_COLOR);
     }
     //加载本地化资源
@@ -97,7 +96,6 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
         if (keywords != null) {
             for (Keyword keyword : keywords) {
                 BaseMod.addKeyword("jaina", keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
-                System.out.println("Added keyword" + keyword.NAMES[0] + keyword.DESCRIPTION);
             }
         }
     }

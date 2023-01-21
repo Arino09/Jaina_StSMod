@@ -1,49 +1,47 @@
 package Jaina.powers;
 
 import Jaina.ModCore.IHelper;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.EnemyMoveInfo;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import java.lang.reflect.Field;
 
-public class FrozenPower extends AbstractPower {
+public class FrozenPower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("Frozen");
-    private static final PowerStrings POWER_STRINGS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
-    public static final String NAME = POWER_STRINGS.NAME;
-    public static final String[] DESCRIPTIONS = POWER_STRINGS.DESCRIPTIONS;
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    private static final String NAME = powerStrings.NAME;
+    private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     private byte moveByte;
     private AbstractMonster.Intent moveIntent;
     private EnemyMoveInfo move;
 
     public FrozenPower(AbstractMonster owner) {
-        this.name = NAME;
-        this.ID = POWER_ID;
+        super(POWER_ID, true, NAME, PowerType.DEBUFF);
         this.owner = owner;
-        this.amount = -1;
-        this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
-        this.updateDescription();
-        //this.img = ImageMaster.loadImage("Jaina/img/powers/test32.png");
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("Jaina/img/powers/test32.png"),0,0,32,32);
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("Jaina/img/powers/test84.png"),0,0,84,84);
+        this.amount = 1;
+        updateDescription();
     }
 
     @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0];
     }
-    
+
     @Override
     public void atEndOfRound() {
+        if (this.amount <= 0) {
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        } else {
+        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 1));
+        }
     }
 
     public void onInitialApplication() {
@@ -57,8 +55,10 @@ public class FrozenPower extends AbstractPower {
                         Field f = AbstractMonster.class.getDeclaredField("move");
                         f.setAccessible(true);
                         FrozenPower.this.move = (EnemyMoveInfo)f.get(FrozenPower.this.owner);
-                        EnemyMoveInfo stunMove = new EnemyMoveInfo(FrozenPower.this.moveByte, AbstractMonster.Intent.STUN, -1, 0, false);
-                        f.set(FrozenPower.this.owner, stunMove);
+
+                        EnemyMoveInfo frozenMove = new EnemyMoveInfo(FrozenPower.this.moveByte,
+                                AbstractMonster.Intent.STUN, -1, 0, false);
+                        f.set(FrozenPower.this.owner, frozenMove);
                         ((AbstractMonster) FrozenPower.this.owner).createIntent();
                     } catch (NoSuchFieldException | IllegalAccessException e) {
                         e.printStackTrace();

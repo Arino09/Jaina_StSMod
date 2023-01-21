@@ -2,7 +2,9 @@ package Jaina.cards;
 
 import Jaina.ModCore.IHelper;
 import Jaina.ModCore.JainaEnums;
+import Jaina.actions.FrozenEnemyAction;
 import Jaina.powers.FrozenPower;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -25,7 +27,9 @@ public class Frostbolt extends AbstractJainaCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealDamage(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        this.addToBot(new ApplyPowerAction(m, p, new FrozenPower(m)));
+        if(!m.hasPower("jaina:Frozen")) {
+            this.addToBot(new FrozenEnemyAction(m, p));
+        }
     }
 
     @Override
