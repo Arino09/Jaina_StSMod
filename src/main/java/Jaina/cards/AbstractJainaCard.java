@@ -4,6 +4,7 @@ import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -69,7 +70,7 @@ public abstract class AbstractJainaCard extends CustomCard {
             default:
                 throw new IllegalArgumentException("Unexpect value: " + type);
         }
-        return "Jaina/img/cards/" + t + "/test32.png";
+        return "Jaina/img/cards/" + t + "/test.png";
     }
 
     /**
@@ -104,7 +105,9 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param cardStrings 卡牌信息
      */
     protected void upgradeDescription(CardStrings cardStrings) {
-        this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        if(cardStrings.UPGRADE_DESCRIPTION != null) {
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        }
         this.initializeDescription();
     }
 

@@ -2,6 +2,7 @@ package Jaina.ModCore;
 
 import Jaina.characters.JainaCharacter;
 import Jaina.powers.FrozenPower;
+import Jaina.relics.ArchmageStuff;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
@@ -17,7 +18,7 @@ import java.nio.charset.StandardCharsets;
 
 
 @SpireInitializer
-public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber, EditRelicsSubscriber {
+public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber, EditRelicsSubscriber, AddAudioSubscriber {
     // 人物选择界面按钮的图片
     private static final String CHAR_BUTTON = "Jaina/img/char/Character_Button.png";
     // 人物选择界面的立绘
@@ -63,7 +64,7 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     // 当baseMod开始注册mod遗物时，便会调用这个函数
     @Override
     public void receiveEditRelics() {
-        //BaseMod.addRelicToCustomPool(new JadeCharm(), JainaEnums.JAINA_COLOR);
+        BaseMod.addRelicToCustomPool(new ArchmageStuff(), JainaEnums.JAINA_COLOR);
     }
     //加载本地化资源
     public void receiveEditStrings() {
@@ -100,4 +101,8 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
         }
     }
 
+    @Override
+    public void receiveAddAudio(){
+        BaseMod.addAudio(IHelper.makeID("select"), "Jaina/sound/select_voice.ogg");
+    }
 }

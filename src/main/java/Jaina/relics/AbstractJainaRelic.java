@@ -1,24 +1,29 @@
 package Jaina.relics;
 
+import basemod.abstracts.CustomRelic;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.localization.RelicStrings;
+
 public class AbstractJainaRelic extends CustomRelic {
+
     public AbstractJainaRelic(String ID, boolean useTestArt, RelicStrings relicStrings, RelicTier tier, LandingSound landingSound) {
-        String[] img_path = getImgPath(ID.substring(6), useTestArt);
-        super(ID, ImageMaster.loadImage(img_path[0]), ImageMaster.loadImage(img_path[1]), 
-        RelicTier.STARTER, AbstractRelic.LandingSound.FLAT);
-        this.name = relicStrings.NAME;
-        this.description = relicStrings.DESCRIPTION[0];
+        super(ID, ImageMaster.loadImage(getImgPath(ID, useTestArt)[0]), ImageMaster.loadImage(getImgPath(ID, useTestArt)[1]), tier, landingSound);
+        this.description = relicStrings.DESCRIPTIONS[0];
     }
+
     /**
-     *
-     * @param name 
+     * 根据遗物名获得图像路径
+     * @param ID 遗物ID
      */
-    private static String[] getImgPath(String name, boolean useTestArt) {
+    private static String[] getImgPath(String ID, boolean useTestArt) {
         String[] img_path = new String[2];
         if(useTestArt) {
-            name = "test";
+            ID = "test";
         } else {
-            img_path[0] = "Jaina/img/relics/" + name + ".png";
-            img_path[1] = "Jaina/img/relics/" + name + "_OTL.png";
+            ID = ID.substring(6);
         }
+        img_path[0] = "Jaina/img/relics/" + ID + ".png";
+        img_path[1] = "Jaina/img/relics/" + ID + "_OTL.png";
+        return img_path;
     }
 }

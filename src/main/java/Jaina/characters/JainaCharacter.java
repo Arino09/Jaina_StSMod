@@ -1,11 +1,13 @@
 package Jaina.characters;
 
 import Jaina.ModCore.Core;
+import Jaina.ModCore.IHelper;
 import Jaina.ModCore.JainaEnums;
 import Jaina.cards.Defend;
 import Jaina.cards.Fireball;
 import Jaina.cards.Frostbolt;
 import Jaina.cards.Strike;
+import Jaina.relics.ArchmageStuff;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -87,7 +89,7 @@ public class JainaCharacter extends CustomPlayer {
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> deck = new ArrayList<>();
         for(int x = 0; x < 5; x++) {
-            deck.add(Frostbolt.ID);
+            deck.add(Strike.ID);
             deck.add(Defend.ID);
         }
         deck.add(Fireball.ID);
@@ -102,7 +104,7 @@ public class JainaCharacter extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> relics = new ArrayList<>();
-        relics.add(PureWater.ID);
+        relics.add(ArchmageStuff.ID);
         return relics;
     }
 
@@ -192,7 +194,8 @@ public class JainaCharacter extends CustomPlayer {
      */
     @Override
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
+        CardCrawlGame.sound.play(IHelper.makeID("select"));
+        CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, true);
     }
 
     /**

@@ -3,6 +3,7 @@ package Jaina.cards;
 import Jaina.ModCore.IHelper;
 import Jaina.ModCore.JainaEnums;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -16,7 +17,7 @@ public class Fireball extends AbstractJainaCard {
 
     public Fireball() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.BASIC, CardTarget.ENEMY);
+                CardRarity.COMMON, CardTarget.ENEMY);
         setDamage(9);
     }
 
@@ -31,7 +32,7 @@ public class Fireball extends AbstractJainaCard {
     }
 
     @Override
-    public void makeCopy() {
+    public AbstractCard makeCopy() {
         return new Fireball();
     }
 }

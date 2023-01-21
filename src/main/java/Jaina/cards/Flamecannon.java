@@ -2,40 +2,39 @@ package Jaina.cards;
 
 import Jaina.ModCore.IHelper;
 import Jaina.ModCore.JainaEnums;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Defend extends AbstractJainaCard {
-
-    public static final String ID = IHelper.makeID("Defend");
+public class Flamecannon extends AbstractJainaCard {
+    public static final String ID = IHelper.makeID("Flamecannon");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    //卡牌基本信息
     private static final int COST = 1;
 
-    public Defend() {
-        super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.BASIC, CardTarget.SELF);
-        this.tags.add(CardTags.STARTER_DEFEND);
-        setBlock(5);
+    public Flamecannon() {
+        super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
+                CardRarity.COMMON, CardTarget.NONE);
+        this.setDamage(11);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainBlock();
+        AbstractMonster randM = AbstractDungeon.getRandomMonster();
+        dealDamage(randM, AbstractGameAction.AttackEffect.FIRE);
     }
 
     @Override
-    public void upp() {
-        upgradeBlock(3);
+    public void upp(){
+        upgradeDamage(3);
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new Defend();
+        return new Flamecannon();
     }
-
 }

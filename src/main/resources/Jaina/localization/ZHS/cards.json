@@ -5,7 +5,7 @@
   },
   "jaina:Defend": {
     "NAME": "防御",
-    "DESCRIPTION": "获得 !B! 点格挡。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "jaina:Fireball": {
     "NAME": "火球术",
@@ -14,5 +14,37 @@
   "jaina:Frostbolt": {
     "NAME": "寒冰箭",
     "DESCRIPTION": "造成 !D! 点伤害并 jaina:冻结 敌人。"
+  },
+  "jaina:Counterspell": {
+    "NAME": "法术反制",
+    "DESCRIPTION": "获得1层 无实体 、1层 缓冲 或者1层 人工制品 。 NL 虚无 。",
+    "UPGRADE_DESCRIPTION": "获得1层 无实体 、1层 缓冲 或者1层 人工制品 。",
+    "EXTENDED_DESCRIPTION": [
+      "获得1层 无实体 ",
+      "获得1层 缓冲 ",
+      "获得1层 人工制品 "
+    ]
+  },
+  "jaina:ArcaneMissiles": {
+    "NAME": "奥术飞弹",
+    "DESCRIPTION": "将 !M! 张 *奥术弹 置入你的手牌。",
+    "UPGRADE_DESCRIPTION": "将 !M! 张 *奥术弹+ 置入你的手牌。"
+  },
+  "jaina:ArcaneMissileToken": {
+    "NAME": "奥术弹",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。"
+  },
+  "jaina:ArcaneIntellect": {
+    "NAME": "奥术智慧",
+    "DESCRIPTION": "抽 !M! 张牌。"
+  },
+  "jaina:ArcaneExplosion": {
+    "NAME": "魔爆术",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 抽 !M! 张牌。"
+  },
+  "jaina:Flamecannon": {
+    "NAME": "烈焰轰击",
+    "DESCRIPTION": "随机对一个敌人造成 !D! 点伤害。"
   }
 }
