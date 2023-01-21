@@ -36,4 +36,9 @@ public class Frostbolt extends AbstractJainaCard {
     public void upp(){
         this.upgradeDamage(2);
     }
+
+    @Override
+    public void makeCopy() {
+        return new Frostbolt();
+    }
 }

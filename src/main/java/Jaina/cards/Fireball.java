@@ -29,4 +29,9 @@ public class Fireball extends AbstractJainaCard {
     public void upp() {
         upgradeDamage(3);
     }
+
+    @Override
+    public void makeCopy() {
+        return new Fireball();
+    }
 }

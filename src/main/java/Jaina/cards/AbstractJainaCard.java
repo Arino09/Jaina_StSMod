@@ -150,11 +150,21 @@ public abstract class AbstractJainaCard extends CustomCard {
     }
 
     /**
-     * 给予玩家一个能力
+     * 给予玩家一层能力
      * @param power 能力
      */
     public void gainPower(AbstractPower power) {
         this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, power));
+    }
+
+    /**
+     * 给予目标生物一个能力
+     * @param power 能力
+     * @param creature 目标生物
+     * @param amount 能力层数
+     */
+    public void givePower(AbstractPower power, AbstractCreature creature, int amount) {
+        this.addToBot(new ApplyPowerAction(creature, AbstractDungeon.player, power, amount));
     }
 
     //重写了升级方法，升级效果写在limitedUpgrade中即可

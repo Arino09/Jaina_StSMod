@@ -1,9 +1,9 @@
 {
-  "jades:Jade Charm": {
-    "NAME": "青玉护符",
-    "FLAVOR": "青玉护符，我从小戴到大。",
+  "jaina:ArchmageStuff": {
+    "NAME": "大法师之杖",
+    "FLAVOR": "大法师的法力好像也不怎么样啊。",
     "DESCRIPTIONS": [
-      "每击杀3名敌人，增加 #g1 点血量上限。"
+      "在战斗开始时，将一张 #b 吉安娜 的卡牌置入你的手牌。"
     ]
   }
 }

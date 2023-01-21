@@ -32,4 +32,9 @@ public class Defend extends AbstractJainaCard {
         upgradeBlock(3);
     }
 
+    @Override
+    public void makeCopy() {
+        return new Defend();
+    }
+
 }
