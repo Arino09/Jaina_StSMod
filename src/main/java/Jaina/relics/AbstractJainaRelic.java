@@ -13,11 +13,12 @@ public class AbstractJainaRelic extends CustomRelic {
 
     /**
      * 根据遗物名获得图像路径
+     *
      * @param ID 遗物ID
      */
     private static String[] getImgPath(String ID, boolean useTestArt) {
         String[] img_path = new String[2];
-        if(useTestArt) {
+        if (useTestArt) {
             ID = "test";
         } else {
             ID = ID.substring(6);

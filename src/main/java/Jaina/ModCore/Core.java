@@ -34,9 +34,9 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     private static final String BIG_ORB = "Jaina/img/char/card_orb.png";
     private static final String SMALL_ORB = "Jaina/img/char/small_orb.png";
 
-    public static final Color JAINA_COLOR = new Color(52.0F / 255.0F,184.0F / 255.0F,173.0F / 255.0F, 1.0F);
+    public static final Color JAINA_COLOR = new Color(52.0F / 255.0F, 184.0F / 255.0F, 173.0F / 255.0F, 1.0F);
 
-    public Core(){
+    public Core() {
         BaseMod.subscribe(this);
         BaseMod.addColor(JainaEnums.JAINA_COLOR, JAINA_COLOR, JAINA_COLOR, JAINA_COLOR, JAINA_COLOR, JAINA_COLOR, JAINA_COLOR, JAINA_COLOR,
                 BG_ATTACK_512, BG_SKILL_512, BG_POWER_512, ENERGY_ORB, BG_ATTACK_1024, BG_SKILL_1024, BG_POWER_1024, BIG_ORB, SMALL_ORB);
@@ -52,6 +52,7 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
         // 添加角色
         BaseMod.addCharacter(new JainaCharacter(CardCrawlGame.playerName), CHAR_BUTTON, CHAR_PORTRAIT, JainaEnums.JAINA_CLASS);
     }
+
     // 当baseMod开始注册mod卡牌时，便会调用这个函数
     @Override
     public void receiveEditCards() {
@@ -61,11 +62,13 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
                 .setDefaultSeen(true)
                 .cards();
     }
+
     // 当baseMod开始注册mod遗物时，便会调用这个函数
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelicToCustomPool(new ArchmageStuff(), JainaEnums.JAINA_COLOR);
     }
+
     //加载本地化资源
     public void receiveEditStrings() {
         String lang;
@@ -91,7 +94,7 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
         }
         //json reader
         String json = Gdx.files.internal("Jaina/localization/" + lang + "/keywords.json")
-                        .readString(String.valueOf(StandardCharsets.UTF_8));
+                .readString(String.valueOf(StandardCharsets.UTF_8));
 
         Keyword[] keywords = gson.fromJson(json, Keyword[].class);
         if (keywords != null) {
@@ -102,7 +105,9 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     }
 
     @Override
-    public void receiveAddAudio(){
+    public void receiveAddAudio() {
         BaseMod.addAudio(IHelper.makeID("select"), "Jaina/sound/select_voice.ogg");
     }
+
+    public static boolean unlockEverything = false;
 }

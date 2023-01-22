@@ -10,7 +10,7 @@ public class AbstractJainaPower extends AbstractPower {
         this.ID = id;
         this.name = name;
         this.type = type;
-        if(useTestArt) {
+        if (useTestArt) {
             loadRegion("test");
             return;
         }
@@ -19,13 +19,14 @@ public class AbstractJainaPower extends AbstractPower {
 
     /**
      * 加载图标
+     *
      * @param name 能力ID的后半段，输入test以使用测试图标
      */
     @Override
     public void loadRegion(String name) {
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(
-                "Jaina/img/powers/" + name + "32.png"),0,0,32,32);
+                "Jaina/img/powers/" + name + "32.png"), 0, 0, 32, 32);
         this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(
-                "Jaina/img/powers/" + name + "84.png"),0,0,84,84);
+                "Jaina/img/powers/" + name + "84.png"), 0, 0, 84, 84);
     }
 }

@@ -25,18 +25,18 @@ public class ArchmageStuff extends AbstractJainaRelic {
     public void atBattleStart() {
         ArrayList<AbstractCard> cardRng = new ArrayList<>();
         for (AbstractCard c : CardLibrary.getAllCards()) {
-            // 随机卡池为角色卡、非稀有、非基本、非治疗卡
-            if(c.color.equals(JainaEnums.JAINA_COLOR) && !c.rarity.equals(AbstractCard.CardRarity.RARE)
-                    && !c.rarity.equals(AbstractCard.CardRarity.BASIC) && !c.hasTag(AbstractCard.CardTags.HEALING))
-            cardRng.add(c);
+            // 随机卡池为角色卡、普通稀有度、非治疗卡
+            if (c.color.equals(JainaEnums.JAINA_COLOR) && c.rarity.equals(AbstractCard.CardRarity.COMMON)
+                    && !c.hasTag(AbstractCard.CardTags.HEALING))
+                cardRng.add(c);
         }
         // 从随机卡池中选一张卡
         AbstractCard card = cardRng.get(AbstractDungeon.cardRandomRng.random(cardRng.size() - 1)).makeCopy();
-        addToBot(new MakeTempCardInHandAction(card));
+        IHelper.getTempCard(card);
     }
 
     @Override
-	public AbstractRelic makeCopy() {
-		return new ArchmageStuff();
-	}
+    public AbstractRelic makeCopy() {
+        return new ArchmageStuff();
+    }
 }

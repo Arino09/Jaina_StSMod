@@ -2,39 +2,43 @@ package Jaina.cards;
 
 import Jaina.ModCore.IHelper;
 import Jaina.ModCore.JainaEnums;
+import Jaina.powers.IceBarrierPower;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class ArcaneIntellect extends AbstractJainaCard {
+public class IceBarrier extends AbstractJainaCard {
 
-    public static final String ID = IHelper.makeID("ArcaneIntellect");
+    public static final String ID = IHelper.makeID("IceBarrier");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 1;
+    private static final int COST = 2;
 
-    public ArcaneIntellect() {
-        super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.SELF);
-        this.setMagicNumber(3);
+    public IceBarrier() {
+        super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
+                CardRarity.UNCOMMON, CardTarget.SELF);
+        setBlock(12);
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
-
+        upgradeBlock(4);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        drawCards(magicNumber);
+        if (!upgraded) {
+            givePower(new IceBarrierPower(p, false), 1);
+        } else {
+            givePower(new IceBarrierPower(p, true), 1);
+        }
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new ArcaneIntellect();
+        return new IceBarrier();
     }
 
 }

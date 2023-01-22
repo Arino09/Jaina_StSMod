@@ -1,7 +1,6 @@
 package Jaina.cards;
 
 import Jaina.ModCore.IHelper;
-import Jaina.ModCore.JainaEnums;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -18,7 +17,7 @@ public class ArcaneMissileToken extends AbstractJainaCard {
     public ArcaneMissileToken() {
         super(ID, true, CARD_STRINGS, COST, CardType.ATTACK, CardColor.COLORLESS,
                 CardRarity.COMMON, CardTarget.ENEMY);
-        // 造成2点伤害并消耗
+        // 造成3点伤害并消耗
         setDamage(3);
         this.exhaust = true;
     }

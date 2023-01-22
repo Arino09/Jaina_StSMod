@@ -22,7 +22,6 @@ import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.relics.PureWater;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
 import java.util.ArrayList;
@@ -56,7 +55,7 @@ public class JainaCharacter extends CustomPlayer {
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString("jaina:Jaina");
 
     public JainaCharacter(String name) {
-        super(name, JainaEnums.JAINA_CLASS, ORB_TEXTURES,  "Jaina/img/UI/orb/vfx.png", LAYER_SPEED, null, null);
+        super(name, JainaEnums.JAINA_CLASS, ORB_TEXTURES, "Jaina/img/UI/orb/vfx.png", LAYER_SPEED, null, null);
 
         // 角色对话气泡的大小，如果游戏中尺寸不对在这里修改（libgdx的坐标轴左下为原点）
         this.dialogX = (this.drawX + 0.0F * Settings.scale);
@@ -83,12 +82,13 @@ public class JainaCharacter extends CustomPlayer {
 
     /**
      * 初始卡组的ID，可直接写或引用变量
+     *
      * @return 初始卡组列表
      */
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> deck = new ArrayList<>();
-        for(int x = 0; x < 5; x++) {
+        for (int x = 0; x < 5; x++) {
             deck.add(Strike.ID);
             deck.add(Defend.ID);
         }
@@ -99,6 +99,7 @@ public class JainaCharacter extends CustomPlayer {
 
     /**
      * 设定初始遗物
+     *
      * @return 初始遗物列表
      */
     @Override
@@ -110,6 +111,7 @@ public class JainaCharacter extends CustomPlayer {
 
     /**
      * 角色初始信息
+     *
      * @return 角色选择信息
      */
     @Override
@@ -128,8 +130,10 @@ public class JainaCharacter extends CustomPlayer {
                 false // 别动
         );
     }
+
     /**
      * 角色名
+     *
      * @return 角色名字（出现在游戏左上角）
      */
     @Override
@@ -139,6 +143,7 @@ public class JainaCharacter extends CustomPlayer {
 
     /**
      * 卡牌颜色
+     *
      * @return 卡牌颜色
      */
     @Override
@@ -148,12 +153,14 @@ public class JainaCharacter extends CustomPlayer {
 
     /**
      * 卡牌选择界面选择该牌的颜色
+     *
      * @return 颜色
      */
     @Override
     public Color getCardRenderColor() {
         return Core.JAINA_COLOR;
     }
+
     /**
      * 翻牌事件出现的你的职业牌（一般设为打击）
      */
@@ -164,6 +171,7 @@ public class JainaCharacter extends CustomPlayer {
 
     /**
      * 卡牌轨迹颜色
+     *
      * @return 卡牌轨迹颜色
      */
     @Override
@@ -173,6 +181,7 @@ public class JainaCharacter extends CustomPlayer {
 
     /**
      * 高进阶带来的生命值损失
+     *
      * @return 损失值
      */
     @Override
@@ -182,6 +191,7 @@ public class JainaCharacter extends CustomPlayer {
 
     /**
      * 卡牌的能量字体，没必要修改
+     *
      * @return 字体
      */
     @Override
@@ -200,6 +210,7 @@ public class JainaCharacter extends CustomPlayer {
 
     /**
      * 碎心胜利图片
+     *
      * @return 图片数组
      */
     @Override
@@ -214,6 +225,7 @@ public class JainaCharacter extends CustomPlayer {
 
     /**
      * 自定义模式选择你的角色时播放的音效
+     *
      * @return 选择角色音效
      */
     @Override
@@ -223,6 +235,7 @@ public class JainaCharacter extends CustomPlayer {
 
     /**
      * 本地化角色名称，显示在游戏左上角
+     *
      * @return 角色名称
      */
     @Override
@@ -232,6 +245,7 @@ public class JainaCharacter extends CustomPlayer {
 
     /**
      * 创建角色实例，不需要修改
+     *
      * @return 角色实例
      */
     @Override
@@ -241,6 +255,7 @@ public class JainaCharacter extends CustomPlayer {
 
     /**
      * 第三章面对心脏说的话（例如战士是“你握紧了你的长刀……”之类的）
+     *
      * @return 本地化台词
      */
     @Override
@@ -250,6 +265,7 @@ public class JainaCharacter extends CustomPlayer {
 
     /**
      * 打心脏的颜色，不是很明显
+     *
      * @return 颜色
      */
     @Override
@@ -259,6 +275,7 @@ public class JainaCharacter extends CustomPlayer {
 
     /**
      * 打心脏造成伤害时的特效
+     *
      * @return 特效Action
      */
     @Override
@@ -268,6 +285,7 @@ public class JainaCharacter extends CustomPlayer {
 
     /**
      * 吸血鬼事件文本，主要是他（索引为0）和她（索引为1）的区别（机器人另外）
+     *
      * @return 0为“他”，1为“她”
      */
     @Override

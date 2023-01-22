@@ -21,7 +21,7 @@ public class FrozenEnemyAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, source, new FrozenPower((AbstractMonster) this.target)));
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, source, new StunMonsterPower((AbstractMonster) this.target)));
         }
         this.tickDuration();
     }

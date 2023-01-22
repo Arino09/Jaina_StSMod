@@ -2,11 +2,9 @@ package Jaina.cards;
 
 import Jaina.ModCore.IHelper;
 import Jaina.ModCore.JainaEnums;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -19,22 +17,25 @@ public class ArcaneMissiles extends AbstractJainaCard {
     public ArcaneMissiles() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.SELF);
-        setMagicNumber(3); //奥术飞弹数量
+        setMagicNumber(4); //奥术飞弹数量
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArcaneMissileToken token = new ArcaneMissileToken();
-        if(upgraded) token.upgrade();
-        for(int i = 0; i < magicNumber; i++) {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(token, true));
+        // 奥术飞弹+给的是奥术弹+
+        if (upgraded) token.upgrade();
+        // 添加奥术弹到手牌
+        for (int i = 0; i < magicNumber; i++) {
+            IHelper.getTempCard(new ArcaneMissileToken());
         }
     }
+
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
         upgradeDescription(CARD_STRINGS);
     }
+
     @Override
     public AbstractCard makeCopy() {
         return new ArcaneMissiles();

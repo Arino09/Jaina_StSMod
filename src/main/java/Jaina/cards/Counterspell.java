@@ -4,7 +4,6 @@ import Jaina.ModCore.IHelper;
 import Jaina.ModCore.JainaEnums;
 import basemod.helpers.ModalChoice;
 import basemod.helpers.ModalChoiceBuilder;
-import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,8 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.BufferPower;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
-
-import java.util.List;
 
 public class Counterspell extends AbstractJainaCard implements ModalChoice.Callback {
 
@@ -40,7 +37,7 @@ public class Counterspell extends AbstractJainaCard implements ModalChoice.Callb
         this.fadingOut = true;
     }
 
-    // Uses the titles and descriptions of the option cards as tooltips for this card
+    // 指向卡牌时显示选项提示
 //    @Override
 //    public List<TooltipInfo> getCustomTooltips() {
 //        return modal.generateTooltips();
@@ -48,8 +45,9 @@ public class Counterspell extends AbstractJainaCard implements ModalChoice.Callb
 
     /**
      * 选择选项之后的操作
-     * @param p 玩家
-     * @param m 怪物
+     *
+     * @param p   玩家
+     * @param m   怪物
      * @param opt 选项
      */
     @Override
@@ -77,6 +75,7 @@ public class Counterspell extends AbstractJainaCard implements ModalChoice.Callb
     @Override
     public void upp() {
         this.fadingOut = false;
+        this.exhaust = true;
         upgradeDescription(CARD_STRINGS);
     }
 

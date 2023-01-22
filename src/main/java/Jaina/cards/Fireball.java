@@ -18,7 +18,7 @@ public class Fireball extends AbstractJainaCard {
     public Fireball() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.ENEMY);
-        setDamage(9);
+        setDamage(10);
     }
 
     @Override

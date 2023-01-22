@@ -8,33 +8,30 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class ArcaneIntellect extends AbstractJainaCard {
+public class CardTmp extends AbstractJainaCard {
 
-    public static final String ID = IHelper.makeID("ArcaneIntellect");
+    public static final String ID = IHelper.makeID(CardTmp);
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 1;
+    private static final int COST = XXXX;
 
-    public ArcaneIntellect() {
-        super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.SELF);
-        this.setMagicNumber(3);
+    public CardTmp() {
+        super(ID, false, CARD_STRINGS, COST, CardType.XXXX, JainaEnums.JAINA_COLOR,
+                CardRarity.XXXX, CardTarget.XXXX);
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
 
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        drawCards(magicNumber);
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new ArcaneIntellect();
+        return new CardTmp();
     }
 
 }

@@ -10,34 +10,37 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Frostbolt extends AbstractJainaCard {
-    public static final String ID = IHelper.makeID("Frostbolt");
+public class IceLance extends AbstractJainaCard {
+
+    public static final String ID = IHelper.makeID("IceLance");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
-    public Frostbolt() {
+    public IceLance() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.ENEMY);
-        setDamage(3);
+        setDamage(7);
+    }
+
+    @Override
+    public void upp() {
+        upgradeDamage(3);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dealDamage(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        // 没有冻结的情况下给予一层冻结
-        if (!m.hasPower("jaina:FrozenPower")) {
+        // 对冻结的敌人造成伤害，或冻结未被冻结的敌人
+        if(m.hasPower("jaina:FrozenPower")) {
+            dealDamage(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        } else {
             this.addToBot(new FrozenEnemyAction(m, p));
         }
     }
 
     @Override
-    public void upp() {
-        this.upgradeDamage(3);
+    public AbstractCard makeCopy() {
+        return new IceLance();
     }
 
-    @Override
-    public AbstractCard makeCopy() {
-        return new Frostbolt();
-    }
 }

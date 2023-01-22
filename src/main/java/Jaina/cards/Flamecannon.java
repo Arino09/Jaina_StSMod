@@ -19,7 +19,7 @@ public class Flamecannon extends AbstractJainaCard {
     public Flamecannon() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.NONE);
-        this.setDamage(11);
+        this.setDamage(13);
     }
 
     @Override
@@ -29,7 +29,7 @@ public class Flamecannon extends AbstractJainaCard {
     }
 
     @Override
-    public void upp(){
+    public void upp() {
         upgradeDamage(3);
     }
 

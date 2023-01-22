@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.EnemyMoveInfo;
 import java.lang.reflect.Field;
 
 public class FrozenPower extends AbstractJainaPower {
-    public static final String POWER_ID = IHelper.makeID("Frozen");
+    public static final String POWER_ID = IHelper.makeID("FrozenPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -38,9 +38,9 @@ public class FrozenPower extends AbstractJainaPower {
     @Override
     public void atEndOfRound() {
         if (this.amount <= 0) {
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         } else {
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 1));
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 1));
         }
     }
 
@@ -54,7 +54,7 @@ public class FrozenPower extends AbstractJainaPower {
                     try {
                         Field f = AbstractMonster.class.getDeclaredField("move");
                         f.setAccessible(true);
-                        FrozenPower.this.move = (EnemyMoveInfo)f.get(FrozenPower.this.owner);
+                        FrozenPower.this.move = (EnemyMoveInfo) f.get(FrozenPower.this.owner);
 
                         EnemyMoveInfo frozenMove = new EnemyMoveInfo(FrozenPower.this.moveByte,
                                 AbstractMonster.Intent.STUN, -1, 0, false);
@@ -71,7 +71,7 @@ public class FrozenPower extends AbstractJainaPower {
 
     public void onRemove() {
         if (this.owner instanceof AbstractMonster) {
-            AbstractMonster m = (AbstractMonster)this.owner;
+            AbstractMonster m = (AbstractMonster) this.owner;
             if (this.move != null) {
                 m.setMove(this.moveByte, this.moveIntent, this.move.baseDamage, this.move.multiplier, this.move.isMultiDamage);
             } else {
