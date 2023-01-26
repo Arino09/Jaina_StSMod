@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Strike extends AbstractJainaCard {
 
-    //从.json文件中提取键名为Jaina_Strike的信息
     public static final String ID = IHelper.makeID("Strike");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 

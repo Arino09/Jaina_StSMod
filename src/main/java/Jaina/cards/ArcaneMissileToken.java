@@ -16,7 +16,7 @@ public class ArcaneMissileToken extends AbstractJainaCard {
 
     public ArcaneMissileToken() {
         super(ID, true, CARD_STRINGS, COST, CardType.ATTACK, CardColor.COLORLESS,
-                CardRarity.COMMON, CardTarget.ENEMY);
+                CardRarity.SPECIAL, CardTarget.ENEMY);
         // 造成3点伤害并消耗
         setDamage(3);
         this.exhaust = true;

@@ -26,7 +26,7 @@ public class Frostbolt extends AbstractJainaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealDamage(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         // 没有冻结的情况下给予一层冻结
-        if (!m.hasPower("jaina:FrozenPower")) {
+        if (!m.hasPower(IHelper.makeID("FrozenPower"))) {
             this.addToBot(new FrozenEnemyAction(m, p));
         }
     }

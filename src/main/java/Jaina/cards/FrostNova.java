@@ -2,8 +2,6 @@ package Jaina.cards;
 
 import Jaina.ModCore.IHelper;
 import Jaina.ModCore.JainaEnums;
-import Jaina.actions.FrozenEnemyAction;
-import Jaina.powers.FrozenPower;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -19,7 +17,7 @@ public class FrostNova extends AbstractJainaCard {
 
     public FrostNova() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.ALL_ENEMY);
+                CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         exhaust = true;
     }
 

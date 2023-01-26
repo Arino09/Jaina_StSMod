@@ -2,8 +2,6 @@ package Jaina.relics;
 
 import Jaina.ModCore.IHelper;
 import Jaina.ModCore.JainaEnums;
-import Jaina.cards.AbstractJainaCard;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;

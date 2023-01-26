@@ -18,7 +18,7 @@ public class ConeOfCold extends AbstractJainaCard {
 
     public ConeOfCold() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.ALL_ENEMY);
+                CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         setDamage(3);
         setBlock(5);
     }

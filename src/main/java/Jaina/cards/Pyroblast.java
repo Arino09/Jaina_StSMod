@@ -33,7 +33,7 @@ public class Pyroblast extends AbstractJainaCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealDamage(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        for(int i = 0;i < magicNumber;i++) {
+        for (int i = 0; i < magicNumber; i++) {
             IHelper.getTempCard(new Burn());
         }
     }

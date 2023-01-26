@@ -31,7 +31,7 @@ public class IceLance extends AbstractJainaCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // 对冻结的敌人造成伤害，或冻结未被冻结的敌人
-        if(m.hasPower("jaina:FrozenPower")) {
+        if (m.hasPower(IHelper.makeID("FrozenPower"))) {
             dealDamage(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         } else {
             this.addToBot(new FrozenEnemyAction(m, p));

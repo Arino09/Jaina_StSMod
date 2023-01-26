@@ -12,10 +12,36 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public abstract class AbstractJainaCard extends CustomCard {
 
+    /**
+     * 构造函数
+     *
+     * @param ID          完整的卡牌ID
+     * @param useTestArt  是否使用测试图片
+     * @param cardStrings 卡牌本地化字段
+     * @param cost        能量花费（-1为X，-2不显示消耗）
+     * @param type        卡牌类型
+     * @param color       卡牌颜色
+     * @param rarity      卡牌稀有度
+     * @param target      卡牌目标
+     */
     public AbstractJainaCard(String ID, boolean useTestArt, CardStrings cardStrings, int cost,
                              CardType type, CardColor color, CardRarity rarity, CardTarget target) {
         super(ID, cardStrings.NAME, useTestArt ? getTestImgPath(type) : getImgPath(type, ID), cost,
                 cardStrings.DESCRIPTION, type, color, rarity, target);
+    }
+
+    /**
+     * @param ID     完整的卡牌ID
+     * @param imgUrl 卡牌图片
+     * @param cost   能量花费（-1为X，-2不显示消耗）
+     * @param type   卡牌类型
+     * @param color  卡牌颜色
+     * @param rarity 卡牌稀有度
+     * @param target 卡牌目标
+     */
+    public AbstractJainaCard(String ID, CardStrings cardStrings, String imgUrl, int cost,
+                             CardType type, CardColor color, CardRarity rarity, CardTarget target) {
+        super(ID, cardStrings.NAME, imgUrl, cost, cardStrings.DESCRIPTION, type, color, rarity, target);
     }
 
     /**
@@ -45,10 +71,6 @@ public abstract class AbstractJainaCard extends CustomCard {
                 break;
             default:
                 throw new IllegalArgumentException("Unexpect value: " + type);
-        }
-        // 法术反制衍生卡用法术反制的卡面
-        if (id.startsWith("jaina:Counterspell")) {
-            id = "jaina:Counterspell";
         }
         return "Jaina/img/cards/" + t + "/" + id.substring(6) + ".png";
     }
@@ -128,7 +150,8 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param ae 伤害效果
      */
     public void dealDamage(AbstractMonster m, AbstractGameAction.AttackEffect ae) {
-        this.addToBot(new DamageAction(m, new DamageInfo(AbstractDungeon.player, this.damage), ae));
+        this.addToBot(new DamageAction(m, new DamageInfo(AbstractDungeon.player,
+                this.damage), ae));
     }
 
     /**
@@ -137,15 +160,16 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param ae 伤害效果
      */
     public void dealAoeDamage(AbstractGameAction.AttackEffect ae) {
-        this.addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, this.multiDamage,
-                this.damageTypeForTurn, ae));
+        this.addToBot(new DamageAllEnemiesAction(AbstractDungeon.player,
+                this.multiDamage, this.damageTypeForTurn, ae));
     }
 
     /**
      * 获得格挡
      */
     public void gainBlock() {
-        this.addToBot(new GainBlockAction(AbstractDungeon.player, this.block));
+        this.addToBot(new GainBlockAction(
+                AbstractDungeon.player, this.block));
     }
 
     /**
@@ -154,7 +178,8 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param block 格挡值
      */
     public void gainBlock(int block) {
-        this.addToBot(new GainBlockAction(AbstractDungeon.player, block));
+        this.addToBot(new GainBlockAction(
+                AbstractDungeon.player, block));
     }
 
     /**
@@ -172,7 +197,8 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param power 能力
      */
     public void gainPower(AbstractPower power) {
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, power));
+        this.addToBot(new ApplyPowerAction(
+                AbstractDungeon.player, AbstractDungeon.player, power));
     }
 
     /**
@@ -182,17 +208,18 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param amount 能力层数
      */
     public void givePower(AbstractPower power, int amount) {
-        this.addToBot(new ApplyPowerAction(power.owner, AbstractDungeon.player, power, amount));
+        this.addToBot(new ApplyPowerAction(power.owner,
+                AbstractDungeon.player, power, amount));
     }
 
     /**
      * 冰冻所有敌人
-     *
      */
     public void frozenAllEnemy() {
-        for(AbstractMonster m : (AbstractDungeon.getMonsters()).monsters) {
+        for (AbstractMonster m : (AbstractDungeon.getMonsters()).monsters) {
             if (!m.isDead && !m.isDying) {
-                this.addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new FrozenPower(m), -1));
+                this.addToBot(new ApplyPowerAction(m, AbstractDungeon.player,
+                        new FrozenPower(m), -1));
             }
         }
     }

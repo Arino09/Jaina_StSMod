@@ -22,7 +22,7 @@ public class ArcaneExplosion extends AbstractJainaCard {
     }
 
     @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         dealAoeDamage(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         if (upgraded) {
             drawCards(magicNumber);

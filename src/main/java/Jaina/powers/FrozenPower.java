@@ -25,7 +25,7 @@ public class FrozenPower extends AbstractJainaPower {
     private EnemyMoveInfo move;
 
     public FrozenPower(AbstractMonster owner) {
-        super(POWER_ID, true, NAME, PowerType.DEBUFF);
+        super(POWER_ID, false, NAME, PowerType.DEBUFF);
         this.owner = owner;
         this.isTurnBased = true;
         this.amount = -1;

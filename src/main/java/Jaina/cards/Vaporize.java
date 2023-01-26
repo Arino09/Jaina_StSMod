@@ -31,7 +31,7 @@ public class Vaporize extends AbstractJainaCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(!upgraded) {
+        if (!upgraded) {
             gainPower(new VaporizePower(p, false));
         } else {
             gainPower(new VaporizePower(p, true));

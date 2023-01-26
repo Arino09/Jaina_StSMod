@@ -27,19 +27,19 @@
   },
   "jaina:Counterspell": {
     "NAME": "法术反制",
-    "DESCRIPTION": "获得1层 无实体 、1层 缓冲 NL 或者1层 人工制品 。 NL 虚无 。",
-    "UPGRADE_DESCRIPTION": "获得1层 无实体 、1层 缓冲 NL 或者1层 人工制品 。"
+    "DESCRIPTION": "选择：获得1层 无实体 、1层缓冲或1层 人工制品 。 NL 虚无 。",
+    "UPGRADE_DESCRIPTION": "选择：获得1层 无实体 、1层缓冲或者1层 人工制品 。 NL 消耗 。"
   },
-  "jaina:Counterspell_Intangible": {
-    "NAME": "法术反制：无实体",
+  "jaina:CounterAttack": {
+    "NAME": "攻击反制",
     "DESCRIPTION": "获得1层 无实体 。"
   },
-  "jaina:Counterspell_Buffer": {
-    "NAME": "法术反制：缓冲",
+  "jaina:CounterDamage": {
+    "NAME": "伤害反制",
     "DESCRIPTION": "获得1层 缓冲 。"
   },
-  "jaina:Counterspell_Artifact": {
-    "NAME": "法术反制：人工制品",
+  "jaina:CounterCurse": {
+    "NAME": "诅咒反制",
     "DESCRIPTION": "获得1层 人工制品 。"
   },
   "jaina:Defend": {
