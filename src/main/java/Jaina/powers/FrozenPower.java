@@ -1,6 +1,7 @@
 package Jaina.powers;
 
 import Jaina.ModCore.IHelper;
+import Jaina.ModCore.JainaEnums;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -8,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.AbstractMonster.Intent;
 import com.megacrit.cardcrawl.monsters.EnemyMoveInfo;
 
 import java.lang.reflect.Field;
@@ -19,14 +21,14 @@ public class FrozenPower extends AbstractJainaPower {
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     private byte moveByte;
-    private AbstractMonster.Intent moveIntent;
+    private Intent moveIntent;
     private EnemyMoveInfo move;
 
     public FrozenPower(AbstractMonster owner) {
         super(POWER_ID, true, NAME, PowerType.DEBUFF);
         this.owner = owner;
         this.isTurnBased = true;
-        this.amount = 1;
+        this.amount = -1;
         updateDescription();
     }
 
@@ -57,7 +59,7 @@ public class FrozenPower extends AbstractJainaPower {
                         FrozenPower.this.move = (EnemyMoveInfo) f.get(FrozenPower.this.owner);
 
                         EnemyMoveInfo frozenMove = new EnemyMoveInfo(FrozenPower.this.moveByte,
-                                AbstractMonster.Intent.STUN, -1, 0, false);
+                                JainaEnums.FROZEN, -1, 0, false);
                         f.set(FrozenPower.this.owner, frozenMove);
                         ((AbstractMonster) FrozenPower.this.owner).createIntent();
                     } catch (NoSuchFieldException | IllegalAccessException e) {

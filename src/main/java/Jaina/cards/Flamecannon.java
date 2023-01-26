@@ -4,6 +4,7 @@ import Jaina.ModCore.IHelper;
 import Jaina.ModCore.JainaEnums;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -26,6 +27,7 @@ public class Flamecannon extends AbstractJainaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractMonster randM = AbstractDungeon.getRandomMonster();
         dealDamage(randM, AbstractGameAction.AttackEffect.FIRE);
+        IHelper.getTempCard(new Burn());
     }
 
     @Override

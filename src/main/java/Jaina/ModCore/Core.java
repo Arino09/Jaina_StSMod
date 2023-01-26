@@ -9,10 +9,12 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.nio.charset.StandardCharsets;
 
@@ -34,7 +36,7 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     private static final String BIG_ORB = "Jaina/img/char/card_orb.png";
     private static final String SMALL_ORB = "Jaina/img/char/small_orb.png";
 
-    public static final Color JAINA_COLOR = new Color(52.0F / 255.0F, 184.0F / 255.0F, 173.0F / 255.0F, 1.0F);
+    public static final Color JAINA_COLOR = new Color(110.0F / 255.0F, 145.0F / 255.0F, 237.0F / 255.0F, 1.0F);
 
     public Core() {
         BaseMod.subscribe(this);
@@ -110,4 +112,5 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     }
 
     public static boolean unlockEverything = false;
+
 }

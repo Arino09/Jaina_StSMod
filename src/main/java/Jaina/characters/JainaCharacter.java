@@ -37,17 +37,17 @@ public class JainaCharacter extends CustomPlayer {
     private static final String CORPSE_IMAGE = "Jaina/img/char/corpse.png";
     // 战斗界面左下角能量图标的每个图层
     private static final String[] ORB_TEXTURES = new String[]{
-            "Jaina/img/UI/orb/layer5.png",
-            "Jaina/img/UI/orb/layer4.png",
-            "Jaina/img/UI/orb/layer3.png",
-            "Jaina/img/UI/orb/layer2.png",
+            "Jaina/img/UI/orb/layer1.png",
+            "Jaina/img/UI/orb/layer1.png",
+            "Jaina/img/UI/orb/layer1.png",
+            "Jaina/img/UI/orb/layer1.png",
             "Jaina/img/UI/orb/layer1.png",
             "Jaina/img/UI/orb/layer6.png",
-            "Jaina/img/UI/orb/layer5d.png",
-            "Jaina/img/UI/orb/layer4d.png",
-            "Jaina/img/UI/orb/layer3d.png",
-            "Jaina/img/UI/orb/layer2d.png",
-            "Jaina/img/UI/orb/layer1d.png"
+            "Jaina/img/UI/orb/layer1.png",
+            "Jaina/img/UI/orb/layer1.png",
+            "Jaina/img/UI/orb/layer1.png",
+            "Jaina/img/UI/orb/layer1.png",
+            "Jaina/img/UI/orb/layer1.png"
     };
     // 每个图层的旋转速度
     private static final float[] LAYER_SPEED = new float[]{-40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F};

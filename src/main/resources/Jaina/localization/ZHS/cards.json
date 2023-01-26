@@ -28,12 +28,19 @@
   "jaina:Counterspell": {
     "NAME": "法术反制",
     "DESCRIPTION": "获得1层 无实体 、1层 缓冲 NL 或者1层 人工制品 。 NL 虚无 。",
-    "UPGRADE_DESCRIPTION": "获得1层 无实体 、1层 缓冲 NL 或者1层 人工制品 。 NL 消耗 。",
-    "EXTENDED_DESCRIPTION": [
-      "获得1层 无实体 ",
-      "获得1层 缓冲 ",
-      "获得1层 人工制品 "
-    ]
+    "UPGRADE_DESCRIPTION": "获得1层 无实体 、1层 缓冲 NL 或者1层 人工制品 。"
+  },
+  "jaina:Counterspell_Intangible": {
+    "NAME": "法术反制：无实体",
+    "DESCRIPTION": "获得1层 无实体 。"
+  },
+  "jaina:Counterspell_Buffer": {
+    "NAME": "法术反制：缓冲",
+    "DESCRIPTION": "获得1层 缓冲 。"
+  },
+  "jaina:Counterspell_Artifact": {
+    "NAME": "法术反制：人工制品",
+    "DESCRIPTION": "获得1层 人工制品 。"
   },
   "jaina:Defend": {
     "NAME": "防御",
@@ -41,15 +48,15 @@
   },
   "jaina:Fireball": {
     "NAME": "火球术",
-    "DESCRIPTION": "造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *灼伤 置入的你手牌。"
   },
   "jaina:Flamecannon": {
     "NAME": "烈焰轰击",
-    "DESCRIPTION": "随机对一个敌人造成 !D! 点伤害。"
+    "DESCRIPTION": "随机对一个敌人造成 !D! 点伤害。 NL 将一张 *灼伤 置入的你手牌。"
   },
   "jaina:Flamestrike": {
     "NAME": "烈焰风暴",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害2次。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害2次。 NL 将一张 *灼伤 置入的你手牌。"
   },
   "jaina:Frostbolt": {
     "NAME": "寒冰箭",
@@ -62,7 +69,7 @@
   },
   "jaina:IceBarrier": {
     "NAME": "寒冰护体",
-    "DESCRIPTION": "当你受到攻击时获得 !B! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "jaina:IceBlock": {
     "NAME": "寒冰屏障",
@@ -74,7 +81,7 @@
   },
   "jaina:Pyroblast": {
     "NAME": "炎爆术",
-    "DESCRIPTION": "造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *灼伤 置入的你手牌。"
   },
   "jaina:SpringWater": {
     "NAME": "清凉的泉水",

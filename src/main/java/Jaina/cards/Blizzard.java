@@ -3,6 +3,7 @@ package Jaina.cards;
 import Jaina.ModCore.IHelper;
 import Jaina.ModCore.JainaEnums;
 import Jaina.actions.FrozenEnemyAction;
+import Jaina.powers.FrozenPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -31,7 +32,7 @@ public class Blizzard extends AbstractJainaCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealAoeDamage(AbstractGameAction.AttackEffect.LIGHTNING);
-        this.addToBot(new FrozenEnemyAction(m, p));
+        frozenAllEnemy();
     }
 
     @Override

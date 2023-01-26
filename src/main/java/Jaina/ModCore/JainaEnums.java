@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class JainaEnums {
     @SpireEnum(name = "JAINA")
@@ -12,4 +13,6 @@ public class JainaEnums {
     public static CardLibrary.LibraryType JAINA_LIBRARY;
     @SpireEnum
     public static AbstractPlayer.PlayerClass JAINA_CLASS;
+    @SpireEnum
+    public static AbstractMonster.Intent FROZEN;
 }

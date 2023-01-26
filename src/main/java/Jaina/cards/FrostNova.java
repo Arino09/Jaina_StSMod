@@ -31,8 +31,7 @@ public class FrostNova extends AbstractJainaCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new FrozenEnemyAction(m, p));
-
+        frozenAllEnemy();
     }
 
     @Override

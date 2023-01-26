@@ -2,7 +2,6 @@ package Jaina.cards;
 
 import Jaina.ModCore.IHelper;
 import Jaina.ModCore.JainaEnums;
-import Jaina.powers.IceBarrierPower;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,26 +13,22 @@ public class IceBarrier extends AbstractJainaCard {
     public static final String ID = IHelper.makeID("IceBarrier");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     public IceBarrier() {
-        super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.SELF);
-        setBlock(12);
+        super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
+                CardRarity.COMMON, CardTarget.SELF);
+        setBlock(9);
     }
 
     @Override
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(3);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!upgraded) {
-            givePower(new IceBarrierPower(p, false), 1);
-        } else {
-            givePower(new IceBarrierPower(p, true), 1);
-        }
+        gainBlock();
     }
 
     @Override

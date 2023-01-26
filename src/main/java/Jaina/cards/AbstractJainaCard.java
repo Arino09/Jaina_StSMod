@@ -1,5 +1,6 @@
 package Jaina.cards;
 
+import Jaina.powers.FrozenPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -24,7 +25,7 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param id   完整卡牌id
      * @return 图片路径
      */
-    private static String getImgPath(CardType type, String id) {
+    public static String getImgPath(CardType type, String id) {
         String t;
         switch (type) {
             case ATTACK:
@@ -45,6 +46,10 @@ public abstract class AbstractJainaCard extends CustomCard {
             default:
                 throw new IllegalArgumentException("Unexpect value: " + type);
         }
+        // 法术反制衍生卡用法术反制的卡面
+        if (id.startsWith("jaina:Counterspell")) {
+            id = "jaina:Counterspell";
+        }
         return "Jaina/img/cards/" + t + "/" + id.substring(6) + ".png";
     }
 
@@ -54,7 +59,7 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param type 卡牌类型
      * @return 测试图片路径
      */
-    private static String getTestImgPath(CardType type) {
+    public static String getTestImgPath(CardType type) {
         String t;
         switch (type) {
             case ATTACK:
@@ -178,6 +183,18 @@ public abstract class AbstractJainaCard extends CustomCard {
      */
     public void givePower(AbstractPower power, int amount) {
         this.addToBot(new ApplyPowerAction(power.owner, AbstractDungeon.player, power, amount));
+    }
+
+    /**
+     * 冰冻所有敌人
+     *
+     */
+    public void frozenAllEnemy() {
+        for(AbstractMonster m : (AbstractDungeon.getMonsters()).monsters) {
+            if (!m.isDead && !m.isDying) {
+                this.addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new FrozenPower(m), -1));
+            }
+        }
     }
 
     //重写了升级方法，升级效果写在limitedUpgrade中即可
