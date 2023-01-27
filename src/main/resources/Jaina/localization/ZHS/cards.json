@@ -8,14 +8,14 @@
     "NAME": "奥术智慧",
     "DESCRIPTION": "抽 !M! 张牌。"
   },
+  "jaina:ArcaneMissileToken": {
+    "NAME": "奥术弹",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。"
+  },
   "jaina:ArcaneMissiles": {
     "NAME": "奥术飞弹",
     "DESCRIPTION": "将 !M! 张 *奥术弹 置入你的手牌。",
     "UPGRADE_DESCRIPTION": "将 !M! 张 *奥术弹+ 置入你的手牌。"
-  },
-  "jaina:ArcaneMissileToken": {
-    "NAME": "奥术弹",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。"
   },
   "jaina:Blizzard": {
     "NAME": "暴风雪",
@@ -25,22 +25,26 @@
     "NAME": "冰锥术",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害并获得 !B! 点 格挡 。"
   },
-  "jaina:Counterspell": {
-    "NAME": "法术反制",
-    "DESCRIPTION": "选择：获得1层 无实体 、1层缓冲或1层 人工制品 。 NL 虚无 。",
-    "UPGRADE_DESCRIPTION": "选择：获得1层 无实体 、1层缓冲或者1层 人工制品 。 NL 消耗 。"
+  "jaina:ConjureManaBiscuit": {
+    "NAME": "制造法力饼干",
+    "DESCRIPTION": "将一张可以获得 [E] [E] 的 *法力饼干 置入你的手牌。"
   },
   "jaina:CounterAttack": {
     "NAME": "攻击反制",
     "DESCRIPTION": "获得1层 无实体 。"
   },
+  "jaina:CounterCurse": {
+    "NAME": "诅咒反制",
+    "DESCRIPTION": "获得1层 人工制品 。"
+  },
   "jaina:CounterDamage": {
     "NAME": "伤害反制",
     "DESCRIPTION": "获得1层 缓冲 。"
   },
-  "jaina:CounterCurse": {
-    "NAME": "诅咒反制",
-    "DESCRIPTION": "获得1层 人工制品 。"
+  "jaina:Counterspell": {
+    "NAME": "法术反制",
+    "DESCRIPTION": "选择：获得1层 无实体 、1层缓冲或1层 人工制品 。 NL 虚无 。",
+    "UPGRADE_DESCRIPTION": "选择：获得1层 无实体 、1层缓冲或者1层 人工制品 。 NL 消耗 。"
   },
   "jaina:Defend": {
     "NAME": "防御",
@@ -58,14 +62,14 @@
     "NAME": "烈焰风暴",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害2次。 NL 将一张 *灼伤 置入的你手牌。"
   },
-  "jaina:Frostbolt": {
-    "NAME": "寒冰箭",
-    "DESCRIPTION": "造成 !D! 点伤害并 jaina:冻结 敌人。"
-  },
   "jaina:FrostNova": {
     "NAME": "冰霜新星",
     "DESCRIPTION": " jaina:冻结 所有敌人。 消耗 。",
     "UPGRADE_DESCRIPTION": " jaina:冻结 所有敌人。"
+  },
+  "jaina:Frostbolt": {
+    "NAME": "寒冰箭",
+    "DESCRIPTION": "造成 !D! 点伤害并 jaina:冻结 敌人。"
   },
   "jaina:IceBarrier": {
     "NAME": "寒冰护体",
@@ -79,13 +83,18 @@
     "NAME": "冰枪术",
     "DESCRIPTION": "对 jaina:冻结 的敌人造成 !D! 点伤害。 NL 若敌人未被 jaina:冻结 ， NL 则 jaina:冻结 敌人"
   },
+  "jaina:ManaBiscuit": {
+    "NAME": "法力饼干",
+    "DESCRIPTION": " 保留 。 NL 获得 [E] [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 [E] [E] [E] 。 NL 消耗 。"
+  },
   "jaina:Pyroblast": {
     "NAME": "炎爆术",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *灼伤 置入的你手牌。"
   },
   "jaina:SpringWater": {
     "NAME": "清凉的泉水",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 每抽到一张技能牌，获得一点 [E] 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 每抽到一张技能牌，获得 [E] 。"
   },
   "jaina:Strike": {
     "NAME": "打击",
@@ -94,5 +103,9 @@
   "jaina:Vaporize": {
     "NAME": "蒸发",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 你下一次受到攻击时对目标造成 !D! 点伤害。"
+  },
+  "jaina:Evocation": {
+    "NAME": "唤醒",
+    "DESCRIPTION": "jaina:法术伤害 + !M! 。"
   }
 }
