@@ -23,10 +23,17 @@
       "防止你受到的一次致命攻击。"
     ]
   },
+  "jaina:SpellDamagePower": {
+    "NAME": "法术伤害",
+    "DESCRIPTIONS": [
+      "法术伤害提高",
+      "点。"
+    ]
+  },
   "jaina:VaporizePower": {
-  "NAME": "蒸发",
-  "DESCRIPTIONS": [
-    "在你受到攻击时对攻击者造成9点伤害。 NL 受到一次攻击仅触发一次。"
+    "NAME": "蒸发",
+    "DESCRIPTIONS": [
+      "在你受到攻击时对攻击者造成9点伤害。 NL 受到一次攻击仅触发一次。"
     ]
   },
   "jaina:VaporizePowerP": {
@@ -35,5 +42,4 @@
       "在你受到攻击时对攻击者造成12点伤害。 NL 受到一次攻击仅触发一次。"
     ]
   }
-
 }
