@@ -28,7 +28,7 @@ import java.util.ArrayList;
 
 public class JainaCharacter extends CustomPlayer {
     // 战斗时角色立绘
-    private static final String STAND = "Jaina/img/char/character.png";
+    private static final String STAND = "Jaina/img/char/jaina.png";
     // 火堆的角色立绘（行动前）
     private static final String SHOULDER_1 = "Jaina/img/char/shoulder.png";
     // 火堆的角色立绘（行动后）
@@ -52,7 +52,7 @@ public class JainaCharacter extends CustomPlayer {
     // 每个图层的旋转速度
     private static final float[] LAYER_SPEED = new float[]{-40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F};
     // 角色的本地化文本，如卡牌的本地化文本一样，如何书写见下
-    private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString("jaina:Jaina");
+    private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(IHelper.makeID("Jaina"));
 
     public JainaCharacter(String name) {
         super(name, JainaEnums.JAINA_CLASS, ORB_TEXTURES, "Jaina/img/UI/orb/vfx.png", LAYER_SPEED, null, null);
