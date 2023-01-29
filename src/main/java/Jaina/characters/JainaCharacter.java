@@ -9,6 +9,7 @@ import Jaina.cards.Frostbolt;
 import Jaina.cards.Strike;
 import Jaina.relics.ArchmageStuff;
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -27,8 +28,6 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import java.util.ArrayList;
 
 public class JainaCharacter extends CustomPlayer {
-    // 战斗时角色立绘
-    private static final String STAND = "Jaina/img/char/jaina.png";
     // 火堆的角色立绘（行动前）
     private static final String SHOULDER_1 = "Jaina/img/char/shoulder.png";
     // 火堆的角色立绘（行动后）
@@ -53,9 +52,11 @@ public class JainaCharacter extends CustomPlayer {
     private static final float[] LAYER_SPEED = new float[]{-40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F};
     // 角色的本地化文本，如卡牌的本地化文本一样，如何书写见下
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(IHelper.makeID("Jaina"));
+    // 角色Spriter动画
+    private static final SpriterAnimation ANIMATION = new SpriterAnimation("Jaina/img/char/jainaAnime/jaina.scml");
 
     public JainaCharacter(String name) {
-        super(name, JainaEnums.JAINA_CLASS, ORB_TEXTURES, "Jaina/img/UI/orb/vfx.png", LAYER_SPEED, null, null);
+        super(name, JainaEnums.JAINA_CLASS, ORB_TEXTURES, "Jaina/img/UI/orb/vfx.png", LAYER_SPEED, ANIMATION);
 
         // 角色对话气泡的大小，如果游戏中尺寸不对在这里修改（libgdx的坐标轴左下为原点）
         this.dialogX = (this.drawX + 0.0F * Settings.scale);
@@ -63,7 +64,7 @@ public class JainaCharacter extends CustomPlayer {
 
         // 初始化你的角色，如果你的角色只有一张图，那么第一个参数填写你角色图片的路径。
         this.initializeClass(
-                STAND, // 角色图片
+                null, // 角色图片
                 SHOULDER_2, SHOULDER_1,
                 CORPSE_IMAGE, // 人物死亡图像
                 this.getLoadout(),
@@ -71,12 +72,6 @@ public class JainaCharacter extends CustomPlayer {
                 200.0F, 220.0F, // 角色碰撞箱大小，越大的角色模型这个越大
                 new EnergyManager(3) // 初始每回合的能量
         );
-
-        // 如果你的人物没有动画，那么这些不需要写
-        // this.loadAnimation("ExampleModResources/img/char/character.atlas", "ExampleModResources/img/char/character.json", 1.8F);
-        // AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
-        // e.setTime(e.getEndTime() * MathUtils.random());
-        // e.setTimeScale(1.2F);
 
     }
 
