@@ -1,11 +1,9 @@
 package Jaina.powers;
 
 import Jaina.ModCore.IHelper;
-import Jaina.ModCore.JainaEnums;
 import Jaina.cards.AbstractJainaCard;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -25,6 +23,7 @@ public class SpellDamagePower extends AbstractJainaPower {
             this.amount = 999;
         }
         updateDescription();
+        upgradeSpellDamage(amount);
     }
 
     public void playApplyPowerSfx() {
