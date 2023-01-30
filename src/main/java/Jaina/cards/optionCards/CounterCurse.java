@@ -1,7 +1,6 @@
 package Jaina.cards.optionCards;
 
 import Jaina.ModCore.IHelper;
-import Jaina.cards.Counterspell;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;

@@ -18,6 +18,7 @@ public class ConjureManaBiscuit extends AbstractJainaCard {
     public ConjureManaBiscuit() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.NONE);
+        cardsToPreview = new ManaBiscuit();
     }
 
     @Override
