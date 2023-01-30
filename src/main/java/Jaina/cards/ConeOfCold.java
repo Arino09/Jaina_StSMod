@@ -3,11 +3,15 @@ package Jaina.cards;
 import Jaina.ModCore.IHelper;
 import Jaina.ModCore.JainaEnums;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.BlizzardEffect;
 
 public class ConeOfCold extends AbstractJainaCard {
 
@@ -21,6 +25,7 @@ public class ConeOfCold extends AbstractJainaCard {
                 CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         setDamage(3);
         setBlock(5);
+
     }
 
     @Override
@@ -31,7 +36,12 @@ public class ConeOfCold extends AbstractJainaCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dealAoeDamage(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        if (Settings.FAST_MODE) {
+            this.addToBot(new VFXAction(new BlizzardEffect(3, AbstractDungeon.getMonsters().shouldFlipVfx()), 0.25F));
+        } else {
+            this.addToBot(new VFXAction(new BlizzardEffect(3, AbstractDungeon.getMonsters().shouldFlipVfx()), 1.0F));
+        }
+        dealAoeDamage(AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         gainBlock();
     }
 
