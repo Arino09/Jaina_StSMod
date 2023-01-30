@@ -15,10 +15,10 @@ public class ArcaneMissileToken extends AbstractJainaCard {
     private static final int COST = 0;
 
     public ArcaneMissileToken() {
-        super(ID, true, CARD_STRINGS, COST, CardType.ATTACK, CardColor.COLORLESS,
+        super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, CardColor.COLORLESS,
                 CardRarity.SPECIAL, CardTarget.ENEMY);
-        // 造成3点伤害并消耗
-        setDamage(3);
+        // 造成2点伤害并消耗
+        setDamage(2);
         this.exhaust = true;
     }
 

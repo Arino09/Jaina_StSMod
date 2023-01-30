@@ -18,6 +18,10 @@ public class ArcaneMissiles extends AbstractJainaCard {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.SELF);
         setMagicNumber(4); //奥术飞弹数量
+        cardsToPreview = new ArcaneMissileToken(); //预览卡牌：奥术弹
+        if(upgraded) {
+            cardsToPreview = new ArcaneMissileToken();
+        }
     }
 
     @Override
@@ -34,6 +38,7 @@ public class ArcaneMissiles extends AbstractJainaCard {
     @Override
     public void upp() {
         upgradeDescription(CARD_STRINGS);
+        this.cardsToPreview.upgrade();
     }
 
     @Override
