@@ -1,5 +1,6 @@
 package Jaina.ModCore;
 
+import Jaina.cards.AbstractJainaCard;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -22,5 +23,17 @@ public interface IHelper {
      */
     static void getTempCard(AbstractCard card) {
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card));
+    }
+
+    /**
+     * 增加法术伤害值
+     *
+     * @param card 作用的卡牌
+     * @param amount 法术伤害层数
+     */
+    static void spellDamageApply (AbstractJainaCard card, int amount) {
+        if (card.hasTag(JainaEnums.ARCANE) || card.hasTag(JainaEnums.FIRE) || card.hasTag(JainaEnums.FROST)) {
+            card.spellDamage += amount;
+        }
     }
 }

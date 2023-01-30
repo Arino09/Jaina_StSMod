@@ -2,6 +2,7 @@ package Jaina.ModCore;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -15,4 +16,10 @@ public class JainaEnums {
     public static AbstractPlayer.PlayerClass JAINA_CLASS;
     @SpireEnum
     public static AbstractMonster.Intent FROZEN;
+    @SpireEnum
+    public static AbstractCard.CardTags FIRE;
+    @SpireEnum
+    public static AbstractCard.CardTags FROST;
+    @SpireEnum
+    public static AbstractCard.CardTags ARCANE;
 }

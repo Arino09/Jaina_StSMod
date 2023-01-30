@@ -2,10 +2,13 @@ package Jaina.powers;
 
 import Jaina.ModCore.IHelper;
 import Jaina.ModCore.JainaEnums;
+import Jaina.cards.AbstractJainaCard;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 
 public class SpellDamagePower extends AbstractJainaPower {
@@ -45,12 +48,8 @@ public class SpellDamagePower extends AbstractJainaPower {
         this.fontScale = 8.0F;
         this.amount -= reduceAmount;
 
-        if (this.amount == 0) {
+        if (this.amount <= 0) {
             addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, NAME));
-        }
-
-        if (this.amount <= -999) {
-            this.amount = -999;
         }
     }
 
@@ -59,13 +58,18 @@ public class SpellDamagePower extends AbstractJainaPower {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
-    @Override
-    public float atDamageGive(float damage, DamageInfo.DamageType type) {
-        System.out.println(type);
-        if (type == JainaEnums.ARCANE || type == JainaEnums.FIRE || type == JainaEnums.FROST) {
-            System.out.println("Spell damage given!");
-            return damage + this.amount;
+    private void upgradeSpellDamage(int amount) {
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            IHelper.spellDamageApply((AbstractJainaCard)c, amount);
         }
-        return damage;
+        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+            IHelper.spellDamageApply((AbstractJainaCard)c, amount);
+        }
+        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+            IHelper.spellDamageApply((AbstractJainaCard)c, amount);
+        }
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            IHelper.spellDamageApply((AbstractJainaCard)c, amount);
+        }
     }
 }

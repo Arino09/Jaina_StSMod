@@ -19,13 +19,13 @@ public class Fireblast extends AbstractJainaCard {
     public Fireblast() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.BASIC, CardTarget.ENEMY);
-        this.damage = 6;
+        setDamage(6);
         cardsToPreview = new Burn();
     }
 
     @Override
     public void upp() {
-        this.damage = 2;
+        upgradeDamage(2);
     }
 
     @Override
