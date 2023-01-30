@@ -3,10 +3,7 @@ package Jaina.characters;
 import Jaina.ModCore.Core;
 import Jaina.ModCore.IHelper;
 import Jaina.ModCore.JainaEnums;
-import Jaina.cards.Defend;
-import Jaina.cards.Fireball;
-import Jaina.cards.Frostbolt;
-import Jaina.cards.Strike;
+import Jaina.cards.*;
 import Jaina.relics.ArchmageStuff;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
@@ -83,11 +80,13 @@ public class JainaCharacter extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> deck = new ArrayList<>();
-        for (int x = 0; x < 5; x++) {
+        for (int i = 0; i < 5; i++) {
             deck.add(Strike.ID);
+        }
+        for (int j = 0; j < 5; j++) {
             deck.add(Defend.ID);
         }
-        deck.add(Fireball.ID);
+        deck.add(Fireblast.ID);
         deck.add(Frostbolt.ID);
         return deck;
     }

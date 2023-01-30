@@ -107,5 +107,9 @@
   "jaina:Evocation": {
     "NAME": "唤醒",
     "DESCRIPTION": "jaina:法术伤害 + !M! 。"
+  },
+  "jaina:Fireblast": {
+    "NAME": "火焰冲击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *灼伤 置入的你手牌。"
   }
 }
