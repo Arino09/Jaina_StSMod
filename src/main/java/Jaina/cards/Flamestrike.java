@@ -20,13 +20,14 @@ public class Flamestrike extends AbstractJainaCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.ALL_ENEMY);
         setDamage(6);
+        cardsToPreview = new Burn();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealAoeDamage(AbstractGameAction.AttackEffect.FIRE);
         dealAoeDamage(AbstractGameAction.AttackEffect.FIRE);
-        IHelper.getTempCard(new Burn());
+        getBurn(1);
     }
 
     @Override

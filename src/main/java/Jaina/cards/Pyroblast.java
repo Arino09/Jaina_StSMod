@@ -21,21 +21,20 @@ public class Pyroblast extends AbstractJainaCard {
     public Pyroblast() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.RARE, CardTarget.ENEMY);
-        setDamage(30);
+        setDamage(35);
         setMagicNumber(3);
+        cardsToPreview = new Burn();
     }
 
     @Override
     public void upp() {
-        upgradeDamage(10);
+        upgradeDamage(13);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealDamage(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        for (int i = 0; i < magicNumber; i++) {
-            IHelper.getTempCard(new Burn());
-        }
+        getBurn(magicNumber);
     }
 
     @Override

@@ -1,16 +1,21 @@
 package Jaina.cards;
 
+import Jaina.ModCore.IHelper;
 import Jaina.powers.FrozenPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public abstract class AbstractJainaCard extends CustomCard {
+
+    // 默认法术强度为0
+    public int spellDamage = 0;
 
     /**
      * 构造函数
@@ -150,8 +155,7 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param ae 伤害效果
      */
     public void dealDamage(AbstractMonster m, AbstractGameAction.AttackEffect ae) {
-        this.addToBot(new DamageAction(m, new DamageInfo(AbstractDungeon.player,
-                this.damage), ae));
+        this.addToBot(new DamageAction(m, new DamageInfo(AbstractDungeon.player, this.damage, this.damageTypeForTurn), ae));
     }
 
     /**
@@ -224,6 +228,15 @@ public abstract class AbstractJainaCard extends CustomCard {
         }
     }
 
+    /**
+     * 获得卡牌 [灼烧]
+     * @param amount [灼烧] 卡牌的数量
+     */
+    public void getBurn(int amount) {
+        for (int i = 0;i < amount; i++) {
+            IHelper.getTempCard(new Burn());
+        }
+    }
     //重写了升级方法，升级效果写在limitedUpgrade中即可
     @Override
     public void upgrade() {

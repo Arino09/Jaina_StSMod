@@ -20,12 +20,13 @@ public class Fireball extends AbstractJainaCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.ENEMY);
         setDamage(10);
+        this.cardsToPreview = new Burn();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealDamage(m, AbstractGameAction.AttackEffect.FIRE);
-        IHelper.getTempCard(new Burn());
+        getBurn(1);
     }
 
     @Override

@@ -21,13 +21,14 @@ public class Flamecannon extends AbstractJainaCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.NONE);
         this.setDamage(13);
+        cardsToPreview = new Burn();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractMonster randM = AbstractDungeon.getRandomMonster();
         dealDamage(randM, AbstractGameAction.AttackEffect.FIRE);
-        IHelper.getTempCard(new Burn());
+        getBurn(1);
     }
 
     @Override
