@@ -15,7 +15,7 @@ public class CounterAttack extends OptionCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public CounterAttack() {
-        super(ID, new Counterspell(), CARD_STRINGS, CardType.POWER);
+        super(ID, true, CARD_STRINGS, CardType.POWER);
     }
 
     @Override
