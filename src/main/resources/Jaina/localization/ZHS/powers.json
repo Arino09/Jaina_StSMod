@@ -41,5 +41,19 @@
     "DESCRIPTIONS": [
       "在你受到攻击时对攻击者造成12点伤害。 NL 受到一次攻击仅触发一次。"
     ]
+  },
+  "jaina:BurningPower": {
+    "NAME": "烧伤",
+    "DESCRIPTIONS": [
+      "回合结束时失去",
+      "点生命值。"
+    ]
+  },
+  "jaina:IncantersPower": {
+    "NAME": "咒术洪流",
+    "DESCRIPTIONS": [
+      "你在每回合打出的第",
+      "张法术牌耗能变为 #b0 。"
+    ]
   }
 }
