@@ -19,11 +19,11 @@
   },
   "jaina:Blizzard": {
     "NAME": "暴风雪",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害并 jaina:冻结 敌人"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害并 jaina:冻结 。"
   },
   "jaina:ConeOfCold": {
     "NAME": "冰锥术",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害并获得 !B! 点 格挡 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。"
   },
   "jaina:ConjureManaBiscuit": {
     "NAME": "制造法力饼干",
@@ -52,15 +52,15 @@
   },
   "jaina:Fireball": {
     "NAME": "火球术",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *灼伤 置入的你手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *灼伤 放入你的弃牌堆中。"
   },
   "jaina:Flamecannon": {
     "NAME": "烈焰轰击",
-    "DESCRIPTION": "随机对一个敌人造成 !D! 点伤害。 NL 将一张 *灼伤 置入的你手牌。"
+    "DESCRIPTION": "随机对一个敌人造成 !D! 点伤害。 NL 将一张 *灼伤 放入你的弃牌堆中。"
   },
   "jaina:Flamestrike": {
     "NAME": "烈焰风暴",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害2次。 NL 将一张 *灼伤 置入的你手牌。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害2次。 NL 将一张 *灼伤 放入你的弃牌堆中。"
   },
   "jaina:FrostNova": {
     "NAME": "冰霜新星",
@@ -81,7 +81,7 @@
   },
   "jaina:IceLance": {
     "NAME": "冰枪术",
-    "DESCRIPTION": "对 jaina:冻结 的敌人造成 !D! 点伤害。 NL 若敌人未被 jaina:冻结 ， NL 则 jaina:冻结 敌人"
+    "DESCRIPTION": "对 jaina:冻结 的敌人造成 !D! 点伤害。 NL 若敌人未被 jaina:冻结 ，则 jaina:冻结 敌人并 消耗 。"
   },
   "jaina:ManaBiscuit": {
     "NAME": "法力饼干",
@@ -90,7 +90,7 @@
   },
   "jaina:Pyroblast": {
     "NAME": "炎爆术",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张 *灼伤 置入的你手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! *灼伤 放入你的弃牌堆中。"
   },
   "jaina:SpringWater": {
     "NAME": "清凉的泉水",
@@ -110,6 +110,30 @@
   },
   "jaina:Fireblast": {
     "NAME": "火焰冲击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *灼伤 置入的你手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张 *灼伤 放入你的弃牌堆中。"
+  },
+  "jaina:ArcaneBlast": {
+    "NAME": "奥术冲击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL jaina:法术伤害 在 *奥术冲击 上发挥 !M! 倍效果。"
+  },
+  "jaina:ArcaneBreath": {
+    "NAME": "奥术吐息",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害两次。"
+  },
+  "jaina:BreathOfSindragosa": {
+    "NAME": "冰龙吐息",
+    "DESCRIPTION": "随机对一个敌人造成 !D! 点伤害并 jaina:冻结 。"
+  },
+  "jaina:Cinderstorm": {
+    "NAME": "燃烬风暴",
+    "DESCRIPTION": "随机造成 !D! 点伤害5次。"
+  },
+  "jaina:Combustion": {
+    "NAME": "燃烧",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予其他敌人 !M! 层 jaina:烧伤 。"
+  },
+  "jaina:IncantersFlow": {
+    "NAME": "咒术洪流",
+    "DESCRIPTION": "你在每回合打出的第一张法术牌耗能变为0。"
   }
 }
