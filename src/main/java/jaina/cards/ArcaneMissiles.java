@@ -16,7 +16,7 @@ public class ArcaneMissiles extends AbstractJainaCard {
 
     public ArcaneMissiles() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.SELF,JainaEnums.CardTags.ARCANE);
+                CardRarity.COMMON, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
         setMagicNumber(4); //奥术飞弹数量
         cardsToPreview = new ArcaneMissileToken(); //预览卡牌：奥术弹
         setDamage(2);

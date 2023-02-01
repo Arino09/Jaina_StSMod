@@ -1,13 +1,13 @@
 package jaina.cards;
 
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import jaina.modCore.IHelper;
-import jaina.modCore.JainaEnums;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import jaina.modCore.IHelper;
+import jaina.modCore.JainaEnums;
 
 
 public class IceShield extends AbstractJainaCard {
@@ -19,7 +19,7 @@ public class IceShield extends AbstractJainaCard {
 
     public IceShield() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.NONE, JainaEnums.CardTags.FROST);
+                CardRarity.COMMON, CardTarget.SELF, JainaEnums.CardTags.FROST);
         setBlock(5);
     }
 

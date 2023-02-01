@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import jaina.modCore.IHelper;
 
-public class IceBlockPower extends AbstractJainaPower implements OnPlayerDeathPower {
+public class IceBlockPower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("IceBlockPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
@@ -29,13 +29,14 @@ public class IceBlockPower extends AbstractJainaPower implements OnPlayerDeathPo
     }
 
     @Override
-    public boolean onPlayerDeath(AbstractPlayer p, DamageInfo damageInfo) {
-        flash();
-        p.isDead = false;
-        p.halfDead = false;
-        int healRecover = p.lastDamageTaken;
-        AbstractDungeon.player.heal(healRecover);
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        return false;
+    public int onAttacked(DamageInfo info, int damageAmount) {
+        if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner != this.owner) {
+            flash();
+            if (AbstractDungeon.player.currentHealth < damageAmount) {
+                return 0;
+            }
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
+        return damageAmount;
     }
 }

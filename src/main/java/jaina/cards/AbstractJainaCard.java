@@ -135,7 +135,7 @@ public abstract class AbstractJainaCard extends CustomCard {
     }
 
     /**
-     *  设置伤害类型
+     * 设置伤害类型
      *
      * @param type 伤害类型
      */
@@ -159,9 +159,9 @@ public abstract class AbstractJainaCard extends CustomCard {
     /**
      * 造成指定量伤害
      *
-     * @param m  目标
+     * @param m    目标
      * @param base 伤害数值
-     * @param ae 伤害效果
+     * @param ae   伤害效果
      */
     public void dealDamage(AbstractMonster m, int base, AbstractGameAction.AttackEffect ae) {
 
@@ -251,6 +251,7 @@ public abstract class AbstractJainaCard extends CustomCard {
 
     /**
      * 在弃牌堆中加入 [灼烧]
+     *
      * @param amount [灼烧] 卡牌的数量
      */
     public void getBurn(int amount) {

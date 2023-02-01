@@ -8,15 +8,6 @@ import java.util.ArrayList;
 
 public class IncantersEndAction extends AbstractGameAction {
 
-    @Override
-    public void update() {
-        restoreCost(AbstractDungeon.player.hand.group);
-        restoreCost(AbstractDungeon.player.discardPile.group);
-        restoreCost(AbstractDungeon.player.drawPile.group);
-        restoreCost(AbstractDungeon.player.exhaustPile.group);
-        this.isDone = true;
-    }
-
     private static void restoreCost(ArrayList<AbstractCard> cards) {
         for (AbstractCard c : cards) {
             if (c.cardID.startsWith("jaina:") && !c.isStarterStrike() && !c.isStarterDefend()) {
@@ -25,5 +16,14 @@ public class IncantersEndAction extends AbstractGameAction {
                 c.isCostModifiedForTurn = false;
             }
         }
+    }
+
+    @Override
+    public void update() {
+        restoreCost(AbstractDungeon.player.hand.group);
+        restoreCost(AbstractDungeon.player.discardPile.group);
+        restoreCost(AbstractDungeon.player.drawPile.group);
+        restoreCost(AbstractDungeon.player.exhaustPile.group);
+        this.isDone = true;
     }
 }

@@ -17,7 +17,7 @@ public class ArcaneIntellect extends AbstractJainaCard {
 
     public ArcaneIntellect() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.SELF,JainaEnums.CardTags.ARCANE);
+                CardRarity.COMMON, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
         setMagicNumber(3);
     }
 

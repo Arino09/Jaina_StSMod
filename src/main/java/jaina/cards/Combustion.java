@@ -23,21 +23,21 @@ public class Combustion extends AbstractJainaCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(8);
-        setMagicNumber(2);
+        setMagicNumber(4);
         setDamageType(JainaEnums.DamageType.FIRE);
     }
 
     @Override
     public void upp() {
         upgradeDamage(2);
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster monster) {
         dealDamage(monster, AbstractGameAction.AttackEffect.FIRE);
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-            if(!m.equals(monster)) {
+            if (!m.equals(monster)) {
                 givePower(new BurningPower(m, magicNumber), magicNumber);
             }
         }

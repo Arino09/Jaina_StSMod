@@ -60,9 +60,9 @@ public class SpellDamagePower extends AbstractJainaPower {
     public float atDamageGive(float damage, DamageInfo.DamageType type) {
         float finalDamage = damage;
         System.out.println("Damage:" + damage + "Type:" + type);
-        if(IHelper.isSpellDamage(type)) {
+        if (IHelper.isSpellDamage(type)) {
             finalDamage = damage + amount;
-        } else if(type.equals(JainaEnums.DamageType.ARCANE_BLAST)) {
+        } else if (type.equals(JainaEnums.DamageType.ARCANE_BLAST)) {
             finalDamage = damage + 2 * amount;
         } else if (type.equals(JainaEnums.DamageType.ARCANE_BLAST_P)) {
             finalDamage = damage + 3 * amount;

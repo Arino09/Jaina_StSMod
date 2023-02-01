@@ -1,14 +1,14 @@
 package jaina.cards;
 
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import jaina.actions.FrozenCloneAction;
-import jaina.modCore.IHelper;
-import jaina.modCore.JainaEnums;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import jaina.actions.FrozenCloneAction;
+import jaina.modCore.IHelper;
+import jaina.modCore.JainaEnums;
 
 
 public class FrozenClone extends AbstractJainaCard {
@@ -42,7 +42,7 @@ public class FrozenClone extends AbstractJainaCard {
     @Override
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        if(canUse(AbstractDungeon.player, null)) {
+        if (canUse(AbstractDungeon.player, null)) {
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
         }
     }
@@ -51,7 +51,7 @@ public class FrozenClone extends AbstractJainaCard {
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = super.canUse(p, m);
-        if(!canUse) {
+        if (!canUse) {
             return false;
         }
         // 依次检查所有敌人的意图，如果有攻击意图则可用

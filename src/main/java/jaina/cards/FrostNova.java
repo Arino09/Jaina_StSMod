@@ -18,12 +18,12 @@ public class FrostNova extends AbstractJainaCard {
     public FrostNova() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, JainaEnums.CardTags.FROST);
-        exhaust = true;
+        this.exhaust = true;
     }
 
     @Override
     public void upp() {
-        exhaust = false;
+        this.exhaust = false;
         upgradeDescription(CARD_STRINGS);
     }
 

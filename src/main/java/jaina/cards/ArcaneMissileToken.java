@@ -21,7 +21,7 @@ public class ArcaneMissileToken extends AbstractJainaCard {
         // 造成2点伤害并消耗
         setDamage(2);
         this.exhaust = true;
-        setDamageType( JainaEnums.DamageType.ARCANE);
+        setDamageType(JainaEnums.DamageType.ARCANE);
     }
 
     @Override

@@ -21,7 +21,7 @@ public class BreathOfSindragosa extends AbstractJainaCard {
     public BreathOfSindragosa() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.NONE, JainaEnums.CardTags.FROST);
-        setDamage(6);
+        setDamage(4);
         setDamageType(JainaEnums.DamageType.FROST);
     }
 

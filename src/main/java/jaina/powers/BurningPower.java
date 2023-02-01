@@ -16,35 +16,30 @@ public class BurningPower extends AbstractJainaPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private static int postfix = 0;
 
     public BurningPower(AbstractCreature owner, int amount) {
-        super(POWER_ID + postfix++, true, NAME, PowerType.DEBUFF);
+        super(POWER_ID, true, NAME, PowerType.DEBUFF);
         this.owner = owner;
         this.amount = amount;
         updateDescription();
-        isTurnBased = true;
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         flash();
-        if(!isPlayer) {
-            if(!owner.isDying && !owner.isDeadOrEscaped()) {
+        if (!isPlayer) {
+            if (!owner.isDying && !owner.isDeadOrEscaped()) {
                 addToBot(new DamageAction(owner, new DamageInfo(owner, amount, DamageInfo.DamageType.HP_LOSS),
                         AbstractGameAction.AttackEffect.FIRE));
+                addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
             }
         }
-        if (this.amount <= 0) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 1));
-        }
+
     }
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + 2*amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
 }

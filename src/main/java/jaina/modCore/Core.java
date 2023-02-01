@@ -18,6 +18,10 @@ import java.nio.charset.StandardCharsets;
 
 @SpireInitializer
 public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber, EditRelicsSubscriber, AddAudioSubscriber {
+    // 显示的颜色
+    public static final Color COLOR = new Color(110.0F / 255.0F, 145.0F / 255.0F, 237.0F / 255.0F, 1.0F);
+    // Mod的ID
+    public static final String MOD_ID = "jaina";
     // 人物选择界面按钮的图片
     private static final String CHAR_BUTTON = "jaina/img/char/Character_Button.png";
     // 人物选择界面的图像
@@ -36,10 +40,7 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     private static final String BIG_ORB = "jaina/img/char/card_orb.png";
     // 小能量（用于描述等）
     private static final String SMALL_ORB = "jaina/img/char/small_orb.png";
-    // 显示的颜色
-    public static final Color COLOR = new Color(110.0F / 255.0F, 145.0F / 255.0F, 237.0F / 255.0F, 1.0F);
-    // Mod的ID
-    public static final String MOD_ID = "jaina";
+    public static boolean unlockEverything = false;
 
     public Core() {
         BaseMod.subscribe(this);
@@ -177,7 +178,5 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
 //        BaseMod.addAudio(IHelper.makeID("UnstablePortal"), "jaina/sound/UnstablePortal.ogg");
 
     }
-
-    public static boolean unlockEverything = false;
 
 }

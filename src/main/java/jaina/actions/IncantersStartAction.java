@@ -8,15 +8,6 @@ import java.util.ArrayList;
 
 public class IncantersStartAction extends AbstractGameAction {
 
-    @Override
-    public void update() {
-        setFree(AbstractDungeon.player.hand.group);
-        setFree(AbstractDungeon.player.discardPile.group);
-        setFree(AbstractDungeon.player.drawPile.group);
-        setFree(AbstractDungeon.player.exhaustPile.group);
-        this.isDone = true;
-    }
-
     private static void setFree(ArrayList<AbstractCard> cards) {
         for (AbstractCard c : cards) {
             if (c.cardID.startsWith("jaina:") && !c.isStarterStrike() && !c.isStarterDefend()) {
@@ -24,5 +15,14 @@ public class IncantersStartAction extends AbstractGameAction {
                 c.freeToPlayOnce = true;
             }
         }
+    }
+
+    @Override
+    public void update() {
+        setFree(AbstractDungeon.player.hand.group);
+        setFree(AbstractDungeon.player.discardPile.group);
+        setFree(AbstractDungeon.player.drawPile.group);
+        setFree(AbstractDungeon.player.exhaustPile.group);
+        this.isDone = true;
     }
 }
