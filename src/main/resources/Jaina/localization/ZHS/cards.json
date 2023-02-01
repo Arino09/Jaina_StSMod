@@ -135,5 +135,33 @@
   "jaina:IncantersFlow": {
     "NAME": "咒术洪流",
     "DESCRIPTION": "你在每回合打出的第一张法术牌耗能变为0。"
+  },
+  "jaina:CabalistsTome": {
+    "NAME": "秘法宝典",
+    "DESCRIPTION": "随机将 *3 张吉安娜的非稀有卡牌放入你的手牌。 NL 消耗 。"
+  },
+  "jaina:CramSession": {
+    "NAME": "考前刷夜",
+    "DESCRIPTION": "抽 !M! 张牌。 NL (受 jaina:法术伤害 加成。）"
+  },
+  "jaina:FrozenClone": {
+    "NAME": "寒冰克隆",
+    "DESCRIPTION": "获得 格挡 X 次，数值等于目标的攻击力。",
+    "UPGRADE_DESCRIPTION": "获得 格挡 X+1 次，数值等于目标的攻击力。",
+    "EXTENDED_DESCRIPTION": [
+      "这名敌人的意图不是 #r攻击。 "
+    ]
+  },
+  "jaina:IceShield": {
+    "NAME": "冰盾术",
+    "DESCRIPTION": "每有一名敌人，获得 !B! 点 格挡 。"
+  },
+  "jaina:FrostArmor": {
+    "NAME": "冰霜护甲",
+    "DESCRIPTION": "获得 !M! 层多层护甲。"
+  },
+  "jaina:ExplosiveRunes": {
+    "NAME": "爆炸符文",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 对 *爪牙 的伤害翻倍。 NL 如果杀死 *爪牙 ，移除部分会对 *精英 或者 *BOSS 敌人造成伤害。"
   }
 }

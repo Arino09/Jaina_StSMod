@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import jaina.actions.SpellDamageAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
@@ -41,6 +42,7 @@ public class SpellDamagePower extends AbstractJainaPower {
         if (this.amount >= 999) {
             this.amount = 999;
         }
+        addToBot(new SpellDamageAction());
     }
 
     @Override
@@ -51,6 +53,7 @@ public class SpellDamagePower extends AbstractJainaPower {
         if (this.amount <= 0) {
             addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, NAME));
         }
+        addToBot(new SpellDamageAction());
     }
 
     @Override

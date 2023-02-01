@@ -20,7 +20,7 @@ public class Flamecannon extends AbstractJainaCard {
     public Flamecannon() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.NONE, JainaEnums.CardTags.FIRE);
-        this.setDamage(13);
+        setDamage(13);
         cardsToPreview = new Burn();
         setDamageType(JainaEnums.DamageType.FIRE);
     }

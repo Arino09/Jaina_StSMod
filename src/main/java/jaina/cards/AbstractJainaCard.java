@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import jaina.powers.FrozenPower;
 
 public abstract class AbstractJainaCard extends CustomCard {
+
     /**
      * 构造函数
      *
@@ -108,7 +109,7 @@ public abstract class AbstractJainaCard extends CustomCard {
      *
      * @param damage 伤害值
      */
-    protected void setDamage(int damage) {
+    public void setDamage(int damage) {
         this.baseDamage = damage;
         this.damage = damage;
     }
@@ -118,7 +119,7 @@ public abstract class AbstractJainaCard extends CustomCard {
      *
      * @param block 格挡值
      */
-    protected void setBlock(int block) {
+    public void setBlock(int block) {
         this.baseBlock = block;
         this.block = block;
     }
@@ -128,7 +129,7 @@ public abstract class AbstractJainaCard extends CustomCard {
      *
      * @param number 特殊值
      */
-    protected void setMagicNumber(int number) {
+    public void setMagicNumber(int number) {
         this.baseMagicNumber = number;
         this.magicNumber = number;
     }
@@ -138,7 +139,7 @@ public abstract class AbstractJainaCard extends CustomCard {
      *
      * @param type 伤害类型
      */
-    protected void setDamageType(DamageInfo.DamageType type) {
+    public void setDamageType(DamageInfo.DamageType type) {
         this.damageType = this.damageTypeForTurn = type;
     }
 
@@ -147,12 +148,24 @@ public abstract class AbstractJainaCard extends CustomCard {
      *
      * @param cardStrings 卡牌信息
      */
-    protected void upgradeDescription(CardStrings cardStrings) {
+    public void upgradeDescription(CardStrings cardStrings) {
 
         if (cardStrings.UPGRADE_DESCRIPTION != null) {
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
         }
         initializeDescription();
+    }
+
+    /**
+     * 造成指定量伤害
+     *
+     * @param m  目标
+     * @param base 伤害数值
+     * @param ae 伤害效果
+     */
+    public void dealDamage(AbstractMonster m, int base, AbstractGameAction.AttackEffect ae) {
+
+        this.addToBot(new DamageAction(m, new DamageInfo(AbstractDungeon.player, base, this.damageTypeForTurn), ae));
     }
 
     /**

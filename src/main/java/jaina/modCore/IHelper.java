@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import jaina.actions.SpellDamageAction;
 
 import static jaina.modCore.Core.MOD_ID;
 
@@ -23,11 +24,11 @@ public interface IHelper {
      */
     static void getTempCard(AbstractCard card) {
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card));
+        AbstractDungeon.actionManager.addToBottom(new SpellDamageAction());
     }
 
     static boolean isSpellDamage(DamageInfo.DamageType type) {
         return type.equals(JainaEnums.DamageType.FIRE) || type.equals(JainaEnums.DamageType.FROST) || type.equals(JainaEnums.DamageType.ARCANE);
     }
-
 
 }

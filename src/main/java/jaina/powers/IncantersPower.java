@@ -41,7 +41,6 @@ public class IncantersPower extends AbstractJainaPower {
                 addToBot(new IncantersEndAction());
             }
         }
-
     }
 
     @Override
