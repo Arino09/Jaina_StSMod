@@ -27,7 +27,6 @@ public class IncantersPower extends AbstractJainaPower {
 
     @Override
     public void atStartOfTurn() {
-        // 所有jaina法术变为0费
         flash();
         cards = amount;
         addToBot(new IncantersStartAction());
