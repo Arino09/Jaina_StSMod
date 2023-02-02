@@ -158,10 +158,14 @@
   },
   "jaina:FrostArmor": {
     "NAME": "冰霜护甲",
-    "DESCRIPTION": "获得 !M! 层多层护甲。"
+    "DESCRIPTION": "获得 !M! 层 多层护甲 。"
   },
   "jaina:ExplosiveRunes": {
     "NAME": "爆炸符文",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 对 *爪牙 的伤害翻倍。 NL 如果杀死 *爪牙 ，移除部分会对 *精英 或者 *BOSS 敌人造成伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 对 *爪牙 的伤害翻倍。 NL 如果杀死 *爪牙 ，溢出部分会对所有敌人造成伤害。"
+  },
+  "jaina:FlameWard": {
+    "NAME": "火焰结界",
+    "DESCRIPTION": "获得 !B! 点 格挡。 NL 每当受到攻击，给予所有敌人 !M! 层 jaina:烧伤 。"
   }
 }
