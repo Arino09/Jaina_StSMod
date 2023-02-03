@@ -31,7 +31,7 @@ public class CabalistsTome extends AbstractJainaCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<AbstractCard> cards = IHelper.getRandomJainaCards(3);
+        ArrayList<AbstractCard> cards = IHelper.generateRandomJainaCards(3, true, true);
         // 从随机卡池中选3张卡
         for (AbstractCard c : cards) {
             c.setCostForTurn(0);

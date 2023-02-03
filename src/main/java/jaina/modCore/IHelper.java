@@ -26,6 +26,9 @@ public interface IHelper {
      * @param card 抽象卡牌类
      */
     static void getTempCard(AbstractCard card) {
+        if (AbstractDungeon.player.hasPower("MasterRealityPower")) {
+            card.upgrade();
+        }
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card));
         AbstractDungeon.actionManager.addToBottom(new SpellDamageAction());
     }
@@ -35,22 +38,51 @@ public interface IHelper {
     }
 
     /**
-     * 获得一定数量随机吉安娜卡牌
-     * （非稀有/特殊卡、非角色卡、非治疗卡）
+     * 生成一定数量随机吉安娜卡牌（非治疗、基础、特殊的职业卡）
      *
+     * @param amount      卡牌数量
+     * @param hasRare     是否生成稀有卡
+     * @param hasUncommon 是否生成罕见卡
      * @return 卡牌数组
      */
-    static ArrayList<AbstractCard> getRandomJainaCards(int amount) {
+    static ArrayList<AbstractCard> generateRandomJainaCards(int amount, boolean hasRare, boolean hasUncommon) {
         ArrayList<AbstractCard> cardRng = new ArrayList<>();
+
         for (AbstractCard c : CardLibrary.getAllCards()) {
-            // 随机卡池为非稀有/特殊卡、角色卡、非治疗卡
-            if (!c.rarity.equals(AbstractCard.CardRarity.RARE) && !c.rarity.equals(AbstractCard.CardRarity.SPECIAL) &&
-                    c.color.equals(JainaEnums.JAINA_COLOR) && !c.hasTag(AbstractCard.CardTags.HEALING))
+            // 初始条件为非治疗、基础、特殊的职业卡
+            boolean conditions = !c.rarity.equals(AbstractCard.CardRarity.SPECIAL) && !c.rarity.equals(AbstractCard.CardRarity.BASIC)
+                    && c.color.equals(JainaEnums.JAINA_COLOR) && !c.hasTag(AbstractCard.CardTags.HEALING);
+            // 如果不含稀有卡
+            if (!hasRare) {
+                conditions = conditions && !c.rarity.equals(AbstractCard.CardRarity.RARE);
+            }
+            if (!hasUncommon) {
+                conditions = conditions && !c.rarity.equals(AbstractCard.CardRarity.UNCOMMON);
+            }
+            if (conditions) {
                 cardRng.add(c);
+            }
         }
+
         ArrayList<AbstractCard> cards = new ArrayList<>();
-        for (int i = 0; i < amount; i++) {
-            cards.add(cardRng.get(AbstractDungeon.cardRandomRng.random(cardRng.size() - 1)).makeCopy());
+        while (cards.size() < 3) {
+            AbstractCard card = cardRng.get(AbstractDungeon.cardRandomRng.random(cardRng.size() - 1)).makeCopy();
+            boolean isRepeated = false;
+            //  去除重复的卡牌
+            for (AbstractCard c : cards) {
+                if (card.cardID.equals(c.cardID)) {
+                    isRepeated = true;
+                    break;
+                }
+            }
+            if (isRepeated) {
+                continue;
+            }
+
+            if (AbstractDungeon.player.hasPower("MasterRealityPower")) {
+                card.upgrade();
+            }
+            cards.add(card);
         }
         return cards;
     }
