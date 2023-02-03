@@ -11,10 +11,11 @@ public class FrostAffinityEndAction extends AbstractGameAction {
 
     private static void setFree(ArrayList<AbstractCard> cards) {
         for (AbstractCard c : cards) {
-            if (c.hasTag(JainaEnums.CardTags.FROST) && c.freeToPlay()) {
+            if (c.hasTag(JainaEnums.CardTags.FROST) && c.isCostModifiedForTurn) {
+                System.out.println(c.cost);
                 c.setCostForTurn(c.cost);
-                c.freeToPlayOnce = false;
                 c.isCostModifiedForTurn = false;
+                System.out.println(c.costForTurn);
             }
         }
     }

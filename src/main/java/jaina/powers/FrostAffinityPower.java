@@ -3,12 +3,12 @@ package jaina.powers;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import jaina.actions.FrostAffinityEndAction;
-import jaina.actions.FrostAffinityStartAction;
-import jaina.modCore.IHelper;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import jaina.actions.FrostAffinityEndAction;
+import jaina.actions.FrostAffinityStartAction;
+import jaina.modCore.IHelper;
 
 public class FrostAffinityPower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("FrostAffinityPower");
