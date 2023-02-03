@@ -33,6 +33,31 @@ public interface IHelper {
         AbstractDungeon.actionManager.addToBottom(new SpellDamageAction());
     }
 
+    static ArrayList<AbstractCard> getFewCards(ArrayList<AbstractCard> group, int amount, boolean canRepeated) {
+        ArrayList<AbstractCard> cards = new ArrayList<>();
+        while (cards.size() < amount) {
+            AbstractCard card = group.get(AbstractDungeon.cardRandomRng.random(group.size() - 1)).makeCopy();
+
+            //  如果不能重复，则去除重复的卡牌
+            if (!canRepeated) {
+                boolean isRepeated = false;
+                for (AbstractCard c : cards) {
+                    if (card.cardID.equals(c.cardID)) {
+                        isRepeated = true;
+                        break;
+                    }
+                }
+                if (isRepeated) continue;
+            }
+
+            if (AbstractDungeon.player.hasPower("MasterRealityPower")) {
+                card.upgrade();
+            }
+            cards.add(card);
+        }
+        return cards;
+    }
+
     static boolean isSpellDamage(DamageInfo.DamageType type) {
         return type.equals(JainaEnums.DamageType.FIRE) || type.equals(JainaEnums.DamageType.FROST) || type.equals(JainaEnums.DamageType.ARCANE);
     }
@@ -45,7 +70,7 @@ public interface IHelper {
      * @param hasUncommon 是否生成罕见卡
      * @return 卡牌数组
      */
-    static ArrayList<AbstractCard> generateRandomJainaCards(int amount, boolean hasRare, boolean hasUncommon) {
+    static ArrayList<AbstractCard> generateRandomJainaCards(int amount, boolean hasRare, boolean hasUncommon, boolean canRepeated) {
         ArrayList<AbstractCard> cardRng = new ArrayList<>();
 
         for (AbstractCard c : CardLibrary.getAllCards()) {
@@ -63,27 +88,6 @@ public interface IHelper {
                 cardRng.add(c);
             }
         }
-
-        ArrayList<AbstractCard> cards = new ArrayList<>();
-        while (cards.size() < 3) {
-            AbstractCard card = cardRng.get(AbstractDungeon.cardRandomRng.random(cardRng.size() - 1)).makeCopy();
-            boolean isRepeated = false;
-            //  去除重复的卡牌
-            for (AbstractCard c : cards) {
-                if (card.cardID.equals(c.cardID)) {
-                    isRepeated = true;
-                    break;
-                }
-            }
-            if (isRepeated) {
-                continue;
-            }
-
-            if (AbstractDungeon.player.hasPower("MasterRealityPower")) {
-                card.upgrade();
-            }
-            cards.add(card);
-        }
-        return cards;
+        return getFewCards(cardRng, amount, canRepeated);
     }
 }

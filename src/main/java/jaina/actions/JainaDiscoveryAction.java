@@ -35,7 +35,7 @@ public class JainaDiscoveryAction extends AbstractGameAction {
     public void update() {
 
         if (generatedCards == null) {
-            generatedCards = IHelper.generateRandomJainaCards(3, hasRare, hasUncommon);
+            generatedCards = IHelper.generateRandomJainaCards(3, hasRare, hasUncommon, false);
         }
 
         if (this.duration == Settings.ACTION_DUR_FAST) {

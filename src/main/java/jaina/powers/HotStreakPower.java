@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import jaina.modCore.JainaEnums;
 
 public class HotStreakPower extends AbstractJainaPower {
-    public static final String POWER_ID = IHelper.makeID("FrostAffinityPower");
+    public static final String POWER_ID = IHelper.makeID("HotStreakPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

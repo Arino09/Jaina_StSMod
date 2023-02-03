@@ -33,7 +33,7 @@ public class FontOfPower extends AbstractJainaCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<AbstractCard> cards = IHelper.generateRandomJainaCards(3, true, true);
+        ArrayList<AbstractCard> cards = IHelper.generateRandomJainaCards(3, true, true, false);
         // 如果这是手牌的最后一张则保留全部三张牌
         if (p.hand.group.size() == 1) {
             for (AbstractCard c : cards) {

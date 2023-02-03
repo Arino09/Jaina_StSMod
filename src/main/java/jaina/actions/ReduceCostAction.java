@@ -18,7 +18,7 @@ public class ReduceCostAction extends AbstractGameAction {
 
     private void reduceCost(ArrayList<AbstractCard> cards) {
         for (AbstractCard c : cards) {
-            if (c.hasTag(JainaEnums.CardTags.FROST)) {
+            if (c.hasTag(tags)) {
                 System.out.println(c.cost);
                 int newCost = c.cost - 2;
                 if (newCost < 0) newCost = 0;
