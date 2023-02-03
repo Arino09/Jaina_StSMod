@@ -6,9 +6,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import jaina.actions.FrostAffinityEndAction;
-import jaina.actions.FrostAffinityStartAction;
+import jaina.actions.RestoreCostAction;
+import jaina.actions.ReduceCostAction;
 import jaina.modCore.IHelper;
+import jaina.modCore.JainaEnums;
 
 public class FrostAffinityPower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("FrostAffinityPower");
@@ -25,19 +26,19 @@ public class FrostAffinityPower extends AbstractJainaPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        addToBot(new FrostAffinityEndAction());
+        addToBot(new RestoreCostAction(JainaEnums.CardTags.FROST));
         addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override
     public void onInitialApplication() {
         flash();
-        addToBot(new FrostAffinityStartAction());
+        addToBot(new ReduceCostAction(JainaEnums.CardTags.FROST));
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        addToBot(new FrostAffinityEndAction());
+        addToBot(new RestoreCostAction(JainaEnums.CardTags.FROST));
         addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 

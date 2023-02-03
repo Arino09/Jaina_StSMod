@@ -2,14 +2,21 @@ package jaina.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.AbstractCard.CardTags;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import jaina.modCore.JainaEnums;
 
 import java.util.ArrayList;
 
-public class FrostAffinityStartAction extends AbstractGameAction {
+public class ReduceCostAction extends AbstractGameAction {
 
-    private static void restoreCost(ArrayList<AbstractCard> cards) {
+    public final CardTags tags;
+
+    public ReduceCostAction(CardTags tags) {
+        this.tags = tags;
+    }
+
+    private void reduceCost(ArrayList<AbstractCard> cards) {
         for (AbstractCard c : cards) {
             if (c.hasTag(JainaEnums.CardTags.FROST)) {
                 System.out.println(c.cost);
@@ -23,10 +30,10 @@ public class FrostAffinityStartAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        restoreCost(AbstractDungeon.player.hand.group);
-        restoreCost(AbstractDungeon.player.discardPile.group);
-        restoreCost(AbstractDungeon.player.drawPile.group);
-        restoreCost(AbstractDungeon.player.exhaustPile.group);
+        reduceCost(AbstractDungeon.player.hand.group);
+        reduceCost(AbstractDungeon.player.discardPile.group);
+        reduceCost(AbstractDungeon.player.drawPile.group);
+        reduceCost(AbstractDungeon.player.exhaustPile.group);
         this.isDone = true;
     }
 }
