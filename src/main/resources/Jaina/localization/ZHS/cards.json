@@ -138,7 +138,7 @@
   },
   "jaina:CabalistsTome": {
     "NAME": "秘法宝典",
-    "DESCRIPTION": "随机将 *3 张吉安娜的非稀有卡牌放入你的手牌。 NL 消耗 。"
+    "DESCRIPTION": "随机将3张吉安娜的非稀有卡牌放入你的手牌。 NL 这些牌在本回合的耗能变为0点。 NL 消耗 。"
   },
   "jaina:CramSession": {
     "NAME": "考前刷夜",
@@ -167,5 +167,18 @@
   "jaina:FlameWard": {
     "NAME": "火焰结界",
     "DESCRIPTION": "获得 !B! 点 格挡。 NL 每当受到攻击，给予所有敌人 !M! 层 jaina:烧伤 。"
+  },
+  "jaina:FrostAffinity": {
+    "NAME": "冰霜亲和",
+    "DESCRIPTION": "在本回合中，你的下一张冰霜卡牌消耗减少 *2 点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "在本回合中，你的下一张冰霜卡牌消耗减少 *2 点。"
+  },
+  "jaina:DeckOfWonders": {
+    "NAME": "惊奇套牌",
+    "DESCRIPTION": "在你的抽牌堆中加入 !M! 张 *惊奇卡牌 。 NL 消耗 。"
+  },
+  "jaina:ScrollOfWonder": {
+    "NAME": "惊奇卡牌",
+    "DESCRIPTION": " jaina:自动释放 ：随机生成一张卡牌并使用。 NL 抽1张牌。 NL jaina:即逝 。"
   }
 }
