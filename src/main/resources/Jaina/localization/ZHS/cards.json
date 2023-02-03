@@ -179,6 +179,11 @@
   },
   "jaina:ScrollOfWonder": {
     "NAME": "惊奇卡牌",
-    "DESCRIPTION": " jaina:自动释放 ：随机生成一张卡牌并使用。 NL 抽1张牌。 NL jaina:即逝 。"
+    "DESCRIPTION": "jaina:自动释放 ：随机生成一张卡牌并使用。 NL 抽1张牌。 NL jaina:即逝 。"
+  },
+  "jaina:FontOfPower": {
+    "NAME": "能量之泉",
+    "DESCRIPTION": "jaina:发现 一张吉安娜卡牌。 NL 如果这张牌是手牌的最后一张，则保留全部三张牌。 NL 消耗 。"
   }
+
 }
