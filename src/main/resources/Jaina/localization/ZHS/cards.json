@@ -184,6 +184,11 @@
   "jaina:FontOfPower": {
     "NAME": "能量之泉",
     "DESCRIPTION": "jaina:发现 一张吉安娜卡牌。 NL 如果这张牌是手牌的最后一张，则保留全部三张牌。 NL 消耗 。"
+  },
+  "jaina:HotStreak": {
+    "NAME": "炽热连击",
+    "DESCRIPTION": "在本回合中，你的下一张火焰卡牌消耗减少 *2 点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "在本回合中，你的下一张火焰卡牌消耗减少 *2 点。"
   }
 
 }
