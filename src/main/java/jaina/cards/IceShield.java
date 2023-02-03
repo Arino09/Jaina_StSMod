@@ -30,7 +30,10 @@ public class IceShield extends AbstractJainaCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int amount = AbstractDungeon.getMonsters().monsters.size();
+        int amount = 0;
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if (monster.currentHealth > 0) amount++;
+        }
         for (int i = 0; i < amount; i++) {
             gainBlock(block);
         }

@@ -37,7 +37,7 @@ public class ExplosiveRunes extends AbstractJainaCard {
             int overflow = m.currentHealth;
             if (m.isDead) {
                 overflow = 2 * this.damage - overflow;
-               addToBot(new DamageAllEnemiesAction(p, overflow, damageTypeForTurn, AttackEffect.FIRE));
+                addToBot(new DamageAllEnemiesAction(p, overflow, damageTypeForTurn, AttackEffect.FIRE));
             }
         } else {
             dealDamage(m, AttackEffect.FIRE);

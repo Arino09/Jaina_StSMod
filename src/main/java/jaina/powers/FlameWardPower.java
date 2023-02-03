@@ -1,17 +1,13 @@
 package jaina.powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import jaina.modCore.IHelper;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import jaina.modCore.JainaEnums;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import jaina.modCore.IHelper;
 
 public class FlameWardPower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("FlameWardPower");

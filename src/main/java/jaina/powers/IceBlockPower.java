@@ -1,9 +1,7 @@
 package jaina.powers;
 
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnPlayerDeathPower;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -33,9 +31,9 @@ public class IceBlockPower extends AbstractJainaPower {
         if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner != this.owner) {
             flash();
             if (AbstractDungeon.player.currentHealth < damageAmount) {
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
                 return 0;
             }
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
         return damageAmount;
     }
