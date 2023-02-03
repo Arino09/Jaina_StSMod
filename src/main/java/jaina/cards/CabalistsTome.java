@@ -3,8 +3,6 @@ package jaina.cards;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
@@ -33,17 +31,11 @@ public class CabalistsTome extends AbstractJainaCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<AbstractCard> cardRng = new ArrayList<>();
-        for (AbstractCard c : CardLibrary.getAllCards()) {
-            // 随机卡池为非稀有卡、角色卡、非治疗卡
-            if (!c.rarity.equals(CardRarity.RARE) && c.color.equals(JainaEnums.JAINA_COLOR) && !c.hasTag(AbstractCard.CardTags.HEALING))
-                cardRng.add(c);
-        }
+        ArrayList<AbstractCard> cards = IHelper.getRandomJainaCards(3);
         // 从随机卡池中选3张卡
-        for (int i = 0; i < 3; i++) {
-            AbstractCard card = cardRng.get(AbstractDungeon.cardRandomRng.random(cardRng.size() - 1)).makeCopy();
-            card.setCostForTurn(0);
-            IHelper.getTempCard(card);
+        for (AbstractCard c : cards) {
+            c.setCostForTurn(0);
+            IHelper.getTempCard(c);
         }
     }
 

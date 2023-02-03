@@ -62,5 +62,11 @@
       "受到攻击时，给予所有敌人",
       "层 #r烧伤 。"
     ]
+  },
+  "jaina:FrostAffinityPower": {
+    "NAME": "冰霜亲和",
+    "DESCRIPTIONS": [
+      "冰霜牌的耗能减少 #y2 点。"
+    ]
   }
 }
