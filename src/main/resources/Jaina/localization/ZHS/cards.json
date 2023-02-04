@@ -183,12 +183,26 @@
   },
   "jaina:FontOfPower": {
     "NAME": "能量之泉",
-    "DESCRIPTION": "jaina:发现 一张吉安娜卡牌。 NL 如果这张牌是手牌的最后一张，则保留全部三张牌。 NL 消耗 。"
+    "DESCRIPTION": "jaina:发现 1张吉安娜卡牌。 NL 如果这张牌是手牌的最后一张，则保留全部三张牌。 NL 消耗 。"
   },
   "jaina:HotStreak": {
     "NAME": "炽热连击",
     "DESCRIPTION": "在本回合中，你的下一张火焰卡牌消耗减少 *2 点。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "在本回合中，你的下一张火焰卡牌消耗减少 *2 点。"
+  },
+  "jaina:MagicTrick": {
+    "NAME": "魔术戏法",
+    "DESCRIPTION": "jaina:发现 1张耗费为1的吉安娜非稀有卡。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "jaina:发现 1张耗费为1的吉安娜非普通卡。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。"
+  },
+  "jaina:PrimordialGlyph": {
+    "NAME": "远古雕文",
+    "DESCRIPTION": "jaina:发现 1张吉安娜非普通卡。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "jaina:发现 1张升级过的吉安娜非普通卡。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。"
+  },
+  "jaina:DragonsBreath": {
+    "NAME": "龙息术",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果手牌中只有火焰卡牌，这张牌在本回合的耗能变为0点。"
   }
 
 }

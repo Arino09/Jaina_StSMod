@@ -3,12 +3,12 @@ package jaina.powers;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import jaina.actions.RestoreCostAction;
-import jaina.actions.ReduceCostAction;
-import jaina.modCore.IHelper;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import jaina.actions.ReduceCostAction;
+import jaina.actions.RestoreCostAction;
+import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 public class HotStreakPower extends AbstractJainaPower {
@@ -26,8 +26,10 @@ public class HotStreakPower extends AbstractJainaPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        addToBot(new RestoreCostAction(JainaEnums.CardTags.FIRE));
-        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+        if (card.hasTag(JainaEnums.CardTags.FIRE)) {
+            addToBot(new RestoreCostAction(JainaEnums.CardTags.FIRE));
+            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+        }
     }
 
     @Override

@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardTags;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import jaina.modCore.JainaEnums;
 
 import java.util.ArrayList;
 
@@ -19,11 +18,9 @@ public class ReduceCostAction extends AbstractGameAction {
     private void reduceCost(ArrayList<AbstractCard> cards) {
         for (AbstractCard c : cards) {
             if (c.hasTag(tags)) {
-                System.out.println(c.cost);
                 int newCost = c.cost - 2;
                 if (newCost < 0) newCost = 0;
                 c.setCostForTurn(newCost);
-                System.out.println(c.costForTurn);
             }
         }
     }

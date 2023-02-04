@@ -18,10 +18,8 @@ public class RestoreCostAction extends AbstractGameAction {
     private void restoreCost(ArrayList<AbstractCard> cards) {
         for (AbstractCard c : cards) {
             if (c.hasTag(tags) && c.isCostModifiedForTurn) {
-                System.out.println(c.cost);
                 c.setCostForTurn(c.cost);
                 c.isCostModifiedForTurn = false;
-                System.out.println(c.costForTurn);
             }
         }
     }

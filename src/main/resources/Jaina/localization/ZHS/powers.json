@@ -68,5 +68,11 @@
     "DESCRIPTIONS": [
       "冰霜牌的耗能减少 #y2 点。"
     ]
+  },
+  "jaina:HotStreakPower": {
+    "NAME": "炽热连击",
+    "DESCRIPTIONS": [
+      "火焰牌的耗能减少 #y2 点。"
+    ]
   }
 }
