@@ -249,15 +249,6 @@ public abstract class AbstractJainaCard extends CustomCard {
         }
     }
 
-    /**
-     * 在弃牌堆中加入 [灼烧]
-     *
-     * @param amount [灼烧] 卡牌的数量
-     */
-    public void getBurn(int amount) {
-        addToBot(new MakeTempCardInDiscardAction(new Burn(), amount));
-    }
-
     //重写了升级方法，升级效果写在limitedUpgrade中即可
     @Override
     public void upgrade() {

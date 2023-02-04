@@ -23,7 +23,6 @@ public class Pyroblast extends AbstractJainaCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.RARE, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(35);
-        setMagicNumber(3);
         cardsToPreview = new Burn();
         setDamageType(JainaEnums.DamageType.FIRE);
     }
@@ -37,7 +36,7 @@ public class Pyroblast extends AbstractJainaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
         dealDamage(m, AbstractGameAction.AttackEffect.NONE);
-        getBurn(magicNumber);
+        IHelper.getBurn(3);
     }
 
     @Override

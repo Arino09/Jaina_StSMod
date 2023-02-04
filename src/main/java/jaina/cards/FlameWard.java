@@ -32,6 +32,7 @@ public class FlameWard extends AbstractJainaCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        gainBlock();
         gainPower(new FlameWardPower(p, magicNumber));
     }
 

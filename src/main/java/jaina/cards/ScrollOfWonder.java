@@ -20,7 +20,7 @@ public class ScrollOfWonder extends AbstractJainaCard {
     private static final int COST = -2;
 
     public ScrollOfWonder() {
-        super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
+        super(ID, false, CARD_STRINGS, COST, CardType.SKILL, CardColor.COLORLESS,
                 CardRarity.SPECIAL, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
         this.purgeOnUse = true;
     }

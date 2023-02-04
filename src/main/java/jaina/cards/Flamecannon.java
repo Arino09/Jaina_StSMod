@@ -29,7 +29,7 @@ public class Flamecannon extends AbstractJainaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractMonster randM = AbstractDungeon.getRandomMonster();
         dealDamage(randM, AbstractGameAction.AttackEffect.FIRE);
-        getBurn(1);
+        IHelper.getBurn(1);
     }
 
     @Override

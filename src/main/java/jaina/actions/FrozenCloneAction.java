@@ -8,10 +8,9 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public class FrozenCloneAction extends AbstractGameAction {
     private final AbstractPlayer p;
-    public int[] multiDamage;
-    private boolean freeToPlayOnce = false;
-    private int energyOnUse = -1;
-    private boolean upgraded = false;
+    private final boolean freeToPlayOnce;
+    private final int energyOnUse;
+    private final boolean upgraded;
 
     public FrozenCloneAction(AbstractPlayer p, int amount, boolean freeToPlayOnce, int energyOnUse, boolean upgraded) {
         this.amount = amount;

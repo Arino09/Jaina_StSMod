@@ -1,8 +1,10 @@
 package jaina.modCore;
 
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import jaina.actions.SpellDamageAction;
@@ -19,7 +21,14 @@ public interface IHelper {
     static String makeID(String id) {
         return MOD_ID + ":" + id;
     }
-
+    /**
+     * 在弃牌堆中加入 [灼烧]
+     *
+     * @param amount [灼烧] 卡牌的数量
+     */
+    static void getBurn(int amount) {
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Burn(), amount));
+    }
     /**
      * 获得临时手牌
      *

@@ -28,7 +28,7 @@ public class Flamestrike extends AbstractJainaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealAoeDamage(AbstractGameAction.AttackEffect.FIRE);
         dealAoeDamage(AbstractGameAction.AttackEffect.FIRE);
-        getBurn(1);
+        IHelper.getBurn(2);
     }
 
     @Override

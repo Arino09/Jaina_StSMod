@@ -27,7 +27,7 @@ public class Fireball extends AbstractJainaCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealDamage(m, AbstractGameAction.AttackEffect.FIRE);
-        getBurn(1);
+        IHelper.getBurn(1);
     }
 
     @Override
