@@ -10,12 +10,12 @@
   },
   "jaina:ArcaneMissileToken": {
     "NAME": "奥术弹",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "强能奥术弹"
   },
   "jaina:ArcaneMissiles": {
     "NAME": "奥术飞弹",
-    "DESCRIPTION": "将 !M! 张 *奥术弹 置入你的手牌。",
-    "UPGRADE_DESCRIPTION": "将 !M! 张 *奥术弹+ 置入你的手牌。"
+    "DESCRIPTION": "将 !M! 张 *奥术弹 置入你的手牌。"
   },
   "jaina:Blizzard": {
     "NAME": "暴风雪",
@@ -183,7 +183,7 @@
   },
   "jaina:FontOfPower": {
     "NAME": "能量之泉",
-    "DESCRIPTION": "jaina:发现 1张吉安娜卡牌。 NL 如果这张牌是手牌的最后一张，则保留全部三张牌。 NL 消耗 。"
+    "DESCRIPTION": "在本回合内获得 jaina:法术伤害 + !M! 。"
   },
   "jaina:HotStreak": {
     "NAME": "炽热连击",
@@ -219,7 +219,44 @@
   },
   "jaina:FlameLance": {
     "NAME": "炎枪术",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 未被格挡的伤害造成 jaina:燃烧 。 NL jaina:烧伤 ： *1 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若造成未被格挡的伤害，给予 !M! 层 jaina:燃烧 。 NL jaina:烧伤 ： *1 。"
+  },
+  "jaina:ForbiddenFlame": {
+    "NAME": "禁忌烈焰",
+    "DESCRIPTION": "造成X倍 !D! 点伤害。 NL jaina:烧伤 ： *X 。"
+  },
+  "jaina:GreaterArcaneMissiles": {
+    "NAME": "强能奥术飞弹",
+    "DESCRIPTION": "将 !M! 张 *强能奥术弹 置入你的手牌。"
+  },
+  "jaina:Icicle": {
+    "NAME": "冰刺",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若敌人被 jaina:冻结 ，则抽1张牌。"
+  },
+  "jaina:Ignite": {
+    "NAME": "点燃",
+    "DESCRIPTION": "触发所有敌人拥有的 jaina:燃烧 。"
+  },
+  "jaina:Meteor": {
+    "NAME": "陨石术",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予所有生物 !M! 层 jaina:燃烧 。"
+  },
+  "jaina:RayOfFrost": {
+    "NAME": "霜冻射线",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若敌人被 jaina:冻结 ，则给予 !M! 层 易伤 。"
+  },
+  "jaina:Scorch": {
+    "NAME": "灼烧",
+    "DESCRIPTION": "给予一名敌人 !M! 层 jaina:燃烧 。 NL 在本场战斗中所有 *点燃 的 jaina:燃烧 层数增加2。"
+  },
+  "jaina:ShootingStar": {
+    "NAME": "迸射流星",
+    "DESCRIPTION": "随机造成3点伤害 !M! 次。"
+  },
+  "jaina:Wildfire": {
+    "NAME": "野火",
+    "DESCRIPTION": "每当你给予 jaina:燃烧 时，额外给予3层。",
+    "UPGRADE_DESCRIPTION": "每当你给予 jaina:燃烧 时，额外给予一倍的层数。"
   }
 
 

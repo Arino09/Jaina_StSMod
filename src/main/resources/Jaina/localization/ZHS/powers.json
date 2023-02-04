@@ -5,18 +5,6 @@
       "被 #b冻结 的角色失去他的下一次行动机会。 NL #b冻结 效果不能叠加。"
     ]
   },
-  "jaina:IceBarrierPower": {
-    "NAME": "寒冰护甲",
-    "DESCRIPTIONS": [
-      "在你受到攻击时获得12点护甲。 NL 受到一次攻击仅触发一次。"
-    ]
-  },
-  "jaina:IceBarrierPowerP": {
-    "NAME": "寒冰护甲+",
-    "DESCRIPTIONS": [
-      "在你受到攻击时获得16点护甲。 NL 受到一次攻击仅触发一次。"
-    ]
-  },
   "jaina:IceBlockPower": {
     "NAME": "寒冰屏障",
     "DESCRIPTIONS": [
@@ -28,6 +16,13 @@
     "DESCRIPTIONS": [
       "法术伤害提高",
       "点。"
+    ]
+  },
+  "jaina:LoseSpellDamagePower": {
+    "NAME": "能量之泉",
+    "DESCRIPTIONS": [
+      "回合结束时失去",
+      "点法术伤害。"
     ]
   },
   "jaina:VaporizePower": {
@@ -43,7 +38,7 @@
     ]
   },
   "jaina:BurningPower": {
-    "NAME": "烧伤",
+    "NAME": "燃烧",
     "DESCRIPTIONS": [
       "回合结束时失去",
       "点生命值。"
@@ -73,6 +68,18 @@
     "NAME": "炽热连击",
     "DESCRIPTIONS": [
       "火焰牌的耗能减少 #y2 点。"
+    ]
+  },
+  "jaina:WildFirePower": {
+    "NAME": "野火",
+    "DESCRIPTIONS": [
+      "每当你给予 #r燃烧 时，额外给予 #y3 层。"
+    ]
+  },
+  "jaina:WildFirePowerP": {
+    "NAME": "野火+",
+    "DESCRIPTIONS": [
+      "每当你给予 #r燃烧 时，额外给予一倍的层数。"
     ]
   }
 }
