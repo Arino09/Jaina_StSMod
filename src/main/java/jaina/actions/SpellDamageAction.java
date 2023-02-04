@@ -25,7 +25,7 @@ public class SpellDamageAction extends AbstractGameAction {
 
     private void updateMagicNumber(ArrayList<AbstractCard> cards, int amount) {
         for (AbstractCard c : cards) {
-            if (c.cardID.equals(CramSession.ID)) {
+            if (c instanceof CramSession) {
                 c.magicNumber = c.baseMagicNumber + amount;
             }
         }

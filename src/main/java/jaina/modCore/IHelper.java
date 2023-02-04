@@ -21,6 +21,7 @@ public interface IHelper {
     static String makeID(String id) {
         return MOD_ID + ":" + id;
     }
+
     /**
      * 在弃牌堆中加入 [灼烧]
      *
@@ -29,6 +30,7 @@ public interface IHelper {
     static void getBurn(int amount) {
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Burn(), amount));
     }
+
     /**
      * 获得临时手牌
      *

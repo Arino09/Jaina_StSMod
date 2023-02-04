@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
@@ -17,6 +18,7 @@ public class DragonsBreath extends AbstractJainaCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
     private static final int COST = 2;
+    private boolean isGold = false;
 
     public DragonsBreath() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
@@ -29,23 +31,32 @@ public class DragonsBreath extends AbstractJainaCard {
         upgradeDamage(4);
     }
 
+    // 减费时显示金色框
     @Override
-    public void update() {
-        super.update();
-        if (AbstractDungeon.isPlayerInDungeon() && AbstractDungeon.player.hand != null) {
-            boolean onlyFire = true;
-            for (AbstractCard c : AbstractDungeon.player.hand.group) {
-                if (!c.hasTag(JainaEnums.CardTags.FIRE)) {
-                    onlyFire = false;
-                    break;
-                }
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if (isGold) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        boolean onlyFire = true;
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            if (!c.hasTag(JainaEnums.CardTags.FIRE)) {
+                onlyFire = false;
+                break;
             }
-            if (onlyFire || isCostModifiedForTurn) {
-                setCostForTurn(0);
-            } else {
-                setCostForTurn(cost);
-                this.isCostModifiedForTurn = false;
-            }
+        }
+        if (onlyFire || isCostModifiedForTurn) {
+            setCostForTurn(0);
+            isGold = true;
+        } else {
+            setCostForTurn(cost);
+            this.isCostModifiedForTurn = false;
+            isGold = false;
         }
     }
 

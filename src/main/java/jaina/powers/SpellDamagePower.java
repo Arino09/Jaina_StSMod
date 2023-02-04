@@ -35,8 +35,8 @@ public class SpellDamagePower extends AbstractJainaPower {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
 
-        if (this.amount == 0) {
-            addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "SpellDamagePower"));
+        if (this.amount <= 0) {
+            addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
 
         if (this.amount >= 999) {
@@ -51,7 +51,7 @@ public class SpellDamagePower extends AbstractJainaPower {
         this.amount -= reduceAmount;
 
         if (this.amount <= 0) {
-            addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, NAME));
+            addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
         addToBot(new SpellDamageAction());
     }

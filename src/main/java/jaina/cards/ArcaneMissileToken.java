@@ -18,8 +18,7 @@ public class ArcaneMissileToken extends AbstractJainaCard {
     public ArcaneMissileToken() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, CardColor.COLORLESS,
                 CardRarity.SPECIAL, CardTarget.ENEMY, JainaEnums.CardTags.ARCANE);
-        // 造成2点伤害并消耗
-        setDamage(2);
+        setDamage(3);
         this.exhaust = true;
         setDamageType(JainaEnums.DamageType.ARCANE);
     }
@@ -31,7 +30,8 @@ public class ArcaneMissileToken extends AbstractJainaCard {
 
     @Override
     public void upp() {
-        upgradeDamage(1);
+        upgradeDamage(2);
+        this.name = CARD_STRINGS.UPGRADE_DESCRIPTION;
     }
 
     @Override

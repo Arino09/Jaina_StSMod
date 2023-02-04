@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.actions.FrozenEnemyAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
+import jaina.powers.FrozenPower;
 
 public class IceLance extends AbstractJainaCard {
 
@@ -32,7 +33,7 @@ public class IceLance extends AbstractJainaCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // 对冻结的敌人造成伤害，或冻结未被冻结的敌人
-        if (m.hasPower(IHelper.makeID("FrozenPower"))) {
+        if (m.hasPower(FrozenPower.POWER_ID)) {
             dealDamage(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         } else {
             this.exhaust = true;

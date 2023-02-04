@@ -1,13 +1,15 @@
 package jaina.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import jaina.modCore.IHelper;
-import jaina.modCore.JainaEnums;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
+import jaina.modCore.IHelper;
+import jaina.modCore.JainaEnums;
 
 
 public class FirstFlame extends AbstractJainaCard {
@@ -35,6 +37,7 @@ public class FirstFlame extends AbstractJainaCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new VFXAction(new FireballEffect(p.hb_x, p.hb_y, m.hb_x, m.hb_y)));
         dealDamage(m, AbstractGameAction.AttackEffect.FIRE);
         SecondFlame flame = new SecondFlame();
         if (upgraded) flame.upgrade();

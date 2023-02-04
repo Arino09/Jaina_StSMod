@@ -30,7 +30,7 @@ public class IceBlockPower extends AbstractJainaPower {
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner != this.owner) {
             flash();
-            if (AbstractDungeon.player.currentHealth < damageAmount) {
+            if (owner.currentHealth + owner.currentBlock <= damageAmount) {
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
                 return 0;
             }

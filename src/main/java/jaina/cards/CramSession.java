@@ -32,9 +32,6 @@ public class CramSession extends AbstractJainaCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (AbstractDungeon.player.hasPower(SpellDamagePower.POWER_ID)) {
-            this.magicNumber = baseMagicNumber + AbstractDungeon.player.getPower(SpellDamagePower.POWER_ID).amount;
-        }
         drawCards(magicNumber);
     }
 

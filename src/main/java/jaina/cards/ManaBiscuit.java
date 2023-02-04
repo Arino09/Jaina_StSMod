@@ -22,7 +22,7 @@ public class ManaBiscuit extends AbstractJainaCard {
     private static final int COST = 0;
 
     public ManaBiscuit() {
-        super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
+        super(ID, false, CARD_STRINGS, COST, CardType.SKILL, CardColor.COLORLESS,
                 CardRarity.SPECIAL, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
         setMagicNumber(2);
         this.exhaust = true;
