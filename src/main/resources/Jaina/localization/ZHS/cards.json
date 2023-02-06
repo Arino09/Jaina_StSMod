@@ -259,6 +259,17 @@
     "NAME": "镜像实体",
     "DESCRIPTION": "复制一名敌人的攻击方式，对其造成伤害。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "复制一名敌人的攻击方式，对其造成伤害。"
+  },
+  "jaina:ManaBind": {
+    "NAME": "法术共鸣",
+    "DESCRIPTION": "你的下一张 *奥术 牌打出两次。",
+    "UPGRADE_DESCRIPTION": "你的下两张 *奥术 牌打出两次。"
+  },
+  "jaina:ShiftingScroll": {
+    "NAME": "变形卷轴",
+    "DESCRIPTION": "这张牌在你的手中每回合开始都会变形成为一张随机吉安娜卡牌。",
+    "UPGRADE_DESCRIPTION": "【变形】"
+
   }
 
 

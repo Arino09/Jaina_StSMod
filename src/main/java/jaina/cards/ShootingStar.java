@@ -20,14 +20,15 @@ public class ShootingStar extends AbstractJainaCard {
 
     public ShootingStar() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.NONE, JainaEnums.CardTags.FROST);
-        setDamage(3);
-        setMagicNumber(3);
+                CardRarity.COMMON, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+        setDamage(2);
+        setMagicNumber(4);
+        setDamageType(JainaEnums.DamageType.ARCANE);
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeDamage(1);
     }
 
     @Override

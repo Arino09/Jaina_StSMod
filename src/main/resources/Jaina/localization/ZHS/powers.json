@@ -81,5 +81,13 @@
     "DESCRIPTIONS": [
       "每当你给予 #r燃烧 时，额外给予一倍的层数。"
     ]
+  },
+  "jaina:ManaBindPower": {
+    "NAME": "法术共鸣",
+    "DESCRIPTIONS": [
+      "你的下一张 #p奥术 牌打出两次。",
+      "你的下",
+      "张 #p奥术 牌打出两次。"
+    ]
   }
 }

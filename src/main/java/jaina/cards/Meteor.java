@@ -27,6 +27,7 @@ public class Meteor extends AbstractJainaCard {
                 CardRarity.RARE, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(20);
         setMagicNumber(5);
+        setDamageType(JainaEnums.DamageType.FIRE);
     }
 
     @Override

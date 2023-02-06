@@ -25,6 +25,8 @@ public class JainaEnums {
         public static AbstractCard.CardTags FROST;
         @SpireEnum
         public static AbstractCard.CardTags ARCANE;
+        @SpireEnum
+        public static AbstractCard.CardTags SHIFT;
     }
 
     public enum DamageType {
