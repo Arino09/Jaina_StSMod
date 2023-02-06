@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 import jaina.powers.BurningPower;
-import jaina.powers.WildfirePower;
 
 
 public class FlameLance extends AbstractJainaCard {

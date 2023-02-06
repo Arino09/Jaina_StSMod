@@ -1,40 +1,59 @@
 package jaina.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import jaina.actions.FrozenCloneAction;
+import com.megacrit.cardcrawl.monsters.EnemyMoveInfo;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
+import java.lang.reflect.Field;
 
-public class FrozenClone extends AbstractJainaCard {
 
-    public static final String ID = IHelper.makeID("FrozenClone");
+public class MirrorEntity extends AbstractJainaCard {
+
+    public static final String ID = IHelper.makeID("MirrorEntity");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = -1;
+    private static final int COST = 2;
 
-    public FrozenClone() {
+    public MirrorEntity() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.ENEMY, JainaEnums.CardTags.FROST);
+                CardRarity.RARE, CardTarget.ENEMY, JainaEnums.CardTags.ARCANE);
+        this.exhaust = true;
     }
 
     @Override
     public void upp() {
+        this.exhaust = false;
         upgradeDescription(CARD_STRINGS);
     }
 
-    // 可用时才会调用这个方法
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m.getIntentBaseDmg() >= 0) {
-            // 如果意图为攻击则获得与攻击力相同的格挡值
-            setBlock(m.getIntentBaseDmg());
-            addToBot(new FrozenCloneAction(p, block, freeToPlayOnce, energyOnUse, upgraded));
+        if (m.getIntentBaseDmg() > 0) {
+            AttackEffect ae;
+            try {
+                Field f = AbstractMonster.class.getDeclaredField("move");
+                f.setAccessible(true);
+                EnemyMoveInfo move = (EnemyMoveInfo) f.get(m);
+
+                setDamage(move.baseDamage);
+                if (move.isMultiDamage) {
+                    setMagicNumber(move.multiplier);
+                }
+
+            } catch (NoSuchFieldException | IllegalAccessException e) {
+                throw new RuntimeException(e);
+            }
+            ae = damage >= 15 ? AttackEffect.BLUNT_HEAVY : AttackEffect.BLUNT_LIGHT;
+            for (int i = 0; i < magicNumber; i++) {
+                dealDamage(m, ae);
+            }
         }
     }
 
@@ -60,14 +79,13 @@ public class FrozenClone extends AbstractJainaCard {
                 return true;
             }
         }
-        // 如果无攻击意图则设定不能使用的文本
         this.cantUseMessage = IHelper.UI_STRINGS.TEXT[2];
         return false;
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new FrozenClone();
+        return new MirrorEntity();
     }
 
 }

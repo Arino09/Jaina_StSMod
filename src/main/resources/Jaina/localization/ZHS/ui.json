@@ -1,13 +1,9 @@
 {
-  "jaina:FrozenIntent": {
+  "jaina:ui": {
     "TEXT": [
       "冻结",
-      "该敌人被冻结了。"
-    ]
-  },
-  "jaina:Discovery": {
-    "TEXT": [
-      "选择一张加入你的手牌"
+      "该敌人被冻结了。",
+      "这名敌人的意图不是 #r攻击。 "
     ]
   }
 }

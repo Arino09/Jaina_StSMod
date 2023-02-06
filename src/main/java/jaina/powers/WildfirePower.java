@@ -1,14 +1,10 @@
 package jaina.powers;
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import jaina.modCore.IHelper;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import jaina.modCore.JainaEnums;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import jaina.modCore.IHelper;
 
 public class WildfirePower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("WildfirePower");

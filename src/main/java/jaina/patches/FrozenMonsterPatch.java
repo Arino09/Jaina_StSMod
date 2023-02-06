@@ -15,6 +15,7 @@ import javassist.CannotCompileException;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 
+import static jaina.modCore.IHelper.UI_STRINGS;
 import static jaina.modCore.JainaEnums.FROZEN;
 
 public class FrozenMonsterPatch {
@@ -78,8 +79,6 @@ public class FrozenMonsterPatch {
             method = "updateIntentTip"
     )
     public static class UpdateIntentTip {
-
-        private static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(IHelper.makeID("FrozenIntent"));
 
         public UpdateIntentTip() {
         }

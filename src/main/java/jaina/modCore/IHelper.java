@@ -5,8 +5,10 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Burn;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import jaina.actions.SpellDamageAction;
 
 import java.util.ArrayList;
@@ -15,7 +17,7 @@ import static jaina.modCore.Core.MOD_ID;
 
 public interface IHelper {
     /**
-     * @param id 卡牌/遗物/药水id
+     * @param id 卡牌/遗物/药水/能力id
      * @return 加上"{MOD_ID}:"前缀的ID，也是本地化json中的ID
      */
     static String makeID(String id) {
@@ -37,13 +39,17 @@ public interface IHelper {
      * @param card 抽象卡牌类
      */
     static void getTempCard(AbstractCard card) {
-        if (AbstractDungeon.player.hasPower("MasterRealityPower")) {
-            card.upgrade();
-        }
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card));
         AbstractDungeon.actionManager.addToBottom(new SpellDamageAction());
     }
 
+    /**
+     * 从卡牌列表中再筛选出一定数量的牌
+     * @param group 筛选池
+     * @param amount 数量
+     * @param canRepeated 是否允许重复
+     * @return 卡牌数组
+     */
     static ArrayList<AbstractCard> getFewCards(ArrayList<AbstractCard> group, int amount, boolean canRepeated) {
         ArrayList<AbstractCard> cards = new ArrayList<>();
         while (cards.size() < amount) {
@@ -69,6 +75,11 @@ public interface IHelper {
         return cards;
     }
 
+    /**
+     * 判断伤害是否受法术伤害影响
+     * @param type 伤害类型
+     * @return 是否受影响
+     */
     static boolean isSpellDamage(DamageInfo.DamageType type) {
         return type.equals(JainaEnums.DamageType.FIRE) || type.equals(JainaEnums.DamageType.FROST) || type.equals(JainaEnums.DamageType.ARCANE);
     }
@@ -101,4 +112,6 @@ public interface IHelper {
         }
         return getFewCards(cardRng, amount, canRepeated);
     }
+
+    UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString("jaina:ui");
 }
