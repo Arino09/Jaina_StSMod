@@ -19,7 +19,7 @@ public class IceWall extends AbstractJainaCard {
 
     public IceWall() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.SELF, JainaEnums.CardTags.FROST);
+                CardRarity.UNCOMMON, CardTarget.SELF, JainaEnums.CardTags.FROST);
         setBlock(5);
     }
 

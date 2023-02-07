@@ -18,11 +18,11 @@ public class Scorch extends AbstractJainaCard {
     public static final String ID = IHelper.makeID("Scorch");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     public Scorch() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
+                CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
         setMagicNumber(4);
     }
 
