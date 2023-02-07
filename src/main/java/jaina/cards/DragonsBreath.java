@@ -96,8 +96,8 @@ public class DragonsBreath extends AbstractJainaCard {
     }
 
     private void changeCost() {
-        if (checkOnlyFire() || isCostModifiedForTurn) {
-            setCostForTurn(0);
+        if (checkOnlyFire() || freeToPlay()) {
+            cost = 0;
         } else {
             setCostForTurn(cost);
             this.isCostModifiedForTurn = false;
