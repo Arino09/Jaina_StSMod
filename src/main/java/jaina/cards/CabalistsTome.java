@@ -26,7 +26,7 @@ public class CabalistsTome extends AbstractJainaCard {
 
     @Override
     public void upp() {
-        updateCost(-1);
+        upgradeBaseCost(2);
     }
 
     @Override

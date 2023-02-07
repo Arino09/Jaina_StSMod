@@ -1,13 +1,13 @@
 package jaina.cards;
 
 import com.badlogic.gdx.graphics.Color;
-import jaina.modCore.IHelper;
-import jaina.modCore.JainaEnums;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import jaina.modCore.IHelper;
+import jaina.modCore.JainaEnums;
 
 
 public class ShiftingScroll extends AbstractJainaCard {
@@ -17,6 +17,7 @@ public class ShiftingScroll extends AbstractJainaCard {
 
     private static final int COST = -2;
     private AbstractJainaCard shiftCard;
+
     public ShiftingScroll() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.RARE, CardTarget.NONE, JainaEnums.CardTags.ARCANE);

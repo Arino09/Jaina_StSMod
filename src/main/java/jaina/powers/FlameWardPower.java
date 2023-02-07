@@ -14,13 +14,11 @@ public class FlameWardPower extends AbstractJainaPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private final int number;
 
-    public FlameWardPower(AbstractCreature owner, int number) {
+    public FlameWardPower(AbstractCreature owner, int amount) {
         super(POWER_ID, true, NAME, PowerType.BUFF);
         this.owner = owner;
-        this.number = number;
-        this.amount = -1;
+        this.amount = amount;
         updateDescription();
     }
 
@@ -29,7 +27,7 @@ public class FlameWardPower extends AbstractJainaPower {
         if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner != this.owner) {
             flash();
             for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-                addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new BurningPower(m, number)));
+                addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new BurningPower(m, amount)));
             }
         }
         return damageAmount;
@@ -37,7 +35,7 @@ public class FlameWardPower extends AbstractJainaPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + number + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
 }

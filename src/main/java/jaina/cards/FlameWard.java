@@ -15,7 +15,7 @@ public class FlameWard extends AbstractJainaCard {
     public static final String ID = IHelper.makeID("FlameWard");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 3;
+    private static final int COST = 2;
 
     public FlameWard() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,

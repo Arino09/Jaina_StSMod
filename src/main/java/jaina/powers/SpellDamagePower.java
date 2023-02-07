@@ -1,6 +1,7 @@
 package jaina.powers;
 
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -57,9 +58,13 @@ public class SpellDamagePower extends AbstractJainaPower {
     }
 
     @Override
+    public void onCardDraw(AbstractCard card) {
+        addToBot(new SpellDamageAction());
+    }
+
+    @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type) {
         float finalDamage = damage;
-        System.out.println("Damage:" + damage + "Type:" + type);
         if (IHelper.isSpellDamage(type)) {
             finalDamage = damage + amount;
         } else if (type.equals(JainaEnums.DamageType.ARCANE_BLAST)) {

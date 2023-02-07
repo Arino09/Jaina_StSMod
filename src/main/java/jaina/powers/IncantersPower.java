@@ -44,7 +44,11 @@ public class IncantersPower extends AbstractJainaPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        if (amount == 1) {
+            this.description = DESCRIPTIONS[0];
+        } else {
+            this.description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+        }
     }
 
 }

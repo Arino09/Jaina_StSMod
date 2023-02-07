@@ -20,7 +20,7 @@ public class FrozenClone extends AbstractJainaCard {
 
     public FrozenClone() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.ENEMY, JainaEnums.CardTags.FROST);
+                CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.FROST);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class FrozenClone extends AbstractJainaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m.getIntentBaseDmg() >= 0) {
             // 如果意图为攻击则获得与攻击力相同的格挡值
-            setBlock(m.getIntentBaseDmg());
+            setBlock(m.getIntentDmg());
             addToBot(new FrozenCloneAction(p, block, freeToPlayOnce, energyOnUse, upgraded));
         }
     }

@@ -22,7 +22,7 @@ public class SecondFlame extends AbstractJainaCard {
                 CardRarity.SPECIAL, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(8);
         setDamageType(JainaEnums.DamageType.FIRE);
-        this.retain = true;
+        this.selfRetain = true;
         this.exhaust = true;
     }
 

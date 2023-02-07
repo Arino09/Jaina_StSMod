@@ -238,14 +238,19 @@ public abstract class AbstractJainaCard extends CustomCard {
 
     /**
      * 冰冻所有敌人
+     *
+     * @return 被冻结的敌人数量
      */
-    public void frozenAllEnemy() {
+    public int frozenAllEnemy() {
+        int amount = 0;
         for (AbstractMonster m : (AbstractDungeon.getMonsters()).monsters) {
             if (!m.isDead && !m.isDying) {
                 this.addToBot(new ApplyPowerAction(m, AbstractDungeon.player,
                         new FrozenPower(m), -1));
+                amount++;
             }
         }
+        return amount;
     }
 
     //重写了升级方法，升级效果写在limitedUpgrade中即可

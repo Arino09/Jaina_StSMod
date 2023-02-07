@@ -25,7 +25,7 @@ public class Ignite extends AbstractJainaCard {
 
     @Override
     public void upp() {
-        updateCost(-1);
+        upgradeBaseCost(0);
     }
 
     @Override

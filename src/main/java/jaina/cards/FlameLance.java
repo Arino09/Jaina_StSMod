@@ -25,6 +25,7 @@ public class FlameLance extends AbstractJainaCard {
                 CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(10);
         setMagicNumber(4);
+        setDamageType(JainaEnums.DamageType.FIRE);
     }
 
     @Override

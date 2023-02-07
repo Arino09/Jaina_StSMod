@@ -23,6 +23,7 @@ public class FirstFlame extends AbstractJainaCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(8);
+        setDamageType(JainaEnums.DamageType.FIRE);
         this.cardsToPreview = new SecondFlame();
     }
 
