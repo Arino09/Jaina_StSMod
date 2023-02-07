@@ -15,14 +15,16 @@ public class JainaDiscoveryAction extends AbstractGameAction {
     private boolean retrieveCard = false;
     private boolean hasRare = true;
     private boolean hasUncommon = true;
+    private boolean hasCommon = true;
     private ArrayList<AbstractCard> generatedCards = null;
 
-    public JainaDiscoveryAction(boolean hasRare, boolean hasUncommon) {
+    public JainaDiscoveryAction(boolean hasRare, boolean hasUncommon, boolean hasCommon) {
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
         this.amount = 1;
         this.hasRare = hasRare;
         this.hasUncommon = hasUncommon;
+        this.hasCommon = hasCommon;
     }
 
     public JainaDiscoveryAction(ArrayList<AbstractCard> cards) {
@@ -35,7 +37,7 @@ public class JainaDiscoveryAction extends AbstractGameAction {
     public void update() {
 
         if (generatedCards == null) {
-            generatedCards = IHelper.generateRandomJainaCards(3, hasRare, hasUncommon, false);
+            generatedCards = IHelper.generateRandomJainaCards(3, hasRare, hasUncommon, hasCommon, true, true);
         }
 
         if (this.duration == Settings.ACTION_DUR_FAST) {
@@ -58,7 +60,6 @@ public class JainaDiscoveryAction extends AbstractGameAction {
                         } else {
                             AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
                         }
-                        disCard2 = null;
                     } else if (AbstractDungeon.player.hand.size() + this.amount <= 10) {
                         AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard2, Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, Settings.HEIGHT / 2.0F));

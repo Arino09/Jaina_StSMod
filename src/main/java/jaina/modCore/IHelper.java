@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import jaina.actions.SpellDamageAction;
-import jaina.cards.ShiftingScroll;
 
 import java.util.ArrayList;
 
@@ -70,7 +69,6 @@ public interface IHelper {
                 }
                 if (isRepeated) continue;
             }
-
             if (AbstractDungeon.player.hasPower("MasterRealityPower")) {
                 card.upgrade();
             }
@@ -95,22 +93,27 @@ public interface IHelper {
      * @param amount      卡牌数量
      * @param hasRare     是否生成稀有卡
      * @param hasUncommon 是否生成罕见卡
+     * @param canRepeated 是否允许重复
+     * @param hasShift    是否包含变形卷轴
      * @return 卡牌数组
      */
-    static ArrayList<AbstractCard> generateRandomJainaCards(int amount, boolean hasRare, boolean hasUncommon, boolean canRepeated) {
+    static ArrayList<AbstractCard> generateRandomJainaCards(int amount,
+           boolean hasRare, boolean hasUncommon, boolean hasCommon, boolean canRepeated, boolean hasShift) {
         ArrayList<AbstractCard> cardRng = new ArrayList<>();
 
-        for (AbstractCard c : CardLibrary.getAllCards()) {
-            // 初始条件为非治疗、基础、特殊的职业卡，不能随机到变形卷轴（初始没有效果）
+        for (AbstractCard c : CardLibrary.getCardList(JainaEnums.JAINA_LIBRARY)) {
+            // 初始条件为非治疗、基础、特殊的职业卡
             boolean conditions = !c.rarity.equals(AbstractCard.CardRarity.SPECIAL) && !c.rarity.equals(AbstractCard.CardRarity.BASIC)
-                    && c.color.equals(JainaEnums.JAINA_COLOR) && !c.hasTag(AbstractCard.CardTags.HEALING) && !c.cardID.equals(ShiftingScroll.ID);
-            // 如果不含稀有卡
+                    && !c.hasTag(AbstractCard.CardTags.HEALING);
             if (!hasRare) {
                 conditions = conditions && !c.rarity.equals(AbstractCard.CardRarity.RARE);
+                if (hasShift) conditions = conditions && !c.hasTag(JainaEnums.CardTags.SHIFT);
             }
-            if (!hasUncommon) {
+            if (!hasUncommon)
                 conditions = conditions && !c.rarity.equals(AbstractCard.CardRarity.UNCOMMON);
-            }
+            if (!hasCommon)
+                conditions = conditions && !c.rarity.equals(AbstractCard.CardRarity.COMMON);
+
             if (conditions) {
                 cardRng.add(c);
             }

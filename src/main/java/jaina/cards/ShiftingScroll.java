@@ -40,7 +40,7 @@ public class ShiftingScroll extends AbstractJainaCard {
 
     @Override
     public void atTurnStart() {
-        shiftCard = (AbstractJainaCard) IHelper.generateRandomJainaCards(1, true, true, true).get(0);
+        shiftCard = (AbstractJainaCard) IHelper.generateRandomJainaCards(1, true, true, true, false, false).get(0);
         this.type = shiftCard.type;
         this.name = CARD_STRINGS.UPGRADE_DESCRIPTION + shiftCard.name;
         this.rawDescription = shiftCard.rawDescription;

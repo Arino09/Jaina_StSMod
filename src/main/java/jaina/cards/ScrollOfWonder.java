@@ -37,7 +37,7 @@ public class ScrollOfWonder extends AbstractJainaCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // 随机生成一张吉安娜卡牌
-        AbstractCard card = IHelper.generateRandomJainaCards(1, true, true, false).get(0);
+        AbstractCard card = IHelper.generateRandomJainaCards(1, true, true, true, false, false).get(0);
         // 免费释放卡牌且不留痕迹
         card.purgeOnUse = true;
         card.ignoreEnergyOnUse = true;

@@ -15,7 +15,7 @@ public class ArchmageStuff extends AbstractJainaRelic {
 
     @Override
     public void atBattleStart() {
-        IHelper.getTempCard(IHelper.generateRandomJainaCards(1, false, false, false).get(0));
+        IHelper.getTempCard(IHelper.generateRandomJainaCards(1, false, false, true, false, false).get(0));
     }
 
     @Override

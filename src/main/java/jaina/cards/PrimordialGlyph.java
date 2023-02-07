@@ -34,13 +34,7 @@ public class PrimordialGlyph extends AbstractJainaCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // 发现一张罕见或稀有卡，本回合法力消耗为0
-        ArrayList<AbstractCard> cardRng = new ArrayList<>();
-        for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (c.color.equals(JainaEnums.JAINA_COLOR) && !c.hasTag(AbstractCard.CardTags.HEALING)
-                    && (c.rarity.equals(CardRarity.UNCOMMON) || c.rarity.equals(CardRarity.RARE)))
-                cardRng.add(c);
-        }
-        ArrayList<AbstractCard> cards = IHelper.getFewCards(cardRng, 3, false);
+        ArrayList<AbstractCard> cards = IHelper.generateRandomJainaCards(3, true, true, false, false, true);
         for (AbstractCard c : cards) {
             if (upgraded) {
                 c.upgrade();
