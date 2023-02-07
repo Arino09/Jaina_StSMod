@@ -1,13 +1,13 @@
-package jaina.powers;
+package jaina.powers.unique;
 
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import jaina.actions.IncantersEndAction;
-import jaina.actions.IncantersStartAction;
+import jaina.actions.ReduceCostAction;
 import jaina.modCore.IHelper;
+import jaina.powers.AbstractJainaPower;
 
 import static jaina.modCore.Core.MOD_ID;
 
@@ -29,7 +29,7 @@ public class IncantersPower extends AbstractJainaPower {
     public void atStartOfTurn() {
         flash();
         cards = amount;
-        addToBot(new IncantersStartAction());
+        addToBot(new ReduceCostAction(false));
     }
 
     @Override
@@ -37,7 +37,7 @@ public class IncantersPower extends AbstractJainaPower {
         if (card.cardID.startsWith(MOD_ID + ":") && !card.isStarterStrike() && !card.isStarterDefend()) {
             cards--;
             if (cards <= 0) {
-                addToBot(new IncantersEndAction());
+                addToBot(new ReduceCostAction(false));
             }
         }
     }
