@@ -1,4 +1,4 @@
-package jaina.actions;
+package jaina.actions.unique;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

@@ -33,7 +33,7 @@ public class TomeOfIntellect extends AbstractJainaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int amount = p.drawPile.size() / magicNumber;
         if (amount > 0) {
-        gainPower(new SpellDamagePower(p, amount));
+            gainPower(new SpellDamagePower(p, amount));
         }
     }
 

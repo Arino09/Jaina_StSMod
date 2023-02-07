@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import jaina.actions.ExhaustCardFromDrawAction;
+import jaina.actions.unique.ExhaustCardFromDrawAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 

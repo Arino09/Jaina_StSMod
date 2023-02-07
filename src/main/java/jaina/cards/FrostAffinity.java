@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.FrostAffinityPower;
+import jaina.powers.unique.FrostAffinityPower;
 
 
 public class FrostAffinity extends AbstractJainaCard {

@@ -1,4 +1,4 @@
-package jaina.powers;
+package jaina.powers.unique;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import jaina.modCore.IHelper;
+import jaina.powers.AbstractJainaPower;
 
 
 public class VaporizePower extends AbstractJainaPower {

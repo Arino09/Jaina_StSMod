@@ -1,4 +1,4 @@
-package jaina.powers;
+package jaina.powers.unique;
 
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
+import jaina.powers.AbstractJainaPower;
 
 public class ManaBindPower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("ManaBindPower");

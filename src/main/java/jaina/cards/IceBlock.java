@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.IceBlockPower;
+import jaina.powers.unique.IceBlockPower;
 
 public class IceBlock extends AbstractJainaCard {
 

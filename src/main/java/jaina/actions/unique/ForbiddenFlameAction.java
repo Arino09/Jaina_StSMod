@@ -1,27 +1,26 @@
-package jaina.actions;
+package jaina.actions.unique;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-// import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import jaina.modCore.IHelper;
-import jaina.modCore.JainaEnums;
 
-public class DragonsFuryAction extends AbstractGameAction {
+public class ForbiddenFlameAction extends AbstractGameAction {
     private final AbstractPlayer p;
     private final boolean freeToPlayOnce;
     private final int energyOnUse;
-    //private final int burnAmt;
 
-    public DragonsFuryAction(AbstractPlayer p, int damage, boolean freeToPlayOnce, int energyOnUse) {
-        this.amount = damage;
-        //this.burnAmt = burnAmt;
+    public ForbiddenFlameAction(AbstractPlayer p, AbstractMonster m, int amount, boolean freeToPlayOnce, int energyOnUse) {
+        this.amount = amount;
         this.p = p;
+        this.target = m;
         this.freeToPlayOnce = freeToPlayOnce;
         this.duration = Settings.ACTION_DUR_XFAST;
-        this.actionType = ActionType.DAMAGE;
+        this.actionType = AbstractGameAction.ActionType.BLOCK;
         this.energyOnUse = energyOnUse;
     }
 
@@ -39,11 +38,9 @@ public class DragonsFuryAction extends AbstractGameAction {
         }
 
         if (effect > 0) {
-            for (int i = 0; i < effect; i++) {
-                addToBot(new DamageAllEnemiesAction(p, this.amount,
-                        JainaEnums.DamageType.FIRE, AttackEffect.FIRE));
-                IHelper.getBurn(1);
-            }
+            amount = effect * amount;
+            addToBot(new DamageAction(target, new DamageInfo(p, this.amount), AttackEffect.FIRE));
+            IHelper.getBurn(effect);
             if (!freeToPlayOnce) {
                 p.energy.use(EnergyPanel.totalCount);
             }

@@ -1,13 +1,13 @@
 package jaina.cards;
 
-import jaina.modCore.IHelper;
-import jaina.modCore.JainaEnums;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import jaina.powers.ArcaneGatePower;
+import jaina.modCore.IHelper;
+import jaina.modCore.JainaEnums;
+import jaina.powers.unique.ArcaneGatePower;
 
 
 public class ArcaneGate extends AbstractJainaCard {
@@ -19,7 +19,7 @@ public class ArcaneGate extends AbstractJainaCard {
 
     public ArcaneGate() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.ARCANE);
+                CardRarity.UNCOMMON, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
         setMagicNumber(1);
     }
 

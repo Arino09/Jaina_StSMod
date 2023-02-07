@@ -12,6 +12,9 @@ import jaina.powers.FrozenPower;
 
 public abstract class AbstractJainaCard extends CustomCard {
 
+    public boolean isFrostAffinity = false;
+    public boolean isIncantersFlow = false;
+
     /**
      * 构造函数
      *
@@ -23,6 +26,7 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param color       卡牌颜色
      * @param rarity      卡牌稀有度
      * @param target      卡牌目标
+     * @param tags        卡牌标签
      */
     public AbstractJainaCard(String ID, boolean useTestArt, CardStrings cardStrings, int cost,
                              CardType type, CardColor color, CardRarity rarity, CardTarget target, CardTags tags) {
@@ -41,9 +45,8 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param target 卡牌目标
      */
     public AbstractJainaCard(String ID, CardStrings cardStrings, String imgUrl, int cost,
-                             CardType type, CardColor color, CardRarity rarity, CardTarget target, CardTags tags) {
+                             CardType type, CardColor color, CardRarity rarity, CardTarget target) {
         super(ID, cardStrings.NAME, imgUrl, cost, cardStrings.DESCRIPTION, type, color, rarity, target);
-        this.tags.add(tags);
     }
 
     /**
@@ -170,7 +173,7 @@ public abstract class AbstractJainaCard extends CustomCard {
     /**
      * 随机造成伤害
      *
-     * @param ae    伤害效果
+     * @param ae 伤害效果
      */
     public void dealRandDamage(AbstractGameAction.AttackEffect ae) {
 

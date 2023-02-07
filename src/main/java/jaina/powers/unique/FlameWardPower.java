@@ -1,4 +1,4 @@
-package jaina.powers;
+package jaina.powers.unique;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
+import jaina.powers.AbstractJainaPower;
+import jaina.powers.BurningPower;
 
 public class FlameWardPower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("FlameWardPower");

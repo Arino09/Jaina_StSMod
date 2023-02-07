@@ -1,4 +1,4 @@
-package jaina.powers;
+package jaina.powers.unique;
 
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -10,6 +10,7 @@ import jaina.actions.ReduceCostAction;
 import jaina.actions.RestoreCostAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
+import jaina.powers.AbstractJainaPower;
 
 public class FrostAffinityPower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("FrostAffinityPower");
@@ -20,14 +21,14 @@ public class FrostAffinityPower extends AbstractJainaPower {
     public FrostAffinityPower(AbstractCreature owner) {
         super(POWER_ID, true, NAME, PowerType.BUFF);
         this.owner = owner;
-        this.amount = -1;
+        this.amount = 1;
         updateDescription();
     }
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.hasTag(JainaEnums.CardTags.FROST)) {
-            addToBot(new RestoreCostAction(JainaEnums.CardTags.FROST));
+            addToBot(new RestoreCostAction(true));
             addToBot(new RemoveSpecificPowerAction(owner, owner, this));
         }
     }
@@ -35,12 +36,12 @@ public class FrostAffinityPower extends AbstractJainaPower {
     @Override
     public void onInitialApplication() {
         flash();
-        addToBot(new ReduceCostAction(JainaEnums.CardTags.FROST));
+        addToBot(new ReduceCostAction(true));
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        addToBot(new RestoreCostAction(JainaEnums.CardTags.FROST));
+        addToBot(new RestoreCostAction(true));
         addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
