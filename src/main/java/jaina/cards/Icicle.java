@@ -32,9 +32,9 @@ public class Icicle extends AbstractJainaCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dealDamage(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+        drawCards(1);
         if (m.hasPower(FrozenPower.POWER_ID)) {
-            drawCards(1);
+            dealDamage(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         }
     }
 
