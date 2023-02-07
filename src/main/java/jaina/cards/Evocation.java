@@ -7,30 +7,29 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.SpellDamagePower;
+import jaina.powers.unique.EvocationPower;
 
 public class Evocation extends AbstractJainaCard {
 
     public static final String ID = IHelper.makeID("Evocation");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 2;
+    private static final int COST = 3;
 
     public Evocation() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
-        setMagicNumber(2);
+                CardRarity.RARE, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
+        setMagicNumber(1);
     }
 
     @Override
     public void upp() {
         upgradeMagicNumber(1);
-        initializeDescription();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new SpellDamagePower(p, magicNumber));
+        gainPower(new EvocationPower(p, magicNumber));
     }
 
     @Override
