@@ -1,18 +1,14 @@
 package jaina.cards;
 
-import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
-import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
-import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import jaina.actions.FrozenEnemyAction;
-import jaina.modCore.IHelper;
-import jaina.modCore.JainaEnums;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import jaina.powers.FrozenPower;
+import jaina.actions.FrozenEnemyAction;
+import jaina.modCore.IHelper;
+import jaina.modCore.JainaEnums;
 
 
 public class FrozenTouch extends AbstractJainaCard {
@@ -21,24 +17,29 @@ public class FrozenTouch extends AbstractJainaCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
     private static final int COST = 1;
+    private int exhaustCount;
 
     public FrozenTouch() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.RARE, CardTarget.ENEMY, JainaEnums.CardTags.FROST);
         setDamage(3);
-        setMagicNumber(1);
-        ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, magicNumber);
+        setMagicNumber(3);
+        setDamageType(JainaEnums.DamageType.FROST);
+        exhaustCount = magicNumber;
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealDamage(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         addToBot(new FrozenEnemyAction(m, p));
+        if (--exhaustCount <= 0) {
+            exhaust = true;
+        }
     }
 
     @Override
