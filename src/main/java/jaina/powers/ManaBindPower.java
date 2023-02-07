@@ -19,10 +19,10 @@ public class ManaBindPower extends AbstractJainaPower {
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public ManaBindPower(AbstractCreature owner) {
+    public ManaBindPower(AbstractCreature owner, int amount) {
         super(POWER_ID, true, NAME, PowerType.BUFF);
         this.owner = owner;
-        this.amount = -1;
+        this.amount = amount;
         updateDescription();
     }
 
