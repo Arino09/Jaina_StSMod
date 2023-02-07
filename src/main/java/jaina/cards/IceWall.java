@@ -10,14 +10,14 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 
-public class IceShield extends AbstractJainaCard {
+public class IceWall extends AbstractJainaCard {
 
-    public static final String ID = IHelper.makeID("IceShield");
+    public static final String ID = IHelper.makeID("IceWall");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
     private static final int COST = 1;
 
-    public IceShield() {
+    public IceWall() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.SELF, JainaEnums.CardTags.FROST);
         setBlock(5);
@@ -41,7 +41,7 @@ public class IceShield extends AbstractJainaCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new IceShield();
+        return new IceWall();
     }
 
 }

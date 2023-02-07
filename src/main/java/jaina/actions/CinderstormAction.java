@@ -13,9 +13,9 @@ import jaina.powers.BurningPower;
 
 import java.util.ArrayList;
 
-public class HotStreakAction extends AbstractGameAction {
+public class CinderstormAction extends AbstractGameAction {
 
-    public HotStreakAction(int burningAmt) {
+    public CinderstormAction(int burningAmt) {
         this.startDuration = this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.WAIT;
         this.amount = burningAmt;
@@ -41,6 +41,7 @@ public class HotStreakAction extends AbstractGameAction {
         for (AbstractCard c : cardsToExhaust) {
             addToTop(new ExhaustSpecificCardAction(c, p.hand));
         }
+        this.isDone = true;
     }
 
 }

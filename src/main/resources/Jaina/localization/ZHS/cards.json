@@ -126,7 +126,7 @@
   },
   "jaina:Cinderstorm": {
     "NAME": "燃烬风暴",
-    "DESCRIPTION": "随机造成 !D! 点伤害5次。"
+    "DESCRIPTION": "消耗手牌中所有的 *灼烧 ，每张给予所有敌人 !M! 层 jaina:烧伤 。"
   },
   "jaina:Combustion": {
     "NAME": "燃烧",
@@ -149,8 +149,8 @@
     "DESCRIPTION": "获得 格挡 X次，数值等于目标的攻击力。",
     "UPGRADE_DESCRIPTION": "获得 格挡 X+1次，数值等于目标的攻击力。"
   },
-  "jaina:IceShield": {
-    "NAME": "冰盾术",
+  "jaina:IceWall": {
+    "NAME": "冰墙术",
     "DESCRIPTION": "每有一名敌人，获得 !B! 点 格挡 。"
   },
   "jaina:FrostArmor": {
@@ -184,7 +184,7 @@
   },
   "jaina:HotStreak": {
     "NAME": "炽热连击",
-    "DESCRIPTION": "消耗手牌中所有的 *灼烧，每消耗一张给予所有敌人 !M! 层 jaina:烧伤"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 jaina:烧伤 。 NL 如果本场战斗中打出的上一张牌是火焰牌，获得 [E] 。"
   },
   "jaina:MagicTrick": {
     "NAME": "魔术戏法",
@@ -276,7 +276,7 @@
   "jaina:TomeOfIntellect": {
     "NAME": "智慧秘典",
     "DESCRIPTION": "你的抽牌堆中每有 !M! 张牌，获得1层 jaina:法术伤害 。 NL 消耗 。"
-},
+  },
   "jaina:SplittingImage": {
     "NAME": "裂魂残像",
     "DESCRIPTION": "在你下一次受到攻击后，获得 !M! 层 无实体 。"
@@ -301,7 +301,13 @@
     "NAME": "深度冻结",
     "DESCRIPTION": "jaina:冻结 所有敌人。 NL 每冻结一名敌人，获得 [E] 并抽一张牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "jaina:冻结 所有敌人。 NL 每冻结一名敌人，获得 [E] 并抽一张牌。"
+  },
+  "jaina:FrozenTouch": {
+    "NAME": "冻寒之触",
+    "DESCRIPTION": "造成 !D! 点伤害并 jaina:冻结 敌人 。 NL 消耗性： !M! 。"
+  },
+  "jaina:ArcaneGate": {
+    "NAME": "奥术之门",
+    "DESCRIPTION": "每当你使用一张 *奥术 牌，造成 !M! 点伤害。"
   }
-
-
 }

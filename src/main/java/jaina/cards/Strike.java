@@ -33,7 +33,7 @@ public class Strike extends AbstractJainaCard {
      */
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dealDamage(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        dealDamage(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
     }
 
     //卡牌升级后的效果
