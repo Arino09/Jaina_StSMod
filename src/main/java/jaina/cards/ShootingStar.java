@@ -34,8 +34,7 @@ public class ShootingStar extends AbstractJainaCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
-            AbstractMonster randM = AbstractDungeon.getRandomMonster();
-            dealDamage(randM, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+            dealRandDamage(AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         }
 
     }

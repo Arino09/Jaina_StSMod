@@ -168,6 +168,16 @@ public abstract class AbstractJainaCard extends CustomCard {
     }
 
     /**
+     * 随机造成伤害
+     *
+     * @param ae    伤害效果
+     */
+    public void dealRandDamage(AbstractGameAction.AttackEffect ae) {
+
+        this.addToBot(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, this.damage, this.damageTypeForTurn), ae));
+    }
+
+    /**
      * 造成伤害
      *
      * @param m  目标
@@ -244,7 +254,7 @@ public abstract class AbstractJainaCard extends CustomCard {
     public int frozenAllEnemy() {
         int amount = 0;
         for (AbstractMonster m : (AbstractDungeon.getMonsters()).monsters) {
-            if (!m.isDead && !m.isDying) {
+            if (!m.isDead && !m.isDying && !m.hasPower(FrozenPower.POWER_ID)) {
                 this.addToBot(new ApplyPowerAction(m, AbstractDungeon.player,
                         new FrozenPower(m), -1));
                 amount++;
