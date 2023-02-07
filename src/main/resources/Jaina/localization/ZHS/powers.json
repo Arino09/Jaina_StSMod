@@ -47,7 +47,8 @@
   "jaina:IncantersPower": {
     "NAME": "咒术洪流",
     "DESCRIPTIONS": [
-      "你在每回合打出的第",
+      "你在每回合打出的第一张法术牌耗能变为 #b0 。",
+      "你在每回合打出的前",
       "张法术牌耗能变为 #b0 。"
     ]
   },
@@ -88,6 +89,20 @@
       "你的下一张 #p奥术 牌打出两次。",
       "你的下",
       "张 #p奥术 牌打出两次。"
+    ]
+  },
+  "jaina:SplittingImagePower": {
+    "NAME": "裂魂残像",
+    "DESCRIPTIONS": [
+      "受到攻击之后获得",
+      "层 #y无实体 。"
+    ]
+  },
+  "jaina:WizardArmorPower": {
+    "NAME": "法师护甲",
+    "DESCRIPTIONS": [
+      "回合结束时获得",
+      "层 格挡 。"
     ]
   }
 }
