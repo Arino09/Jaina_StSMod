@@ -104,5 +104,12 @@
       "回合结束时获得",
       "层 格挡 。"
     ]
+  },
+  "jaina:ArcaneGatePower": {
+    "NAME": "奥术之门",
+    "DESCRIPTIONS": [
+      "使用 #p奥术 牌时造成",
+      "点伤害。"
+    ]
   }
 }

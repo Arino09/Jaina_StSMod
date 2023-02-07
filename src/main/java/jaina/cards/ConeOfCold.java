@@ -30,7 +30,7 @@ public class ConeOfCold extends AbstractJainaCard {
 
     @Override
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
         upgradeBlock(3);
     }
 
