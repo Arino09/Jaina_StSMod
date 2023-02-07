@@ -96,7 +96,7 @@
     "NAME": "法师护甲",
     "DESCRIPTIONS": [
       "回合结束时获得",
-      "层 #y格挡 。"
+      "点 #y格挡 。"
     ]
   },
   "jaina:ArcaneGatePower": {
@@ -107,10 +107,16 @@
     ]
   },
   "jaina:ArcticArmorPower": {
-    "NAME": "极寒护甲",
+    "NAME": "寒甲术",
     "DESCRIPTIONS": [
       "你每打出一张 #b冰霜 牌，获得",
       "点 #y格挡"
+    ]
+  },
+  "jaina:EvocationPower": {
+    "NAME": "法力唤醒",
+    "DESCRIPTIONS": [
+      "每回合获得 #y法术伤害 +"
     ]
   }
 }

@@ -19,7 +19,7 @@ public abstract class OptionCard extends AbstractJainaCard {
      * @param type        卡牌类型
      */
     public OptionCard(String id, boolean useTestArt, CardStrings cardStrings, CardType type) {
-        super(id, cardStrings, useTestArt ? getTestImgPath(type) : getOptImgPath(id), COST, type, COLOR, RARITY, TARGET, CardTags.EMPTY);
+        super(id, cardStrings, useTestArt ? getTestImgPath(type) : getOptImgPath(id), COST, type, COLOR, RARITY, TARGET);
     }
 
     /**
