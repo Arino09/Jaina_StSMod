@@ -14,15 +14,15 @@
   "jaina:SpellDamagePower": {
     "NAME": "法术伤害",
     "DESCRIPTIONS": [
-      "法术伤害提高",
+      "#y法术伤害 提高",
       "点。"
     ]
   },
   "jaina:LoseSpellDamagePower": {
-    "NAME": "能量之泉",
+    "NAME": "奥术光辉",
     "DESCRIPTIONS": [
       "回合结束时失去",
-      "点法术伤害。"
+      "点 #y法术伤害 。"
     ]
   },
   "jaina:VaporizePower": {
@@ -62,13 +62,7 @@
   "jaina:FrostAffinityPower": {
     "NAME": "冰霜亲和",
     "DESCRIPTIONS": [
-      "冰霜牌的耗能减少 #y2 点。"
-    ]
-  },
-  "jaina:HotStreakPower": {
-    "NAME": "炽热连击",
-    "DESCRIPTIONS": [
-      "火焰牌的耗能减少 #y2 点。"
+      "#b冰霜 牌的耗能减少 #y2 点。"
     ]
   },
   "jaina:WildFirePower": {
@@ -102,7 +96,7 @@
     "NAME": "法师护甲",
     "DESCRIPTIONS": [
       "回合结束时获得",
-      "层 格挡 。"
+      "层 #y格挡 。"
     ]
   },
   "jaina:ArcaneGatePower": {
@@ -110,6 +104,13 @@
     "DESCRIPTIONS": [
       "使用 #p奥术 牌时造成",
       "点伤害。"
+    ]
+  },
+  "jaina:ArcticArmorPower": {
+    "NAME": "极寒护甲",
+    "DESCRIPTIONS": [
+      "你每打出一张 #b冰霜 牌，获得",
+      "点 #y格挡"
     ]
   }
 }

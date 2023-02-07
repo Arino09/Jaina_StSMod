@@ -142,7 +142,7 @@
   },
   "jaina:CramSession": {
     "NAME": "考前刷夜",
-    "DESCRIPTION": "抽 !M! 张牌。 NL (受 jaina:法术伤害 加成。）"
+    "DESCRIPTION": "抽 !M! 张牌。 NL （受 jaina:法术伤害 加成。）"
   },
   "jaina:FrozenClone": {
     "NAME": "寒冰克隆",
@@ -180,7 +180,7 @@
   },
   "jaina:FontOfPower": {
     "NAME": "能量之泉",
-    "DESCRIPTION": "在本回合内获得 jaina:法术伤害 + !M! 。"
+    "DESCRIPTION": "获得 !M! 点 [E] NL （受 jaina:法术伤害 加成）。"
   },
   "jaina:HotStreak": {
     "NAME": "炽热连击",
@@ -308,6 +308,14 @@
   },
   "jaina:ArcaneGate": {
     "NAME": "奥术之门",
-    "DESCRIPTION": "每当你使用一张 *奥术 牌，造成 !M! 点伤害。"
+    "DESCRIPTION": "每当你使用一张 *奥术 牌，造成 !M! 点伤害 NL （受 jaina:法术伤害 加成）。"
+  },
+  "jaina:ShatteringBlast": {
+    "NAME": "冰爆冲击",
+    "DESCRIPTION": "对所有被 jaina:冻结 的敌人造成 !D! 点伤害。"
+  },
+  "jaina:ArcticArmor": {
+    "NAME": "极寒护甲",
+    "DESCRIPTION": "每当你使用一张 *冰霜 牌，获得 !M! 点 格挡 。"
   }
 }
