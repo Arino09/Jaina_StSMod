@@ -14,17 +14,16 @@ public class CramSession extends AbstractJainaCard {
     public static final String ID = IHelper.makeID("CramSession");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     public CramSession() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
-        setMagicNumber(2);
+        setMagicNumber(1);
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(-1);
         upgradeBaseCost(1);
     }
 

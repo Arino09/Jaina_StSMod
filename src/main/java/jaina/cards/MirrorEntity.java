@@ -46,6 +46,8 @@ public class MirrorEntity extends AbstractJainaCard {
                 setDamage(move.baseDamage);
                 if (move.isMultiDamage) {
                     setMagicNumber(move.multiplier);
+                } else {
+                    setMagicNumber(1);
                 }
 
             } catch (NoSuchFieldException | IllegalAccessException e) {
