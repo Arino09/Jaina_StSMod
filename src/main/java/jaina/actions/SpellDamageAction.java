@@ -28,11 +28,11 @@ public class SpellDamageAction extends AbstractGameAction {
     private void updateMagicCards(ArrayList<AbstractCard> cards, int amount) {
         for (AbstractCard c : cards) {
             if (c instanceof CramSession || c instanceof ApexisBlast) {
-                c.baseMagicNumber = c.magicNumber = c.baseMagicNumber + amount;
+                c.magicNumber = c.baseMagicNumber + amount;
                 c.initializeDescription();
             }
-            if (c.color == JainaEnums.JAINA_COLOR && c.baseBlock > 0 && c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
-                c.baseBlock = c.block = c.baseBlock + amount;
+            if (c.color == JainaEnums.JAINA_COLOR && c.baseBlock > 0 && !c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
+                c.block = c.baseBlock + amount;
                 c.initializeDescription();
             }
         }

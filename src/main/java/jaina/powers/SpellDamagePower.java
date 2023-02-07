@@ -1,14 +1,20 @@
 package jaina.powers;
 
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import jaina.actions.SpellDamageAction;
+import jaina.cards.ApexisBlast;
+import jaina.cards.CramSession;
+import jaina.cards.FontOfPower;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
+import jaina.powers.unique.WizardArmorPower;
 
 public class SpellDamagePower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("SpellDamagePower");
@@ -44,6 +50,9 @@ public class SpellDamagePower extends AbstractJainaPower {
             this.amount = 999;
         }
         addToBot(new SpellDamageAction());
+        if (AbstractDungeon.player.hasPower(WizardArmorPower.POWER_ID)) {
+            AbstractDungeon.player.getPower(WizardArmorPower.POWER_ID).onSpecificTrigger();
+        }
     }
 
     @Override
@@ -55,11 +64,25 @@ public class SpellDamagePower extends AbstractJainaPower {
             addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
         addToBot(new SpellDamageAction());
+        if (AbstractDungeon.player.hasPower(WizardArmorPower.POWER_ID)) {
+            AbstractDungeon.player.getPower(WizardArmorPower.POWER_ID).onSpecificTrigger();
+        }
     }
 
     @Override
-    public void onCardDraw(AbstractCard card) {
-        addToBot(new SpellDamageAction());
+    public float modifyBlock(float blockAmount, AbstractCard card) {
+        if (card.color == JainaEnums.JAINA_COLOR && !card.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
+            return blockAmount + this.amount;
+        }
+        return blockAmount;
+    }
+
+    @Override
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+        String id = card.cardID;
+        if (id.equals(CramSession.ID) || id.equals(FontOfPower.ID) || id.equals(ApexisBlast.ID)) {
+            card.magicNumber += this.amount;
+        }
     }
 
     @Override
