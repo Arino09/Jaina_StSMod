@@ -14,11 +14,12 @@ public class WishAction extends AbstractGameAction {
     private final AbstractPlayer p;
     private final boolean upgraded;
 
-    public WishAction(boolean upgraded) {
+    public WishAction(int amount, boolean upgraded) {
         p = AbstractDungeon.player;
         setValues(p, AbstractDungeon.player);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_MED;
+        this.amount = amount;
         this.upgraded = upgraded;
     }
 

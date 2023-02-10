@@ -30,7 +30,7 @@ public class Wish extends AbstractJainaCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new WishAction(upgraded));
+        addToBot(new WishAction(1, upgraded));
     }
 
     @Override
