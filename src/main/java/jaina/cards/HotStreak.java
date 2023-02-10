@@ -22,7 +22,7 @@ public class HotStreak extends AbstractJainaCard {
 
     public HotStreak() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.NONE, JainaEnums.CardTags.FIRE);
+                CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(4);
         setMagicNumber(4);
     }

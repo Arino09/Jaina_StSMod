@@ -22,14 +22,12 @@ public class ArcaneBlast extends AbstractJainaCard {
         setDamage(7);
         // 法术伤害作用的倍数
         setMagicNumber(2);
-        setDamageType(JainaEnums.DamageType.ARCANE_BLAST);
     }
 
     @Override
     public void upp() {
         upgradeDamage(2);
         upgradeMagicNumber(1);
-        setDamageType(JainaEnums.DamageType.ARCANE_BLAST_P);
     }
 
     @Override

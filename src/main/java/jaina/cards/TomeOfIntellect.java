@@ -19,7 +19,7 @@ public class TomeOfIntellect extends AbstractJainaCard {
 
     public TomeOfIntellect() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.UNCOMMON, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
         this.exhaust = true;
         setMagicNumber(5);
     }

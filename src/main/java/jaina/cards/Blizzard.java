@@ -24,7 +24,6 @@ public class Blizzard extends AbstractJainaCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, JainaEnums.CardTags.FROST);
         setDamage(5);
-        setDamageType(JainaEnums.DamageType.FROST);
     }
 
     @Override

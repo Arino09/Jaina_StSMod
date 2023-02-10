@@ -18,7 +18,7 @@ public class Evocation extends AbstractJainaCard {
 
     public Evocation() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
+                CardRarity.RARE, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
         setMagicNumber(1);
     }
 

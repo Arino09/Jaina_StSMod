@@ -24,7 +24,6 @@ public class FrozenTouch extends AbstractJainaCard {
                 CardRarity.RARE, CardTarget.ENEMY, JainaEnums.CardTags.FROST);
         setDamage(3);
         setMagicNumber(3);
-        setDamageType(JainaEnums.DamageType.FROST);
         exhaustCount = magicNumber;
     }
 

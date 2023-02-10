@@ -4,10 +4,12 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
+import jaina.powers.SpellDamagePower;
 
 
 public class ApexisBlast extends AbstractJainaCard {
@@ -22,13 +24,20 @@ public class ApexisBlast extends AbstractJainaCard {
                 CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.ARCANE);
         setDamage(9);
         setMagicNumber(1);
-        setDamageType(JainaEnums.DamageType.ARCANE);
     }
 
     @Override
     public void upp() {
         upgradeDamage(3);
         upgradeMagicNumber(1);
+    }
+
+    @Override
+    public void applyPowers() {
+        if (AbstractDungeon.player.hasPower(SpellDamagePower.POWER_ID)) {
+            setMagicNumber(AbstractDungeon.player.getPower(SpellDamagePower.POWER_ID).amount + baseMagicNumber);
+        }
+        initializeDescription();
     }
 
     @Override

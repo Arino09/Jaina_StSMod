@@ -21,7 +21,6 @@ public class Fireblast extends AbstractJainaCard {
                 CardRarity.BASIC, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(6);
         cardsToPreview = new Burn();
-        setDamageType(JainaEnums.DamageType.FIRE);
     }
 
     @Override

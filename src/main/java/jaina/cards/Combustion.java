@@ -24,7 +24,6 @@ public class Combustion extends AbstractJainaCard {
                 CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(8);
         setMagicNumber(4);
-        setDamageType(JainaEnums.DamageType.FIRE);
     }
 
     @Override

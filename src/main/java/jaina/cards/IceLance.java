@@ -22,7 +22,6 @@ public class IceLance extends AbstractJainaCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.ENEMY, JainaEnums.CardTags.FROST);
         setDamage(7);
-        setDamageType(JainaEnums.DamageType.FROST);
     }
 
     @Override

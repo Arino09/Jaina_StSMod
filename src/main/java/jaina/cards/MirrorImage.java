@@ -18,7 +18,7 @@ public class MirrorImage extends AbstractJainaCard {
 
     public MirrorImage() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.COMMON, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
         setBlock(4);
         selfRetain = true;
     }

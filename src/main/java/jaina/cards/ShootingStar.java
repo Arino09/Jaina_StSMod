@@ -22,7 +22,6 @@ public class ShootingStar extends AbstractJainaCard {
                 CardRarity.COMMON, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
         setDamage(2);
         setMagicNumber(4);
-        setDamageType(JainaEnums.DamageType.ARCANE);
     }
 
     @Override

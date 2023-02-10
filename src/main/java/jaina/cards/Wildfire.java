@@ -19,7 +19,7 @@ public class Wildfire extends AbstractJainaCard {
 
     public Wildfire() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.NONE, JainaEnums.CardTags.FIRE);
+                CardRarity.RARE, CardTarget.SELF, JainaEnums.CardTags.FIRE);
     }
 
     @Override

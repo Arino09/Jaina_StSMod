@@ -19,7 +19,6 @@ public class ArcaneExplosion extends AbstractJainaCard {
                 CardRarity.COMMON, CardTarget.ALL_ENEMY, JainaEnums.CardTags.ARCANE);
         setDamage(5);
         setMagicNumber(1);
-        setDamageType(JainaEnums.DamageType.ARCANE);
     }
 
     @Override

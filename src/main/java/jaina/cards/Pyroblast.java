@@ -24,7 +24,6 @@ public class Pyroblast extends AbstractJainaCard {
                 CardRarity.RARE, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(35);
         cardsToPreview = new Burn();
-        setDamageType(JainaEnums.DamageType.FIRE);
     }
 
     @Override

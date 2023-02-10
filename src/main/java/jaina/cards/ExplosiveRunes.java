@@ -22,7 +22,6 @@ public class ExplosiveRunes extends AbstractJainaCard {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(8);
-        this.setDamageType(JainaEnums.DamageType.FIRE);
     }
 
     @Override

@@ -19,7 +19,7 @@ public class ManaBind extends AbstractJainaCard {
 
     public ManaBind() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.RARE, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
         setMagicNumber(1);
     }
 

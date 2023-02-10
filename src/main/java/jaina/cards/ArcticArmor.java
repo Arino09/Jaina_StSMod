@@ -19,7 +19,7 @@ public class ArcticArmor extends AbstractJainaCard {
 
     public ArcticArmor() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.NONE, JainaEnums.CardTags.FROST);
+                CardRarity.UNCOMMON, CardTarget.SELF, JainaEnums.CardTags.FROST);
         setMagicNumber(1);
     }
 

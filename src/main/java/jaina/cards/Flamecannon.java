@@ -21,7 +21,6 @@ public class Flamecannon extends AbstractJainaCard {
                 CardRarity.UNCOMMON, CardTarget.NONE, JainaEnums.CardTags.FIRE);
         setDamage(13);
         cardsToPreview = new Burn();
-        setDamageType(JainaEnums.DamageType.FIRE);
     }
 
     @Override

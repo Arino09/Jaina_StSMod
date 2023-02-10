@@ -34,10 +34,10 @@ public class FontOfPower extends AbstractJainaCard {
 
     @Override
     public void applyPowers() {
-        super.applyPowers();
         if (AbstractDungeon.player.hasPower(SpellDamagePower.POWER_ID)) {
             setMagicNumber(AbstractDungeon.player.getPower(SpellDamagePower.POWER_ID).amount + baseMagicNumber);
         }
+        initializeDescription();
     }
 
     @Override

@@ -2,6 +2,7 @@ package jaina.actions.unique;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
@@ -40,7 +41,7 @@ public class DragonsFuryAction extends AbstractGameAction {
         if (effect > 0) {
             for (int i = 0; i < effect; i++) {
                 addToBot(new DamageAllEnemiesAction(p, this.amount,
-                        JainaEnums.DamageType.FIRE, AttackEffect.FIRE));
+                        DamageInfo.DamageType.NORMAL, AttackEffect.FIRE));
                 IHelper.getBurn(1);
             }
             if (!freeToPlayOnce) {

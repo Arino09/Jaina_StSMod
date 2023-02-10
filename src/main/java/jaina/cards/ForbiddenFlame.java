@@ -21,7 +21,6 @@ public class ForbiddenFlame extends AbstractJainaCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.RARE, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(10);
-        setDamageType(JainaEnums.DamageType.FIRE);
     }
 
     @Override

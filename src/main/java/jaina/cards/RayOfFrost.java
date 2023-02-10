@@ -25,7 +25,6 @@ public class RayOfFrost extends AbstractJainaCard {
                 CardRarity.COMMON, CardTarget.ENEMY, JainaEnums.CardTags.FROST);
         setDamage(4);
         setMagicNumber(2);
-        setDamageType(JainaEnums.DamageType.FROST);
     }
 
     @Override

@@ -20,7 +20,6 @@ public class ArcaneBreath extends AbstractJainaCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.ALL_ENEMY, JainaEnums.CardTags.ARCANE);
         setDamage(4);
-        setDamageType(JainaEnums.DamageType.ARCANE);
     }
 
     @Override

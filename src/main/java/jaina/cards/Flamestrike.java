@@ -21,7 +21,6 @@ public class Flamestrike extends AbstractJainaCard {
                 CardRarity.COMMON, CardTarget.ALL_ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(6);
         cardsToPreview = new Burn();
-        setDamageType(JainaEnums.DamageType.FIRE);
     }
 
     @Override

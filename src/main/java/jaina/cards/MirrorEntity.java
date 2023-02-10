@@ -25,7 +25,6 @@ public class MirrorEntity extends AbstractJainaCard {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.ARCANE);
         this.exhaust = true;
-        setDamageType(JainaEnums.DamageType.ARCANE);
     }
 
     @Override

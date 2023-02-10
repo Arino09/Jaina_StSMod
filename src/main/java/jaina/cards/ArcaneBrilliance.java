@@ -20,7 +20,7 @@ public class ArcaneBrilliance extends AbstractJainaCard {
 
     public ArcaneBrilliance() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.COMMON, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
         setMagicNumber(2);
     }
 

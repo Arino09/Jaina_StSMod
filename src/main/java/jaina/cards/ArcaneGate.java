@@ -19,7 +19,7 @@ public class ArcaneGate extends AbstractJainaCard {
 
     public ArcaneGate() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.UNCOMMON, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
         setMagicNumber(1);
     }
 

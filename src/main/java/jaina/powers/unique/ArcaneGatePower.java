@@ -22,7 +22,6 @@ public class ArcaneGatePower extends AbstractJainaPower {
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     private static final AbstractGameAction.AttackEffect AE = AbstractGameAction.AttackEffect.BLUNT_LIGHT;
-    private static final DamageInfo.DamageType TYPE = JainaEnums.DamageType.ARCANE;
 
     public ArcaneGatePower(AbstractCreature owner, int dmg) {
         super(POWER_ID, true, NAME, PowerType.BUFF);
@@ -38,12 +37,12 @@ public class ArcaneGatePower extends AbstractJainaPower {
             if (m == null) {
                 flashWithoutSound();
                 if (card.target == AbstractCard.CardTarget.ALL_ENEMY) {
-                    addToBot(new DamageAllEnemiesAction(p, this.amount, TYPE, AE));
+                    addToBot(new DamageAllEnemiesAction(p, this.amount, DamageInfo.DamageType.NORMAL, AE));
                 } else {
-                    addToBot(new DamageRandomEnemyAction(new DamageInfo(p, amount, TYPE), AE));
+                    addToBot(new DamageRandomEnemyAction(new DamageInfo(p, amount, DamageInfo.DamageType.NORMAL), AE));
                 }
             } else {
-                addToBot(new DamageAction(m, new DamageInfo(p, amount, TYPE), AE));
+                addToBot(new DamageAction(m, new DamageInfo(p, amount, DamageInfo.DamageType.NORMAL), AE));
             }
         }
     }

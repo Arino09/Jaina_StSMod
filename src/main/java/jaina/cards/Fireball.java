@@ -23,7 +23,6 @@ public class Fireball extends AbstractJainaCard {
                 CardRarity.COMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(10);
         this.cardsToPreview = new Burn();
-        setDamageType(JainaEnums.DamageType.FIRE);
     }
 
     @Override

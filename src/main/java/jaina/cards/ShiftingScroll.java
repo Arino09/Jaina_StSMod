@@ -23,7 +23,6 @@ public class ShiftingScroll extends AbstractJainaCard {
                 CardRarity.RARE, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
         this.tags.add(JainaEnums.CardTags.SHIFT);
         this.selfRetain = true;
-        setDamageType(JainaEnums.DamageType.ARCANE);
     }
 
     @Override
@@ -58,7 +57,6 @@ public class ShiftingScroll extends AbstractJainaCard {
         setDamage(shiftCard.baseDamage);
         setBlock(shiftCard.baseBlock);
         setMagicNumber(shiftCard.baseMagicNumber);
-        setDamageType(shiftCard.damageTypeForTurn);
 
         this.initializeTitle();
         this.initializeDescription();

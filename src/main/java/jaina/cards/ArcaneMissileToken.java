@@ -20,7 +20,6 @@ public class ArcaneMissileToken extends AbstractJainaCard {
                 CardRarity.SPECIAL, CardTarget.ENEMY, JainaEnums.CardTags.ARCANE);
         setDamage(3);
         this.exhaust = true;
-        setDamageType(JainaEnums.DamageType.ARCANE);
     }
 
     @Override

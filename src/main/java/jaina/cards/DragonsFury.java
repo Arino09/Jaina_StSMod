@@ -21,7 +21,6 @@ public class DragonsFury extends AbstractJainaCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(8);
-        setDamageType(JainaEnums.DamageType.FIRE);
     }
 
     @Override

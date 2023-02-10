@@ -20,7 +20,6 @@ public class Frostbolt extends AbstractJainaCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.BASIC, CardTarget.ENEMY, JainaEnums.CardTags.FROST);
         setDamage(3);
-        setDamageType(JainaEnums.DamageType.FROST);
     }
 
     @Override

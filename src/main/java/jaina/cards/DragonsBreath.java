@@ -1,5 +1,6 @@
 package jaina.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,7 +24,6 @@ public class DragonsBreath extends AbstractJainaCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(12);
-        setDamageType(JainaEnums.DamageType.FIRE);
     }
 
     @Override

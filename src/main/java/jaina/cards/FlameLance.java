@@ -25,7 +25,6 @@ public class FlameLance extends AbstractJainaCard {
                 CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
         setDamage(10);
         setMagicNumber(4);
-        setDamageType(JainaEnums.DamageType.FIRE);
     }
 
     @Override
@@ -36,7 +35,7 @@ public class FlameLance extends AbstractJainaCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageCallbackAction(m, new DamageInfo(p, this.damage, JainaEnums.DamageType.FIRE),
+        addToBot(new DamageCallbackAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL),
                 AbstractGameAction.AttackEffect.FIRE, (c) -> {
             if (c > 0) {
                 givePower(new BurningPower(m, magicNumber), magicNumber);

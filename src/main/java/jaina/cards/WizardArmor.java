@@ -19,7 +19,7 @@ public class WizardArmor extends AbstractJainaCard {
 
     public WizardArmor() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.UNCOMMON, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
         setMagicNumber(4);
     }
 
