@@ -27,15 +27,15 @@ public class IncantersPower extends AbstractJainaPower {
     }
 
     @Override
+    public void onInitialApplication() {
+        cards = 0; // 第一回合不可能减费
+    }
+
+    @Override
     public void atStartOfTurn() {
         flash();
         cards = amount;
         addToBot(new ReduceCostAction(false));
-    }
-
-    @Override
-    public void onInitialApplication() {
-        cards = 0; // 第一回合不可能减费
     }
 
     @Override
@@ -45,6 +45,13 @@ public class IncantersPower extends AbstractJainaPower {
             if (cards <= 0) {
                 addToBot(new RestoreCostAction(false));
             }
+        }
+    }
+
+    @Override
+    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
+        if (isPlayer) {
+            addToBot(new RestoreCostAction(true));
         }
     }
 
