@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import jaina.actions.ReduceCostAction;
+import jaina.actions.RestoreCostAction;
 import jaina.modCore.IHelper;
 import jaina.powers.AbstractJainaPower;
 
@@ -33,11 +34,16 @@ public class IncantersPower extends AbstractJainaPower {
     }
 
     @Override
+    public void onInitialApplication() {
+        cards = 0; // 第一回合不可能减费
+    }
+
+    @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.cardID.startsWith(MOD_ID + ":") && !card.isStarterStrike() && !card.isStarterDefend()) {
             cards--;
             if (cards <= 0) {
-                addToBot(new ReduceCostAction(false));
+                addToBot(new RestoreCostAction(false));
             }
         }
     }
