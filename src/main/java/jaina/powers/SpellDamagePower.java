@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import jaina.actions.SpellDamageAction;
 import jaina.cards.ApexisBlast;
+import jaina.cards.ArcaneBlast;
 import jaina.cards.CramSession;
 import jaina.cards.FontOfPower;
 import jaina.modCore.IHelper;
@@ -86,16 +87,17 @@ public class SpellDamagePower extends AbstractJainaPower {
     }
 
     @Override
-    public float atDamageGive(float damage, DamageInfo.DamageType type) {
+    public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
         float finalDamage = damage;
-        if (IHelper.isSpellDamage(type)) {
+        if (card.cardID.equals(ArcaneBlast.ID)) {
+                finalDamage = damage + 2 * amount;
+            if (card.upgraded) {
+                finalDamage += amount;
+            }
+        }else if (IHelper.isSpellDamage(card)) {
             finalDamage = damage + amount;
-        } else if (type.equals(JainaEnums.DamageType.ARCANE_BLAST)) {
-            finalDamage = damage + 2 * amount;
-        } else if (type.equals(JainaEnums.DamageType.ARCANE_BLAST_P)) {
-            finalDamage = damage + 3 * amount;
         }
-        return finalDamage;
+        return super.atDamageGive(finalDamage, type, card);
     }
 
     @Override

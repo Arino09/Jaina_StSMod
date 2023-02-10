@@ -33,18 +33,4 @@ public class JainaEnums {
         public static AbstractCard.CardTags INCANTER;
     }
 
-    public enum DamageType {
-        ;
-        @SpireEnum
-        public static DamageInfo.DamageType FIRE;
-        @SpireEnum
-        public static DamageInfo.DamageType FROST;
-        @SpireEnum
-        public static DamageInfo.DamageType ARCANE;
-        @SpireEnum
-        public static DamageInfo.DamageType ARCANE_BLAST;
-        @SpireEnum
-        public static DamageInfo.DamageType ARCANE_BLAST_P;
-    }
-
 }

@@ -78,13 +78,13 @@ public interface IHelper {
     }
 
     /**
-     * 判断伤害是否受法术伤害影响
+     * 判断卡牌是否受法术伤害影响
      *
-     * @param type 伤害类型
+     * @param card 卡牌
      * @return 是否受影响
      */
-    static boolean isSpellDamage(DamageInfo.DamageType type) {
-        return type.equals(JainaEnums.DamageType.FIRE) || type.equals(JainaEnums.DamageType.FROST) || type.equals(JainaEnums.DamageType.ARCANE);
+    static boolean isSpellDamage(AbstractCard card) {
+        return card.hasTag(JainaEnums.CardTags.FIRE) || card.hasTag(JainaEnums.CardTags.FROST) ||card.hasTag(JainaEnums.CardTags.ARCANE);
     }
 
     /**

@@ -137,15 +137,6 @@ public abstract class AbstractJainaCard extends CustomCard {
     }
 
     /**
-     * 设置伤害类型
-     *
-     * @param type 伤害类型
-     */
-    public void setDamageType(DamageInfo.DamageType type) {
-        this.damageType = this.damageTypeForTurn = type;
-    }
-
-    /**
      * 升级卡牌描述
      *
      * @param cardStrings 卡牌信息
