@@ -1,5 +1,7 @@
 package jaina.cards;
 
+import basemod.BaseMod;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import jaina.modCore.IHelper;
@@ -33,6 +35,13 @@ public abstract class AbstractFireCard extends AbstractJainaCard {
         List<String> tags = new ArrayList<>();
         tags.add(descriptorStrings[0]);
         return tags;
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltipsTop() {
+        List<TooltipInfo> tips = new ArrayList<>();
+        tips.add(new TooltipInfo(BaseMod.getKeywordTitle(ID), BaseMod.getKeywordDescription(ID)));
+        return tips;
     }
 
 }

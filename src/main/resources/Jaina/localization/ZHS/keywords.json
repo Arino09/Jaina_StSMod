@@ -1,6 +1,30 @@
 [
   {
     "NAMES": [
+      "奥术",
+      "Arcane"
+    ],
+    "PROPER_NAME": "奥术",
+    "DESCRIPTION": "奥术法术是一种难以掌控充满随机性的法术，同时也能让你获得强大的能力。"
+  },
+  {
+    "NAMES": [
+      "冰霜",
+      "Frost"
+    ],
+    "PROPER_NAME": "冰霜",
+    "DESCRIPTION": "冰霜法术可以限制敌人的行动，将场面牢牢地掌控在自己手中。"
+  },
+  {
+    "NAMES": [
+      "火焰",
+      "Fire"
+    ],
+    "PROPER_NAME": "火焰",
+    "DESCRIPTION": "火焰法术能造成高额的伤害和燃烧效果，但小心伤到自己！"
+  },
+  {
+    "NAMES": [
       "冻结"
     ],
     "DESCRIPTION": "被 #b冻结 的角色失去他的下一次行动机会。 NL #b冻结 效果不能叠加。"

@@ -1,5 +1,7 @@
 package jaina.cards;
 
+import basemod.BaseMod;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import jaina.modCore.IHelper;
@@ -35,4 +37,10 @@ public abstract class AbstractArcaneCard extends AbstractJainaCard {
         return tags;
     }
 
+    @Override
+    public List<TooltipInfo> getCustomTooltipsTop() {
+        List<TooltipInfo> tips = new ArrayList<>();
+        tips.add(new TooltipInfo(BaseMod.getKeywordTitle(ID), BaseMod.getKeywordDescription(ID)));
+        return tips;
+    }
 }
