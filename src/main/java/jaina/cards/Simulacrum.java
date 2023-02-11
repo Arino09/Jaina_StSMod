@@ -13,7 +13,7 @@ import jaina.modCore.JainaEnums;
 public class Simulacrum extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("Simulacrum");
-    private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
     private static final int COST = 1;
 

@@ -46,30 +46,28 @@ public class FontOfPower extends AbstractArcaneCard {
                 rawDescription += CARD_STRINGS.EXTENDED_DESCRIPTION[0] + magicNumber + CARD_STRINGS.EXTENDED_DESCRIPTION[1];
             }
         } else {
-            rawDescription = CARD_STRINGS.DESCRIPTION;
+            resetDescription();
         }
         initializeDescription();
     }
 
     @Override
     public void onMoveToDiscard() {
-        rawDescription = CARD_STRINGS.DESCRIPTION;
-        initializeDescription();
+        resetDescription();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainEnergyAction(magicNumber));
-        rawDescription = CARD_STRINGS.DESCRIPTION;
-        initializeDescription();
+        resetDescription();
     }
 
-    @Override
-    public void initializeDescription() {
-        super.initializeDescription();
+    private void resetDescription() {
+        rawDescription = CARD_STRINGS.DESCRIPTION;
         if (upgraded) {
-            upgradeDescription(CARD_STRINGS);
+            rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
         }
+        initializeDescription();
     }
 
     @Override

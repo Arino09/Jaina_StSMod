@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import jaina.cards.Simulacrum;
 import jaina.modCore.IHelper;
 
 public class ExhaustCardFromDrawAction extends AbstractGameAction {
@@ -28,8 +29,7 @@ public class ExhaustCardFromDrawAction extends AbstractGameAction {
             }
             if (draw.size() == 1) {
                 AbstractCard card = draw.getTopCard().makeSameInstanceOf();
-                card.exhaust = true;
-                card.rawDescription = card.rawDescription + IHelper.UI_STRINGS.TEXT[4];
+                updateCard(card);
                 if (p.hand.size() == 10) {
                     return;
                 } else {
@@ -58,8 +58,7 @@ public class ExhaustCardFromDrawAction extends AbstractGameAction {
             for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                 c.unhover();
                 AbstractCard card = c.makeSameInstanceOf();
-                card.exhaust = true;
-                card.rawDescription = card.rawDescription + IHelper.UI_STRINGS.TEXT[4];
+                updateCard(card);
                 if (p.hand.size() == 10) {
                     card.moveToDiscardPile();
                     p.createHandIsFullDialog();
@@ -72,6 +71,15 @@ public class ExhaustCardFromDrawAction extends AbstractGameAction {
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             p.hand.refreshHandLayout();
             this.isDone = true;
+        }
+    }
+    // 在原卡的基础上加上【消耗】并更新卡牌描述
+    private void updateCard(AbstractCard card) {
+        card.name = card.name + Simulacrum.CARD_STRINGS.EXTENDED_DESCRIPTION[0];
+        if(!card.exhaust) {
+            card.exhaust = true;
+            card.rawDescription = card.rawDescription + Simulacrum.CARD_STRINGS.EXTENDED_DESCRIPTION[1];
+            card.initializeDescription();
         }
     }
 }

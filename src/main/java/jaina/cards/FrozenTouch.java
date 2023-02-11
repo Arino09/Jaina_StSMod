@@ -39,6 +39,14 @@ public class FrozenTouch extends AbstractFrostCard {
         if (--exhaustCount <= 0) {
             exhaust = true;
         }
+        rawDescription = CARD_STRINGS.DESCRIPTION + CARD_STRINGS.EXTENDED_DESCRIPTION[0] + exhaustCount + CARD_STRINGS.EXTENDED_DESCRIPTION[1];
+        initializeDescription();
+    }
+
+    @Override
+    public void triggerOnExhaust() {
+        rawDescription = CARD_STRINGS.DESCRIPTION;
+        initializeDescription();
     }
 
     @Override
