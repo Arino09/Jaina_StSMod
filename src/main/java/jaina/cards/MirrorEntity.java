@@ -14,7 +14,7 @@ import jaina.modCore.JainaEnums;
 import java.lang.reflect.Field;
 
 
-public class MirrorEntity extends AbstractJainaCard {
+public class MirrorEntity extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("MirrorEntity");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -23,7 +23,7 @@ public class MirrorEntity extends AbstractJainaCard {
 
     public MirrorEntity() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.ARCANE);
+                CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.exhaust = true;
     }
 

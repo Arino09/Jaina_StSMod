@@ -11,7 +11,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 
-public class FrozenClone extends AbstractJainaCard {
+public class FrozenClone extends AbstractFrostCard {
 
     public static final String ID = IHelper.makeID("FrozenClone");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -20,7 +20,7 @@ public class FrozenClone extends AbstractJainaCard {
 
     public FrozenClone() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.FROST);
+                CardRarity.UNCOMMON, CardTarget.ENEMY);
     }
 
     @Override

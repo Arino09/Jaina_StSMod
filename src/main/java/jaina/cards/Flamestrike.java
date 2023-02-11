@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class Flamestrike extends AbstractJainaCard {
+public class Flamestrike extends AbstractFireCard {
     public static final String ID = IHelper.makeID("Flamestrike");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
@@ -18,7 +18,7 @@ public class Flamestrike extends AbstractJainaCard {
 
     public Flamestrike() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.ALL_ENEMY, JainaEnums.CardTags.FIRE);
+                CardRarity.COMMON, CardTarget.ALL_ENEMY);
         setDamage(6);
         cardsToPreview = new Burn();
     }

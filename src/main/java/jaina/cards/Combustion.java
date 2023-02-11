@@ -12,7 +12,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.BurningPower;
 
 
-public class Combustion extends AbstractJainaCard {
+public class Combustion extends AbstractFireCard {
 
     public static final String ID = IHelper.makeID("Combustion");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -21,7 +21,7 @@ public class Combustion extends AbstractJainaCard {
 
     public Combustion() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
+                CardRarity.UNCOMMON, CardTarget.ENEMY);
         setDamage(8);
         setMagicNumber(4);
     }

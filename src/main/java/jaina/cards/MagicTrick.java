@@ -13,7 +13,7 @@ import jaina.modCore.JainaEnums;
 import java.util.ArrayList;
 
 
-public class MagicTrick extends AbstractJainaCard {
+public class MagicTrick extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("MagicTrick");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -22,7 +22,7 @@ public class MagicTrick extends AbstractJainaCard {
 
     public MagicTrick() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.UNCOMMON, CardTarget.NONE);
         this.exhaust = true;
     }
 

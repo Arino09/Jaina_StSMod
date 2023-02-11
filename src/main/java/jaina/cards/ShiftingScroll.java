@@ -10,7 +10,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 
-public class ShiftingScroll extends AbstractJainaCard {
+public class ShiftingScroll extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("ShiftingScroll");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -20,15 +20,21 @@ public class ShiftingScroll extends AbstractJainaCard {
 
     public ShiftingScroll() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.RARE, CardTarget.NONE);
         this.tags.add(JainaEnums.CardTags.SHIFT);
         this.selfRetain = true;
     }
 
     @Override
     public void upp() {
+        // 战斗中升级本体
         if (shiftCard != null) {
             shiftCard.upp();
+            this.upgraded = false;
+        } else {
+            // 战斗外升级加固有
+            this.isInnate = true;
+            upgradeDescription(CARD_STRINGS);
         }
     }
 
@@ -40,9 +46,13 @@ public class ShiftingScroll extends AbstractJainaCard {
     @Override
     public void atTurnStart() {
         shiftCard = (AbstractJainaCard) IHelper.generateRandomJainaCards(1, true, true, true, false, false).get(0);
+        if (upgraded) {
+            shiftCard.upp();
+        }
+
         this.type = shiftCard.type;
-        this.name = CARD_STRINGS.UPGRADE_DESCRIPTION + shiftCard.name;
-        this.rawDescription = shiftCard.rawDescription;
+        this.name = CARD_STRINGS.EXTENDED_DESCRIPTION[0] + shiftCard.name;
+        this.rawDescription = CARD_STRINGS.EXTENDED_DESCRIPTION[1] + shiftCard.rawDescription;
         this.cost = this.costForTurn = shiftCard.cost;
         this.portrait = shiftCard.portrait;
         this.rarity = shiftCard.rarity;

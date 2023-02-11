@@ -9,7 +9,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 import jaina.powers.unique.EvocationPower;
 
-public class Evocation extends AbstractJainaCard {
+public class Evocation extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("Evocation");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -18,7 +18,7 @@ public class Evocation extends AbstractJainaCard {
 
     public Evocation() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.RARE, CardTarget.NONE);
         setMagicNumber(1);
     }
 

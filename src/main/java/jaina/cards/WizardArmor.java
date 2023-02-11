@@ -10,7 +10,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.unique.WizardArmorPower;
 
 
-public class WizardArmor extends AbstractJainaCard {
+public class WizardArmor extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("WizardArmor");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class WizardArmor extends AbstractJainaCard {
 
     public WizardArmor() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
+                CardRarity.UNCOMMON, CardTarget.SELF);
         setMagicNumber(4);
     }
 

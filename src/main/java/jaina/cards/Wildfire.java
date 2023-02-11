@@ -10,7 +10,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.unique.WildfirePower;
 
 
-public class Wildfire extends AbstractJainaCard {
+public class Wildfire extends AbstractFireCard {
 
     public static final String ID = IHelper.makeID("Wildfire");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class Wildfire extends AbstractJainaCard {
 
     public Wildfire() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.SELF, JainaEnums.CardTags.FIRE);
+                CardRarity.RARE, CardTarget.SELF);
     }
 
     @Override

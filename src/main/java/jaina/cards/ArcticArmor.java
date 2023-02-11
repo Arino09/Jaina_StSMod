@@ -10,7 +10,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.unique.ArcticArmorPower;
 
 
-public class ArcticArmor extends AbstractJainaCard {
+public class ArcticArmor extends AbstractFrostCard {
 
     public static final String ID = IHelper.makeID("ArcticArmor");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class ArcticArmor extends AbstractJainaCard {
 
     public ArcticArmor() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.SELF, JainaEnums.CardTags.FROST);
+                CardRarity.UNCOMMON, CardTarget.SELF);
         setMagicNumber(1);
     }
 

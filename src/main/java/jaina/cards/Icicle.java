@@ -11,7 +11,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.FrozenPower;
 
 
-public class Icicle extends AbstractJainaCard {
+public class Icicle extends AbstractFrostCard {
 
     public static final String ID = IHelper.makeID("Icicle");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -20,7 +20,7 @@ public class Icicle extends AbstractJainaCard {
 
     public Icicle() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.ENEMY, JainaEnums.CardTags.FROST);
+                CardRarity.COMMON, CardTarget.ENEMY);
         setDamage(4);
     }
 

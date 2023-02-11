@@ -10,7 +10,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.unique.ArcaneGatePower;
 
 
-public class ArcaneGate extends AbstractJainaCard {
+public class ArcaneGate extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("ArcaneGate");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class ArcaneGate extends AbstractJainaCard {
 
     public ArcaneGate() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
+                CardRarity.UNCOMMON, CardTarget.SELF);
         setMagicNumber(1);
     }
 

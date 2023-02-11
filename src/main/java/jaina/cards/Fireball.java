@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class Fireball extends AbstractJainaCard {
+public class Fireball extends AbstractFireCard {
 
     public static final String ID = IHelper.makeID("Fireball");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -20,7 +20,7 @@ public class Fireball extends AbstractJainaCard {
 
     public Fireball() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
+                CardRarity.COMMON, CardTarget.ENEMY);
         setDamage(10);
         this.cardsToPreview = new Burn();
     }

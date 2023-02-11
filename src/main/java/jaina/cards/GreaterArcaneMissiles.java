@@ -9,7 +9,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 
-public class GreaterArcaneMissiles extends AbstractJainaCard {
+public class GreaterArcaneMissiles extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("GreaterArcaneMissiles");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class GreaterArcaneMissiles extends AbstractJainaCard {
 
     public GreaterArcaneMissiles() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.UNCOMMON, CardTarget.NONE);
         setMagicNumber(3);
         token.upgrade();
         cardsToPreview = token;

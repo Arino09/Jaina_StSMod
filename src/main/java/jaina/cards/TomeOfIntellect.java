@@ -10,7 +10,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.SpellDamagePower;
 
 
-public class TomeOfIntellect extends AbstractJainaCard {
+public class TomeOfIntellect extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("TomeOfIntellect");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class TomeOfIntellect extends AbstractJainaCard {
 
     public TomeOfIntellect() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
+                CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
         setMagicNumber(5);
     }

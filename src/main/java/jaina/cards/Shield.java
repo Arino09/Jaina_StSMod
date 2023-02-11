@@ -9,7 +9,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 
-public class Shield extends AbstractJainaCard {
+public class Shield extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("Shield");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -18,7 +18,7 @@ public class Shield extends AbstractJainaCard {
 
     public Shield() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
+                CardRarity.COMMON, CardTarget.SELF);
         setBlock(6);
         setMagicNumber(1);
     }

@@ -10,7 +10,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 
-public class SecondFlame extends AbstractJainaCard {
+public class SecondFlame extends AbstractFireCard {
 
     public static final String ID = IHelper.makeID("SecondFlame");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class SecondFlame extends AbstractJainaCard {
 
     public SecondFlame() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, CardColor.COLORLESS,
-                CardRarity.SPECIAL, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
+                CardRarity.SPECIAL, CardTarget.ENEMY);
         setDamage(8);
         this.selfRetain = true;
         this.exhaust = true;

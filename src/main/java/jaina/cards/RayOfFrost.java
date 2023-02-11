@@ -13,7 +13,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.FrozenPower;
 
 
-public class RayOfFrost extends AbstractJainaCard {
+public class RayOfFrost extends AbstractFrostCard {
 
     public static final String ID = IHelper.makeID("RayOfFrost");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -22,7 +22,7 @@ public class RayOfFrost extends AbstractJainaCard {
 
     public RayOfFrost() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.ENEMY, JainaEnums.CardTags.FROST);
+                CardRarity.COMMON, CardTarget.ENEMY);
         setDamage(4);
         setMagicNumber(2);
     }

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class Fireblast extends AbstractJainaCard {
+public class Fireblast extends AbstractFireCard {
     public static final String ID = IHelper.makeID("Fireblast");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
@@ -18,7 +18,7 @@ public class Fireblast extends AbstractJainaCard {
 
     public Fireblast() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.BASIC, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
+                CardRarity.BASIC, CardTarget.ENEMY);
         setDamage(6);
         cardsToPreview = new Burn();
     }

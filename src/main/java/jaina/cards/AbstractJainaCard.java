@@ -12,9 +12,6 @@ import jaina.powers.FrozenPower;
 
 public abstract class AbstractJainaCard extends CustomCard {
 
-    public boolean isFrostAffinity = false;
-    public boolean isIncantersFlow = false;
-
     /**
      * 构造函数
      *

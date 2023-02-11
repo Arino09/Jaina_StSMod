@@ -12,7 +12,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 
-public class DragonsBreath extends AbstractJainaCard {
+public class DragonsBreath extends AbstractFireCard {
 
     public static final String ID = IHelper.makeID("DragonsBreath");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -22,7 +22,7 @@ public class DragonsBreath extends AbstractJainaCard {
 
     public DragonsBreath() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
+                CardRarity.COMMON, CardTarget.ENEMY);
         setDamage(12);
     }
 

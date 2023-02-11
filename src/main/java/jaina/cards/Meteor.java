@@ -15,7 +15,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.BurningPower;
 
 
-public class Meteor extends AbstractJainaCard {
+public class Meteor extends AbstractFireCard {
 
     public static final String ID = IHelper.makeID("Meteor");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -24,7 +24,7 @@ public class Meteor extends AbstractJainaCard {
 
     public Meteor() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
+                CardRarity.RARE, CardTarget.ENEMY);
         setDamage(20);
         setMagicNumber(5);
     }

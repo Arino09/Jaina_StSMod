@@ -11,7 +11,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 
-public class BookOfSpecters extends AbstractJainaCard {
+public class BookOfSpecters extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("BookOfSpecters");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -20,7 +20,7 @@ public class BookOfSpecters extends AbstractJainaCard {
 
     public BookOfSpecters() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.UNCOMMON, CardTarget.NONE);
         setMagicNumber(5);
     }
 

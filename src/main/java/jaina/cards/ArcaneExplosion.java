@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class ArcaneExplosion extends AbstractJainaCard {
+public class ArcaneExplosion extends AbstractArcaneCard {
     public static final String ID = IHelper.makeID("ArcaneExplosion");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
@@ -16,7 +16,7 @@ public class ArcaneExplosion extends AbstractJainaCard {
 
     public ArcaneExplosion() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.ALL_ENEMY, JainaEnums.CardTags.ARCANE);
+                CardRarity.COMMON, CardTarget.ALL_ENEMY);
         setDamage(5);
         setMagicNumber(1);
     }

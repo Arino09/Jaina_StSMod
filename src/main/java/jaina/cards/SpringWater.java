@@ -10,7 +10,7 @@ import jaina.actions.unique.SpringWaterAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class SpringWater extends AbstractJainaCard {
+public class SpringWater extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("SpringWater");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class SpringWater extends AbstractJainaCard {
 
     public SpringWater() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.NONE, CardTags.EMPTY);
+                CardRarity.COMMON, CardTarget.NONE);
         setMagicNumber(5);
     }
 

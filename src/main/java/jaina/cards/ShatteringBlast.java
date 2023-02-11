@@ -12,7 +12,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.FrozenPower;
 
 
-public class ShatteringBlast extends AbstractJainaCard {
+public class ShatteringBlast extends AbstractFrostCard {
 
     public static final String ID = IHelper.makeID("ShatteringBlast");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -21,7 +21,7 @@ public class ShatteringBlast extends AbstractJainaCard {
 
     public ShatteringBlast() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, JainaEnums.CardTags.FROST);
+                CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         setDamage(8);
     }
 

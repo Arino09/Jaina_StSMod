@@ -10,7 +10,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 
-public class Duplicate extends AbstractJainaCard {
+public class Duplicate extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("Duplicate");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class Duplicate extends AbstractJainaCard {
 
     public Duplicate() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.UNCOMMON, CardTarget.NONE);
         setMagicNumber(1);
     }
 

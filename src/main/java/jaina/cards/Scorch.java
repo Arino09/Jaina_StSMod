@@ -13,7 +13,7 @@ import jaina.powers.BurningPower;
 import java.util.ArrayList;
 
 
-public class Scorch extends AbstractJainaCard {
+public class Scorch extends AbstractFireCard {
 
     public static final String ID = IHelper.makeID("Scorch");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -22,7 +22,7 @@ public class Scorch extends AbstractJainaCard {
 
     public Scorch() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
+                CardRarity.UNCOMMON, CardTarget.ENEMY);
         setMagicNumber(4);
     }
 

@@ -10,7 +10,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.unique.FrostAffinityPower;
 
 
-public class FrostAffinity extends AbstractJainaCard {
+public class FrostAffinity extends AbstractFrostCard {
 
     public static final String ID = IHelper.makeID("FrostAffinity");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class FrostAffinity extends AbstractJainaCard {
 
     public FrostAffinity() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.SELF, JainaEnums.CardTags.FROST);
+                CardRarity.COMMON, CardTarget.SELF);
         this.exhaust = true;
     }
 

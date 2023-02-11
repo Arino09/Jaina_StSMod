@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class ScrollOfWonder extends AbstractJainaCard {
+public class ScrollOfWonder extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("ScrollOfWonder");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -21,7 +21,7 @@ public class ScrollOfWonder extends AbstractJainaCard {
 
     public ScrollOfWonder() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, CardColor.COLORLESS,
-                CardRarity.SPECIAL, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.SPECIAL, CardTarget.NONE);
         this.purgeOnUse = true;
     }
 

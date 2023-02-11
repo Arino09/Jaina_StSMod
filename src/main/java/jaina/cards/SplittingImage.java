@@ -10,7 +10,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.unique.SplittingImagePower;
 
 
-public class SplittingImage extends AbstractJainaCard {
+public class SplittingImage extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("SplittingImage");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class SplittingImage extends AbstractJainaCard {
 
     public SplittingImage() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
+                CardRarity.UNCOMMON, CardTarget.SELF);
         setMagicNumber(1);
     }
 

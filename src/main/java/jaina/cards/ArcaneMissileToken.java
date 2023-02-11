@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class ArcaneMissileToken extends AbstractJainaCard {
+public class ArcaneMissileToken extends AbstractArcaneCard {
     public static final String ID = IHelper.makeID("ArcaneMissileToken");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
@@ -17,7 +17,7 @@ public class ArcaneMissileToken extends AbstractJainaCard {
 
     public ArcaneMissileToken() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, CardColor.COLORLESS,
-                CardRarity.SPECIAL, CardTarget.ENEMY, JainaEnums.CardTags.ARCANE);
+                CardRarity.SPECIAL, CardTarget.ENEMY);
         setDamage(3);
         this.exhaust = true;
     }

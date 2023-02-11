@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class ConjureManaBiscuit extends AbstractJainaCard {
+public class ConjureManaBiscuit extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("ConjureManaBiscuit");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -17,7 +17,7 @@ public class ConjureManaBiscuit extends AbstractJainaCard {
 
     public ConjureManaBiscuit() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.COMMON, CardTarget.NONE);
         cardsToPreview = new ManaBiscuit();
     }
 

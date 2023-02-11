@@ -12,7 +12,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.BurningPower;
 
 
-public class HotStreak extends AbstractJainaCard {
+public class HotStreak extends AbstractFireCard {
 
     public static final String ID = IHelper.makeID("HotStreak");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -22,7 +22,7 @@ public class HotStreak extends AbstractJainaCard {
 
     public HotStreak() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
+                CardRarity.UNCOMMON, CardTarget.ENEMY);
         setDamage(4);
         setMagicNumber(4);
     }

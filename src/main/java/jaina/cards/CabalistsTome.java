@@ -11,7 +11,7 @@ import jaina.modCore.JainaEnums;
 import java.util.ArrayList;
 
 
-public class CabalistsTome extends AbstractJainaCard {
+public class CabalistsTome extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("CabalistsTome");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -20,7 +20,7 @@ public class CabalistsTome extends AbstractJainaCard {
 
     public CabalistsTome() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.RARE, CardTarget.NONE);
         this.exhaust = true;
     }
 

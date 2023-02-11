@@ -11,7 +11,7 @@ import jaina.actions.FrozenEnemyAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class BreathOfSindragosa extends AbstractJainaCard {
+public class BreathOfSindragosa extends AbstractFrostCard {
 
     public static final String ID = IHelper.makeID("BreathOfSindragosa");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -20,7 +20,7 @@ public class BreathOfSindragosa extends AbstractJainaCard {
 
     public BreathOfSindragosa() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.NONE, JainaEnums.CardTags.FROST);
+                CardRarity.UNCOMMON, CardTarget.NONE);
         setDamage(4);
     }
 

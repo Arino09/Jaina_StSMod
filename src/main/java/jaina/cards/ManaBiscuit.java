@@ -14,7 +14,7 @@ import jaina.modCore.Core;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class ManaBiscuit extends AbstractJainaCard {
+public class ManaBiscuit extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("ManaBiscuit");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -23,7 +23,7 @@ public class ManaBiscuit extends AbstractJainaCard {
 
     public ManaBiscuit() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, CardColor.COLORLESS,
-                CardRarity.SPECIAL, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.SPECIAL, CardTarget.NONE);
         setMagicNumber(2);
         this.exhaust = true;
         this.selfRetain = true;

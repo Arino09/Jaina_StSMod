@@ -10,7 +10,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 
-public class DeckOfWonders extends AbstractJainaCard {
+public class DeckOfWonders extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("DeckOfWonders");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class DeckOfWonders extends AbstractJainaCard {
 
     public DeckOfWonders() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.RARE, CardTarget.NONE);
         this.exhaust = true;
         setMagicNumber(3);
         this.cardsToPreview = new ScrollOfWonder();

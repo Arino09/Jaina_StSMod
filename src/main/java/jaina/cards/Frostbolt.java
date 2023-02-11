@@ -10,7 +10,7 @@ import jaina.actions.FrozenEnemyAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class Frostbolt extends AbstractJainaCard {
+public class Frostbolt extends AbstractFrostCard {
     public static final String ID = IHelper.makeID("Frostbolt");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
@@ -18,7 +18,7 @@ public class Frostbolt extends AbstractJainaCard {
 
     public Frostbolt() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.BASIC, CardTarget.ENEMY, JainaEnums.CardTags.FROST);
+                CardRarity.BASIC, CardTarget.ENEMY);
         setDamage(3);
     }
 

@@ -10,7 +10,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.unique.IncantersPower;
 
 
-public class IncantersFlow extends AbstractJainaCard {
+public class IncantersFlow extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("IncantersFlow");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class IncantersFlow extends AbstractJainaCard {
 
     public IncantersFlow() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
+                CardRarity.RARE, CardTarget.SELF);
     }
 
     @Override

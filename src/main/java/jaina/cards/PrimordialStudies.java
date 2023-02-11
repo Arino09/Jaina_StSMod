@@ -10,7 +10,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.SpellDamagePower;
 
 
-public class PrimordialStudies extends AbstractJainaCard {
+public class PrimordialStudies extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("PrimordialStudies");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class PrimordialStudies extends AbstractJainaCard {
 
     public PrimordialStudies() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
+                CardRarity.UNCOMMON, CardTarget.SELF);
         setMagicNumber(2);
     }
 

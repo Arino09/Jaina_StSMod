@@ -10,7 +10,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 
-public class DeepFreeze extends AbstractJainaCard {
+public class DeepFreeze extends AbstractFrostCard {
 
     public static final String ID = IHelper.makeID("DeepFreeze");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class DeepFreeze extends AbstractJainaCard {
 
     public DeepFreeze() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.ALL_ENEMY, JainaEnums.CardTags.FROST);
+                CardRarity.RARE, CardTarget.ALL_ENEMY);
         exhaust = true;
     }
 

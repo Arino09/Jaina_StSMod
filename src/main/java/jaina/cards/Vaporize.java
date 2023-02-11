@@ -9,7 +9,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 import jaina.powers.unique.VaporizePower;
 
-public class Vaporize extends AbstractJainaCard {
+public class Vaporize extends AbstractFireCard {
 
     public static final String ID = IHelper.makeID("Vaporize");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -18,7 +18,7 @@ public class Vaporize extends AbstractJainaCard {
 
     public Vaporize() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                AbstractCard.CardRarity.UNCOMMON, CardTarget.SELF, JainaEnums.CardTags.FIRE);
+                AbstractCard.CardRarity.UNCOMMON, CardTarget.SELF);
         setBlock(6);
         setDamage(6);
     }

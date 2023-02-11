@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class FrostNova extends AbstractJainaCard {
+public class FrostNova extends AbstractFrostCard {
 
     public static final String ID = IHelper.makeID("FrostNova");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -17,7 +17,7 @@ public class FrostNova extends AbstractJainaCard {
 
     public FrostNova() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, JainaEnums.CardTags.FROST);
+                CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.exhaust = true;
     }
 

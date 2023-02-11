@@ -10,7 +10,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 
-public class Wish extends AbstractJainaCard {
+public class Wish extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("Wish");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class Wish extends AbstractJainaCard {
 
     public Wish() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.NONE, JainaEnums.CardTags.ARCANE);
+                CardRarity.RARE, CardTarget.NONE);
         exhaust = true;
     }
 

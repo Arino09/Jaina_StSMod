@@ -13,7 +13,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.BurningPower;
 
 
-public class FlameLance extends AbstractJainaCard {
+public class FlameLance extends AbstractFireCard {
 
     public static final String ID = IHelper.makeID("FlameLance");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -22,7 +22,7 @@ public class FlameLance extends AbstractJainaCard {
 
     public FlameLance() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
+                CardRarity.UNCOMMON, CardTarget.ENEMY);
         setDamage(10);
         setMagicNumber(4);
     }

@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.vfx.combat.BlizzardEffect;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class ConeOfCold extends AbstractJainaCard {
+public class ConeOfCold extends AbstractFrostCard {
 
     public static final String ID = IHelper.makeID("ConeOfCold");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -22,7 +22,7 @@ public class ConeOfCold extends AbstractJainaCard {
 
     public ConeOfCold() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.ALL_ENEMY, JainaEnums.CardTags.FROST);
+                CardRarity.COMMON, CardTarget.ALL_ENEMY);
         setDamage(4);
         setBlock(5);
     }

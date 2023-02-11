@@ -11,7 +11,7 @@ import jaina.powers.LoseSpellDamagePower;
 import jaina.powers.SpellDamagePower;
 
 
-public class ArcaneBrilliance extends AbstractJainaCard {
+public class ArcaneBrilliance extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("ArcaneBrilliance");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -20,7 +20,7 @@ public class ArcaneBrilliance extends AbstractJainaCard {
 
     public ArcaneBrilliance() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
+                CardRarity.COMMON, CardTarget.SELF);
         setMagicNumber(2);
     }
 

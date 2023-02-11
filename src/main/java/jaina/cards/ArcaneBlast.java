@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class ArcaneBlast extends AbstractJainaCard {
+public class ArcaneBlast extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("ArcaneBlast");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -18,7 +18,7 @@ public class ArcaneBlast extends AbstractJainaCard {
 
     public ArcaneBlast() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.ARCANE);
+                CardRarity.UNCOMMON, CardTarget.ENEMY);
         setDamage(7);
         // 法术伤害作用的倍数
         setMagicNumber(2);

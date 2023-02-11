@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class Pyroblast extends AbstractJainaCard {
+public class Pyroblast extends AbstractFireCard {
 
     public static final String ID = IHelper.makeID("Pyroblast");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -21,7 +21,7 @@ public class Pyroblast extends AbstractJainaCard {
 
     public Pyroblast() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
+                CardRarity.RARE, CardTarget.ENEMY);
         setDamage(35);
         cardsToPreview = new Burn();
     }

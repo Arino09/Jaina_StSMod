@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class ArcaneBreath extends AbstractJainaCard {
+public class ArcaneBreath extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("ArcaneBreath");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -18,7 +18,7 @@ public class ArcaneBreath extends AbstractJainaCard {
 
     public ArcaneBreath() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.ALL_ENEMY, JainaEnums.CardTags.ARCANE);
+                CardRarity.COMMON, CardTarget.ALL_ENEMY);
         setDamage(4);
     }
 

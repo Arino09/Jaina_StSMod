@@ -11,7 +11,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.BurningPower;
 
 
-public class Ignite extends AbstractJainaCard {
+public class Ignite extends AbstractFireCard {
 
     public static final String ID = IHelper.makeID("Ignite");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -20,7 +20,7 @@ public class Ignite extends AbstractJainaCard {
 
     public Ignite() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, JainaEnums.CardTags.FIRE);
+                CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
     }
 
     @Override

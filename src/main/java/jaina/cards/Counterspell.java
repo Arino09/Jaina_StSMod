@@ -14,7 +14,7 @@ import jaina.modCore.JainaEnums;
 
 import java.util.ArrayList;
 
-public class Counterspell extends AbstractJainaCard {
+public class Counterspell extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("Counterspell");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -23,7 +23,7 @@ public class Counterspell extends AbstractJainaCard {
 
     public Counterspell() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
+                CardRarity.RARE, CardTarget.SELF);
         this.isEthereal = true;
     }
 

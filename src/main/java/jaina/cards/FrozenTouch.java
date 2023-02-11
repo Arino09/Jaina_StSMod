@@ -11,7 +11,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 
-public class FrozenTouch extends AbstractJainaCard {
+public class FrozenTouch extends AbstractFrostCard {
 
     public static final String ID = IHelper.makeID("FrozenTouch");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -21,7 +21,7 @@ public class FrozenTouch extends AbstractJainaCard {
 
     public FrozenTouch() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.ENEMY, JainaEnums.CardTags.FROST);
+                CardRarity.RARE, CardTarget.ENEMY);
         setDamage(3);
         setMagicNumber(3);
         exhaustCount = magicNumber;

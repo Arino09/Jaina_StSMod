@@ -10,7 +10,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 
-public class IceWall extends AbstractJainaCard {
+public class IceWall extends AbstractFrostCard {
 
     public static final String ID = IHelper.makeID("IceWall");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class IceWall extends AbstractJainaCard {
 
     public IceWall() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.SELF, JainaEnums.CardTags.FROST);
+                CardRarity.UNCOMMON, CardTarget.SELF);
         setBlock(5);
     }
 

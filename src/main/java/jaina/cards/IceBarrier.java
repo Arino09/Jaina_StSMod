@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class IceBarrier extends AbstractJainaCard {
+public class IceBarrier extends AbstractFrostCard {
 
     public static final String ID = IHelper.makeID("IceBarrier");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -17,7 +17,7 @@ public class IceBarrier extends AbstractJainaCard {
 
     public IceBarrier() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.SELF, JainaEnums.CardTags.FROST);
+                CardRarity.COMMON, CardTarget.SELF);
         setBlock(9);
     }
 

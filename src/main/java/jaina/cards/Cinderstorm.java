@@ -10,7 +10,7 @@ import jaina.actions.unique.CinderstormAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-public class Cinderstorm extends AbstractJainaCard {
+public class Cinderstorm extends AbstractFireCard {
 
     public static final String ID = IHelper.makeID("Cinderstorm");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class Cinderstorm extends AbstractJainaCard {
 
     public Cinderstorm() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.NONE, JainaEnums.CardTags.FIRE);
+                CardRarity.UNCOMMON, CardTarget.NONE);
         setMagicNumber(1);
         cardsToPreview = new Burn();
     }

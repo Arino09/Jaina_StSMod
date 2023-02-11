@@ -10,7 +10,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.unique.FlameWardPower;
 
 
-public class FlameWard extends AbstractJainaCard {
+public class FlameWard extends AbstractFireCard {
 
     public static final String ID = IHelper.makeID("FlameWard");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class FlameWard extends AbstractJainaCard {
 
     public FlameWard() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.SELF, JainaEnums.CardTags.FIRE);
+                CardRarity.UNCOMMON, CardTarget.SELF);
         setBlock(10);
         setMagicNumber(1);
     }

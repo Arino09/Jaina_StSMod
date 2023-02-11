@@ -11,7 +11,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 
-public class ExplosiveRunes extends AbstractJainaCard {
+public class ExplosiveRunes extends AbstractFireCard {
 
     public static final String ID = IHelper.makeID("ExplosiveRunes");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -20,7 +20,7 @@ public class ExplosiveRunes extends AbstractJainaCard {
 
     public ExplosiveRunes() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.ENEMY, JainaEnums.CardTags.FIRE);
+                CardRarity.UNCOMMON, CardTarget.ENEMY);
         setDamage(8);
     }
 

@@ -9,7 +9,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
 
-public class IceShard extends AbstractJainaCard {
+public class IceShard extends AbstractFrostCard {
 
     public static final String ID = IHelper.makeID("IceShard");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -18,7 +18,7 @@ public class IceShard extends AbstractJainaCard {
 
     public IceShard() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.NONE, JainaEnums.CardTags.FROST);
+                CardRarity.RARE, CardTarget.NONE);
         setMagicNumber(3);
         this.exhaust = true;
         cardsToPreview = new IceLance();

@@ -10,7 +10,7 @@ import jaina.modCore.JainaEnums;
 import jaina.powers.unique.ManaBindPower;
 
 
-public class ManaBind extends AbstractJainaCard {
+public class ManaBind extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("ManaBind");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -19,7 +19,7 @@ public class ManaBind extends AbstractJainaCard {
 
     public ManaBind() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.SELF, JainaEnums.CardTags.ARCANE);
+                CardRarity.RARE, CardTarget.SELF);
         setMagicNumber(1);
     }
 

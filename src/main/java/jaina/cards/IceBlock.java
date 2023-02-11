@@ -9,7 +9,7 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 import jaina.powers.unique.IceBlockPower;
 
-public class IceBlock extends AbstractJainaCard {
+public class IceBlock extends AbstractFrostCard {
 
     public static final String ID = IHelper.makeID("IceBlock");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -18,7 +18,7 @@ public class IceBlock extends AbstractJainaCard {
 
     public IceBlock() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.SELF, JainaEnums.CardTags.FROST);
+                CardRarity.RARE, CardTarget.SELF);
     }
 
     @Override
