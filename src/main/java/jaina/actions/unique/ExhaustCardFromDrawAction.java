@@ -27,8 +27,9 @@ public class ExhaustCardFromDrawAction extends AbstractGameAction {
                 return;
             }
             if (draw.size() == 1) {
-                AbstractCard card = draw.getTopCard();
+                AbstractCard card = draw.getTopCard().makeSameInstanceOf();
                 card.exhaust = true;
+                card.rawDescription = card.rawDescription + IHelper.UI_STRINGS.TEXT[4];
                 if (p.hand.size() == 10) {
                     return;
                 } else {
@@ -56,12 +57,14 @@ public class ExhaustCardFromDrawAction extends AbstractGameAction {
         if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
             for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                 c.unhover();
-                c.exhaust = true;
+                AbstractCard card = c.makeSameInstanceOf();
+                card.exhaust = true;
+                card.rawDescription = card.rawDescription + IHelper.UI_STRINGS.TEXT[4];
                 if (p.hand.size() == 10) {
-                    c.moveToDiscardPile();
+                    card.moveToDiscardPile();
                     p.createHandIsFullDialog();
                 } else {
-                    p.hand.addToTop(c);
+                    p.hand.addToTop(card);
                 }
                 p.hand.refreshHandLayout();
                 p.hand.applyPowers();
