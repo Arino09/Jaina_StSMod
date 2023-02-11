@@ -185,7 +185,7 @@
   },
   "jaina:HotStreak": {
     "NAME": "炽热连击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 jaina:烧伤 。 NL 如果本场战斗中打出的上一张牌是火焰牌，获得 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 jaina:燃烧 。 NL 如果本场战斗中打出的上一张牌是火焰牌，获得 [E] 。"
   },
   "jaina:MagicTrick": {
     "NAME": "魔术戏法",
@@ -313,7 +313,7 @@
   },
   "jaina:ArcaneGate": {
     "NAME": "奥术之门",
-    "DESCRIPTION": "每当你使用一张 *奥术 牌，造成 !M! 点伤害 NL （受 jaina:法术伤害 加成）。"
+    "DESCRIPTION": "每当你使用一张 *奥术 牌，造成 !M! 点伤害。"
   },
   "jaina:ShatteringBlast": {
     "NAME": "冰爆冲击",
