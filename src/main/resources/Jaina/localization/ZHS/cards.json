@@ -142,7 +142,11 @@
   },
   "jaina:CramSession": {
     "NAME": "考前刷夜",
-    "DESCRIPTION": "抽 !M! 张牌。 NL （受 jaina:法术伤害 加成。）"
+    "DESCRIPTION": "抽 !M! 张牌。 NL （受 jaina:法术伤害 加成。）",
+    "EXTENDED_DESCRIPTION": [
+      "（抽",
+      "张牌。）"
+    ]
   },
   "jaina:FrozenClone": {
     "NAME": "寒冰克隆",
@@ -181,11 +185,15 @@
   "jaina:FontOfPower": {
     "NAME": "能量之泉",
     "DESCRIPTION": "获得 !M! 点 [E] NL （受 jaina:法术伤害 加成）。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 点 [E] NL （受 jaina:法术伤害 加成）。"
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 [E] NL （受 jaina:法术伤害 加成）。",
+    "EXTENDED_DESCRIPTION": [
+      "（获得",
+      "点 [E] ）"
+    ]
   },
   "jaina:HotStreak": {
     "NAME": "炽热连击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 jaina:燃烧 。 NL 如果本场战斗中打出的上一张牌是火焰牌，获得 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 jaina:燃烧 。 NL 如果本场战斗中打出的上一张牌是 *火焰 牌，获得 [E] 。"
   },
   "jaina:MagicTrick": {
     "NAME": "魔术戏法",
@@ -199,7 +207,7 @@
   },
   "jaina:DragonsBreath": {
     "NAME": "龙息术",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果手牌中只有火焰牌，这张牌的耗能变为0点。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果手牌中只有 *火焰 牌，这张牌的耗能变为0点。"
   },
   "jaina:DragonsFury": {
     "NAME": "巨龙之怒",
@@ -292,7 +300,11 @@
   },
   "jaina:ApexisBlast": {
     "NAME": "埃匹希斯冲击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌（受 jaina:法术伤害 加成）。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌（受 jaina:法术伤害 加成）。",
+    "EXTENDED_DESCRIPTION": [
+      "（抽",
+      "张牌。）"
+    ]
   },
   "jaina:BookOfSpecters": {
     "NAME": "怨灵之书",
