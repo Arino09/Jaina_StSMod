@@ -50,6 +50,11 @@ public class HotStreak extends AbstractFireCard {
     }
 
     @Override
+    public void triggerOnEndOfPlayerTurn() {
+        this.lastIsFire = false;
+    }
+
+    @Override
     public void triggerOnOtherCardPlayed(AbstractCard c) {
         lastIsFire = c.hasTag(JainaEnums.CardTags.FIRE);
     }
