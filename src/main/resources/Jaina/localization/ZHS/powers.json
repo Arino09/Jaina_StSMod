@@ -28,13 +28,8 @@
   "jaina:VaporizePower": {
     "NAME": "蒸发",
     "DESCRIPTIONS": [
-      "在你受到攻击时对攻击者造成9点伤害。 NL 受到一次攻击仅触发一次。"
-    ]
-  },
-  "jaina:VaporizePowerP": {
-    "NAME": "蒸发+",
-    "DESCRIPTIONS": [
-      "在你受到攻击时对攻击者造成12点伤害。 NL 受到一次攻击仅触发一次。"
+      "在你受到攻击时对攻击者造成",
+      "点伤害。 NL 受到一次攻击仅触发一次。"
     ]
   },
   "jaina:BurningPower": {

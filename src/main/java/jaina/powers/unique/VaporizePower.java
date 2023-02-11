@@ -21,7 +21,7 @@ public class VaporizePower extends AbstractJainaPower {
 
     public VaporizePower(AbstractCreature owner, boolean upgraded) {
         super(upgraded ? POWER_ID_P : POWER_ID, true, NAME, PowerType.BUFF);
-        DAMAGE = upgraded ? 9 : 6;
+        DAMAGE = upgraded ? 12 : 9;
         this.owner = owner;
         this.amount = 1;
         updateDescription();
@@ -29,7 +29,7 @@ public class VaporizePower extends AbstractJainaPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + DAMAGE + DESCRIPTIONS[1];
     }
 
     @Override
