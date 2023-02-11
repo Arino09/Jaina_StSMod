@@ -83,10 +83,10 @@ public class JainaCharacter extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> deck = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 4; i++) {
             deck.add(Strike.ID);
         }
-        for (int j = 0; j < 5; j++) {
+        for (int j = 0; j < 4; j++) {
             deck.add(Defend.ID);
         }
         deck.add(Fireblast.ID);
