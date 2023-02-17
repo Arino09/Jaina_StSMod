@@ -15,13 +15,16 @@ public class IceShard extends AbstractFrostCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
     private static final int COST = 3;
-
+    private final IceLance iceLance = new IceLance();
     public IceShard() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.RARE, CardTarget.NONE);
         setMagicNumber(3);
         this.exhaust = true;
-        cardsToPreview = new IceLance();
+        iceLance.exhaust = true;
+        iceLance.rawDescription = CARD_STRINGS.EXTENDED_DESCRIPTION[0];
+        iceLance.initializeDescription();
+        cardsToPreview = iceLance;
     }
 
     @Override
@@ -32,7 +35,7 @@ public class IceShard extends AbstractFrostCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
-            IHelper.getTempCard(new IceLance());
+            IHelper.getTempCard(iceLance.makeSameInstanceOf());
         }
     }
 

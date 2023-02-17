@@ -81,7 +81,7 @@
   },
   "jaina:IceLance": {
     "NAME": "冰枪术",
-    "DESCRIPTION": "对 jaina:冻结 的敌人造成 !D! 点伤害。 NL 若敌人未被冻结 ，则 jaina:冻结 敌人并 消耗 。"
+    "DESCRIPTION": "对被 jaina:冻结 的敌人造成 !D! 点伤害。 NL 若敌人未被冻结 ，则 jaina:冻结 敌人并 消耗 。"
   },
   "jaina:ManaBiscuit": {
     "NAME": "法力饼干",
@@ -126,7 +126,7 @@
   },
   "jaina:Cinderstorm": {
     "NAME": "燃烬风暴",
-    "DESCRIPTION": "消耗手牌中所有的 *灼伤 ，每张给予所有敌人 !M! 层 jaina:烧伤 。"
+    "DESCRIPTION": "消耗手牌中所有的 *灼伤 ，每张给予所有敌人 !M! 层 jaina:燃烧 。"
   },
   "jaina:Combustion": {
     "NAME": "燃烧",
@@ -284,7 +284,11 @@
   },
   "jaina:Simulacrum": {
     "NAME": "模拟幻影",
-    "DESCRIPTION": "从抽牌堆中选择 !M! 张牌，将这些牌的复制加入你的手牌。 NL 这些牌具有 消耗 。"
+    "DESCRIPTION": "从抽牌堆中选择 !M! 张牌，将这些牌的复制加入你的手牌。 NL 这些牌具有 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "【幻影】",
+      " NL 消耗 。"
+    ]
   },
   "jaina:TomeOfIntellect": {
     "NAME": "智慧秘典",
@@ -312,7 +316,10 @@
   },
   "jaina:IceShard": {
     "NAME": "寒冰碎片",
-    "DESCRIPTION": "将 !M! 张 *冰枪术 放入你的手牌。"
+    "DESCRIPTION": "将 !M! 张具有 *消耗 的 *冰枪术 放入你的手牌。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "对被 jaina:冻结 的敌人造成 !D! 点伤害，或 jaina:冻结 敌人。 NL 消耗 。"
+    ]
   },
   "jaina:DeepFreeze": {
     "NAME": "深度冻结",
@@ -321,7 +328,11 @@
   },
   "jaina:FrozenTouch": {
     "NAME": "冻寒之触",
-    "DESCRIPTION": "造成 !D! 点伤害并 jaina:冻结 敌人 。 NL 使用 !M! 次后 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害并 jaina:冻结 敌人 。 NL 使用 !M! 次后 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "（还剩",
+      "次）"
+    ]
   },
   "jaina:ArcaneGate": {
     "NAME": "奥术之门",

@@ -4,7 +4,7 @@ import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 
-public class AbstractJainaRelic extends CustomRelic {
+public abstract class AbstractJainaRelic extends CustomRelic {
 
     public AbstractJainaRelic(String ID, boolean useTestArt, RelicStrings relicStrings, RelicTier tier, LandingSound landingSound) {
         super(ID, ImageMaster.loadImage(getImgPath(ID, useTestArt)[0]), ImageMaster.loadImage(getImgPath(ID, useTestArt)[1]), tier, landingSound);
