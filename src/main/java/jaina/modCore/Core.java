@@ -2,6 +2,7 @@ package jaina.modCore;
 
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.abstracts.CustomRelic;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -10,8 +11,8 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import jaina.characters.JainaCharacter;
-import jaina.relics.ArchmageStuff;
 
 import java.nio.charset.StandardCharsets;
 
@@ -76,7 +77,15 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     // 当baseMod开始注册mod遗物时，便会调用这个函数
     @Override
     public void receiveEditRelics() {
-        BaseMod.addRelicToCustomPool(new ArchmageStuff(), JainaEnums.JAINA_COLOR);
+        // 自动添加遗物到角色遗物池
+        new AutoAdd(MOD_ID)
+                .packageFilter("jaina.relics")
+                .any(CustomRelic.class, (info, relic) -> {
+                    BaseMod.addRelicToCustomPool(relic, JainaEnums.JAINA_COLOR);
+                    if (info.seen) {
+                        UnlockTracker.markRelicAsSeen(relic.relicId);
+                    }
+                });
     }
 
     //加载本地化资源
