@@ -10,7 +10,6 @@ import jaina.modCore.IHelper;
 public class TheCoin extends AbstractJainaRelic implements ClickableRelic {
     public static final String ID = IHelper.makeID("TheCoin");
     private static final RelicStrings RELIC_STRINGS = CardCrawlGame.languagePack.getRelicStrings(ID);
-    private boolean isUsed;
 
     public TheCoin() {
         super(ID, false, RELIC_STRINGS, AbstractRelic.RelicTier.COMMON, AbstractRelic.LandingSound.CLINK);
@@ -18,19 +17,23 @@ public class TheCoin extends AbstractJainaRelic implements ClickableRelic {
 
     @Override
     public void atBattleStart() {
-        isUsed = false;
+        this.usedUp = false;
     }
 
     @Override
     public void onRightClick() {
-        if (!isUsed) {
+        if (!usedUp) {
             if (AbstractDungeon.player.hand.size() != 10) {
                 IHelper.getTempCard(new jaina.cards.TheCoin());
             }
-            isUsed = true;
+            usedUp = true;
         }
     }
 
+    @Override
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0];
+    }
 
     @Override
     public AbstractRelic makeCopy() {
