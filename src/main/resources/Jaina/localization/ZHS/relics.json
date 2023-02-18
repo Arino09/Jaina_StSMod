@@ -10,7 +10,35 @@
     "NAME": "幸运币",
     "FLAVOR": "它不一定能带来好运，但一定能给你一点小小的帮助！",
     "DESCRIPTIONS": [
-      "将一张 #y幸运币 放入你的手牌。"
+      "每场战斗一次，将一张 #y幸运币 放入你的手牌。"
     ]
-  }
+  },
+  "jaina:SphereOfSapience": {
+    "NAME": "感知宝珠",
+    "FLAVOR": "那张牌也许会迟到，但从不缺席。",
+    "DESCRIPTIONS": [
+      "每场战斗一次，预见 #b5 并抽一张牌。"
+    ]
+  },
+  "jaina:RobesOfGaudiness": {
+    "NAME": "华丽的长袍",
+    "FLAVOR": "一件有诸多宝石镶嵌在里面的长袍，没有人能驾驭它的力量。",
+    "DESCRIPTIONS": [
+      "你的 #b吉安娜 卡牌消耗为 #b0 。 NL 每回合只能使用 #b3 张牌。"
+    ]
+  },
+  "jaina:ArcaniteCrystal": {
+    "NAME": "奥金晶体",
+    "FLAVOR": "蕴藏着奥术能量的天然晶体，十分珍稀。",
+    "DESCRIPTIONS": [
+      "你每回合第一次打出 #p奥术牌 时，手牌中一张随机牌在这个回合耗能变为 #b0 。"
+    ]
+  },
+  "jaina:AscendantScroll": {
+    "NAME": "升格卷轴",
+    "FLAVOR": "一个记载着古老文字的卷轴，使用它可能会造成不可预料的后果。",
+    "DESCRIPTIONS": [
+      "消耗 #y2 点能量，将一张随机卡牌放入的你手牌，这张卡本回合耗能减少 #y2 。"
+    ]
+}
 }
