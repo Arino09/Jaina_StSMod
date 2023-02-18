@@ -19,6 +19,11 @@ public class ArchmageStuff extends AbstractJainaRelic {
     }
 
     @Override
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0];
+    }
+
+    @Override
     public AbstractRelic makeCopy() {
         return new ArchmageStuff();
     }
