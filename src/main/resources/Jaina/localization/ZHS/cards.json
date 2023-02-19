@@ -134,11 +134,11 @@
   },
   "jaina:IncantersFlow": {
     "NAME": "咒术洪流",
-    "DESCRIPTION": "你在每回合打出的第一张法术牌耗能变为0。"
+    "DESCRIPTION": "你在每回合打出的第一张 #b法术牌 耗能变为0。"
   },
   "jaina:CabalistsTome": {
     "NAME": "秘法宝典",
-    "DESCRIPTION": "随机将3张吉安娜的非稀有卡牌放入你的手牌。 NL 这些牌在本回合的耗能变为0点。 NL 消耗 。"
+    "DESCRIPTION": "随机将3张非稀有 #b法术牌 放入你的手牌。 NL 这些牌在本回合的耗能变为0点。 NL 消耗 。"
   },
   "jaina:CramSession": {
     "NAME": "考前刷夜",
@@ -197,13 +197,13 @@
   },
   "jaina:MagicTrick": {
     "NAME": "魔术戏法",
-    "DESCRIPTION": "jaina:发现 1张耗费为1的吉安娜非稀有卡。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "jaina:发现 1张耗费为1的吉安娜非普通卡。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。"
+    "DESCRIPTION": "jaina:发现 1张耗费为1的非稀有 #b法术牌 。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "jaina:发现 1张耗费为1的非普通 #b法术牌 。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。"
   },
   "jaina:PrimordialGlyph": {
     "NAME": "远古雕文",
-    "DESCRIPTION": "jaina:发现 1张吉安娜非普通卡。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "jaina:发现 1张升级过的吉安娜非普通卡。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。"
+    "DESCRIPTION": "jaina:发现 1张非普通 #b法术牌 。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "jaina:发现 1张升级过的非普通 #b法术牌 。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。"
   },
   "jaina:DragonsBreath": {
     "NAME": "龙息术",
@@ -275,8 +275,8 @@
   },
   "jaina:ShiftingScroll": {
     "NAME": "变形卷轴",
-    "DESCRIPTION": "保留 。 NL 这张牌在你的手中每回合开始都会变形成为一张随机吉安娜卡牌。",
-    "UPGRADE_DESCRIPTION": "保留 。 固有 。 NL 这张牌在你的手中每回合开始都会变形成为一张随机吉安娜卡牌。",
+    "DESCRIPTION": "保留 。 NL 这张牌在你的手中每回合开始都会变形成为一张随机 #b法术牌 。",
+    "UPGRADE_DESCRIPTION": "保留 。 固有 。 NL 这张牌在你的手中每回合开始都会变形成为一张随机 #b法术牌 。",
     "EXTENDED_DESCRIPTION": [
       "【变形】",
       "保留 。 NL "
@@ -353,8 +353,8 @@
   },
   "jaina:Wish": {
     "NAME": "祈愿术",
-    "DESCRIPTION": "选择一张吉安娜牌加入你的手牌。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择一张升级过的吉安娜牌加入你的手牌。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。"
+    "DESCRIPTION": "选择一张 #b法术牌 加入你的手牌。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张升级过的 #b法术牌 加入你的手牌。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。"
   },
   "jaina:MirrorImage": {
     "NAME": "镜像法术",
