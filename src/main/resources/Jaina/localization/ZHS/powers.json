@@ -1,35 +1,16 @@
 {
-  "jaina:FrozenPower": {
-    "NAME": "冻结",
+  "jaina:ArcaneGatePower": {
+    "NAME": "奥术之门",
     "DESCRIPTIONS": [
-      "被 #b冻结 的角色失去他的下一次行动机会。 NL #b冻结 效果不能叠加。"
+      "使用 #p奥术 牌时造成",
+      "点伤害。"
     ]
   },
-  "jaina:IceBlockPower": {
-    "NAME": "寒冰屏障",
+  "jaina:ArcticArmorPower": {
+    "NAME": "寒甲术",
     "DESCRIPTIONS": [
-      "防止你受到的一次致命攻击。"
-    ]
-  },
-  "jaina:SpellDamagePower": {
-    "NAME": "法术伤害",
-    "DESCRIPTIONS": [
-      "#y法术伤害 提高",
-      "点。"
-    ]
-  },
-  "jaina:LoseSpellDamagePower": {
-    "NAME": "奥术光辉",
-    "DESCRIPTIONS": [
-      "回合结束时失去",
-      "点 #y法术伤害 。"
-    ]
-  },
-  "jaina:VaporizePower": {
-    "NAME": "蒸发",
-    "DESCRIPTIONS": [
-      "在你受到攻击时对攻击者造成",
-      "点伤害。 NL 受到一次攻击仅触发一次。"
+      "你每打出一张 #b冰霜 牌，获得",
+      "点 #y格挡"
     ]
   },
   "jaina:BurningPower": {
@@ -39,12 +20,10 @@
       "点生命值。"
     ]
   },
-  "jaina:IncantersPower": {
-    "NAME": "咒术洪流",
+  "jaina:EvocationPower": {
+    "NAME": "法力唤醒",
     "DESCRIPTIONS": [
-      "你在每回合打出的第一张法术牌耗能变为 #b0 。",
-      "你在每回合打出的前",
-      "张法术牌耗能变为 #b0 。"
+      "每回合获得 #y法术伤害 +"
     ]
   },
   "jaina:FlameWardPower": {
@@ -60,16 +39,31 @@
       "#b冰霜 牌的耗能减少 #y2 点。"
     ]
   },
-  "jaina:WildFirePower": {
-    "NAME": "野火",
+  "jaina:FrozenPower": {
+    "NAME": "冻结",
     "DESCRIPTIONS": [
-      "每当你给予 #r燃烧 时，额外给予 #y3 层。"
+      "被 #b冻结 的角色失去他的下一次行动机会。 NL #b冻结 效果不能叠加。"
     ]
   },
-  "jaina:WildFirePowerP": {
-    "NAME": "野火+",
+  "jaina:IceBlockPower": {
+    "NAME": "寒冰屏障",
     "DESCRIPTIONS": [
-      "每当你给予 #r燃烧 时，额外给予一倍的层数。"
+      "防止你受到的一次致命攻击。"
+    ]
+  },
+  "jaina:IncantersPower": {
+    "NAME": "咒术洪流",
+    "DESCRIPTIONS": [
+      "你在每回合打出的第一张法术牌耗能变为 #b0 。",
+      "你在每回合打出的前",
+      "张法术牌耗能变为 #b0 。"
+    ]
+  },
+  "jaina:LoseSpellDamagePower": {
+    "NAME": "奥术光辉",
+    "DESCRIPTIONS": [
+      "回合结束时失去",
+      "点 #y法术伤害 。"
     ]
   },
   "jaina:ManaBindPower": {
@@ -80,6 +74,13 @@
       "张 #p奥术 牌打出两次。"
     ]
   },
+  "jaina:SpellDamagePower": {
+    "NAME": "法术伤害",
+    "DESCRIPTIONS": [
+      "#y法术伤害 提高",
+      "点。"
+    ]
+  },
   "jaina:SplittingImagePower": {
     "NAME": "裂魂残像",
     "DESCRIPTIONS": [
@@ -87,31 +88,30 @@
       "层 #y无实体 。"
     ]
   },
+  "jaina:VaporizePower": {
+    "NAME": "蒸发",
+    "DESCRIPTIONS": [
+      "在你受到攻击时对攻击者造成",
+      "点伤害。 NL 受到一次攻击仅触发一次。"
+    ]
+  },
+  "jaina:WildfirePower": {
+    "NAME": "野火",
+    "DESCRIPTIONS": [
+      "每当你给予 #r燃烧 时，额外给予 #y3 层。"
+    ]
+  },
+  "jaina:WildfirePowerP": {
+    "NAME": "野火+",
+    "DESCRIPTIONS": [
+      "每当你给予 #r燃烧 时，额外给予一倍的层数。"
+    ]
+  },
   "jaina:WizardArmorPower": {
     "NAME": "法师护甲",
     "DESCRIPTIONS": [
       "回合结束时获得",
       "点 #y格挡 。"
-    ]
-  },
-  "jaina:ArcaneGatePower": {
-    "NAME": "奥术之门",
-    "DESCRIPTIONS": [
-      "使用 #p奥术 牌时造成",
-      "点伤害。"
-    ]
-  },
-  "jaina:ArcticArmorPower": {
-    "NAME": "寒甲术",
-    "DESCRIPTIONS": [
-      "你每打出一张 #b冰霜 牌，获得",
-      "点 #y格挡"
-    ]
-  },
-  "jaina:EvocationPower": {
-    "NAME": "法力唤醒",
-    "DESCRIPTIONS": [
-      "每回合获得 #y法术伤害 +"
     ]
   }
 }

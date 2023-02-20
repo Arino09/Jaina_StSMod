@@ -1,8 +1,32 @@
 {
+  "jaina:ApexisBlast": {
+    "NAME": "埃匹希斯冲击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌（受 jaina:法术伤害 加成）。",
+    "EXTENDED_DESCRIPTION": [
+      "（抽",
+      "张牌。）"
+    ]
+  },
+  "jaina:ArcaneBlast": {
+    "NAME": "奥术冲击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL jaina:法术伤害 在 *奥术冲击 上发挥 !M! 倍效果。"
+  },
+  "jaina:ArcaneBreath": {
+    "NAME": "奥术吐息",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害两次。"
+  },
+  "jaina:ArcaneBrilliance": {
+    "NAME": "奥术光辉",
+    "DESCRIPTION": "jaina:法术伤害 + !M! 。 NL 你的回合结束时， jaina:法术伤害 - !M! 。"
+  },
   "jaina:ArcaneExplosion": {
     "NAME": "魔爆术",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 抽 !M! 张牌。"
+  },
+  "jaina:ArcaneGate": {
+    "NAME": "奥术之门",
+    "DESCRIPTION": "每当你使用一张 *奥术 牌，造成 !M! 点伤害。"
   },
   "jaina:ArcaneIntellect": {
     "NAME": "奥术智慧",
@@ -17,9 +41,33 @@
     "NAME": "奥术飞弹",
     "DESCRIPTION": "将 !M! 张 *奥术弹 置入你的手牌。"
   },
+  "jaina:ArcticArmor": {
+    "NAME": "寒甲术",
+    "DESCRIPTION": "每当你使用一张 *冰霜 牌，获得 !M! 点 格挡 。"
+  },
   "jaina:Blizzard": {
     "NAME": "暴风雪",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害并 jaina:冻结 。"
+  },
+  "jaina:BookOfSpecters": {
+    "NAME": "怨灵之书",
+    "DESCRIPTION": "抽 !M! 张牌，丢弃抽到的牌中的非攻击牌。"
+  },
+  "jaina:BreathOfSindragosa": {
+    "NAME": "冰龙吐息",
+    "DESCRIPTION": "随机对一个敌人造成 !D! 点伤害并 jaina:冻结 。"
+  },
+  "jaina:CabalistsTome": {
+    "NAME": "秘法宝典",
+    "DESCRIPTION": "随机将3张非稀有法术牌放入你的手牌。 NL 这些牌在本回合的耗能变为0点。 NL 消耗 。"
+  },
+  "jaina:Cinderstorm": {
+    "NAME": "燃烬风暴",
+    "DESCRIPTION": "消耗手牌中所有的 *灼伤 ，每张给予所有敌人 !M! 层 jaina:燃烧 。"
+  },
+  "jaina:Combustion": {
+    "NAME": "燃烧",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予其他敌人 !M! 层 jaina:燃烧 。"
   },
   "jaina:ConeOfCold": {
     "NAME": "冰锥术",
@@ -46,13 +94,68 @@
     "DESCRIPTION": "选择：获得1层 无实体 、1层缓冲或1层 人工制品 。 NL 虚无 。",
     "UPGRADE_DESCRIPTION": "选择：获得1层 无实体 、1层缓冲或者1层 人工制品 。 NL 消耗 。"
   },
+  "jaina:CramSession": {
+    "NAME": "考前刷夜",
+    "DESCRIPTION": "抽 !M! 张牌。 NL （受 jaina:法术伤害 加成。）",
+    "EXTENDED_DESCRIPTION": [
+      "（抽",
+      "张牌。）"
+    ]
+  },
+  "jaina:DeckOfWonders": {
+    "NAME": "惊奇套牌",
+    "DESCRIPTION": "在你的抽牌堆中加入 !M! 张 *惊奇卡牌 。 NL 消耗 。"
+  },
+  "jaina:DeepFreeze": {
+    "NAME": "深度冻结",
+    "DESCRIPTION": "jaina:冻结 所有敌人。 NL 每冻结一名敌人，获得 [E] 并抽一张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "jaina:冻结 所有敌人。 NL 每冻结一名敌人，获得 [E] 并抽一张牌。"
+  },
   "jaina:Defend": {
     "NAME": "防御",
     "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
+  "jaina:DragonsBreath": {
+    "NAME": "龙息术",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果手牌中只有 *火焰 牌，这张牌的耗能变为0点。"
+  },
+  "jaina:DragonsFury": {
+    "NAME": "巨龙之怒",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害X次。 NL jaina:烧伤 ： *X 。"
+  },
+  "jaina:Duplicate": {
+    "NAME": "复制",
+    "DESCRIPTION": "将你手牌中的一张牌复制一张。 NL （不能复制 *复制 。）",
+    "UPGRADE_DESCRIPTION": "将你手牌中的一张牌复制两张。 NL （不能复制 *复制 。）"
+  },
+  "jaina:Evocation": {
+    "NAME": "唤醒",
+    "DESCRIPTION": "每回合开始时获得 jaina:法术伤害 + !M! 。"
+  },
+  "jaina:ExplosiveRunes": {
+    "NAME": "爆炸符文",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 对 *爪牙 的伤害翻倍。 NL 如果杀死 *爪牙 ，溢出部分会对所有敌人造成伤害。"
+  },
   "jaina:Fireball": {
     "NAME": "火球术",
     "DESCRIPTION": "造成 !D! 点伤害。 NL jaina:烧伤 ： *1 。"
+  },
+  "jaina:Fireblast": {
+    "NAME": "火焰冲击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL jaina:烧伤 ： *1 。"
+  },
+  "jaina:FirstFlame": {
+    "NAME": "初始之火",
+    "DESCRIPTION": "造成 !D! 点伤害。将一张 *传承之火 置入你的手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。将一张 *传承之火+ 置入你的手牌。"
+  },
+  "jaina:FlameLance": {
+    "NAME": "炎枪术",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若造成未被格挡的伤害，给予 !M! 层 jaina:燃烧 。 NL jaina:烧伤 ： *1 。"
+  },
+  "jaina:FlameWard": {
+    "NAME": "火焰结界",
+    "DESCRIPTION": "获得 !B! 点 格挡。 NL 每当受到攻击，给予所有敌人 !M! 层 jaina:燃烧 。"
   },
   "jaina:Flamecannon": {
     "NAME": "烈焰轰击",
@@ -62,6 +165,28 @@
     "NAME": "烈焰风暴",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害2次。 NL jaina:烧伤 ： *2 。"
   },
+  "jaina:FontOfPower": {
+    "NAME": "能量之泉",
+    "DESCRIPTION": "获得 !M! 点 [E] NL （受 jaina:法术伤害 加成）。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 [E] NL （受 jaina:法术伤害 加成）。",
+    "EXTENDED_DESCRIPTION": [
+      "（获得",
+      "点 [E] ）"
+    ]
+  },
+  "jaina:ForbiddenFlame": {
+    "NAME": "禁忌烈焰",
+    "DESCRIPTION": "造成X倍 !D! 点伤害。 NL jaina:烧伤 ： *X 。"
+  },
+  "jaina:FrostAffinity": {
+    "NAME": "冰霜亲和",
+    "DESCRIPTION": "在本回合中，你的下一张冰霜卡牌消耗减少 *2 点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "在本回合中，你的下一张冰霜卡牌消耗减少 *2 点。"
+  },
+  "jaina:FrostArmor": {
+    "NAME": "冰霜护甲",
+    "DESCRIPTION": "获得 !M! 层 多层护甲 。"
+  },
   "jaina:FrostNova": {
     "NAME": "冰霜新星",
     "DESCRIPTION": " jaina:冻结 所有敌人。 消耗 。",
@@ -70,6 +195,27 @@
   "jaina:Frostbolt": {
     "NAME": "寒冰箭",
     "DESCRIPTION": "造成 !D! 点伤害并 jaina:冻结 敌人。"
+  },
+  "jaina:FrozenClone": {
+    "NAME": "寒冰克隆",
+    "DESCRIPTION": "获得 格挡 X次，数值等于目标的攻击力。",
+    "UPGRADE_DESCRIPTION": "获得 格挡 X+1次，数值等于目标的攻击力。"
+  },
+  "jaina:FrozenTouch": {
+    "NAME": "冻寒之触",
+    "DESCRIPTION": "造成 !D! 点伤害并 jaina:冻结 敌人 。 NL 使用 !M! 次后 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "（还剩",
+      "次）"
+    ]
+  },
+  "jaina:GreaterArcaneMissiles": {
+    "NAME": "强能奥术飞弹",
+    "DESCRIPTION": "将 !M! 张 *强能奥术弹 置入你的手牌。"
+  },
+  "jaina:HotStreak": {
+    "NAME": "炽热连击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 jaina:燃烧 。 NL 如果本场战斗中打出的上一张牌是 *火焰 牌，获得 [E] 。"
   },
   "jaina:IceBarrier": {
     "NAME": "寒冰护体",
@@ -83,156 +229,16 @@
     "NAME": "冰枪术",
     "DESCRIPTION": "对被 jaina:冻结 的敌人造成 !D! 点伤害。 NL 若敌人未被冻结 ，则 jaina:冻结 敌人并 消耗 。"
   },
-  "jaina:ManaBiscuit": {
-    "NAME": "法力饼干",
-    "DESCRIPTION": " 保留 。 NL 获得 [E] [E] 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 [E] [E] [E] 。 NL 消耗 。"
-  },
-  "jaina:Pyroblast": {
-    "NAME": "炎爆术",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL jaina:烧伤 ： *3 。"
-  },
-  "jaina:SpringWater": {
-    "NAME": "清凉的泉水",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 每抽到一张技能牌，获得 [E] 。"
-  },
-  "jaina:Strike": {
-    "NAME": "打击",
-    "DESCRIPTION": "造成 !D! 点伤害。"
-  },
-  "jaina:Vaporize": {
-    "NAME": "蒸发",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 你下一次受到攻击时对目标造成 !D! 点伤害。"
-  },
-  "jaina:Evocation": {
-    "NAME": "唤醒",
-    "DESCRIPTION": "每回合开始时获得 jaina:法术伤害 + !M! 。"
-  },
-  "jaina:Fireblast": {
-    "NAME": "火焰冲击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL jaina:烧伤 ： *1 。"
-  },
-  "jaina:ArcaneBlast": {
-    "NAME": "奥术冲击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL jaina:法术伤害 在 *奥术冲击 上发挥 !M! 倍效果。"
-  },
-  "jaina:ArcaneBreath": {
-    "NAME": "奥术吐息",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害两次。"
-  },
-  "jaina:BreathOfSindragosa": {
-    "NAME": "冰龙吐息",
-    "DESCRIPTION": "随机对一个敌人造成 !D! 点伤害并 jaina:冻结 。"
-  },
-  "jaina:Cinderstorm": {
-    "NAME": "燃烬风暴",
-    "DESCRIPTION": "消耗手牌中所有的 *灼伤 ，每张给予所有敌人 !M! 层 jaina:燃烧 。"
-  },
-  "jaina:Combustion": {
-    "NAME": "燃烧",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予其他敌人 !M! 层 jaina:燃烧 。"
-  },
-  "jaina:IncantersFlow": {
-    "NAME": "咒术洪流",
-    "DESCRIPTION": "你在每回合打出的第一张 #b法术牌 耗能变为0。"
-  },
-  "jaina:CabalistsTome": {
-    "NAME": "秘法宝典",
-    "DESCRIPTION": "随机将3张非稀有 #b法术牌 放入你的手牌。 NL 这些牌在本回合的耗能变为0点。 NL 消耗 。"
-  },
-  "jaina:CramSession": {
-    "NAME": "考前刷夜",
-    "DESCRIPTION": "抽 !M! 张牌。 NL （受 jaina:法术伤害 加成。）",
+  "jaina:IceShard": {
+    "NAME": "寒冰碎片",
+    "DESCRIPTION": "将 !M! 张具有 *消耗 的 *冰枪术 放入你的手牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "（抽",
-      "张牌。）"
+      "对被 jaina:冻结 的敌人造成 !D! 点伤害，或 jaina:冻结 敌人。 NL 消耗 。"
     ]
-  },
-  "jaina:FrozenClone": {
-    "NAME": "寒冰克隆",
-    "DESCRIPTION": "获得 格挡 X次，数值等于目标的攻击力。",
-    "UPGRADE_DESCRIPTION": "获得 格挡 X+1次，数值等于目标的攻击力。"
   },
   "jaina:IceWall": {
     "NAME": "冰墙",
     "DESCRIPTION": "每有一名敌人，获得 !B! 点 格挡 。"
-  },
-  "jaina:FrostArmor": {
-    "NAME": "冰霜护甲",
-    "DESCRIPTION": "获得 !M! 层 多层护甲 。"
-  },
-  "jaina:ExplosiveRunes": {
-    "NAME": "爆炸符文",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 对 *爪牙 的伤害翻倍。 NL 如果杀死 *爪牙 ，溢出部分会对所有敌人造成伤害。"
-  },
-  "jaina:FlameWard": {
-    "NAME": "火焰结界",
-    "DESCRIPTION": "获得 !B! 点 格挡。 NL 每当受到攻击，给予所有敌人 !M! 层 jaina:燃烧 。"
-  },
-  "jaina:FrostAffinity": {
-    "NAME": "冰霜亲和",
-    "DESCRIPTION": "在本回合中，你的下一张冰霜卡牌消耗减少 *2 点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "在本回合中，你的下一张冰霜卡牌消耗减少 *2 点。"
-  },
-  "jaina:DeckOfWonders": {
-    "NAME": "惊奇套牌",
-    "DESCRIPTION": "在你的抽牌堆中加入 !M! 张 *惊奇卡牌 。 NL 消耗 。"
-  },
-  "jaina:ScrollOfWonder": {
-    "NAME": "惊奇卡牌",
-    "DESCRIPTION": "jaina:自动释放 ：随机生成一张卡牌并使用。 NL 抽1张牌。 NL jaina:即逝 。"
-  },
-  "jaina:FontOfPower": {
-    "NAME": "能量之泉",
-    "DESCRIPTION": "获得 !M! 点 [E] NL （受 jaina:法术伤害 加成）。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 点 [E] NL （受 jaina:法术伤害 加成）。",
-    "EXTENDED_DESCRIPTION": [
-      "（获得",
-      "点 [E] ）"
-    ]
-  },
-  "jaina:HotStreak": {
-    "NAME": "炽热连击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 jaina:燃烧 。 NL 如果本场战斗中打出的上一张牌是 *火焰 牌，获得 [E] 。"
-  },
-  "jaina:MagicTrick": {
-    "NAME": "魔术戏法",
-    "DESCRIPTION": "jaina:发现 1张耗费为1的非稀有 #b法术牌 。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "jaina:发现 1张耗费为1的非普通 #b法术牌 。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。"
-  },
-  "jaina:PrimordialGlyph": {
-    "NAME": "远古雕文",
-    "DESCRIPTION": "jaina:发现 1张非普通 #b法术牌 。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "jaina:发现 1张升级过的非普通 #b法术牌 。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。"
-  },
-  "jaina:DragonsBreath": {
-    "NAME": "龙息术",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果手牌中只有 *火焰 牌，这张牌的耗能变为0点。"
-  },
-  "jaina:DragonsFury": {
-    "NAME": "巨龙之怒",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害X次。 NL jaina:烧伤 ： *X 。"
-  },
-  "jaina:FirstFlame": {
-    "NAME": "初始之火",
-    "DESCRIPTION": "造成 !D! 点伤害。将一张 *传承之火 置入你的手牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。将一张 *传承之火+ 置入你的手牌。"
-  },
-  "jaina:SecondFlame": {
-    "NAME": "传承之火",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 消耗 。"
-  },
-  "jaina:FlameLance": {
-    "NAME": "炎枪术",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若造成未被格挡的伤害，给予 !M! 层 jaina:燃烧 。 NL jaina:烧伤 ： *1 。"
-  },
-  "jaina:ForbiddenFlame": {
-    "NAME": "禁忌烈焰",
-    "DESCRIPTION": "造成X倍 !D! 点伤害。 NL jaina:烧伤 ： *X 。"
-  },
-  "jaina:GreaterArcaneMissiles": {
-    "NAME": "强能奥术飞弹",
-    "DESCRIPTION": "将 !M! 张 *强能奥术弹 置入你的手牌。"
   },
   "jaina:Icicle": {
     "NAME": "冰刺",
@@ -242,9 +248,51 @@
     "NAME": "点燃",
     "DESCRIPTION": "触发所有敌人拥有的 jaina:燃烧 。"
   },
+  "jaina:IncantersFlow": {
+    "NAME": "咒术洪流",
+    "DESCRIPTION": "你在每回合打出的第一张法术牌耗能变为0。"
+  },
+  "jaina:MagicTrick": {
+    "NAME": "魔术戏法",
+    "DESCRIPTION": "jaina:发现 1张耗费为1的非稀有法术牌。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "jaina:发现 1张耗费为1的非普通法术牌。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。"
+  },
+  "jaina:ManaBind": {
+    "NAME": "法术共鸣",
+    "DESCRIPTION": "在这个回合，你的下一张 *奥术 牌打出两次。",
+    "UPGRADE_DESCRIPTION": "在这个回合，你的下 !M! 张 *奥术 牌打出两次。"
+  },
+  "jaina:ManaBiscuit": {
+    "NAME": "法力饼干",
+    "DESCRIPTION": " 保留 。 NL 获得 [E] [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 [E] [E] [E] 。 NL 消耗 。"
+  },
   "jaina:Meteor": {
     "NAME": "陨石术",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予所有生物 !M! 层 jaina:燃烧 。"
+  },
+  "jaina:MirrorEntity": {
+    "NAME": "镜像实体",
+    "DESCRIPTION": "复制一名敌人的攻击方式，对其造成伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "复制一名敌人的攻击方式，对其造成伤害。"
+  },
+  "jaina:MirrorImage": {
+    "NAME": "镜像法术",
+    "DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。"
+  },
+  "jaina:PrimordialGlyph": {
+    "NAME": "远古雕文",
+    "DESCRIPTION": "jaina:发现 1张非普通法术牌。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "jaina:发现 1张升级过的非普通法术牌。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。"
+  },
+  "jaina:PrimordialStudies": {
+    "NAME": "始生研习",
+    "DESCRIPTION": "jaina:法术伤害 + !M! 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL jaina:法术伤害 + !M! 。"
+  },
+  "jaina:Pyroblast": {
+    "NAME": "炎爆术",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL jaina:烧伤 ： *3 。"
   },
   "jaina:RayOfFrost": {
     "NAME": "霜冻射线",
@@ -254,33 +302,34 @@
     "NAME": "灼烧",
     "DESCRIPTION": "给予一名敌人 !M! 层 jaina:燃烧 。 NL 在本场战斗中所有 *灼烧 的 jaina:燃烧 层数增加2。"
   },
-  "jaina:ShootingStar": {
-    "NAME": "迸射流星",
-    "DESCRIPTION": "随机造成3点伤害 !M! 次。"
+  "jaina:ScrollOfWonder": {
+    "NAME": "惊奇卡牌",
+    "DESCRIPTION": "jaina:自动释放 ：随机生成一张卡牌并使用。 NL 抽1张牌。 NL jaina:即逝 。"
   },
-  "jaina:Wildfire": {
-    "NAME": "野火",
-    "DESCRIPTION": "每当你给予 jaina:燃烧 时，额外给予3层。",
-    "UPGRADE_DESCRIPTION": "每当你给予 jaina:燃烧 时，额外给予一倍的层数。"
+  "jaina:SecondFlame": {
+    "NAME": "传承之火",
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 消耗 。"
   },
-  "jaina:MirrorEntity": {
-    "NAME": "镜像实体",
-    "DESCRIPTION": "复制一名敌人的攻击方式，对其造成伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "复制一名敌人的攻击方式，对其造成伤害。"
+  "jaina:ShatteringBlast": {
+    "NAME": "冰爆冲击",
+    "DESCRIPTION": "对所有被 jaina:冻结 的敌人造成 !D! 点伤害。"
   },
-  "jaina:ManaBind": {
-    "NAME": "法术共鸣",
-    "DESCRIPTION": "在这个回合，你的下一张 *奥术 牌打出两次。",
-    "UPGRADE_DESCRIPTION": "在这个回合，你的下 !M! 张 *奥术 牌打出两次。"
+  "jaina:Shield": {
+    "NAME": "护盾术",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌。"
   },
   "jaina:ShiftingScroll": {
     "NAME": "变形卷轴",
-    "DESCRIPTION": "保留 。 NL 这张牌在你的手中每回合开始都会变形成为一张随机 #b法术牌 。",
-    "UPGRADE_DESCRIPTION": "保留 。 固有 。 NL 这张牌在你的手中每回合开始都会变形成为一张随机 #b法术牌 。",
+    "DESCRIPTION": "保留 。 NL 这张牌在你的手中每回合开始都会变形成为一张随机法术牌。",
+    "UPGRADE_DESCRIPTION": "保留 。 固有 。 NL 这张牌在你的手中每回合开始都会变形成为一张随机法术牌。",
     "EXTENDED_DESCRIPTION": [
       "【变形】",
       "保留 。 NL "
     ]
+  },
+  "jaina:ShootingStar": {
+    "NAME": "迸射流星",
+    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。"
   },
   "jaina:Simulacrum": {
     "NAME": "模拟幻影",
@@ -290,91 +339,42 @@
       " NL 消耗 。"
     ]
   },
-  "jaina:TomeOfIntellect": {
-    "NAME": "智慧秘典",
-    "DESCRIPTION": "你的抽牌堆中每有 !M! 张牌，获得1层 jaina:法术伤害 。 NL 消耗 。"
-  },
   "jaina:SplittingImage": {
     "NAME": "裂魂残像",
     "DESCRIPTION": "在你下一次受到攻击后，获得 !M! 层 无实体 。"
   },
-  "jaina:WizardArmor": {
-    "NAME": "法师护甲",
-    "DESCRIPTION": "在你的回合结束时，获得 !M! 点 格挡 （受 jaina:法术伤害 加成）。"
+  "jaina:SpringWater": {
+    "NAME": "清凉的泉水",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 每抽到一张技能牌，获得 [E] 。"
   },
-  "jaina:ApexisBlast": {
-    "NAME": "埃匹希斯冲击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌（受 jaina:法术伤害 加成）。",
-    "EXTENDED_DESCRIPTION": [
-      "（抽",
-      "张牌。）"
-    ]
-  },
-  "jaina:BookOfSpecters": {
-    "NAME": "怨灵之书",
-    "DESCRIPTION": "抽 !M! 张牌，丢弃抽到的牌中的非攻击牌。"
-  },
-  "jaina:IceShard": {
-    "NAME": "寒冰碎片",
-    "DESCRIPTION": "将 !M! 张具有 *消耗 的 *冰枪术 放入你的手牌。 NL 消耗 。",
-    "EXTENDED_DESCRIPTION": [
-      "对被 jaina:冻结 的敌人造成 !D! 点伤害，或 jaina:冻结 敌人。 NL 消耗 。"
-    ]
-  },
-  "jaina:DeepFreeze": {
-    "NAME": "深度冻结",
-    "DESCRIPTION": "jaina:冻结 所有敌人。 NL 每冻结一名敌人，获得 [E] 并抽一张牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "jaina:冻结 所有敌人。 NL 每冻结一名敌人，获得 [E] 并抽一张牌。"
-  },
-  "jaina:FrozenTouch": {
-    "NAME": "冻寒之触",
-    "DESCRIPTION": "造成 !D! 点伤害并 jaina:冻结 敌人 。 NL 使用 !M! 次后 消耗 。",
-    "EXTENDED_DESCRIPTION": [
-      "（还剩",
-      "次）"
-    ]
-  },
-  "jaina:ArcaneGate": {
-    "NAME": "奥术之门",
-    "DESCRIPTION": "每当你使用一张 *奥术 牌，造成 !M! 点伤害。"
-  },
-  "jaina:ShatteringBlast": {
-    "NAME": "冰爆冲击",
-    "DESCRIPTION": "对所有被 jaina:冻结 的敌人造成 !D! 点伤害。"
-  },
-  "jaina:ArcticArmor": {
-    "NAME": "寒甲术",
-    "DESCRIPTION": "每当你使用一张 *冰霜 牌，获得 !M! 点 格挡 。"
-  },
-  "jaina:Duplicate": {
-    "NAME": "复制",
-    "DESCRIPTION": "将你手牌中的一张牌复制一张。 NL （不能复制 *复制 。）",
-    "UPGRADE_DESCRIPTION": "将你手牌中的一张牌复制两张。 NL （不能复制 *复制 。）"
-  },
-  "jaina:Wish": {
-    "NAME": "祈愿术",
-    "DESCRIPTION": "选择一张 #b法术牌 加入你的手牌。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择一张升级过的 #b法术牌 加入你的手牌。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。"
-  },
-  "jaina:MirrorImage": {
-    "NAME": "镜像法术",
-    "DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。"
-  },
-  "jaina:PrimordialStudies": {
-    "NAME": "始生研习",
-    "DESCRIPTION": "jaina:法术伤害 + !M! 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL jaina:法术伤害 + !M! 。"
-  },
-  "jaina:Shield": {
-    "NAME": "护盾术",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌。"
+  "jaina:Strike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "jaina:TheCoin": {
     "NAME": "幸运币",
     "DESCRIPTION": "保留 。 NL 获得 [E] 。 NL 消耗 。"
   },
-  "jaina:ArcaneBrilliance": {
-    "NAME": "奥术光辉",
-    "DESCRIPTION": "jaina:法术伤害 + !M! 。 NL 你的回合结束时， jaina:法术伤害 - !M! 。"
+  "jaina:TomeOfIntellect": {
+    "NAME": "智慧秘典",
+    "DESCRIPTION": "你的抽牌堆中每有 !M! 张牌，获得1层 jaina:法术伤害 。 NL 消耗 。"
+  },
+  "jaina:Vaporize": {
+    "NAME": "蒸发",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 你下一次受到攻击时对目标造成 !D! 点伤害。"
+  },
+  "jaina:Wildfire": {
+    "NAME": "野火",
+    "DESCRIPTION": "每当你给予 jaina:燃烧 时，额外给予3层。",
+    "UPGRADE_DESCRIPTION": "每当你给予 jaina:燃烧 时，额外给予一倍的层数。"
+  },
+  "jaina:Wish": {
+    "NAME": "祈愿术",
+    "DESCRIPTION": "选择一张法术牌加入你的手牌。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张升级过的法术牌加入你的手牌。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。"
+  },
+  "jaina:WizardArmor": {
+    "NAME": "法师护甲",
+    "DESCRIPTION": "在你的回合结束时，获得 !M! 点 格挡 （受 jaina:法术伤害 加成）。"
   }
 }
