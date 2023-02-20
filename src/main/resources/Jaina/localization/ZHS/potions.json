@@ -1,0 +1,20 @@
+{
+  "jaina:FrozenPotion": {
+    "NAME": "冰冻药水",
+    "DESCRIPTIONS": [
+      " #y冻结 一名敌人。"
+    ]
+  },
+  "jaina:VolcanicPotion": {
+    "NAME": "火山药水",
+    "DESCRIPTIONS": [
+      "给予所有敌人 #b15 层 #y燃烧 。"
+    ]
+  },
+  "jaina:IllusionPotion": {
+    "NAME": "幻象药水",
+    "DESCRIPTIONS": [
+      "复制你抽牌堆里的 #b1 张牌放入你的手牌。这张牌具有 #y消耗 。"
+    ]
+  }
+}

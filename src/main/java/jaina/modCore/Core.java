@@ -13,6 +13,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import jaina.characters.JainaCharacter;
+import jaina.potions.FrozenPotion;
+import jaina.potions.IllusionPotion;
+import jaina.potions.VolcanicPotion;
 
 import java.nio.charset.StandardCharsets;
 
@@ -86,6 +89,13 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
                         UnlockTracker.markRelicAsSeen(relic.relicId);
                     }
                 });
+        addPotions();
+    }
+
+    private void addPotions() {
+        BaseMod.addPotion(FrozenPotion.class, null, null, null, FrozenPotion.ID, JainaEnums.JAINA_CLASS);
+        BaseMod.addPotion(IllusionPotion.class,  IllusionPotion.LIQUID_COLOR, IllusionPotion.HYBRID_COLOR, null, IllusionPotion.ID, JainaEnums.JAINA_CLASS);
+        BaseMod.addPotion(VolcanicPotion.class, VolcanicPotion.LIQUID_COLOR, VolcanicPotion.HYBRID_COLOR, null, VolcanicPotion.ID, JainaEnums.JAINA_CLASS);
     }
 
     //加载本地化资源
@@ -100,6 +110,7 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
         BaseMod.loadCustomStringsFile(CardStrings.class, "jaina/localization/" + lang + "/cards.json"); // 加载相应语言的卡牌本地化内容
         BaseMod.loadCustomStringsFile(RelicStrings.class, "jaina/localization/" + lang + "/relics.json");
         BaseMod.loadCustomStringsFile(PowerStrings.class, "jaina/localization/" + lang + "/powers.json");
+        BaseMod.loadCustomStringsFile(PotionStrings.class, "jaina/localization/" + lang + "/potions.json");
         BaseMod.loadCustomStringsFile(UIStrings.class, "jaina/localization/" + lang + "/ui.json");
     }
 
