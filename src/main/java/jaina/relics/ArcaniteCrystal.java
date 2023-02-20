@@ -69,11 +69,6 @@ public class ArcaniteCrystal extends AbstractJainaRelic {
     }
 
     @Override
-    public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0];
-    }
-
-    @Override
     public AbstractRelic makeCopy() {
         return new ArcaniteCrystal();
     }

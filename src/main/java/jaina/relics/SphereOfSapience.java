@@ -12,6 +12,7 @@ import jaina.modCore.IHelper;
 public class SphereOfSapience extends AbstractJainaRelic implements ClickableRelic {
     public static final String ID = IHelper.makeID("SphereOfSapience");
     private static final RelicStrings RELIC_STRINGS = CardCrawlGame.languagePack.getRelicStrings(ID);
+    private static final int AMT = 5;
 
     public SphereOfSapience() {
         super(ID, false, RELIC_STRINGS, RelicTier.COMMON, LandingSound.MAGICAL);
@@ -25,17 +26,12 @@ public class SphereOfSapience extends AbstractJainaRelic implements ClickableRel
     @Override
     public void onRightClick() {
         if (!usedUp) {
-            addToBot(new ScryAction(5));
+            addToBot(new ScryAction(AMT));
             if (AbstractDungeon.player.hand.size() != 10) {
                 addToBot(new DrawCardAction(1));
             }
             usedUp = true;
         }
-    }
-
-    @Override
-    public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0];
     }
 
     @Override

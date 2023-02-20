@@ -27,4 +27,10 @@ public abstract class AbstractJainaRelic extends CustomRelic {
         img_path[1] = "jaina/img/relics/" + ID + "_OTL.png";
         return img_path;
     }
+
+    @Override
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0];
+    }
+
 }

@@ -11,6 +11,7 @@ import jaina.modCore.IHelper;
 public class AscendantScroll extends AbstractJainaRelic implements ClickableRelic {
     public static final String ID = IHelper.makeID("AscendantScroll");
     private static final RelicStrings RELIC_STRINGS = CardCrawlGame.languagePack.getRelicStrings(ID);
+    private static final int COST = 2;
 
     public AscendantScroll() {
         super(ID, false, RELIC_STRINGS, RelicTier.SHOP, LandingSound.MAGICAL);
@@ -18,24 +19,19 @@ public class AscendantScroll extends AbstractJainaRelic implements ClickableReli
 
     @Override
     public void onRightClick() {
-        if (AbstractDungeon.player.energy.energy >= 2) {
-            AbstractDungeon.player.energy.use(2);
+        if (AbstractDungeon.player.energy.energy >= COST) {
+            AbstractDungeon.player.energy.use(COST);
         }
         if (AbstractDungeon.player.hand.size() <= 10) {
             AbstractCard card = IHelper.generateRandomJainaCards(1, true, true, true, false, false).get(0);
-            if (card.costForTurn <= 2 && card.costForTurn >= 0) {
+            if (card.costForTurn <= COST && card.costForTurn >= 0) {
                 card.setCostForTurn(0);
                 card.freeToPlayOnce = true;
             } else {
-                card.setCostForTurn(card.costForTurn - 2);
+                card.setCostForTurn(card.costForTurn - COST);
             }
             IHelper.getTempCard(card);
         }
-    }
-
-    @Override
-    public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0];
     }
 
     @Override
