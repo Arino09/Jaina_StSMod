@@ -91,12 +91,17 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     }
 
     private void addPotions() {
+        System.out.println("Adding Jaina potions: ");
         BaseMod.addPotion(ArcanePotion.class, ArcanePotion.LIQUID_COLOR, ArcanePotion.HYBRID_COLOR, null, ArcanePotion.ID, JainaEnums.JAINA_CLASS);
+        BaseMod.addPotion(BottledArcaneMissiles.class, BottledArcaneMissiles.LIQUID_COLOR, BottledArcaneMissiles.HYBRID_COLOR, null, BottledArcaneMissiles.ID, JainaEnums.JAINA_CLASS);
         BaseMod.addPotion(FirePotion.class, FirePotion.LIQUID_COLOR, FirePotion.HYBRID_COLOR, null, FirePotion.ID, JainaEnums.JAINA_CLASS);
         BaseMod.addPotion(FrostPotion.class, FrostPotion.LIQUID_COLOR, FrostPotion.HYBRID_COLOR, null, FrostPotion.ID, JainaEnums.JAINA_CLASS);
         BaseMod.addPotion(FrozenPotion.class, null, null, null, FrozenPotion.ID, JainaEnums.JAINA_CLASS);
         BaseMod.addPotion(IllusionPotion.class, IllusionPotion.LIQUID_COLOR, IllusionPotion.HYBRID_COLOR, null, IllusionPotion.ID, JainaEnums.JAINA_CLASS);
+        BaseMod.addPotion(SpellDamagePotion.class, SpellDamagePotion.LIQUID_COLOR, SpellDamagePotion.HYBRID_COLOR, null, SpellDamagePotion.ID, JainaEnums.JAINA_CLASS);
+        BaseMod.addPotion(SpellInspirationPotion.class, SpellInspirationPotion.LIQUID_COLOR, SpellInspirationPotion.HYBRID_COLOR, null, SpellInspirationPotion.ID, JainaEnums.JAINA_CLASS);
         BaseMod.addPotion(VolcanicPotion.class, VolcanicPotion.LIQUID_COLOR, VolcanicPotion.HYBRID_COLOR, null, VolcanicPotion.ID, JainaEnums.JAINA_CLASS);
+        System.out.println("Jaina potions added.");
     }
 
     //加载本地化资源
