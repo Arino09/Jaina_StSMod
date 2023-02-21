@@ -13,9 +13,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import jaina.characters.JainaCharacter;
-import jaina.potions.FrozenPotion;
-import jaina.potions.IllusionPotion;
-import jaina.potions.VolcanicPotion;
+import jaina.potions.*;
 
 import java.nio.charset.StandardCharsets;
 
@@ -93,8 +91,11 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     }
 
     private void addPotions() {
+        BaseMod.addPotion(ArcanePotion.class, ArcanePotion.LIQUID_COLOR, ArcanePotion.HYBRID_COLOR, null, ArcanePotion.ID, JainaEnums.JAINA_CLASS);
+        BaseMod.addPotion(FirePotion.class, FirePotion.LIQUID_COLOR, FirePotion.HYBRID_COLOR, null, FirePotion.ID, JainaEnums.JAINA_CLASS);
+        BaseMod.addPotion(FrostPotion.class, FrostPotion.LIQUID_COLOR, FrostPotion.HYBRID_COLOR, null, FrostPotion.ID, JainaEnums.JAINA_CLASS);
         BaseMod.addPotion(FrozenPotion.class, null, null, null, FrozenPotion.ID, JainaEnums.JAINA_CLASS);
-        BaseMod.addPotion(IllusionPotion.class,  IllusionPotion.LIQUID_COLOR, IllusionPotion.HYBRID_COLOR, null, IllusionPotion.ID, JainaEnums.JAINA_CLASS);
+        BaseMod.addPotion(IllusionPotion.class, IllusionPotion.LIQUID_COLOR, IllusionPotion.HYBRID_COLOR, null, IllusionPotion.ID, JainaEnums.JAINA_CLASS);
         BaseMod.addPotion(VolcanicPotion.class, VolcanicPotion.LIQUID_COLOR, VolcanicPotion.HYBRID_COLOR, null, VolcanicPotion.ID, JainaEnums.JAINA_CLASS);
     }
 

@@ -19,10 +19,11 @@ import jaina.powers.BurningPower;
 public class VolcanicPotion extends AbstractPotion {
 
     public static final String ID = IHelper.makeID("VolcanicPotion");
+    public static final Color LIQUID_COLOR = CardHelper.getColor(140, 24, 49);
+    public static final Color HYBRID_COLOR = CardHelper.getColor(247, 101, 115);
     private static final PotionStrings POTION_STRINGS = CardCrawlGame.languagePack.getPotionString(ID);
     private static final int POTENCY = 15;
-    public static final Color LIQUID_COLOR = CardHelper.getColor(239, 73, 41);
-    public static final Color HYBRID_COLOR = CardHelper.getColor(255, 172, 79);
+
     public VolcanicPotion() {
         super(POTION_STRINGS.NAME, ID, PotionRarity.COMMON, PotionSize.SPHERE, PotionEffect.NONE, LIQUID_COLOR, HYBRID_COLOR, null);
         this.labOutlineColor = Core.COLOR;
@@ -32,7 +33,7 @@ public class VolcanicPotion extends AbstractPotion {
     @Override
     public void initializeData() {
         this.potency = getPotency();
-        this.description = POTION_STRINGS.DESCRIPTIONS[0];
+        this.description = POTION_STRINGS.DESCRIPTIONS[0] + getPotency() + POTION_STRINGS.DESCRIPTIONS[1];
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(
@@ -49,7 +50,7 @@ public class VolcanicPotion extends AbstractPotion {
     }
 
     @Override
-    public int getPotency(int ascensionLevel) {
+    public int getPotency(int i) {
         return POTENCY;
     }
 

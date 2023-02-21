@@ -16,8 +16,8 @@ import jaina.modCore.IHelper;
 public class IllusionPotion extends AbstractPotion {
 
     public static final String ID = IHelper.makeID("IllusionPotion");
-    public static final Color LIQUID_COLOR = CardHelper.getColor(18, 105, 231);
-    public static final Color HYBRID_COLOR = CardHelper.getColor(24, 197, 249);
+    public static final Color LIQUID_COLOR = CardHelper.getColor(41, 134, 165);
+    public static final Color HYBRID_COLOR = CardHelper.getColor(159, 188, 204);
     private static final PotionStrings POTION_STRINGS = CardCrawlGame.languagePack.getPotionString(ID);
     private static final int POTENCY = 1;
 
@@ -29,7 +29,7 @@ public class IllusionPotion extends AbstractPotion {
     @Override
     public void initializeData() {
         this.potency = getPotency();
-        this.description = POTION_STRINGS.DESCRIPTIONS[0];
+        this.description = POTION_STRINGS.DESCRIPTIONS[0] + getPotency() + POTION_STRINGS.DESCRIPTIONS[1];
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(
@@ -39,13 +39,13 @@ public class IllusionPotion extends AbstractPotion {
     }
 
     @Override
-    public int getPotency(int ascensionLevel) {
-        return POTENCY;
+    public void use(AbstractCreature target) {
+        addToBot(new ExhaustCardFromDrawAction(POTENCY));
     }
 
     @Override
-    public void use(AbstractCreature target) {
-        addToBot(new ExhaustCardFromDrawAction(POTENCY));
+    public int getPotency(int ascensionLevel) {
+        return POTENCY;
     }
 
     @Override

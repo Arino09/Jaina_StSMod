@@ -21,15 +21,28 @@ public class FrozenPotion extends AbstractPotion {
 
     public FrozenPotion() {
         super(POTION_STRINGS.NAME, ID, PotionRarity.COMMON, PotionSize.SPHERE, PotionColor.BLUE);
-        this.labOutlineColor = Core.COLOR;
         this.isThrown = true;
         this.targetRequired = true;
+        this.labOutlineColor = Core.COLOR;
+    }
+
+    @Override
+    public void use(AbstractCreature target) {
+        addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new FrozenPower((AbstractMonster) target)));
+        if (getPotency() > 1) {
+            addToBot(new ApplyPowerAction(AbstractDungeon.getRandomMonster((AbstractMonster) target),
+                    AbstractDungeon.player, new FrozenPower((AbstractMonster) target)));
+        }
     }
 
     @Override
     public void initializeData() {
         this.potency = getPotency();
-        this.description = POTION_STRINGS.DESCRIPTIONS[0];
+        if (AbstractDungeon.player == null || !AbstractDungeon.player.hasRelic("SacredBark")) {
+            this.description = POTION_STRINGS.DESCRIPTIONS[0];
+        } else {
+            this.description = POTION_STRINGS.DESCRIPTIONS[1];
+        }
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(
@@ -39,12 +52,7 @@ public class FrozenPotion extends AbstractPotion {
     }
 
     @Override
-    public void use(AbstractCreature target) {
-        addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new FrozenPower((AbstractMonster)target)));
-    }
-
-    @Override
-    public int getPotency(int ascensionLevel) {
+    public int getPotency(int i) {
         return 1;
     }
 

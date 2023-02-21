@@ -2,19 +2,43 @@
   "jaina:FrozenPotion": {
     "NAME": "冰冻药水",
     "DESCRIPTIONS": [
-      " #y冻结 一名敌人。"
+      " #y冻结 一名敌人。",
+      " #y冻结 一名敌人，再随机冻结一名敌人。"
     ]
   },
   "jaina:VolcanicPotion": {
     "NAME": "火山药水",
     "DESCRIPTIONS": [
-      "给予所有敌人 #b15 层 #y燃烧 。"
+      "给予所有敌人 #b",
+      " 层 #y燃烧 。"
     ]
   },
   "jaina:IllusionPotion": {
     "NAME": "幻象药水",
     "DESCRIPTIONS": [
-      "复制你抽牌堆里的 #b1 张牌放入你的手牌。这张牌具有 #y消耗 。"
+      "复制你抽牌堆里的 #b",
+      " 张牌放入你的手牌。这张牌具有 #y消耗 。"
+    ]
+  },
+  "jaina:ArcanePotion": {
+    "NAME": "奥术法术药水",
+    "DESCRIPTIONS": [
+      "#y发现 #b1 张 #y奥术牌 。这张牌在本回合耗能变为 #b0 。",
+      "#y发现 #b2 张 #y奥术牌 。这两张牌在本回合耗能变为 #b0 。"
+    ]
+  },
+  "jaina:FirePotion": {
+    "NAME": "火焰法术药水",
+    "DESCRIPTIONS": [
+      "#y发现 #b1 张 #y火焰牌 。这张牌在本回合耗能变为 #b0 。",
+      "#y发现 #b2 张 #y火焰牌 。这两张牌在本回合耗能变为 #b0 。"
+    ]
+  },
+  "jaina:FrostPotion": {
+    "NAME": "冰霜法术药水",
+    "DESCRIPTIONS": [
+      "#y发现 #b1 张 #y冰霜牌 。这张牌在本回合耗能变为 #b0 。",
+      "#y发现 #b2 张 #y冰霜牌 。这两张牌在本回合耗能变为 #b0 。"
     ]
   }
 }
