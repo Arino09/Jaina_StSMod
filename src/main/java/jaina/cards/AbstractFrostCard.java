@@ -14,6 +14,7 @@ public abstract class AbstractFrostCard extends AbstractJainaCard {
 
     private static final String ID = IHelper.makeID("Frost");
     private static final String[] descriptorStrings = CardCrawlGame.languagePack.getUIString(ID).TEXT;
+
     /**
      * 构造函数
      *

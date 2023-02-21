@@ -73,10 +73,11 @@ public class ExhaustCardFromDrawAction extends AbstractGameAction {
             this.isDone = true;
         }
     }
+
     // 在原卡的基础上加上【消耗】并更新卡牌描述
     private void updateCard(AbstractCard card) {
         card.name = card.name + Simulacrum.CARD_STRINGS.EXTENDED_DESCRIPTION[0];
-        if(!card.exhaust) {
+        if (!card.exhaust) {
             card.exhaust = true;
             card.rawDescription = card.rawDescription + Simulacrum.CARD_STRINGS.EXTENDED_DESCRIPTION[1];
             card.initializeDescription();

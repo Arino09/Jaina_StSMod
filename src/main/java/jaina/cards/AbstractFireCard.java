@@ -14,6 +14,7 @@ public abstract class AbstractFireCard extends AbstractJainaCard {
 
     private static final String ID = IHelper.makeID("Fire");
     private static final String[] descriptorStrings = CardCrawlGame.languagePack.getUIString(ID).TEXT;
+
     /**
      * 构造函数
      *

@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import jaina.modCore.IHelper;
-import jaina.modCore.JainaEnums;
 
 public class DragonsFuryAction extends AbstractGameAction {
     private final AbstractPlayer p;

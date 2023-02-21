@@ -12,10 +12,6 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 import jaina.powers.SpellDamagePower;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 public class FontOfPower extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("FontOfPower");

@@ -3,7 +3,6 @@ package jaina.modCore;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -84,7 +83,7 @@ public interface IHelper {
      * @return 是否受影响
      */
     static boolean isSpellDamage(AbstractCard card) {
-        return card.hasTag(JainaEnums.CardTags.FIRE) || card.hasTag(JainaEnums.CardTags.FROST) ||card.hasTag(JainaEnums.CardTags.ARCANE);
+        return card.hasTag(JainaEnums.CardTags.FIRE) || card.hasTag(JainaEnums.CardTags.FROST) || card.hasTag(JainaEnums.CardTags.ARCANE);
     }
 
     /**
@@ -107,7 +106,7 @@ public interface IHelper {
                     && !c.hasTag(AbstractCard.CardTags.HEALING);
             if (!hasRare) {
                 conditions = conditions && !c.rarity.equals(AbstractCard.CardRarity.RARE);
-                if (hasShift) conditions = conditions && !c.hasTag(JainaEnums.CardTags.SHIFT);
+                if (!hasShift) conditions = conditions && !c.hasTag(JainaEnums.CardTags.SHIFT);
             }
             if (!hasUncommon)
                 conditions = conditions && !c.rarity.equals(AbstractCard.CardRarity.UNCOMMON);

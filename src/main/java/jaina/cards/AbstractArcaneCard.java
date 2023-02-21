@@ -14,6 +14,7 @@ public abstract class AbstractArcaneCard extends AbstractJainaCard {
 
     private static final String ID = IHelper.makeID("Arcane");
     private static final String[] descriptorStrings = CardCrawlGame.languagePack.getUIString(ID).TEXT;
+
     /**
      * 构造函数
      *

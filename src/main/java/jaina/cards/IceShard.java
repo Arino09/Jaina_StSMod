@@ -16,6 +16,7 @@ public class IceShard extends AbstractFrostCard {
 
     private static final int COST = 3;
     private final IceLance iceLance = new IceLance();
+
     public IceShard() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.RARE, CardTarget.NONE);

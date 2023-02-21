@@ -15,7 +15,7 @@ public class DuplicateAction extends AbstractGameAction {
     private static final float DURATION_PER_CARD = 0.25F;
     private final ArrayList<AbstractCard> cannotDuplicate = new ArrayList<>();
     private final AbstractPlayer p;
-    private int dupeAmount;
+    private final int dupeAmount;
 
     public DuplicateAction(AbstractCreature source, int amount) {
         setValues(AbstractDungeon.player, source, amount);

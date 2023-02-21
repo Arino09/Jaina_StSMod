@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
-import jaina.modCore.JainaEnums;
 
 public class ArcaneMissileToken extends AbstractArcaneCard {
     public static final String ID = IHelper.makeID("ArcaneMissileToken");

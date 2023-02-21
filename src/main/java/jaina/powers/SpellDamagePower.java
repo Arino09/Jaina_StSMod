@@ -90,11 +90,11 @@ public class SpellDamagePower extends AbstractJainaPower {
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
         float finalDamage = damage;
         if (card.cardID.equals(ArcaneBlast.ID)) {
-                finalDamage = damage + 2 * amount;
+            finalDamage = damage + 2 * amount;
             if (card.upgraded) {
                 finalDamage += amount;
             }
-        }else if (IHelper.isSpellDamage(card)) {
+        } else if (IHelper.isSpellDamage(card)) {
             finalDamage = damage + amount;
         }
         return super.atDamageGive(finalDamage, type, card);

@@ -2,9 +2,7 @@ package jaina.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardTags;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import jaina.cards.AbstractJainaCard;
 import jaina.modCore.JainaEnums;
 
 import java.util.ArrayList;
@@ -17,7 +15,7 @@ public class RestoreCostAction extends AbstractGameAction {
         this.isFrostAffinity = isFrostAffinity;
     }
 
-    private void restoreCost(ArrayList<AbstractCard> cards,boolean isFrostAffinity) {
+    private void restoreCost(ArrayList<AbstractCard> cards, boolean isFrostAffinity) {
         if (isFrostAffinity) {
             for (AbstractCard c : cards) {
                 if (c.hasTag(JainaEnums.CardTags.AFFINITY) && c.hasTag(JainaEnums.CardTags.FROST)) {

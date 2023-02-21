@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.MiracleEffect;
 import jaina.modCore.Core;
 import jaina.modCore.IHelper;
-import jaina.modCore.JainaEnums;
 
 public class ManaBiscuit extends AbstractArcaneCard {
 
