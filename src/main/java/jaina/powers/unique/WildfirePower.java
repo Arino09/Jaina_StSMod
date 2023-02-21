@@ -18,7 +18,7 @@ public class WildfirePower extends AbstractJainaPower {
     private final boolean upgraded;
 
     public WildfirePower(AbstractCreature owner, boolean upgraded) {
-        super(upgraded ? POWER_ID_P : POWER_ID, true, NAME, PowerType.BUFF);
+        super(upgraded ? POWER_ID_P : POWER_ID, false, NAME, PowerType.BUFF);
         this.owner = owner;
         this.amount = -1;
         this.upgraded = upgraded;
@@ -39,6 +39,10 @@ public class WildfirePower extends AbstractJainaPower {
     @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0];
+        if (upgraded) {
+            this.name = DESCRIPTIONS[1];
+            this.description = DESCRIPTIONS[2];
+        }
     }
 
 }

@@ -24,7 +24,7 @@ public class ArcaneGatePower extends AbstractJainaPower {
     private static final AbstractGameAction.AttackEffect AE = AbstractGameAction.AttackEffect.BLUNT_LIGHT;
 
     public ArcaneGatePower(AbstractCreature owner, int dmg) {
-        super(POWER_ID, true, NAME, PowerType.BUFF);
+        super(POWER_ID, false, NAME, PowerType.BUFF);
         this.owner = owner;
         this.amount = dmg;
         updateDescription();

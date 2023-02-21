@@ -24,7 +24,7 @@ public class SpellDamagePower extends AbstractJainaPower {
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public SpellDamagePower(AbstractCreature owner, int amount) {
-        super(POWER_ID, true, NAME, PowerType.BUFF);
+        super(POWER_ID, false, NAME, PowerType.BUFF);
         this.owner = owner;
         this.amount = amount;
         if (this.amount >= 999) {

@@ -13,6 +13,7 @@ public class RestoreCostAction extends AbstractGameAction {
 
     /**
      * 恢复费用buff
+     *
      * @param isFrostAffinity 是否是冰霜亲和
      */
     public RestoreCostAction(boolean isFrostAffinity) {

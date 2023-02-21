@@ -17,7 +17,7 @@ public class ArcticArmorPower extends AbstractJainaPower {
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public ArcticArmorPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, true, NAME, PowerType.BUFF);
+        super(POWER_ID, false, NAME, PowerType.BUFF);
         this.owner = owner;
         this.amount = amount;
         updateDescription();

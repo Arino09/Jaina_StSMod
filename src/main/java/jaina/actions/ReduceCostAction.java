@@ -13,6 +13,7 @@ public class ReduceCostAction extends AbstractGameAction {
 
     /**
      * 减少2费buff
+     *
      * @param isFrostAffinity 是否是冰霜亲和
      */
     public ReduceCostAction(boolean isFrostAffinity) {

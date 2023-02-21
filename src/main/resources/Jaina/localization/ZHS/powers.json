@@ -2,35 +2,36 @@
   "jaina:ArcaneGatePower": {
     "NAME": "奥术之门",
     "DESCRIPTIONS": [
-      "使用 #p奥术 牌时造成",
-      "点伤害。"
+      "使用 #p奥术 牌时造成 #b",
+      " 点伤害。"
     ]
   },
   "jaina:ArcticArmorPower": {
     "NAME": "寒甲术",
     "DESCRIPTIONS": [
-      "你每打出一张 #b冰霜 牌，获得",
-      "点 #y格挡"
+      "你每打出一张 #b冰霜 牌，获得 #b",
+      " 点 #y格挡 。"
     ]
   },
   "jaina:BurningPower": {
     "NAME": "燃烧",
     "DESCRIPTIONS": [
-      "回合结束时失去",
-      "点生命值。"
+      "回合结束时失去 #r",
+      " 点生命值。"
     ]
   },
   "jaina:EvocationPower": {
     "NAME": "法力唤醒",
     "DESCRIPTIONS": [
-      "每回合获得 #y法术伤害 +"
+      "每回合获得 #y法术伤害 + #b",
+      " 。"
     ]
   },
   "jaina:FlameWardPower": {
     "NAME": "火焰结界",
     "DESCRIPTIONS": [
-      "受到攻击时，给予所有敌人",
-      "层 #r烧伤 。"
+      "受到攻击时，给予所有敌人 #b",
+      " 层 #r烧伤 。"
     ]
   },
   "jaina:FrostAffinityPower": {
@@ -48,15 +49,15 @@
   "jaina:IceBlockPower": {
     "NAME": "寒冰屏障",
     "DESCRIPTIONS": [
-      "防止你受到的一次致命攻击。"
+      "防止你受到的下一次致命攻击。"
     ]
   },
   "jaina:IncantersPower": {
     "NAME": "咒术洪流",
     "DESCRIPTIONS": [
       "你在每回合打出的第一张法术牌耗能变为 #b0 。",
-      "你在每回合打出的前",
-      "张法术牌耗能变为 #b0 。"
+      "你在每回合打出的前 #b",
+      " 张法术牌耗能变为 #b0 。"
     ]
   },
   "jaina:LoseSpellDamagePower": {
@@ -70,8 +71,8 @@
     "NAME": "法术共鸣",
     "DESCRIPTIONS": [
       "你的下一张 #p奥术 牌打出两次。",
-      "你的下",
-      "张 #p奥术 牌打出两次。"
+      "你的下 #b",
+      " 张 #p奥术 牌打出两次。"
     ]
   },
   "jaina:SpellDamagePower": {
@@ -84,34 +85,31 @@
   "jaina:SplittingImagePower": {
     "NAME": "裂魂残像",
     "DESCRIPTIONS": [
-      "受到攻击之后获得",
-      "层 #y无实体 。"
+      "受到攻击之后获得 #b",
+      " 层 #y无实体 。"
     ]
   },
   "jaina:VaporizePower": {
     "NAME": "蒸发",
     "DESCRIPTIONS": [
-      "在你受到攻击时对攻击者造成",
-      "点伤害。 NL 受到一次攻击仅触发一次。"
+      "在你受到攻击时对攻击者造成 #b",
+      " 点伤害。 NL 受到一次攻击仅触发一次。",
+      "蒸发+"
     ]
   },
   "jaina:WildfirePower": {
     "NAME": "野火",
     "DESCRIPTIONS": [
-      "每当你给予 #r燃烧 时，额外给予 #y3 层。"
-    ]
-  },
-  "jaina:WildfirePowerP": {
-    "NAME": "野火+",
-    "DESCRIPTIONS": [
+      "每当你给予 #r燃烧 时，额外给予 #y3 层。",
+      "野火+",
       "每当你给予 #r燃烧 时，额外给予一倍的层数。"
     ]
   },
   "jaina:WizardArmorPower": {
     "NAME": "法师护甲",
     "DESCRIPTIONS": [
-      "回合结束时获得",
-      "点 #y格挡 。"
+      "回合结束时获得 #b",
+      " 点 #y格挡 。"
     ]
   }
 }

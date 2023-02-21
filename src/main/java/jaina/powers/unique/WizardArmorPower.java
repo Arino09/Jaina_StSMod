@@ -18,7 +18,7 @@ public class WizardArmorPower extends AbstractJainaPower {
     private final int baseAmount;
 
     public WizardArmorPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, true, NAME, PowerType.BUFF);
+        super(POWER_ID, false, NAME, PowerType.BUFF);
         this.owner = owner;
         this.baseAmount = this.amount = amount;
         updateDescription();

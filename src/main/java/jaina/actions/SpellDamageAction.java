@@ -28,7 +28,8 @@ public class SpellDamageAction extends AbstractGameAction {
 
     /**
      * 更新M值受法术伤害影响的卡牌描述
-     * @param cards 卡牌堆
+     *
+     * @param cards  卡牌堆
      * @param amount 法术伤害
      */
     private void updateMagicCards(ArrayList<AbstractCard> cards, int amount) {

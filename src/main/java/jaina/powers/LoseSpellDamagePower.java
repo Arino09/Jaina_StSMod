@@ -14,7 +14,7 @@ public class LoseSpellDamagePower extends AbstractJainaPower {
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public LoseSpellDamagePower(AbstractCreature owner, int amount) {
-        super(POWER_ID, true, NAME, PowerType.DEBUFF);
+        super(POWER_ID, false, NAME, PowerType.DEBUFF);
         this.owner = owner;
         this.amount = amount;
         updateDescription();
