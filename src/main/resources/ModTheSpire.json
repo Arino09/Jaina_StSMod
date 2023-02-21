@@ -3,7 +3,7 @@
   "name": "炉石传说-法师吉安娜 Mod",
   "author_list": ["Arino"],
   "description": "加入了《炉石传说》中的法师——吉安娜·普罗德摩尔 包括75张卡牌，9个遗物，9种药水。",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "sts_version": "12-18-2022",
   "mts_version": "3.30.1",
   "dependencies": ["basemod","stslib"]
