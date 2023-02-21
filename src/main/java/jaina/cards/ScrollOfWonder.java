@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import jaina.modCore.IHelper;
-import jaina.modCore.JainaEnums;
 
 public class ScrollOfWonder extends AbstractArcaneCard {
 

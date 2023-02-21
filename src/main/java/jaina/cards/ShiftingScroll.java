@@ -52,7 +52,11 @@ public class ShiftingScroll extends AbstractArcaneCard {
 
         this.type = shiftCard.type;
         this.name = CARD_STRINGS.EXTENDED_DESCRIPTION[0] + shiftCard.name;
-        this.rawDescription = CARD_STRINGS.EXTENDED_DESCRIPTION[1] + shiftCard.rawDescription;
+        if (!shiftCard.selfRetain) {
+            this.rawDescription = CARD_STRINGS.EXTENDED_DESCRIPTION[1] + shiftCard.rawDescription;
+        } else {
+            this.rawDescription = shiftCard.rawDescription;
+        }
         this.cost = this.costForTurn = shiftCard.cost;
         this.portrait = shiftCard.portrait;
         this.rarity = shiftCard.rarity;
@@ -70,7 +74,19 @@ public class ShiftingScroll extends AbstractArcaneCard {
 
         this.initializeTitle();
         this.initializeDescription();
-        this.update();
+    }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        boolean canUse = super.canUse(p, m);
+        if (!canUse) {
+            return false;
+        }
+        if (shiftCard != null) {
+            return true;
+        }
+        this.cantUseMessage = CARD_STRINGS.EXTENDED_DESCRIPTION[2];
+        return false;
     }
 
     @Override
