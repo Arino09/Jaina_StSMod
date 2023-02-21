@@ -31,10 +31,11 @@ public class CabalistsTome extends AbstractArcaneCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<AbstractCard> cards = IHelper.generateRandomJainaCards(3, true, true, true, true, true);
         // 从随机卡池中选3张卡
-        for (AbstractCard c : cards) {
+        ArrayList<AbstractCard> cardRng = IHelper.generateRandomJainaCards(true, true, true, true);
+        for (AbstractCard c : IHelper.getFewCards(cardRng, 3, false)) {
             c.setCostForTurn(0);
+            c.freeToPlayOnce = true;
             IHelper.getTempCard(c);
         }
     }

@@ -1,9 +1,12 @@
 package jaina.relics;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import jaina.modCore.IHelper;
+
+import java.util.ArrayList;
 
 public class ArchmageStuff extends AbstractJainaRelic {
     public static final String ID = IHelper.makeID("ArchmageStuff");
@@ -15,7 +18,8 @@ public class ArchmageStuff extends AbstractJainaRelic {
 
     @Override
     public void atBattleStart() {
-        IHelper.getTempCard(IHelper.generateRandomJainaCards(1, false, false, true, false, false).get(0));
+        ArrayList<AbstractCard> cardRng = IHelper.generateRandomJainaCards(false, false, true, false);
+        IHelper.getTempCard(IHelper.getFewCards(cardRng, 1, false).get(0));
     }
 
     @Override

@@ -2,12 +2,10 @@ package jaina.potions;
 
 import basemod.BaseMod;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
@@ -16,8 +14,6 @@ import jaina.actions.JainaDiscoveryAction;
 import jaina.modCore.Core;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-
-import java.util.ArrayList;
 
 public class ArcanePotion extends AbstractPotion {
     public static final String ID = IHelper.makeID("ArcanePotion");
@@ -32,18 +28,8 @@ public class ArcanePotion extends AbstractPotion {
 
     @Override
     public void use(AbstractCreature abstractCreature) {
-        ArrayList<AbstractCard> cards = new ArrayList<>();
-        for (AbstractCard c : CardLibrary.getCardList(JainaEnums.JAINA_LIBRARY)) {
-            if (c.hasTag(JainaEnums.CardTags.ARCANE) && !c.rarity.equals(AbstractCard.CardRarity.BASIC)) {
-                cards.add(c);
-            }
-        }
-        for (AbstractCard c : cards) {
-            c.setCostForTurn(0);
-            c.freeToPlayOnce = true;
-        }
-        for (int i = 0; i < getPotency(); i++)
-            addToBot(new JainaDiscoveryAction(IHelper.getFewCards(cards, 3, false)));
+        for (int i = 0; i < potency; i++)
+            addToBot(new JainaDiscoveryAction(JainaEnums.CardTags.ARCANE, true));
     }
 
     @Override

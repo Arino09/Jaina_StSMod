@@ -43,12 +43,7 @@ public class MagicTrick extends AbstractArcaneCard {
             if (!c.hasTag(AbstractCard.CardTags.HEALING) && condition && c.cost == 1)
                 cardRng.add(c);
         }
-        ArrayList<AbstractCard> cards = IHelper.getFewCards(cardRng, 3, false);
-        for (AbstractCard c : cards) {
-            c.setCostForTurn(0);
-            c.freeToPlayOnce = true;
-        }
-        addToBot(new JainaDiscoveryAction(cards));
+        addToBot(new JainaDiscoveryAction(cardRng, true));
     }
 
     @Override

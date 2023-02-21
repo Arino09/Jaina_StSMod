@@ -33,15 +33,7 @@ public class PrimordialGlyph extends AbstractArcaneCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // 发现一张罕见或稀有卡，本回合法力消耗为0
-        ArrayList<AbstractCard> cards = IHelper.generateRandomJainaCards(3, true, true, false, false, true);
-        for (AbstractCard c : cards) {
-            if (upgraded) {
-                c.upgrade();
-            }
-            c.setCostForTurn(0);
-            c.freeToPlayOnce = true;
-        }
-        addToBot(new JainaDiscoveryAction(cards));
+        addToBot(new JainaDiscoveryAction(true, true, false, true));
     }
 
     @Override

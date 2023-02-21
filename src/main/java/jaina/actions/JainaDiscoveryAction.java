@@ -13,32 +13,30 @@ import java.util.ArrayList;
 
 public class JainaDiscoveryAction extends AbstractGameAction {
     private boolean retrieveCard = false;
-    private boolean hasRare = true;
-    private boolean hasUncommon = true;
-    private boolean hasCommon = true;
-    private ArrayList<AbstractCard> generatedCards = null;
+    private final ArrayList<AbstractCard> generatedCards;
 
-    public JainaDiscoveryAction(boolean hasRare, boolean hasUncommon, boolean hasCommon) {
-        this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
-        this.duration = Settings.ACTION_DUR_FAST;
-        this.amount = 1;
-        this.hasRare = hasRare;
-        this.hasUncommon = hasUncommon;
-        this.hasCommon = hasCommon;
+    public JainaDiscoveryAction(boolean hasRare, boolean hasUncommon, boolean hasCommon, boolean free) {
+        this(IHelper.generateRandomJainaCards(hasRare, hasUncommon, hasCommon, true), free);
     }
 
-    public JainaDiscoveryAction(ArrayList<AbstractCard> cards) {
+    public JainaDiscoveryAction(AbstractCard.CardTags tags, boolean free) {
+        this(IHelper.generateTypeOfSpell(tags), free);
+    }
+
+    public JainaDiscoveryAction(ArrayList<AbstractCard> cards, boolean free) {
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
         this.amount = 1;
-        generatedCards = cards;
+        generatedCards = IHelper.getFewCards(cards, 3, false);
+        if (free) {
+            for (AbstractCard c : generatedCards) {
+                c.setCostForTurn(0);
+                c.freeToPlayOnce = true;
+            }
+        }
     }
 
     public void update() {
-
-        if (generatedCards == null) {
-            generatedCards = IHelper.generateRandomJainaCards(3, hasRare, hasUncommon, hasCommon, true, true);
-        }
 
         if (this.duration == Settings.ACTION_DUR_FAST) {
             AbstractDungeon.cardRewardScreen.customCombatOpen(generatedCards, CardRewardScreen.TEXT[1], false);

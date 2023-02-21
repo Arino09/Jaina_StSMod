@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import jaina.modCore.IHelper;
 
+import java.util.ArrayList;
+
 public class ScrollOfWonder extends AbstractArcaneCard {
 
     public static final String ID = IHelper.makeID("ScrollOfWonder");
@@ -32,7 +34,8 @@ public class ScrollOfWonder extends AbstractArcaneCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // 随机生成一张吉安娜卡牌
-        AbstractCard card = IHelper.generateRandomJainaCards(1, true, true, true, false, false).get(0);
+        ArrayList<AbstractCard> cardRng = IHelper.generateRandomJainaCards(true, true, true, false);
+        AbstractCard card = IHelper.getFewCards(cardRng, 1, false).get(0);
         // 免费释放卡牌且不留痕迹
         card.purgeOnUse = true;
         card.ignoreEnergyOnUse = true;

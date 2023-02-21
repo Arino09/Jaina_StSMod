@@ -88,17 +88,14 @@ public interface IHelper {
     }
 
     /**
-     * 生成一定数量随机吉安娜卡牌（非治疗、基础、特殊的职业卡）
+     * 生成随机吉安娜卡牌（非治疗、基础、特殊的职业卡）
      *
-     * @param amount      卡牌数量
      * @param hasRare     是否生成稀有卡
      * @param hasUncommon 是否生成罕见卡
-     * @param canRepeated 是否允许重复
      * @param hasShift    是否包含变形卷轴
      * @return 卡牌数组
      */
-    static ArrayList<AbstractCard> generateRandomJainaCards(int amount,
-           boolean hasRare, boolean hasUncommon, boolean hasCommon, boolean canRepeated, boolean hasShift) {
+    static ArrayList<AbstractCard> generateRandomJainaCards(boolean hasRare, boolean hasUncommon, boolean hasCommon, boolean hasShift) {
         ArrayList<AbstractCard> cardRng = new ArrayList<>();
 
         for (AbstractCard c : CardLibrary.getCardList(JainaEnums.JAINA_LIBRARY)) {
@@ -116,6 +113,21 @@ public interface IHelper {
             if (conditions)
                 cardRng.add(c);
         }
-        return getFewCards(cardRng, amount, canRepeated);
+        return cardRng;
+    }
+
+    /**
+     * 生成一种类型的法术
+     * @param tags 法术类型
+     * @return 卡牌数组
+     */
+    static ArrayList<AbstractCard> generateTypeOfSpell(AbstractCard.CardTags tags) {
+        ArrayList<AbstractCard> cardRng = new ArrayList<>();
+        for (AbstractCard c : CardLibrary.getCardList(JainaEnums.JAINA_LIBRARY)) {
+            if (c.hasTag(tags) && !c.rarity.equals(AbstractCard.CardRarity.BASIC)) {
+                cardRng.add(c);
+            }
+        }
+        return cardRng;
     }
 }

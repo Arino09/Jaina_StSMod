@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import jaina.modCore.IHelper;
 
+import java.util.ArrayList;
+
 public class AscendantScroll extends AbstractJainaRelic implements ClickableRelic {
     public static final String ID = IHelper.makeID("AscendantScroll");
     private static final RelicStrings RELIC_STRINGS = CardCrawlGame.languagePack.getRelicStrings(ID);
@@ -23,7 +25,8 @@ public class AscendantScroll extends AbstractJainaRelic implements ClickableReli
             AbstractDungeon.player.energy.use(COST);
         }
         if (AbstractDungeon.player.hand.size() <= 10) {
-            AbstractCard card = IHelper.generateRandomJainaCards(1, true, true, true, false, false).get(0);
+            ArrayList<AbstractCard> cardRng = IHelper.generateRandomJainaCards(true, true, true, false);
+            AbstractCard card = IHelper.getFewCards(cardRng, 1, false).get(0);
             if (card.costForTurn <= COST && card.costForTurn >= 0) {
                 card.setCostForTurn(0);
                 card.freeToPlayOnce = true;

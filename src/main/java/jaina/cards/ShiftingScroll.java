@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
+import java.util.ArrayList;
+
 
 public class ShiftingScroll extends AbstractArcaneCard {
 
@@ -44,7 +46,8 @@ public class ShiftingScroll extends AbstractArcaneCard {
 
     @Override
     public void atTurnStart() {
-        shiftCard = (AbstractJainaCard) IHelper.generateRandomJainaCards(1, true, true, true, false, false).get(0);
+        ArrayList<AbstractCard> cardRng = IHelper.generateRandomJainaCards(true, true, true, false);
+        shiftCard = (AbstractJainaCard) IHelper.getFewCards(cardRng, 1, false).get(0);
         if (upgraded) {
             shiftCard.upp();
         }
