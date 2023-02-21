@@ -15,6 +15,7 @@ public class SpellDamageAction extends AbstractGameAction {
     @Override
     public void update() {
         int amount;
+        // 更新所有地方的卡牌描述
         if (AbstractDungeon.player.hasPower(SpellDamagePower.POWER_ID)) {
             amount = AbstractDungeon.player.getPower(SpellDamagePower.POWER_ID).amount;
             updateMagicCards(AbstractDungeon.player.hand.group, amount);
@@ -25,6 +26,11 @@ public class SpellDamageAction extends AbstractGameAction {
         this.isDone = true;
     }
 
+    /**
+     * 更新M值受法术伤害影响的卡牌描述
+     * @param cards 卡牌堆
+     * @param amount 法术伤害
+     */
     private void updateMagicCards(ArrayList<AbstractCard> cards, int amount) {
         for (AbstractCard c : cards) {
             if (c instanceof CramSession || c instanceof ApexisBlast) {

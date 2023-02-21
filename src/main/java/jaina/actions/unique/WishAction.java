@@ -26,6 +26,7 @@ public class WishAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_MED) {
+            // 卡池为所有法师牌
             CardGroup library = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
             for (AbstractCard c : CardLibrary.getCardList(JainaEnums.JAINA_LIBRARY)) {
                 if (c.color == JainaEnums.JAINA_COLOR) {
@@ -45,10 +46,12 @@ public class WishAction extends AbstractGameAction {
                 c.unhover();
                 c.setCostForTurn(0);
                 c.isCostModifiedForTurn = true;
+                // 手牌满了则进入弃牌堆
                 if (p.hand.size() == 10) {
                     c.moveToDiscardPile();
                     p.createHandIsFullDialog();
                 } else {
+                    // 否则正常入手
                     p.hand.addToTop(c);
                 }
                 p.hand.refreshHandLayout();

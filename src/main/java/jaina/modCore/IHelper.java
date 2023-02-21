@@ -118,6 +118,7 @@ public interface IHelper {
 
     /**
      * 生成一种类型的法术
+     *
      * @param tags 法术类型
      * @return 卡牌数组
      */

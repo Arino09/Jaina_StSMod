@@ -12,8 +12,8 @@ import jaina.modCore.IHelper;
 import java.util.ArrayList;
 
 public class JainaDiscoveryAction extends AbstractGameAction {
-    private boolean retrieveCard = false;
     private final ArrayList<AbstractCard> generatedCards;
+    private boolean retrieveCard = false;
 
     public JainaDiscoveryAction(boolean hasRare, boolean hasUncommon, boolean hasCommon, boolean free) {
         this(IHelper.generateRandomJainaCards(hasRare, hasUncommon, hasCommon, true), free);

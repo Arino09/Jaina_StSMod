@@ -11,11 +11,16 @@ public class RestoreCostAction extends AbstractGameAction {
 
     private final boolean isFrostAffinity;
 
+    /**
+     * 恢复费用buff
+     * @param isFrostAffinity 是否是冰霜亲和
+     */
     public RestoreCostAction(boolean isFrostAffinity) {
         this.isFrostAffinity = isFrostAffinity;
     }
 
     private void restoreCost(ArrayList<AbstractCard> cards, boolean isFrostAffinity) {
+        // 冰霜亲和牌恢复
         if (isFrostAffinity) {
             for (AbstractCard c : cards) {
                 if (c.hasTag(JainaEnums.CardTags.AFFINITY) && c.hasTag(JainaEnums.CardTags.FROST)) {
@@ -24,6 +29,7 @@ public class RestoreCostAction extends AbstractGameAction {
                 }
             }
         } else {
+            // 咒术洪流牌恢复
             for (AbstractCard c : cards) {
                 if (c.hasTag(JainaEnums.CardTags.INCANTER) && !c.hasTag(JainaEnums.CardTags.AFFINITY)) {
                     c.setCostForTurn(c.cost);

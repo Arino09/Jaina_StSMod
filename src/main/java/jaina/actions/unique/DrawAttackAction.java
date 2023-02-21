@@ -19,6 +19,7 @@ public class DrawAttackAction extends AbstractGameAction {
         AbstractDungeon.actionManager.addToTop(new WaitAction(0.4F));
         tickDuration();
         if (this.isDone)
+            // 弃掉抽到的非攻击牌
             for (AbstractCard c : DrawCardAction.drawnCards) {
                 if (c.type != AbstractCard.CardType.ATTACK) {
                     AbstractDungeon.player.hand.moveToDiscardPile(c);

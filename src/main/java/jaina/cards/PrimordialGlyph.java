@@ -9,8 +9,6 @@ import jaina.actions.JainaDiscoveryAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-import java.util.ArrayList;
-
 
 public class PrimordialGlyph extends AbstractArcaneCard {
 

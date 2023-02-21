@@ -90,6 +90,7 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
         addPotions();
     }
 
+    // 添加药水
     private void addPotions() {
         System.out.println("Adding Jaina potions: ");
         BaseMod.addPotion(ArcanePotion.class, ArcanePotion.LIQUID_COLOR, ArcanePotion.HYBRID_COLOR, null, ArcanePotion.ID, JainaEnums.JAINA_CLASS);

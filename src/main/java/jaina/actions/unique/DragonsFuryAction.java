@@ -12,11 +12,9 @@ public class DragonsFuryAction extends AbstractGameAction {
     private final AbstractPlayer p;
     private final boolean freeToPlayOnce;
     private final int energyOnUse;
-    //private final int burnAmt;
 
     public DragonsFuryAction(AbstractPlayer p, int damage, boolean freeToPlayOnce, int energyOnUse) {
         this.amount = damage;
-        //this.burnAmt = burnAmt;
         this.p = p;
         this.freeToPlayOnce = freeToPlayOnce;
         this.duration = Settings.ACTION_DUR_XFAST;

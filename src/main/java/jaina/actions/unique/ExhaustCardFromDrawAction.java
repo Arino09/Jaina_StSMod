@@ -23,16 +23,21 @@ public class ExhaustCardFromDrawAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_MED) {
             CardGroup draw = p.drawPile;
+            // 抽牌堆没有牌直接结束
             if (draw.size() == 0) {
                 this.isDone = true;
                 return;
             }
+            // 抽牌堆只有一张牌直接复制
             if (draw.size() == 1) {
                 AbstractCard card = draw.getTopCard().makeSameInstanceOf();
                 updateCard(card);
+                // 如果手牌满了则进入弃牌堆并提示
                 if (p.hand.size() == 10) {
-                    return;
+                    card.moveToDiscardPile();
+                    p.createHandIsFullDialog();
                 } else {
+                    // 否则正常加入手牌
                     card.unhover();
                     card.lighten(true);
                     card.setAngle(0.0F);
@@ -59,10 +64,12 @@ public class ExhaustCardFromDrawAction extends AbstractGameAction {
                 c.unhover();
                 AbstractCard card = c.makeSameInstanceOf();
                 updateCard(card);
+                // 如果手牌满了则进入弃牌堆并提示
                 if (p.hand.size() == 10) {
                     card.moveToDiscardPile();
                     p.createHandIsFullDialog();
                 } else {
+                    // 否则正常加入手牌
                     p.hand.addToTop(card);
                 }
                 p.hand.refreshHandLayout();
