@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import jaina.actions.SpellDamageAction;
+import jaina.cards.ShiftingScroll;
 
 import java.util.ArrayList;
 
@@ -104,18 +105,16 @@ public interface IHelper {
             // 初始条件为非治疗、基础、特殊的职业卡
             boolean conditions = !c.rarity.equals(AbstractCard.CardRarity.SPECIAL) && !c.rarity.equals(AbstractCard.CardRarity.BASIC)
                     && !c.hasTag(AbstractCard.CardTags.HEALING);
-            if (!hasRare) {
+            if (!hasRare)
                 conditions = conditions && !c.rarity.equals(AbstractCard.CardRarity.RARE);
-                if (!hasShift) conditions = conditions && !c.hasTag(JainaEnums.CardTags.SHIFT);
-            }
+            if (!hasShift)
+                conditions = conditions && !c.cardID.equals(ShiftingScroll.ID);
             if (!hasUncommon)
                 conditions = conditions && !c.rarity.equals(AbstractCard.CardRarity.UNCOMMON);
             if (!hasCommon)
                 conditions = conditions && !c.rarity.equals(AbstractCard.CardRarity.COMMON);
-
-            if (conditions) {
+            if (conditions)
                 cardRng.add(c);
-            }
         }
         return getFewCards(cardRng, amount, canRepeated);
     }

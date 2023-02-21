@@ -29,11 +29,6 @@ public class TheCoin extends AbstractJainaCard {
     }
 
     @Override
-    public void upp() {
-
-    }
-
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (!Settings.DISABLE_EFFECTS) {
             addToBot(new VFXAction(new BorderFlashEffect(Core.COLOR)));

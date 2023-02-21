@@ -21,7 +21,6 @@ public class ShiftingScroll extends AbstractArcaneCard {
     public ShiftingScroll() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.RARE, CardTarget.NONE);
-        this.tags.add(JainaEnums.CardTags.SHIFT);
         this.selfRetain = true;
     }
 
@@ -62,7 +61,6 @@ public class ShiftingScroll extends AbstractArcaneCard {
         this.rarity = shiftCard.rarity;
         this.target = shiftCard.target;
         this.tags = shiftCard.tags;
-        this.tags.add(JainaEnums.CardTags.SHIFT);
 
         this.exhaust = shiftCard.exhaust;
         this.isEthereal = shiftCard.isEthereal;

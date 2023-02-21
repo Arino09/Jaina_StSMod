@@ -33,13 +33,15 @@ public class FrostPotion extends AbstractPotion {
 
     @Override
     public void use(AbstractCreature abstractCreature) {
-        ArrayList<AbstractCard> cards = new ArrayList<>();
-        for (AbstractCard c : CardLibrary.getCardList(JainaEnums.JAINA_LIBRARY)) {
+        ArrayList<AbstractCard> cards = CardLibrary.getCardList(JainaEnums.JAINA_LIBRARY);
+        for (AbstractCard c : cards) {
             if (c.hasTag(JainaEnums.CardTags.FROST) && !c.rarity.equals(AbstractCard.CardRarity.BASIC)) {
-                c.setCostForTurn(0);
-                c.freeToPlayOnce = true;
                 cards.add(c);
             }
+        }
+        for (AbstractCard c : cards) {
+            c.setCostForTurn(0);
+            c.freeToPlayOnce = true;
         }
         for (int i = 0; i < getPotency(); i++)
             addToBot(new JainaDiscoveryAction(IHelper.getFewCards(cards, 3, false)));

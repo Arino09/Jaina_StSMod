@@ -35,12 +35,15 @@ public class FirePotion extends AbstractPotion {
         ArrayList<AbstractCard> cards = new ArrayList<>();
         for (AbstractCard c : CardLibrary.getCardList(JainaEnums.JAINA_LIBRARY)) {
             if (c.hasTag(JainaEnums.CardTags.FIRE) && !c.rarity.equals(AbstractCard.CardRarity.BASIC)) {
-                c.setCostForTurn(0);
-                c.freeToPlayOnce = true;
                 cards.add(c);
             }
         }
-        addToBot(new JainaDiscoveryAction(IHelper.getFewCards(cards, 3, false)));
+        for (AbstractCard c : cards) {
+            c.setCostForTurn(0);
+            c.freeToPlayOnce = true;
+        }
+        for (int i = 0; i < getPotency(); i++)
+            addToBot(new JainaDiscoveryAction(IHelper.getFewCards(cards, 3, false)));
     }
 
     @Override

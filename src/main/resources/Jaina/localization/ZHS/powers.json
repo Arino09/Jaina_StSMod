@@ -60,10 +60,10 @@
     ]
   },
   "jaina:LoseSpellDamagePower": {
-    "NAME": "奥术光辉",
+    "NAME": "临时法术伤害",
     "DESCRIPTIONS": [
-      "回合结束时失去",
-      "点 #y法术伤害 。"
+      "回合结束时 #y法术伤害 - #b",
+      " 。"
     ]
   },
   "jaina:ManaBindPower": {
@@ -77,8 +77,8 @@
   "jaina:SpellDamagePower": {
     "NAME": "法术伤害",
     "DESCRIPTIONS": [
-      "#y法术伤害 提高",
-      "点。"
+      "#y法术伤害 + #b",
+      " 。"
     ]
   },
   "jaina:SplittingImagePower": {

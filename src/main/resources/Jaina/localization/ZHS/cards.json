@@ -371,8 +371,8 @@
   },
   "jaina:Wish": {
     "NAME": "祈愿术",
-    "DESCRIPTION": "选择一张法术牌加入你的手牌。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "选择一张升级过的法术牌加入你的手牌。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。"
+    "DESCRIPTION": "从所有法术牌中选择一张加入你的手牌。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从所有法术牌中选择一张加入你的手牌并升级。 NL 这张牌在本回合的耗能变为0点。 NL 消耗 。"
   },
   "jaina:WizardArmor": {
     "NAME": "法师护甲",
