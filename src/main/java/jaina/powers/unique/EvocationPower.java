@@ -28,7 +28,7 @@ public class EvocationPower extends AbstractJainaPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + amount;
+        this.description = String.format(DESCRIPTIONS[0], amount);
     }
 
 }

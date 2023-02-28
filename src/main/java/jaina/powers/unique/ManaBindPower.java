@@ -31,7 +31,7 @@ public class ManaBindPower extends AbstractJainaPower {
         if (this.amount == 1) {
             this.description = DESCRIPTIONS[0];
         } else {
-            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+            this.description = String.format(DESCRIPTIONS[1], amount);
         }
     }
 

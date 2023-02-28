@@ -4,8 +4,11 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import jaina.modCore.IHelper;
+import jaina.powers.unique.VaporizePower;
 
 public class LoseSpellDamagePower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("LoseSpellDamagePower");
@@ -28,7 +31,7 @@ public class LoseSpellDamagePower extends AbstractJainaPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = String.format(DESCRIPTIONS[0], amount);
     }
 
 }

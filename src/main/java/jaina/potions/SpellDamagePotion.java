@@ -37,7 +37,7 @@ public class SpellDamagePotion extends AbstractPotion {
     @Override
     public void initializeData() {
         this.potency = getPotency();
-        this.description = POTION_STRINGS.DESCRIPTIONS[0] + potency + POTION_STRINGS.DESCRIPTIONS[1];
+        this.description = String.format(POTION_STRINGS.DESCRIPTIONS[0], potency);
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(

@@ -74,7 +74,7 @@ public abstract class AbstractJainaCard extends CustomCard {
             default:
                 throw new IllegalArgumentException("Unexpect value: " + type);
         }
-        return "jaina/img/cards/" + t + "/" + id.substring(6) + ".png";
+        return String.format("jaina/img/cards/%s/%s.png", t, id.substring(6));
     }
 
     /**
@@ -100,7 +100,7 @@ public abstract class AbstractJainaCard extends CustomCard {
             default:
                 throw new IllegalArgumentException("Unexpect value: " + type);
         }
-        return "jaina/img/cards/" + t + "/test.png";
+        return String.format("jaina/img/cards/%s/test.png", t);
     }
 
     /**
