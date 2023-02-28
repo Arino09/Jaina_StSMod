@@ -34,8 +34,8 @@ public class ArcaneGatePower extends AbstractJainaPower {
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         AbstractPlayer p = AbstractDungeon.player;
         if (card.hasTag(JainaEnums.CardTags.ARCANE)) {
+            flashWithoutSound();
             if (m == null) {
-                flashWithoutSound();
                 if (card.target == AbstractCard.CardTarget.ALL_ENEMY) {
                     addToBot(new DamageAllEnemiesAction(p, this.amount, DamageInfo.DamageType.NORMAL, AE));
                 } else {

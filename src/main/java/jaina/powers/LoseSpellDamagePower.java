@@ -25,6 +25,7 @@ public class LoseSpellDamagePower extends AbstractJainaPower {
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
+        flash();
         addToBot(new ApplyPowerAction(owner, owner, new SpellDamagePower(owner, -amount)));
         addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }

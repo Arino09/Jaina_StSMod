@@ -31,13 +31,16 @@ public class WizardArmorPower extends AbstractJainaPower {
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
+        flash();
         addToBot(new GainBlockAction(owner, amount));
     }
 
     @Override
     public void onSpecificTrigger() {
-        if (owner.isPlayer && owner.hasPower(SpellDamagePower.POWER_ID)) {
+        if (owner.hasPower(SpellDamagePower.POWER_ID)) {
             amount = baseAmount + owner.getPower(SpellDamagePower.POWER_ID).amount;
+        } else {
+            amount = baseAmount;
         }
         updateDescription();
     }

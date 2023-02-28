@@ -26,6 +26,7 @@ public class ArcticArmorPower extends AbstractJainaPower {
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         if (card.hasTag(JainaEnums.CardTags.FROST)) {
+            flash();
             addToBot(new GainBlockAction(owner, amount));
         }
     }

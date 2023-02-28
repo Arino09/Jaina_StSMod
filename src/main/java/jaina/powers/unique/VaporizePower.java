@@ -32,9 +32,9 @@ public class VaporizePower extends AbstractJainaPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + DAMAGE + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0];
         if (upgraded) {
-            this.name = DESCRIPTIONS[2];
+            this.name = DESCRIPTIONS[1];
         }
     }
 

@@ -23,6 +23,7 @@ public class EvocationPower extends AbstractJainaPower {
 
     @Override
     public void atStartOfTurn() {
+        flash();
         addToBot(new ApplyPowerAction(owner, owner, new SpellDamagePower(owner, amount)));
     }
 

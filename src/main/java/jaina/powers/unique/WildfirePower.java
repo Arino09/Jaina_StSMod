@@ -28,6 +28,7 @@ public class WildfirePower extends AbstractJainaPower {
     @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if (power instanceof BurningPower && !target.isPlayer) {
+            flash();
             if (upgraded) {
                 power.amount *= 2;
             } else {
