@@ -45,8 +45,7 @@ public class FrozenTouch extends AbstractFrostCard {
 
     @Override
     public void triggerOnExhaust() {
-        rawDescription = CARD_STRINGS.DESCRIPTION;
-        initializeDescription();
+        resetDescription(CARD_STRINGS);
     }
 
     @Override

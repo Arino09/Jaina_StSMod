@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import jaina.powers.FrozenPower;
+import jaina.powers.SpellDamagePower;
 
 public abstract class AbstractJainaCard extends CustomCard {
 
@@ -252,6 +253,38 @@ public abstract class AbstractJainaCard extends CustomCard {
             }
         }
         return amount;
+    }
+
+    /**
+     * 根据法术伤害在卡牌描述中更新魔法数
+     *
+     * @param strings 本地化文本
+     */
+    public void updateDescription(CardStrings strings) {
+        AbstractPower power = AbstractDungeon.player.getPower(SpellDamagePower.POWER_ID);
+        if (AbstractDungeon.player.hasPower(SpellDamagePower.POWER_ID)) {
+            // 仅当法伤数值变化时才更新描述
+            if (power.amount + baseMagicNumber > magicNumber) {
+                magicNumber = power.amount + baseMagicNumber;
+                rawDescription = strings.DESCRIPTION + String.format(strings.EXTENDED_DESCRIPTION[0], magicNumber);
+                initializeDescription();
+            }
+        } else {
+            resetDescription(strings);
+        }
+    }
+
+    /**
+     * 重置卡牌描述为最初版
+     *
+     * @param cardStrings 本地化文本
+     */
+    public void resetDescription(CardStrings cardStrings) {
+        rawDescription = cardStrings.DESCRIPTION;
+        if (upgraded) {
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        }
+        initializeDescription();
     }
 
     //重写了升级方法，升级效果写在limitedUpgrade中即可
