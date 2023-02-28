@@ -14,7 +14,7 @@ public class CramSession extends AbstractArcaneCard {
     public static final String ID = IHelper.makeID("CramSession");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     public CramSession() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,

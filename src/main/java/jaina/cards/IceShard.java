@@ -36,7 +36,7 @@ public class IceShard extends AbstractFrostCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
-            IHelper.getTempCard(iceLance.makeSameInstanceOf());
+            IHelper.getTempCard(iceLance);
         }
     }
 
