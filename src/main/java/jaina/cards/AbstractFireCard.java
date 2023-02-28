@@ -1,19 +1,15 @@
 package jaina.cards;
 
-import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public abstract class AbstractFireCard extends AbstractJainaCard {
 
-    private static final String ID = IHelper.makeID("Fire");
-    private static final String[] descriptorStrings = CardCrawlGame.languagePack.getUIString(ID).TEXT;
+    public static final String ID = IHelper.makeID("Fire");
 
     /**
      * 构造函数
@@ -33,16 +29,12 @@ public abstract class AbstractFireCard extends AbstractJainaCard {
 
     @Override
     public List<String> getCardDescriptors() {
-        List<String> tags = new ArrayList<>();
-        tags.add(descriptorStrings[0]);
-        return tags;
+        return ISpellCard.getCardDescriptors(ID);
     }
 
     @Override
     public List<TooltipInfo> getCustomTooltipsTop() {
-        List<TooltipInfo> tips = new ArrayList<>();
-        tips.add(new TooltipInfo(BaseMod.getKeywordTitle(ID), BaseMod.getKeywordDescription(ID)));
-        return tips;
+        return ISpellCard.getCustomTooltipsTop(ID);
     }
 
 }
