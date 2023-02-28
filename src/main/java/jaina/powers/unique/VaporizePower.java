@@ -17,13 +17,10 @@ public class VaporizePower extends AbstractJainaPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private final int DAMAGE;
-
     private final boolean upgraded;
 
     public VaporizePower(AbstractCreature owner, boolean upgraded) {
         super(upgraded ? POWER_ID_P : POWER_ID, false, NAME, PowerType.BUFF);
-        DAMAGE = upgraded ? 12 : 9;
         this.owner = owner;
         this.amount = 1;
         this.upgraded = upgraded;
@@ -43,7 +40,7 @@ public class VaporizePower extends AbstractJainaPower {
         // 受到攻击时对目标造成伤害
         if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner != this.owner) {
             flash();
-            addToTop(new DamageAction(info.owner, new DamageInfo(this.owner, DAMAGE,
+            addToTop(new DamageAction(info.owner, new DamageInfo(this.owner, info.base,
                     DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
             amount--;
             // 层数为0后立马解除能力
@@ -56,6 +53,4 @@ public class VaporizePower extends AbstractJainaPower {
         }
         return damageAmount;
     }
-
-
 }

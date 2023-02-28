@@ -3,8 +3,7 @@
     "NAME": "埃匹希斯冲击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌（受 jaina:法术伤害 加成）。",
     "EXTENDED_DESCRIPTION": [
-      "（抽",
-      "张牌。）"
+      "（抽%d张牌。）"
     ]
   },
   "jaina:ArcaneBlast": {
@@ -98,8 +97,7 @@
     "NAME": "考前刷夜",
     "DESCRIPTION": "抽 !M! 张牌。 NL （受 jaina:法术伤害 加成。）",
     "EXTENDED_DESCRIPTION": [
-      "（抽",
-      "张牌。）"
+      "（抽%d张牌。）"
     ]
   },
   "jaina:DeckOfWonders": {
@@ -170,8 +168,7 @@
     "DESCRIPTION": "获得 !M! 点 [E] NL （受 jaina:法术伤害 加成）。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得 !M! 点 [E] NL （受 jaina:法术伤害 加成）。",
     "EXTENDED_DESCRIPTION": [
-      "（获得",
-      "点 [E] ）"
+      "（获得%d点 [E] ）"
     ]
   },
   "jaina:ForbiddenFlame": {
@@ -205,8 +202,7 @@
     "NAME": "冻寒之触",
     "DESCRIPTION": "造成 !D! 点伤害并 jaina:冻结 敌人 。 NL 使用 !M! 次后 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "（还剩",
-      "次）"
+      "（还剩%d次）"
     ]
   },
   "jaina:GreaterArcaneMissiles": {
@@ -231,7 +227,7 @@
   },
   "jaina:IceShard": {
     "NAME": "寒冰碎片",
-    "DESCRIPTION": "将 !M! 张具有 *消耗 的 *冰枪术 放入你的手牌。 NL 消耗 。",
+    "DESCRIPTION": "将 !M! 张 *碎片 放入你的手牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "对被 jaina:冻结 的敌人造成 !D! 点伤害，或 jaina:冻结 敌人。 NL 消耗 。"
     ]
@@ -362,7 +358,7 @@
   },
   "jaina:Vaporize": {
     "NAME": "蒸发",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 你下一次受到攻击时对目标造成 !D! 点伤害。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 你下一次受到攻击时对目标造成相同的伤害。"
   },
   "jaina:Wildfire": {
     "NAME": "野火",
