@@ -8,24 +8,19 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 
-
 public class IceShard extends AbstractFrostCard {
 
     public static final String ID = IHelper.makeID("IceShard");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
     private static final int COST = 3;
-    private final IceLance iceLance = new IceLance();
 
     public IceShard() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.RARE, CardTarget.NONE);
         setMagicNumber(3);
         this.exhaust = true;
-        iceLance.exhaust = true;
-        iceLance.rawDescription = CARD_STRINGS.EXTENDED_DESCRIPTION[0];
-        iceLance.initializeDescription();
-        cardsToPreview = iceLance;
+        cardsToPreview = new IceShardToken();
     }
 
     @Override
@@ -36,7 +31,7 @@ public class IceShard extends AbstractFrostCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
-            IHelper.getTempCard(iceLance);
+            IHelper.getTempCard(new IceShardToken());
         }
     }
 

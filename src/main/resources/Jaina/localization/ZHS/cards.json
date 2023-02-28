@@ -232,6 +232,10 @@
       "对被 jaina:冻结 的敌人造成 !D! 点伤害，或 jaina:冻结 敌人。 NL 消耗 。"
     ]
   },
+  "jaina:IceShardToken": {
+    "NAME": "碎片",
+    "DESCRIPTION": "对被 jaina:冻结 的敌人造成 !D! 点伤害。 NL 若敌人未被冻结 ，则 jaina:冻结 敌人。 NL 消耗 。"
+  },
   "jaina:IceWall": {
     "NAME": "冰墙",
     "DESCRIPTION": "每有一名敌人，获得 !B! 点 格挡 。"
