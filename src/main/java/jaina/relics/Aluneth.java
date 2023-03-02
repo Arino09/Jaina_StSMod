@@ -13,7 +13,7 @@ public class Aluneth extends AbstractJainaRelic {
     public static final String ID = IHelper.makeID("Aluneth");
     private static final RelicStrings RELIC_STRINGS = CardCrawlGame.languagePack.getRelicStrings(ID);
     private static final int DRAW = 3;
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 5;
 
     public Aluneth() {
         super(ID, false, RELIC_STRINGS, RelicTier.RARE, LandingSound.MAGICAL);
