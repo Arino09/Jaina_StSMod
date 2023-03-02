@@ -1,6 +1,7 @@
 # Jaina_StSMod
 基于《杀戮尖塔》(*Slay the Spire*)制作的《炉石传说》法师吉安娜 Mod
 
+2023-3-2: 本Mod已上传至Steam创意工坊
 ----
 ### alpha0.3.0
 设置了解锁内容。
