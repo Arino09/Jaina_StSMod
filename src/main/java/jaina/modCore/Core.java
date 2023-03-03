@@ -7,6 +7,7 @@ import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -17,11 +18,9 @@ import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import jaina.cards.*;
 import jaina.characters.JainaCharacter;
-import jaina.potions.*;
 import jaina.relics.*;
 
 import java.nio.charset.StandardCharsets;
-
 
 @SpireInitializer
 public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber, EditRelicsSubscriber, AddAudioSubscriber, SetUnlocksSubscriber {
@@ -185,7 +184,8 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
         Keyword[] keywords = gson.fromJson(json, Keyword[].class);
         if (keywords != null) {
             for (Keyword keyword : keywords) {
-                BaseMod.addKeyword(MOD_ID, keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
+                // add (mod_id, proper name, names[], description)
+                BaseMod.addKeyword(MOD_ID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
             }
         }
     }

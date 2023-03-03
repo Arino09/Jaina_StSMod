@@ -46,8 +46,8 @@ public class FrozenPotion extends AbstractPotion {
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(
-                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.makeID("冻结"))),
-                BaseMod.getKeywordDescription(IHelper.makeID("冻结"))
+                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.localizeKeywordID("Frozen"))),
+                BaseMod.getKeywordDescription(IHelper.localizeKeywordID("Frozen"))
         ));
     }
 

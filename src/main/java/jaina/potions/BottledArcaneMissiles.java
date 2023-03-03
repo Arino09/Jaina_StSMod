@@ -1,5 +1,6 @@
 package jaina.potions;
 
+import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -38,6 +39,9 @@ public class BottledArcaneMissiles extends AbstractPotion {
         this.description = String.format(POTION_STRINGS.DESCRIPTIONS[0], potency);
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
+        ArcaneMissileToken token = new ArcaneMissileToken();
+        token.upgrade();
+        this.tips.add(new CardPowerTip(token));
     }
 
     @Override

@@ -43,12 +43,12 @@ public class FrostPotion extends AbstractPotion {
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(
-                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.makeID("发现"))),
-                BaseMod.getKeywordDescription(IHelper.makeID("发现"))
+                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.localizeKeywordID("Discover"))),
+                BaseMod.getKeywordDescription(IHelper.localizeKeywordID("Discover"))
         ));
         this.tips.add(new PowerTip(
-                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.makeID("冰霜"))),
-                BaseMod.getKeywordDescription(IHelper.makeID("冰霜"))
+                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.localizeKeywordID("Frost"))),
+                BaseMod.getKeywordDescription(IHelper.localizeKeywordID("Frost"))
         ));
     }
 

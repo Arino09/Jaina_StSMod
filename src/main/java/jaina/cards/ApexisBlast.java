@@ -28,6 +28,7 @@ public class ApexisBlast extends AbstractArcaneCard {
     public void upp() {
         upgradeDamage(3);
         upgradeMagicNumber(1);
+        upgradeDescription(CARD_STRINGS);
     }
 
     @Override

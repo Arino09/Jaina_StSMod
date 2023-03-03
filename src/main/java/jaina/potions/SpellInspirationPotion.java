@@ -40,12 +40,12 @@ public class SpellInspirationPotion extends AbstractPotion {
     @Override
     public void initializeData() {
         this.potency = getPotency();
-        this.description = String.format(POTION_STRINGS.DESCRIPTIONS[0], potency);
+        this.description = String.format(POTION_STRINGS.DESCRIPTIONS[0], potency, potency);
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(
-                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.makeID("法术伤害"))),
-                BaseMod.getKeywordDescription(IHelper.makeID("法术伤害"))
+                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.localizeKeywordID("Spelldamage"))),
+                BaseMod.getKeywordDescription(IHelper.localizeKeywordID("Spelldamage"))
         ));
     }
 

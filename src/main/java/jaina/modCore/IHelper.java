@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
@@ -12,18 +13,37 @@ import jaina.actions.SpellDamageAction;
 import jaina.cards.ShiftingScroll;
 
 import java.util.ArrayList;
+import java.util.Map;
 
+import static com.megacrit.cardcrawl.core.Settings.GameLanguage.ENG;
 import static jaina.modCore.Core.MOD_ID;
 
 public interface IHelper {
-    UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString("jaina:ui");
+
+    UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString(IHelper.makeID("ui"));
 
     /**
+     * 返回唯一id
+     *
      * @param id 卡牌/遗物/药水/能力id
      * @return 加上"{MOD_ID}:"前缀的ID，也是本地化json中的ID
      */
     static String makeID(String id) {
         return MOD_ID + ":" + id;
+    }
+
+    /**
+     * 本地化英文关键词并转换成ID
+     *
+     * @param engKeyword 英文关键词
+     * @return 当前语言的关键词ID
+     */
+    static String localizeKeywordID(String engKeyword) {
+        // 如果是英语直接返回当前关键词ID
+        if (Settings.language == ENG) return IHelper.makeID(engKeyword);
+        // 在ui.json中保存有关键词映射表
+        Map<String, String> keywords = CardCrawlGame.languagePack.getUIString(IHelper.makeID("keywords")).TEXT_DICT;
+        return IHelper.makeID(keywords.get(engKeyword));
     }
 
     /**

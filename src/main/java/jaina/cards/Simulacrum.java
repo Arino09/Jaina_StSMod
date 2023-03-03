@@ -26,6 +26,7 @@ public class Simulacrum extends AbstractArcaneCard {
     @Override
     public void upp() {
         upgradeMagicNumber(1);
+        upgradeDescription(CARD_STRINGS);
     }
 
     @Override

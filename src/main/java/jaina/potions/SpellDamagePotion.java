@@ -41,8 +41,8 @@ public class SpellDamagePotion extends AbstractPotion {
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(
-                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.makeID("法术伤害"))),
-                BaseMod.getKeywordDescription(IHelper.makeID("法术伤害"))
+                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.localizeKeywordID("Spelldamage"))),
+                BaseMod.getKeywordDescription(IHelper.localizeKeywordID("Spelldamage"))
         ));
     }
 

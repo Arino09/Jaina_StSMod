@@ -27,6 +27,7 @@ public class Shield extends AbstractArcaneCard {
     public void upp() {
         upgradeBlock(2);
         upgradeMagicNumber(1);
+        upgradeDescription(CARD_STRINGS);
     }
 
     @Override

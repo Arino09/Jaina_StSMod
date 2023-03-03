@@ -37,8 +37,8 @@ public class VolcanicPotion extends AbstractPotion {
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(
-                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.makeID("燃烧"))),
-                BaseMod.getKeywordDescription(IHelper.makeID("燃烧"))
+                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.localizeKeywordID("Combustion"))),
+                BaseMod.getKeywordDescription(IHelper.localizeKeywordID("Combustion"))
         ));
     }
 
