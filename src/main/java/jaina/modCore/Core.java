@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import jaina.cards.*;
@@ -59,52 +60,6 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
         new Core();
     }
 
-    // 当baseMod开始注册角色时，调用这个方法
-    @Override
-    public void receiveEditCharacters() {
-        // 添加角色
-        BaseMod.addCharacter(new JainaCharacter(CardCrawlGame.playerName), CHAR_BUTTON, CHAR_PORTRAIT, JainaEnums.JAINA_CLASS);
-    }
-
-    // 当baseMod开始注册mod卡牌时，便会调用这个函数
-    @Override
-    public void receiveEditCards() {
-        // 自动添加卡牌
-        new AutoAdd(MOD_ID)
-                .packageFilter("jaina.cards")
-                .setDefaultSeen(true)
-                .cards();
-        new AutoAdd(MOD_ID)
-                .packageFilter("jaina.cards.optionCards")
-                .setDefaultSeen(true)
-                .cards();
-    }
-
-    // 当baseMod开始注册mod遗物时，便会调用这个函数
-    @Override
-    public void receiveEditRelics() {
-        // 自动添加遗物到角色遗物池
-        new AutoAdd(MOD_ID)
-                .packageFilter("jaina.relics")
-                .any(CustomRelic.class, (info, relic) -> {
-                    BaseMod.addRelicToCustomPool(relic, JainaEnums.JAINA_COLOR);
-                    if (info.seen) {
-                        UnlockTracker.markRelicAsSeen(relic.relicId);
-                    }
-                });
-        addPotions();
-    }
-
-    // 设置解锁内容
-    @Override
-    public void receiveSetUnlocks() {
-        registerUnlockCardBundle(JainaEnums.JAINA_CLASS, 0, IceLance.ID, BreathOfSindragosa.ID, IceShard.ID);
-        registerUnlockRelicBundle(JainaEnums.JAINA_CLASS, 1, ArcaniteCrystal.ID, RubySpellstone.ID, RobesOfGaudiness.ID);
-        registerUnlockCardBundle(JainaEnums.JAINA_CLASS, 2, TomeOfIntellect.ID, CabalistsTome.ID, ShiftingScroll.ID);
-        registerUnlockRelicBundle(JainaEnums.JAINA_CLASS, 3, AscendantScroll.ID, Aluneth.ID, BookOfWonders.ID);
-        registerUnlockCardBundle(JainaEnums.JAINA_CLASS, 4, FontOfPower.ID, Evocation.ID, Wish.ID);
-    }
-
     // 解锁卡牌
     private static void registerUnlockCardBundle(AbstractPlayer.PlayerClass player, int index, String card1, String card2, String card3) {
         CustomUnlockBundle bundle = new CustomUnlockBundle(card1, card2, card3);
@@ -139,19 +94,65 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
         }
     }
 
+    // 当baseMod开始注册角色时，调用这个方法
+    @Override
+    public void receiveEditCharacters() {
+        // 添加角色
+        BaseMod.addCharacter(new JainaCharacter(CardCrawlGame.playerName), CHAR_BUTTON, CHAR_PORTRAIT, JainaEnums.JAINA_CLASS);
+        addPotions();
+    }
+
+    // 当baseMod开始注册mod卡牌时，便会调用这个函数
+    @Override
+    public void receiveEditCards() {
+        // 自动添加卡牌
+        new AutoAdd(MOD_ID)
+                .packageFilter("jaina.cards")
+                .setDefaultSeen(true)
+                .cards();
+        new AutoAdd(MOD_ID)
+                .packageFilter("jaina.cards.optionCards")
+                .setDefaultSeen(true)
+                .cards();
+    }
+
+    // 当baseMod开始注册mod遗物时，便会调用这个函数
+    @Override
+    public void receiveEditRelics() {
+        // 自动添加遗物到角色遗物池
+        new AutoAdd(MOD_ID)
+                .packageFilter("jaina.relics")
+                .any(CustomRelic.class, (info, relic) -> {
+                    BaseMod.addRelicToCustomPool(relic, JainaEnums.JAINA_COLOR);
+                    if (info.seen) {
+                        UnlockTracker.markRelicAsSeen(relic.relicId);
+                    }
+                });
+    }
+
+    // 设置解锁内容
+    @Override
+    public void receiveSetUnlocks() {
+        registerUnlockCardBundle(JainaEnums.JAINA_CLASS, 0, IceLance.ID, BreathOfSindragosa.ID, IceShard.ID);
+        registerUnlockRelicBundle(JainaEnums.JAINA_CLASS, 1, ArcaniteCrystal.ID, RubySpellstone.ID, RobesOfGaudiness.ID);
+        registerUnlockCardBundle(JainaEnums.JAINA_CLASS, 2, TomeOfIntellect.ID, CabalistsTome.ID, ShiftingScroll.ID);
+        registerUnlockRelicBundle(JainaEnums.JAINA_CLASS, 3, AscendantScroll.ID, Aluneth.ID, BookOfWonders.ID);
+        registerUnlockCardBundle(JainaEnums.JAINA_CLASS, 4, FontOfPower.ID, Evocation.ID, Wish.ID);
+    }
+
     // 添加药水
     private void addPotions() {
         System.out.println("Adding Jaina potions: ");
-        BaseMod.addPotion(ArcanePotion.class, ArcanePotion.LIQUID_COLOR, ArcanePotion.HYBRID_COLOR, null, ArcanePotion.ID, JainaEnums.JAINA_CLASS);
-        BaseMod.addPotion(BottledArcaneMissiles.class, BottledArcaneMissiles.LIQUID_COLOR, BottledArcaneMissiles.HYBRID_COLOR, null, BottledArcaneMissiles.ID, JainaEnums.JAINA_CLASS);
-        BaseMod.addPotion(FirePotion.class, FirePotion.LIQUID_COLOR, FirePotion.HYBRID_COLOR, null, FirePotion.ID, JainaEnums.JAINA_CLASS);
-        BaseMod.addPotion(FrostPotion.class, FrostPotion.LIQUID_COLOR, FrostPotion.HYBRID_COLOR, null, FrostPotion.ID, JainaEnums.JAINA_CLASS);
-        BaseMod.addPotion(FrozenPotion.class, null, null, null, FrozenPotion.ID, JainaEnums.JAINA_CLASS);
-        BaseMod.addPotion(IllusionPotion.class, IllusionPotion.LIQUID_COLOR, IllusionPotion.HYBRID_COLOR, null, IllusionPotion.ID, JainaEnums.JAINA_CLASS);
-        BaseMod.addPotion(SpellDamagePotion.class, SpellDamagePotion.LIQUID_COLOR, SpellDamagePotion.HYBRID_COLOR, null, SpellDamagePotion.ID, JainaEnums.JAINA_CLASS);
-        BaseMod.addPotion(SpellInspirationPotion.class, SpellInspirationPotion.LIQUID_COLOR, SpellInspirationPotion.HYBRID_COLOR, null, SpellInspirationPotion.ID, JainaEnums.JAINA_CLASS);
-        BaseMod.addPotion(VolcanicPotion.class, VolcanicPotion.LIQUID_COLOR, VolcanicPotion.HYBRID_COLOR, null, VolcanicPotion.ID, JainaEnums.JAINA_CLASS);
+        new AutoAdd(MOD_ID)
+                .packageFilter("jaina.potions")
+                .any(AbstractPotion.class, (info, potion) -> addPotionToJaina(potion));
         System.out.println("Jaina potions added.");
+    }
+
+    private void addPotionToJaina(AbstractPotion potion) {
+        String id = potion.ID;
+        BaseMod.addPotion(potion.getClass(), null, null, null, id, JainaEnums.JAINA_CLASS);
+        System.out.println("Added potion: " + id.substring(6));
     }
 
     //加载本地化资源
