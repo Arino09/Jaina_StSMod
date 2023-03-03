@@ -1,0 +1,387 @@
+{
+  "jaina:ApexisBlast": {
+    "NAME": "Apexis Blast",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card (Affected by jaina:Spelldamage. )",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards (Affected by jaina:Spelldamage. )",
+    "EXTENDED_DESCRIPTION": [
+      "(Draw %d cards. )",
+      "(Draw %d card. )"
+    ]
+  },
+  "jaina:ArcaneBlast": {
+    "NAME": "Arcane Blast",
+    "DESCRIPTION": "Deal !D! damage. NL jaina:Spelldamage affects this card !M! times."
+  },
+  "jaina:ArcaneBreath": {
+    "NAME": "Arcane Breath",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice."
+  },
+  "jaina:ArcaneBrilliance": {
+    "NAME": "Arcane Brilliance",
+    "DESCRIPTION": "jaina:Spelldamage + !M!. NL At the end of your turn, jaina:Spelldamage - !M!."
+  },
+  "jaina:ArcaneExplosion": {
+    "NAME": "Arcane Explosion",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw !M! card."
+  },
+  "jaina:ArcaneGate": {
+    "NAME": "Arcane Gate",
+    "DESCRIPTION": "Whenever your play a jaina:Arcane card, deal !M! damage."
+  },
+  "jaina:ArcaneIntellect": {
+    "NAME": "Arcane Intellect",
+    "DESCRIPTION": "Draw !M! cards."
+  },
+  "jaina:ArcaneMissileToken": {
+    "NAME": "Arcane Missile",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Enhanced Arcane Missile"
+  },
+  "jaina:ArcaneMissiles": {
+    "NAME": "Arcane Missiles",
+    "DESCRIPTION": "Add !M! *Arcane *Missiles into your hand."
+  },
+  "jaina:ArcticArmor": {
+    "NAME": "Arctic Armor",
+    "DESCRIPTION": "Whenever you play a jaina:Frost card, gain !M! Block."
+  },
+  "jaina:Blizzard": {
+    "NAME": "Blizzard",
+    "DESCRIPTION": "Deal !D! damage and jaina:Frozen ALL enemies."
+  },
+  "jaina:BookOfSpecters": {
+    "NAME": "Book of Specters",
+    "DESCRIPTION": "Draw !M! cards, discard all non-Attack cards drawn this way."
+  },
+  "jaina:BreathOfSindragosa": {
+    "NAME": "Breath of Sindragosa",
+    "DESCRIPTION": "Deal !D! damage and jaina:Frozen a random enemy."
+  },
+  "jaina:CabalistsTome": {
+    "NAME": "Cabalist's Tome",
+    "DESCRIPTION": "Add 3 random non-Rare spell cards into your hand. NL These cards cost 0 for this turn. NL Exhaust."
+  },
+  "jaina:Cinderstorm": {
+    "NAME": "Cinderstorm",
+    "DESCRIPTION": "Exhaust all *Burns in your hand. NL Apply !M! jaina:Combustion for each card Exhausted."
+  },
+  "jaina:Combustion": {
+    "NAME": "Combustion",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! jaina:Combustion to all OTHER enemies."
+  },
+  "jaina:ConeOfCold": {
+    "NAME": "Cone of Cold",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !B! Block."
+  },
+  "jaina:ConjureManaBiscuit": {
+    "NAME": "Conjure Mana Biscuit",
+    "DESCRIPTION": "Add a *Mana *Biscuit that gives you [E] [E] into your hand."
+  },
+  "jaina:CounterAttack": {
+    "NAME": "Counter Attack",
+    "DESCRIPTION": "Gain 1 Intangible."
+  },
+  "jaina:CounterCurse": {
+    "NAME": "Counter Curse",
+    "DESCRIPTION": "Gain 1 Artifact."
+  },
+  "jaina:CounterDamage": {
+    "NAME": "Counter Damage",
+    "DESCRIPTION": "Gain 1 jaina:Buffer."
+  },
+  "jaina:Counterspell": {
+    "NAME": "Counter Spell",
+    "DESCRIPTION": "Choose one: NL Gain 1 Intangible, 1 jaina:Buffer or 1 Artifact. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Choose one: NL Gain 1 Intangible, 1 jaina:Buffer or 1 Artifact. NL Exhaust."
+  },
+  "jaina:CramSession": {
+    "NAME": "Cram Session",
+    "DESCRIPTION": "Draw !M! card. NL (Affected by jaina:Spelldamage. )",
+    "EXTENDED_DESCRIPTION": [
+      "(Draw %d cards. )",
+      "(Draw %d card. )"
+    ]
+  },
+  "jaina:DeckOfWonders": {
+    "NAME": "Deck of Wonders",
+    "DESCRIPTION": "Add !M! *Scroll *of *Wonder to your draw pile. NL Exhaust."
+  },
+  "jaina:DeepFreeze": {
+    "NAME": "DeepFreeze",
+    "DESCRIPTION": "jaina:Frozen ALL enemies. NL Whenever you frozen an enemy, gain [E] and draw 1 card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "jaina:Frozen ALL enemies. NL Whenever you frozen an enemy, gain [E] and draw 1 card."
+  },
+  "jaina:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "jaina:DragonsBreath": {
+    "NAME": "Dragon's Breath",
+    "DESCRIPTION": "Deal !D! damage. NL Cost 0 if your hand has only jaina:Fire."
+  },
+  "jaina:DragonsFury": {
+    "NAME": "Dragon's Fury",
+    "DESCRIPTION": "Deal !D! damage X times. NL jaina:Burnt: *X."
+  },
+  "jaina:Duplicate": {
+    "NAME": "Duplicate",
+    "DESCRIPTION": "Add a copy of a card into your hand. NL (Can NOT choose *Duplicate. )",
+    "UPGRADE_DESCRIPTION": "Add 2 copies of cards into your hand. NL (Can NOT choose *Duplicate. )"
+  },
+  "jaina:Evocation": {
+    "NAME": "Evocation",
+    "DESCRIPTION": "At the start of your turn, jaina:Spelldamage + !M!"
+  },
+  "jaina:ExplosiveRunes": {
+    "NAME": "Explosive Runes",
+    "DESCRIPTION": "Deal !D! damage. NL Deal double damage to a *minion. NL Deal the over-taken damage to ALL enemies if kills a *minion."
+  },
+  "jaina:Fireball": {
+    "NAME": "Fireball",
+    "DESCRIPTION": "Deal !D! damage. NL jaina:Burnt: *1."
+  },
+  "jaina:Fireblast": {
+    "NAME": "Fireblast",
+    "DESCRIPTION": "Deal !D! damage. NL jaina:Burnt: *1."
+  },
+  "jaina:FirstFlame": {
+    "NAME": "First Flame",
+    "DESCRIPTION": "Deal !D! damage. Add a *Second *Fire into your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a *Second *Fire+ into your hand."
+  },
+  "jaina:FlameLance": {
+    "NAME": "Flame Lance",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! jaina:Combustion if deals unblocked damage. NL jaina:Burnt: *1."
+  },
+  "jaina:FlameWard": {
+    "NAME": "Flame Ward",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked, apply !M! jaina:Combustion to ALL enemies."
+  },
+  "jaina:Flamecannon": {
+    "NAME": "Flamecannon",
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL jaina:Combustion: *1."
+  },
+  "jaina:Flamestrike": {
+    "NAME": "Flamestrike",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL jaina:Burnt: *2."
+  },
+  "jaina:FontOfPower": {
+    "NAME": "Font of Power",
+    "DESCRIPTION": "Gain !M! [E] . NL (Affected by jaina:Spelldamage. ) NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! [E] . NL (Affected by jaina:Spelldamage. )",
+    "EXTENDED_DESCRIPTION": [
+      "(Gain %d [E] . )",
+      "(Gain %d [E] . )"
+    ]
+  },
+  "jaina:ForbiddenFlame": {
+    "NAME": "Forbidden Flame",
+    "DESCRIPTION": "Deal X times !D! damage. NL jaina:Burnt: *X."
+  },
+  "jaina:FrostAffinity": {
+    "NAME": "Frost Affinity",
+    "DESCRIPTION": "This turn, your next jaina:Frost card cost 2 less. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "This turn, your next jaina:Frost card cost 2 less."
+  },
+  "jaina:FrostArmor": {
+    "NAME": "Frost Armor",
+    "DESCRIPTION": "Gain !M! Plated Armor."
+  },
+  "jaina:FrostNova": {
+    "NAME": "FrostNova",
+    "DESCRIPTION": "jaina:Frozen ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "jaina:Frozen ALL enemies."
+  },
+  "jaina:Frostbolt": {
+    "NAME": "Frostbolt",
+    "DESCRIPTION": "Deal !D! damage and jaina:Frozen an enemy."
+  },
+  "jaina:FrozenClone": {
+    "NAME": "Frozen Clone",
+    "DESCRIPTION": "Gain Block that equals to the damage of target X times.",
+    "UPGRADE_DESCRIPTION": "Gain Block that equals to the damage of target X+1 times."
+  },
+  "jaina:FrozenTouch": {
+    "NAME": "Frozen Touch",
+    "DESCRIPTION": "Deal !D! damage and jaina:Frozen an enemy. NL Exhaust after using !M! times.",
+    "EXTENDED_DESCRIPTION": [
+      "(%d times left.)"
+    ]
+  },
+  "jaina:GreaterArcaneMissiles": {
+    "NAME": "Greater Arcane Missiles",
+    "DESCRIPTION": "Add !M! *Enhanced *Arcane *Missiles into your hand."
+  },
+  "jaina:HotStreak": {
+    "NAME": "Hot Streak",
+    "DESCRIPTION": "Deal !D! damage and apply !M! jaina:Combustion to an enemy. NL If the last card played this combat was a jaina:Fire , gain [E]."
+  },
+  "jaina:IceBarrier": {
+    "NAME": "Ice Barrier",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "jaina:IceBlock": {
+    "NAME": "Ice Block",
+    "DESCRIPTION": "Prevent the next deadly attack you take."
+  },
+  "jaina:IceLance": {
+    "NAME": "Ice Lance",
+    "DESCRIPTION": "Deal !D! damage to a jaina:Frozen enemy. NL If target is not frozen, jaina:Frozen it and Exhaust."
+  },
+  "jaina:IceShard": {
+    "NAME": "Ice Shard",
+    "DESCRIPTION": "Add !M! *Shards into your hand. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage to a jaina:Frozen enemy. NL Or jaina:Frozen an enemy. NL Exhaust."
+    ]
+  },
+  "jaina:IceShardToken": {
+    "NAME": "Shard",
+    "DESCRIPTION": "Deal !D! damage to a jaina:Frozen enemy. NL Or jaina:Frozen an enemy. NL Exhaust."
+  },
+  "jaina:IceWall": {
+    "NAME": "Ice Wall",
+    "DESCRIPTION": "Gain !B! Block for each enemy in combat."
+  },
+  "jaina:Icicle": {
+    "NAME": "Icicle",
+    "DESCRIPTION": "Draw 1 card. NL Deal !D! damage if enemy is jaina:Frozen."
+  },
+  "jaina:Ignite": {
+    "NAME": "Ignite",
+    "DESCRIPTION": "Trigger jaina:Combustion on ALL enemies."
+  },
+  "jaina:IncantersFlow": {
+    "NAME": "Incanter's Flow",
+    "DESCRIPTION": "The first card you play each turn cost 0."
+  },
+  "jaina:MagicTrick": {
+    "NAME": "Magic Trick",
+    "DESCRIPTION": "jaina:Discover 1 non-Rare card costs 1. NL It costs 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "jaina:Discover 1 non-Common card costs 1. NL It costs 0 this turn. NL Exhaust."
+  },
+  "jaina:ManaBind": {
+    "NAME": "Mana Bind",
+    "DESCRIPTION": "This turn, your next jaina:Arcane card is played twice.",
+    "UPGRADE_DESCRIPTION": "This turn, your next !M! jaina:Arcane cards are played twice."
+  },
+  "jaina:ManaBiscuit": {
+    "NAME": "Mana Biscuit",
+    "DESCRIPTION": "Retain. NL Gain [E] [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain [E] [E] [E]. NL Exhaust."
+  },
+  "jaina:Meteor": {
+    "NAME": "Meteor",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! jaina:Combustion to ALL CREATURES."
+  },
+  "jaina:MirrorEntity": {
+    "NAME": "Mirror Entity",
+    "DESCRIPTION": "Copy an enemy's attack method and deal damage to it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Copy an enemy's attack method and deal damage to it."
+  },
+  "jaina:MirrorImage": {
+    "NAME": "Mirror Image",
+    "DESCRIPTION": "Retain. NL Gain !B! Block."
+  },
+  "jaina:PrimordialGlyph": {
+    "NAME": "Primordial Glyph",
+    "DESCRIPTION": "jaina:Discover 1 non-Common spell card. NL It costs 0 this turn NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "jaina:Discover 1 Upgraded non-Common spell card. NL It costs 0 this turn NL Exhaust."
+  },
+  "jaina:PrimordialStudies": {
+    "NAME": "Primordial Studies",
+    "DESCRIPTION": "jaina:Spelldamage + !M!.",
+    "UPGRADE_DESCRIPTION": "Innate. NL jaina:Spelldamage + !M!."
+  },
+  "jaina:Pyroblast": {
+    "NAME": "Pyroblast",
+    "DESCRIPTION": "Deal !D! damage. NL jaina:Burnt: *3."
+  },
+  "jaina:RayOfFrost": {
+    "NAME": "Ray of Frost",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable if target is jaina:Frozen."
+  },
+  "jaina:Scorch": {
+    "NAME": "Scorch",
+    "DESCRIPTION": "Apply !M! jaina:Combustion. NL Increase the jaina:Combustion of ALL *Scorches by 2 this combat."
+  },
+  "jaina:ScrollOfWonder": {
+    "NAME": "Scroll of Wonder",
+    "DESCRIPTION": "jaina:Autoplay: NL Generate a random card and play it. Draw 1 card. NL jaina:Purge."
+  },
+  "jaina:SecondFlame": {
+    "NAME": "Second Flame",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust."
+  },
+  "jaina:ShatteringBlast": {
+    "NAME": "Shattering Blast",
+    "DESCRIPTION": "Deal !D! damage to ALL jaina:Frozen enemies."
+  },
+  "jaina:Shield": {
+    "NAME": "Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw !M! cards."
+  },
+  "jaina:ShiftingScroll": {
+    "NAME": "ShiftingScroll",
+    "DESCRIPTION": "Retain. NL When this is in your hand, transform it into a random spell at the start of each turn.",
+    "UPGRADE_DESCRIPTION": "Retain. Innate. NL When this is in your hand, Transform it into a random spell at the start of each turn.",
+    "EXTENDED_DESCRIPTION": [
+      "[Shifting]",
+      "Retain. NL ",
+      "Can NOT play this card!"
+    ]
+  },
+  "jaina:ShootingStar": {
+    "NAME": "Shooting Star",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+  },
+  "jaina:Simulacrum": {
+    "NAME": "Simulacrum",
+    "DESCRIPTION": "Choose !M! card from your draw pile, add a copy of this into your hand. NL This cards have Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose !M! cards from your draw pile, add copies of these into your hand. NL These cards have Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "[Illusion]",
+      " NL Exhaust."
+    ]
+  },
+  "jaina:SplittingImage": {
+    "NAME": "Splitting Image",
+    "DESCRIPTION": "After you are attacked, gain !M! Intangible."
+  },
+  "jaina:SpringWater": {
+    "NAME": "Spring Water",
+    "DESCRIPTION": "Draw !M! cards. NL Whenever you draw a Skill, gain [E]."
+  },
+  "jaina:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "jaina:TheCoin": {
+    "NAME": "The Coin",
+    "DESCRIPTION": "Retain. NL Gain [E]. NL Exhaust."
+  },
+  "jaina:TomeOfIntellect": {
+    "NAME": "Tome of Intellect",
+    "DESCRIPTION": "Gain jaina:Spelldamage +1 for every !M! cards in your draw pile. NL Exhaust."
+  },
+  "jaina:Vaporize": {
+    "NAME": "Vaporize",
+    "DESCRIPTION": "Gain !B! Block. NL The next time you are attacked, deal the same damage to the attacker."
+  },
+  "jaina:Wildfire": {
+    "NAME": "Wildfire",
+    "DESCRIPTION": "Apply 3 additional jaina:Combustion whenever you apply.",
+    "UPGRADE_DESCRIPTION": "Double jaina:Combustion whenever you apply."
+  },
+  "jaina:Wish": {
+    "NAME": "Wish",
+    "DESCRIPTION": "Choose a card from all spell cards to add into your hand. NL It costs 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a Upgrade card from all spell cards to add into your hand. NL It costs 0 this turn. NL Exhaust."
+  },
+  "jaina:WizardArmor": {
+    "NAME": "Wizard Armor",
+    "DESCRIPTION": "At the end of your turn, gain !M! Block. (Affected by jaina:Spelldamage. )"
+  }
+}

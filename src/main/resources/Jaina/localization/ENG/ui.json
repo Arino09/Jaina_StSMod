@@ -1,0 +1,26 @@
+{
+  "jaina:Arcane": {
+    "TEXT": [
+      "Arcane"
+    ]
+  },
+  "jaina:Fire": {
+    "TEXT": [
+      "Fire"
+    ]
+  },
+  "jaina:Frost": {
+    "TEXT": [
+      "Frost"
+    ]
+  },
+  "jaina:ui": {
+    "TEXT": [
+      "Frozen",
+      "This enemy is frozen.",
+      "The intent of this enemy is not #rATTACK.",
+      "Choose a card",
+      "Can't #yplay more cards!"
+    ]
+  }
+}

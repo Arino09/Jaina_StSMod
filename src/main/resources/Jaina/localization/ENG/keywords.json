@@ -1,0 +1,90 @@
+[
+  {
+    "NAMES": [
+      "Arcane",
+      "arcane"
+    ],
+    "PROPER_NAME": "Arcane",
+    "DESCRIPTION": "Arcane spells are full of randomness that gives you powerful abilities."
+  },
+  {
+    "NAMES": [
+      "Frost",
+      "frost"
+    ],
+    "PROPER_NAME": "Frost",
+    "DESCRIPTION": "Frost spells can limit the enemy's movements and let you dominate the fight."
+  },
+  {
+    "NAMES": [
+      "Fire",
+      "fire"
+    ],
+    "PROPER_NAME": "Fire",
+    "DESCRIPTION": "Fire spells deal high damage and burn effects, but watch out the fire!"
+  },
+  {
+    "NAMES": [
+      "Frozen",
+      "frozen"
+    ],
+    "PROPER_NAME": "Frozen",
+    "DESCRIPTION": "A #bFrozen creature loses his next action. NL #bFrozen effect can NOT stack."
+  },
+  {
+    "NAMES": [
+      "Spelldamage",
+      "spelldamage"
+    ],
+    "PROPER_NAME": "Spelldamage",
+    "DESCRIPTION": "Increase the damage and block from spell cards, or enhance other effects."
+  },
+  {
+    "NAMES": [
+      "Combustion",
+      "combustion"
+    ],
+    "PROPER_NAME": "Combustion",
+    "DESCRIPTION": "#rCombusting creatures will lose their HP at the end of turn."
+  },
+  {
+    "NAMES": [
+      "Purge",
+      "purge"
+    ],
+    "PROPER_NAME": "Purge",
+    "DESCRIPTION": "Removed until end of combat. NL Does NOT go to your exhaust pile."
+  },
+  {
+    "NAMES": [
+      "Autoplay",
+      "autoplay"
+    ],
+    "PROPER_NAME": "Autoplay",
+    "DESCRIPTION": "This card automatically plays itself when drawn."
+  },
+  {
+    "NAMES": [
+      "Buffer",
+      "buffer"
+    ],
+    "PROPER_NAME": "Buffer",
+    "DESCRIPTION": "Prevent the next time you would lose HP."
+  },
+  {
+    "NAMES": [
+      "Discover",
+      "discover"
+    ],
+    "PROPER_NAME": "Discover",
+    "DESCRIPTION": "Choose 1 of 3 cards to add into your hand."
+  },
+  {
+    "NAMES": [
+      "Burnt",
+      "burnt"
+    ],
+    "PROPER_NAME": "Burnt",
+    "DESCRIPTION": "Add a number of #rBurns to your discard pile."
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "jaina:Aluneth": {
+    "NAME": "Aluneth",
+    "FLAVOR": "PHENOMENAL ARCANE POWER…itty bitty living space.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, draw 3 additional cards. Whenever you shuffle, take #b5 damage."
+    ]
+  },
+  "jaina:ArcaniteCrystal": {
+    "NAME": "Arcanite Crystal",
+    "FLAVOR": "A natual crystal contains Arcane power, very rare.",
+    "DESCRIPTIONS": [
+      "Whenever you play the first #yArcane card each turn, a random card in your hand costs #b0 that turn."
+    ]
+  },
+  "jaina:ArchmageStuff": {
+    "NAME": "Archmage Stuff",
+    "FLAVOR": "The archmage's power is nothing more.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add #b1 random Common card into your hand."
+    ]
+  },
+  "jaina:AscendantScroll": {
+    "NAME": "Ascendant Scroll",
+    "FLAVOR": "A scroll containing ancient characters. The use of which can have unpredictable consequences.",
+    "DESCRIPTIONS": [
+      "Right click to use [E] [E] : add #b1 random spell card into your hand. It costs 2 less this turn."
+    ]
+  },
+  "jaina:BookOfWonders": {
+    "NAME": "Book of Wonders",
+    "FLAVOR": "Maybe delights...maybe frights!",
+    "DESCRIPTIONS": [
+      "At the start of each combat, shuffle #b5 #yScroll #yof #yWonder s into your draw pile."
+    ]
+  },
+  "jaina:RobesOfGaudiness": {
+    "NAME": "Robes of Gaudiness",
+    "FLAVOR": "A robe embedded lots of ores, which nobody can harness.",
+    "DESCRIPTIONS": [
+      "You cannot play more than 3 cards each turn. Your spell cards cost 0."
+    ]
+  },
+  "jaina:RubySpellstone": {
+    "NAME": "Ruby Spellstone",
+    "FLAVOR": "The final stone undid its master Spun into wards by nameless caster Azari wailed a savage roar Now sealed in nether, evermore",
+    "DESCRIPTIONS": [
+      "Whenever your play #b3 spell cards of the same kind continuously, gain [E] ."
+    ]
+  },
+  "jaina:SphereOfSapience": {
+    "NAME": "Sphere of Sapience",
+    "FLAVOR": "I see you...",
+    "DESCRIPTIONS": [
+      "Right click to use (Once at each combat): #yScry #b5 , draw #b1 card."
+    ]
+  },
+  "jaina:TheCoin": {
+    "NAME": "The Coin",
+    "FLAVOR": "It may not bring good luck, but it can certainly give you a hand!",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add #b1 #yThe #yCoin into your hand."
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "jaina:ArcanePotion": {
+    "NAME": "Arcane Spell Potion",
+    "DESCRIPTIONS": [
+      " #yDiscover #b1 #yArcane card. It cost #b0 this turn.",
+      " #yDiscover #b2 #yArcane cards. It cost #b0 this turn."
+    ]
+  },
+  "jaina:BottledArcaneMissiles": {
+    "NAME": "Bottled Arcane Missiles",
+    "DESCRIPTIONS": [
+      "Add #b%d #yEnhanced #yArcane #yMissiles into your hand."
+    ]
+  },
+  "jaina:FirePotion": {
+    "NAME": "Fire Spell Potion",
+    "DESCRIPTIONS": [
+      " #yDiscover #b1 #yFire card. It cost #b0 this turn.",
+      " #yDiscover #b2 #yFire cards. It cost #b0 this turn."
+    ]
+  },
+  "jaina:FrostPotion": {
+    "NAME": "Frost Spell Potion",
+    "DESCRIPTIONS": [
+      " #yDiscover #b1 #yFrost card. It cost #b0 this turn.",
+      " #yDiscover #b2 #yFrost cards. It cost #b0 this turn."
+    ]
+  },
+  "jaina:FrozenPotion": {
+    "NAME": "Frozen Potion",
+    "DESCRIPTIONS": [
+      " #yFrozen an enemy.",
+      " #yFrozen an enemy, and frozen another random enemy."
+    ]
+  },
+  "jaina:IllusionPotion": {
+    "NAME": "Illusion Potion",
+    "DESCRIPTIONS": [
+      "Choose %d cards from your draw pile, add copies of these into your hand. These cards have #yExhaust."
+    ]
+  },
+  "jaina:SpellDamagePotion": {
+    "NAME": "Spell Damage Potion",
+    "DESCRIPTIONS": [
+      " #ySpelldamage + #b%d."
+    ]
+  },
+  "jaina:SpellInspirationPotion": {
+    "NAME": "Spell Inspiration Potion",
+    "DESCRIPTIONS": [
+      " #ySpelldamage + #b%d. At the end of your turn, #ySpelldamage - #b%d."
+    ]
+  },
+  "jaina:VolcanicPotion": {
+    "NAME": "Volcanic Potion",
+    "DESCRIPTIONS": [
+      "Apply #b%d #yCombustion to ALL enemies."
+    ]
+  }
+}
