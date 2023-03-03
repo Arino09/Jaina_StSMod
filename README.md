@@ -2,6 +2,11 @@
 基于《杀戮尖塔》(*Slay the Spire*)制作的《炉石传说》法师吉安娜 Mod
 
 ----
+### alpha0.3.1
+添加了英语本地化文本。
+Added English localization texts.
+
+----
 ### alpha0.3.0
 设置了解锁内容。
 
