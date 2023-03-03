@@ -261,8 +261,8 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param strings 本地化文本
      */
     public void updateDescription(CardStrings strings) {
-        AbstractPower power = AbstractDungeon.player.getPower(SpellDamagePower.POWER_ID);
         if (AbstractDungeon.player.hasPower(SpellDamagePower.POWER_ID)) {
+            AbstractPower power = AbstractDungeon.player.getPower(SpellDamagePower.POWER_ID);
             // 仅当法伤数值变化时才更新描述
             if (power.amount + baseMagicNumber > magicNumber) {
                 magicNumber = power.amount + baseMagicNumber;
@@ -277,12 +277,12 @@ public abstract class AbstractJainaCard extends CustomCard {
     /**
      * 重置卡牌描述为最初版
      *
-     * @param cardStrings 本地化文本
+     * @param strings 本地化文本
      */
-    public void resetDescription(CardStrings cardStrings) {
-        rawDescription = cardStrings.DESCRIPTION;
+    public void resetDescription(CardStrings strings) {
+        rawDescription = strings.DESCRIPTION;
         if (upgraded) {
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            rawDescription = strings.UPGRADE_DESCRIPTION;
         }
         initializeDescription();
     }

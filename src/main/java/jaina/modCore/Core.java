@@ -49,21 +49,6 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     private static final String SMALL_ORB = "jaina/img/char/small_orb.png";
     // 解锁内容设置
     public static boolean unlockEverything = false;
-    private static final String CARD_11 = IceLance.ID;
-    private static final String CARD_12 = BreathOfSindragosa.ID;
-    private static final String CARD_13 = IceShard.ID;
-    private static final String CARD_21 = TomeOfIntellect.ID;
-    private static final String CARD_22 = CabalistsTome.ID;
-    private static final String CARD_23 = ShiftingScroll.ID;
-    private static final String CARD_31 = FontOfPower.ID;
-    private static final String CARD_32 = Evocation.ID;
-    private static final String CARD_33 = Wish.ID;
-    private static final String RELIC_11 = ArcaniteCrystal.ID;
-    private static final String RELIC_12 = RubySpellstone.ID;
-    private static final String RELIC_13 = RobesOfGaudiness.ID;
-    private static final String RELIC_21 = AscendantScroll.ID;
-    private static final String RELIC_22 = Aluneth.ID;
-    private static final String RELIC_23 = BookOfWonders.ID;
 
     public Core() {
         BaseMod.subscribe(this);
@@ -114,11 +99,11 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     // 设置解锁内容
     @Override
     public void receiveSetUnlocks() {
-        registerUnlockCardBundle(JainaEnums.JAINA_CLASS, 0, CARD_11, CARD_12, CARD_13);
-        registerUnlockRelicBundle(JainaEnums.JAINA_CLASS, 1, RELIC_11, RELIC_12, RELIC_13);
-        registerUnlockCardBundle(JainaEnums.JAINA_CLASS, 2, CARD_21, CARD_22, CARD_23);
-        registerUnlockRelicBundle(JainaEnums.JAINA_CLASS, 3, RELIC_21, RELIC_22, RELIC_23);
-        registerUnlockCardBundle(JainaEnums.JAINA_CLASS, 4, CARD_31, CARD_32, CARD_33);
+        registerUnlockCardBundle(JainaEnums.JAINA_CLASS, 0, IceLance.ID, BreathOfSindragosa.ID, IceShard.ID);
+        registerUnlockRelicBundle(JainaEnums.JAINA_CLASS, 1, ArcaniteCrystal.ID, RubySpellstone.ID, RobesOfGaudiness.ID);
+        registerUnlockCardBundle(JainaEnums.JAINA_CLASS, 2, TomeOfIntellect.ID, CabalistsTome.ID, ShiftingScroll.ID);
+        registerUnlockRelicBundle(JainaEnums.JAINA_CLASS, 3, AscendantScroll.ID, Aluneth.ID, BookOfWonders.ID);
+        registerUnlockCardBundle(JainaEnums.JAINA_CLASS, 4, FontOfPower.ID, Evocation.ID, Wish.ID);
     }
 
     // 解锁卡牌
@@ -172,12 +157,10 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
 
     //加载本地化资源
     public void receiveEditStrings() {
-        String lang = "ZHS";
-//        if (Settings.language == Settings.GameLanguage.ZHS) {
-//            lang = "ZHS";
-//        } else {
-//            lang = "ENG";
-//        }
+        String lang = "ENG";
+        if (Settings.language == Settings.GameLanguage.ZHS) {
+            lang = "ZHS";
+        }
         BaseMod.loadCustomStringsFile(CharacterStrings.class, "jaina/localization/" + lang + "/character.json");
         BaseMod.loadCustomStringsFile(CardStrings.class, "jaina/localization/" + lang + "/cards.json"); // 加载相应语言的卡牌本地化内容
         BaseMod.loadCustomStringsFile(RelicStrings.class, "jaina/localization/" + lang + "/relics.json");
