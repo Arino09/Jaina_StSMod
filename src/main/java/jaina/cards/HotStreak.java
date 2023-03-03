@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.BurningPower;
+import jaina.powers.CombustionPower;
 
 
 public class HotStreak extends AbstractFireCard {
@@ -36,7 +36,7 @@ public class HotStreak extends AbstractFireCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealDamage(m, AbstractGameAction.AttackEffect.FIRE);
-        givePower(new BurningPower(m, magicNumber), magicNumber);
+        givePower(new CombustionPower(m, magicNumber), magicNumber);
         if (lastIsFire) addToBot(new GainEnergyAction(1));
     }
 

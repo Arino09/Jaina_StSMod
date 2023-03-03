@@ -11,13 +11,13 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.vfx.FireBurstParticleEffect;
 import jaina.modCore.IHelper;
 
-public class BurningPower extends AbstractJainaPower {
-    public static final String POWER_ID = IHelper.makeID("BurningPower");
+public class CombustionPower extends AbstractJainaPower {
+    public static final String POWER_ID = IHelper.makeID("CombustionPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public BurningPower(AbstractCreature owner, int amount) {
+    public CombustionPower(AbstractCreature owner, int amount) {
         super(POWER_ID, false, NAME, PowerType.DEBUFF);
         this.owner = owner;
         this.amount = amount;

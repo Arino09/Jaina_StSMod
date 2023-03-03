@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import jaina.powers.BurningPower;
+import jaina.powers.CombustionPower;
 
 import java.util.ArrayList;
 
@@ -34,7 +34,7 @@ public class CinderstormAction extends AbstractGameAction {
         // 每灼烧一张给予所有敌人amount层灼烧
         for (AbstractCard c : cardsToExhaust) {
             for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-                addToTop(new ApplyPowerAction(m, p, new BurningPower(m, amount)));
+                addToTop(new ApplyPowerAction(m, p, new CombustionPower(m, amount)));
             }
         }
         // 先消耗所有灼烧牌

@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.powers.AbstractJainaPower;
-import jaina.powers.BurningPower;
+import jaina.powers.CombustionPower;
 
 public class FlameWardPower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("FlameWardPower");
@@ -29,7 +29,7 @@ public class FlameWardPower extends AbstractJainaPower {
         if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner != this.owner) {
             flash();
             for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-                addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new BurningPower(m, amount)));
+                addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new CombustionPower(m, amount)));
             }
         }
         return damageAmount;

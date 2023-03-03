@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.BurningPower;
+import jaina.powers.CombustionPower;
 
 import java.util.ArrayList;
 
@@ -33,7 +33,7 @@ public class Scorch extends AbstractFireCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        givePower(new BurningPower(m, magicNumber), magicNumber);
+        givePower(new CombustionPower(m, magicNumber), magicNumber);
         upgradeAllIgnite(AbstractDungeon.player.hand.group);
         upgradeAllIgnite(AbstractDungeon.player.discardPile.group);
         upgradeAllIgnite(AbstractDungeon.player.drawPile.group);

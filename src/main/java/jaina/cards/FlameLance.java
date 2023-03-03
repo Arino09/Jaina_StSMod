@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.BurningPower;
+import jaina.powers.CombustionPower;
 
 
 public class FlameLance extends AbstractFireCard {
@@ -38,7 +38,7 @@ public class FlameLance extends AbstractFireCard {
         addToBot(new DamageCallbackAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL),
                 AbstractGameAction.AttackEffect.FIRE, (c) -> {
             if (c > 0) {
-                givePower(new BurningPower(m, magicNumber), magicNumber);
+                givePower(new CombustionPower(m, magicNumber), magicNumber);
             }
         }));
         IHelper.getBurn(1);

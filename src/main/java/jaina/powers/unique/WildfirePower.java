@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import jaina.modCore.IHelper;
 import jaina.powers.AbstractJainaPower;
-import jaina.powers.BurningPower;
+import jaina.powers.CombustionPower;
 
 public class WildfirePower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("WildfirePower");
@@ -27,7 +27,7 @@ public class WildfirePower extends AbstractJainaPower {
 
     @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power instanceof BurningPower && !target.isPlayer) {
+        if (power instanceof CombustionPower && !target.isPlayer) {
             flash();
             if (upgraded) {
                 power.amount *= 2;

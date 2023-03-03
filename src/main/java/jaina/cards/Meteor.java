@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.vfx.FireBurstParticleEffect;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.BurningPower;
+import jaina.powers.CombustionPower;
 
 
 public class Meteor extends AbstractFireCard {
@@ -41,10 +41,10 @@ public class Meteor extends AbstractFireCard {
         dealDamage(m, AbstractGameAction.AttackEffect.NONE);
         for (AbstractMonster mon : AbstractDungeon.getMonsters().monsters) {
             addToBot(new VFXAction(new FireBurstParticleEffect(mon.hb_x, mon.hb_y)));
-            givePower(new BurningPower(mon, magicNumber), magicNumber);
+            givePower(new CombustionPower(mon, magicNumber), magicNumber);
         }
         addToBot(new VFXAction(new FireBurstParticleEffect(p.hb_x, p.hb_y)));
-        gainPower(new BurningPower(p, magicNumber));
+        gainPower(new CombustionPower(p, magicNumber));
     }
 
     @Override
