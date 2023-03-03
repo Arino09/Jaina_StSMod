@@ -2,16 +2,16 @@
   "jaina:ArcaneGatePower": {
     "NAME": "奥术之门",
     "DESCRIPTIONS": [
-      "使用 #p奥术 牌时造成 #b%d 点伤害。"
+      "打出 #y奥术 牌时造成 #b%d 点伤害。"
     ]
   },
   "jaina:ArcticArmorPower": {
     "NAME": "寒甲术",
     "DESCRIPTIONS": [
-      "你每打出一张 #b冰霜 牌，获得 #b%d 点 #y格挡 。"
+      "打出 #y冰霜 牌时获得 #b%d 点 #y格挡 。"
     ]
   },
-  "jaina:BurningPower": {
+  "jaina:CombustionPower": {
     "NAME": "燃烧",
     "DESCRIPTIONS": [
       "回合结束时失去 #r%d 点生命值。"
@@ -20,26 +20,25 @@
   "jaina:EvocationPower": {
     "NAME": "法力唤醒",
     "DESCRIPTIONS": [
-      "每回合获得 #y法术伤害 + #b%d 。"
+      "回合开始时 #y法术伤害 + #b%d 。"
     ]
   },
   "jaina:FlameWardPower": {
     "NAME": "火焰结界",
     "DESCRIPTIONS": [
-      "受到攻击时，给予所有敌人 #b",
-      " 层 #r烧伤 。"
+      "受到攻击时，给予所有敌人 #b%d 层 #r燃烧 。"
     ]
   },
   "jaina:FrostAffinityPower": {
     "NAME": "冰霜亲和",
     "DESCRIPTIONS": [
-      "#b冰霜 牌的耗能减少 #y2 点。"
+      "在这个回合，你的下一张 #y冰霜 牌的耗能减少 #b2 点。"
     ]
   },
   "jaina:FrozenPower": {
     "NAME": "冻结",
     "DESCRIPTIONS": [
-      "被 #b冻结 的角色失去他的下一次行动机会。 NL #b冻结 效果不能叠加。"
+      "被 #y冻结 的角色失去他的下一次行动机会。 NL #b冻结 效果不能叠加。"
     ]
   },
   "jaina:IceBlockPower": {
@@ -51,12 +50,12 @@
   "jaina:IncantersPower": {
     "NAME": "咒术洪流",
     "DESCRIPTIONS": [
-      "你在每回合打出的第一张法术牌耗能变为 #b0 。",
-      "你在每回合打出的前 #b%d 张法术牌耗能变为 #b0 。"
+      "每回合打出的第一张法术牌耗能变为 #b0 。",
+      "每回合打出的前 #b%d 张法术牌耗能变为 #b0 。"
     ]
   },
   "jaina:LoseSpellDamagePower": {
-    "NAME": "临时法术伤害",
+    "NAME": "法术伤害下降",
     "DESCRIPTIONS": [
       "回合结束时 #y法术伤害 - #b%d 。"
     ]
@@ -64,8 +63,8 @@
   "jaina:ManaBindPower": {
     "NAME": "法术共鸣",
     "DESCRIPTIONS": [
-      "你的下一张 #p奥术 牌打出两次。",
-      "你的下 #b%d 张 #p奥术 牌打出两次。"
+      "在这个回合，你的下一张 #y奥术 牌打出两次。",
+      "在这个回合，你的下 #b%d 张 #y奥术 牌打出两次。"
     ]
   },
   "jaina:SpellDamagePower": {
@@ -83,16 +82,16 @@
   "jaina:VaporizePower": {
     "NAME": "蒸发",
     "DESCRIPTIONS": [
-      "在你受到攻击时对攻击者造成相同的伤害。 NL 受到一次攻击仅触发一次。",
+      "受到攻击时对攻击者造成相同的伤害。 NL 受到一次攻击仅触发一次。",
       "蒸发+"
     ]
   },
   "jaina:WildfirePower": {
     "NAME": "野火",
     "DESCRIPTIONS": [
-      "每当你给予 #r燃烧 时，额外给予 #y3 层。",
+      "额外给予 #b3 层 #y燃烧 。",
       "野火+",
-      "每当你给予 #r燃烧 时，额外给予一倍的层数。"
+      "给予双倍的 #y燃烧 。"
     ]
   },
   "jaina:WizardArmorPower": {
