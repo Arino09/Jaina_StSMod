@@ -1,6 +1,5 @@
 package jaina.cards;
 
-import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
@@ -30,11 +29,6 @@ public abstract class AbstractFireCard extends AbstractJainaCard {
     @Override
     public List<String> getCardDescriptors() {
         return ISpellCard.getCardDescriptors(ID);
-    }
-
-    @Override
-    public List<TooltipInfo> getCustomTooltipsTop() {
-        return ISpellCard.getCustomTooltipsTop(ID);
     }
 
 }

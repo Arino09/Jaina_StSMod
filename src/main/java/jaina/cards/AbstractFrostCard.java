@@ -1,6 +1,5 @@
 package jaina.cards;
 
-import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
@@ -32,8 +31,4 @@ public abstract class AbstractFrostCard extends AbstractJainaCard {
         return ISpellCard.getCardDescriptors(ID);
     }
 
-    @Override
-    public List<TooltipInfo> getCustomTooltipsTop() {
-        return ISpellCard.getCustomTooltipsTop(ID);
-    }
 }

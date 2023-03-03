@@ -1,7 +1,6 @@
 package jaina.cards;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -59,11 +58,6 @@ public class IceShardToken extends CustomCard {
     @Override
     public List<String> getCardDescriptors() {
         return ISpellCard.getCardDescriptors(AbstractFrostCard.ID);
-    }
-
-    @Override
-    public List<TooltipInfo> getCustomTooltips() {
-        return ISpellCard.getCustomTooltipsTop(AbstractFrostCard.ID);
     }
 
     @Override
