@@ -193,7 +193,11 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
 
     @Override
     public void receiveAddAudio() {
-        BaseMod.addAudio(IHelper.makeID("select"), "jaina/sound/Select_voice.ogg");
+        if (Settings.language == Settings.GameLanguage.ZHS) {
+            BaseMod.addAudio(IHelper.makeID("pick"), "jaina/sound/pick_zhs.ogg");
+        } else {
+            BaseMod.addAudio(IHelper.makeID("pick"), "jaina/sound/pick_eng.ogg");
+        }
         // Beta测试阶段前不使用
 //        BaseMod.addAudio(IHelper.makeID("ArcaneFizzle"), "jaina/sound/Arcane_Fizzle.ogg");
 //        BaseMod.addAudio(IHelper.makeID("ArcaneImpact"), "jaina/sound/Arcane_Impact.ogg");
