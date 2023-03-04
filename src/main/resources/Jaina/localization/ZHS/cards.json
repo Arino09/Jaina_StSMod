@@ -81,8 +81,8 @@
     "NAME": "攻击反制",
     "DESCRIPTION": "获得1层 无实体 。"
   },
-  "jaina:CounterCurse": {
-    "NAME": "诅咒反制",
+  "jaina:CounterMagic": {
+    "NAME": "魔咒反制",
     "DESCRIPTION": "获得1层 人工制品 。"
   },
   "jaina:CounterDamage": {
@@ -189,7 +189,7 @@
   },
   "jaina:FrostNova": {
     "NAME": "冰霜新星",
-    "DESCRIPTION": "jaina:冻结 所有敌人。NL 消耗 。",
+    "DESCRIPTION": "jaina:冻结 所有敌人。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "jaina:冻结 所有敌人。"
   },
   "jaina:Frostbolt": {
@@ -359,7 +359,8 @@
   },
   "jaina:TheCoin": {
     "NAME": "幸运币",
-    "DESCRIPTION": "保留 。 NL 获得 [E] 。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 获得 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 获得 [E] [E] 。 NL 消耗 。"
   },
   "jaina:TomeOfIntellect": {
     "NAME": "智慧秘典",

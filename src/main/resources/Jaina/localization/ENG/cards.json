@@ -82,8 +82,8 @@
     "NAME": "Counter Attack",
     "DESCRIPTION": "Gain 1 Intangible."
   },
-  "jaina:CounterCurse": {
-    "NAME": "Counter Curse",
+  "jaina:CounterMagic": {
+    "NAME": "Counter Magic",
     "DESCRIPTION": "Gain 1 Artifact."
   },
   "jaina:CounterDamage": {
@@ -360,7 +360,8 @@
   },
   "jaina:TheCoin": {
     "NAME": "The Coin",
-    "DESCRIPTION": "Retain. NL Gain [E]. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain [E] [E]. NL Exhaust."
   },
   "jaina:TomeOfIntellect": {
     "NAME": "Tome of Intellect",
