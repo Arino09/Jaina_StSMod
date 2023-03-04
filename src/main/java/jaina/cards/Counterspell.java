@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.cards.optionCards.CounterAttack;
-import jaina.cards.optionCards.CounterCurse;
+import jaina.cards.optionCards.CounterMagic;
 import jaina.cards.optionCards.CounterDamage;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
@@ -33,7 +33,7 @@ public class Counterspell extends AbstractArcaneCard {
         // 添加三张选项卡牌
         choices.add(new CounterAttack());
         choices.add(new CounterDamage());
-        choices.add(new CounterCurse());
+        choices.add(new CounterMagic());
         // 释放选择的效果
         addToBot(new ChooseOneAction(choices));
     }

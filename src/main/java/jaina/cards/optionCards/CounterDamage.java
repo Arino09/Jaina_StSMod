@@ -14,7 +14,7 @@ public class CounterDamage extends OptionCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public CounterDamage() {
-        super(ID, true, CARD_STRINGS, CardType.POWER);
+        super(ID, false, CARD_STRINGS, CardType.POWER);
     }
 
     @Override
