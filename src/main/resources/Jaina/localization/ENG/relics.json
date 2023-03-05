@@ -1,58 +1,58 @@
 {
   "jaina:Aluneth": {
     "NAME": "Aluneth",
-    "FLAVOR": "PHENOMENAL ARCANE POWER…itty bitty living space.",
+    "FLAVOR": "PHENOMENAL ARCANE POWER...itty bitty living space.",
     "DESCRIPTIONS": [
-      "At the start of your turn, draw 3 additional cards. Whenever you shuffle, take #b5 damage."
+      "At the start of your turn, draw #b3 additional cards. Whenever you shuffle your draw pile, take #b5 damage."
     ]
   },
   "jaina:ArcaniteCrystal": {
     "NAME": "Arcanite Crystal",
-    "FLAVOR": "A natual crystal contains Arcane power, very rare.",
+    "FLAVOR": "An exceptionally rare natural crystal containing arcane power.",
     "DESCRIPTIONS": [
-      "Whenever you play the first #yArcane card each turn, a random card in your hand costs #b0 that turn."
+      "The first time you play an #yArcane card each turn, a random card in your hand costs #b0 that turn."
     ]
   },
   "jaina:ArchmageStuff": {
-    "NAME": "Archmage Stuff",
-    "FLAVOR": "The archmage's power is nothing more.",
+    "NAME": "Archmage's Bygone Staff",
+    "FLAVOR": "Nearly naught remains of the power once contained in this archmage's staff.",
     "DESCRIPTIONS": [
       "At the start of each combat, add #b1 random Common card into your hand."
     ]
   },
   "jaina:AscendantScroll": {
     "NAME": "Ascendant Scroll",
-    "FLAVOR": "A scroll containing ancient characters. The use of which can have unpredictable consequences.",
+    "FLAVOR": "A scroll written in an ancient language, the use of which can have unpredictable consequences.",
     "DESCRIPTIONS": [
-      "Right click to use [E] [E] : add #b1 random spell card into your hand. It costs 2 less this turn."
+      "During your turn, #yright #yclick: Spend [E] [E] . Add #b1 random spell card into your hand. It costs #b2 less this turn."
     ]
   },
   "jaina:BookOfWonders": {
     "NAME": "Book of Wonders",
     "FLAVOR": "Maybe delights...maybe frights!",
     "DESCRIPTIONS": [
-      "At the start of each combat, shuffle #b5 #yScroll #yof #yWonder s into your draw pile."
+      "At the start of each combat, shuffle #b5 #yScrolls #yof #yWonder into your draw pile."
     ]
   },
   "jaina:RobesOfGaudiness": {
     "NAME": "Robes of Gaudiness",
-    "FLAVOR": "A robe embedded lots of ores, which nobody can harness.",
+    "FLAVOR": "Countless magical gems are embedded into this robe - yet few who have worn it can harness their power.",
     "DESCRIPTIONS": [
-      "You cannot play more than 3 cards each turn. Your spell cards cost 0."
+      "All your spell cards cost 0. You may not play more than #b3 cards each turn. "
     ]
   },
   "jaina:RubySpellstone": {
     "NAME": "Ruby Spellstone",
-    "FLAVOR": "The final stone undid its master Spun into wards by nameless caster Azari wailed a savage roar Now sealed in nether, evermore",
+    "FLAVOR": "The final stone undid its master NL Spun into wards by nameless caster NL Azari wailed a savage roar NL Now sealed in nether, evermore.",
     "DESCRIPTIONS": [
-      "Whenever your play #b3 spell cards of the same kind continuously, gain [E] ."
+      "Whenever your play #b3 spell cards of the same kind in a row, gain [E] ."
     ]
   },
   "jaina:SphereOfSapience": {
     "NAME": "Sphere of Sapience",
     "FLAVOR": "I see you...",
     "DESCRIPTIONS": [
-      "Right click to use (Once at each combat): #yScry #b5 , draw #b1 card."
+      "Once per combat, during your turn, #yright #yclick: #yScry #b5, then draw #b1 card."
     ]
   },
   "jaina:TheCoin": {

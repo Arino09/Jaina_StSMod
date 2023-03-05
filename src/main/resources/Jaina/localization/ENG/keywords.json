@@ -5,7 +5,7 @@
       "arcane"
     ],
     "PROPER_NAME": "Arcane",
-    "DESCRIPTION": "Arcane spells are full of randomness that gives you powerful abilities."
+    "DESCRIPTION": "Arcane spells tend to have assorted, beneficial effects."
   },
   {
     "NAMES": [
@@ -13,7 +13,7 @@
       "frost"
     ],
     "PROPER_NAME": "Frost",
-    "DESCRIPTION": "Frost spells can limit the enemy's movements and let you dominate the fight."
+    "DESCRIPTION": "Frost spells revolve around crowd control and #yFreeze."
   },
   {
     "NAMES": [
@@ -21,23 +21,25 @@
       "fire"
     ],
     "PROPER_NAME": "Fire",
-    "DESCRIPTION": "Fire spells deal high damage and burn effects, but watch out the fire!"
+    "DESCRIPTION": "Fire spells generally deal high damage and may inflict #yCombustion."
   },
   {
     "NAMES": [
       "Frozen",
-      "frozen"
+      "frozen",
+      "Freeze",
+      "freeze",
     ],
     "PROPER_NAME": "Frozen",
-    "DESCRIPTION": "A #bFrozen creature loses his next action. NL #bFrozen effect can NOT stack."
+    "DESCRIPTION": "A #bFrozen creature may not act. #bFrozen can NOT stack."
   },
   {
     "NAMES": [
-      "Spelldamage",
-      "spelldamage"
+      "spell force",
+      "spell_force"
     ],
-    "PROPER_NAME": "Spelldamage",
-    "DESCRIPTION": "Increase the damage and block from spell cards, or enhance other effects."
+    "PROPER_NAME": "Spell Force",
+    "DESCRIPTION": "Increases damage and block of certain cards. May also enhance other effects depending on the card."
   },
   {
     "NAMES": [
@@ -45,7 +47,7 @@
       "combustion"
     ],
     "PROPER_NAME": "Combustion",
-    "DESCRIPTION": "#rCombusting creatures will lose their HP at the end of turn."
+    "DESCRIPTION": "#rCombusting creatures will lose HP at the end of their turn."
   },
   {
     "NAMES": [
