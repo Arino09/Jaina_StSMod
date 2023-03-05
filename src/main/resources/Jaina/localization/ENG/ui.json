@@ -18,9 +18,9 @@
     "TEXT": [
       "Frozen",
       "This enemy is frozen.",
-      "The intent of this enemy is not #rATTACK.",
+      "The enemy doesn't intend to #rattack!.",
       "Choose a card",
-      "Can't #yplay more cards!"
+      "I can't #yplay any more cards!"
     ]
   }
 }
