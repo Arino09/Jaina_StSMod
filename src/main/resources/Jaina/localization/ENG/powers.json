@@ -2,62 +2,62 @@
   "jaina:ArcaneGatePower": {
     "NAME": "Arcane Gate",
     "DESCRIPTIONS": [
-      "Deal %d damage when play #pArcane cards."
+      "Deal %d damage whenever you play an #pArcane card."
     ]
   },
   "jaina:ArcticArmorPower": {
     "NAME": "Arctic Armor",
     "DESCRIPTIONS": [
-      "Gain %d Block when play #bFrost cards."
+      "Gain %d Block whenever you play a #bFrost card."
     ]
   },
   "jaina:CombustionPower": {
     "NAME": "Combustion",
     "DESCRIPTIONS": [
-      "At the end of turn, lose #r%d HP."
+      "At the end of turn, this creature loses #b%d HP."
     ]
   },
   "jaina:EvocationPower": {
     "NAME": "Evocation",
     "DESCRIPTIONS": [
-      "At the start of your turn, #ySpelldamage + #b%d."
+      "At the start of your turn, gain #b%d #ySpelldamage."
     ]
   },
   "jaina:FlameWardPower": {
     "NAME": "Flame Ward",
     "DESCRIPTIONS": [
-      "Whenever being attacked, apply %d #rCombustion."
+      "Whenever you are attacked, apply %d #rCombustion to the attacker."
     ]
   },
   "jaina:FrostAffinityPower": {
     "NAME": "Frost Affinity",
     "DESCRIPTIONS": [
-      "The next #bFrost card you play costs 2 less this turn."
+      "The next #bFrost card you play costs #b2 less this turn."
     ]
   },
   "jaina:FrozenPower": {
     "NAME": "Frozen",
     "DESCRIPTIONS": [
-      "A #bFrozen creature loses his next action. NL #bFrozen effect can NOT stack."
+      "Stilled by ice and may not act. This effect can NOT stack."
     ]
   },
   "jaina:IceBlockPower": {
     "NAME": "Ice Block",
     "DESCRIPTIONS": [
-      "Prevent the next fatal damage you take."
+      "Prevent the next instance of lethal damage you would take."
     ]
   },
   "jaina:IncantersPower": {
     "NAME": "Incanter's Flow",
     "DESCRIPTIONS": [
-      "The first card you play each turn cost 0.",
+      "The first card you play each turn costs 0.",
       "The first %d cards you play each turn cost 0."
     ]
   },
   "jaina:LoseSpellDamagePower": {
-    "NAME": "Spelldamage Down",
+    "NAME": "Spell Force Down",
     "DESCRIPTIONS": [
-      "At the end of your turn, #ySpelldamage - #b%d."
+      "At the end of your turn, lose #b%d #ySpell #yForce."
     ]
   },
   "jaina:ManaBindPower": {
@@ -68,30 +68,30 @@
     ]
   },
   "jaina:SpellDamagePower": {
-    "NAME": "Spelldamage",
+    "NAME": "Spell Force",
     "DESCRIPTIONS": [
-      "#ySpelldamage + #b%d."
+      "Increases the effect of certain spell cards by #b%d."
     ]
   },
   "jaina:SplittingImagePower": {
     "NAME": "Splitting Image",
     "DESCRIPTIONS": [
-      "Gain #b%d #yIntagible after being attacked."
+      "Gain #b%d #yIntangible after being attacked."
     ]
   },
   "jaina:VaporizePower": {
     "NAME": "Vaporize",
     "DESCRIPTIONS": [
-      "The next time you are attacked, deal the same damage to the attacker. NL Only trigger once at one attack.",
+      "The next time you are attacked, deal that much damage to the attacker. Removed after a single hit.",
       "Vaporize+"
     ]
   },
   "jaina:WildfirePower": {
     "NAME": "Wildfire",
     "DESCRIPTIONS": [
-      "Apply #y3 additional #rCombustion.",
+      "Whenever you apply #rCombustion, apply #b3 more.",
       "Wildfire+",
-      "Double the #rCombustion you apply."
+      "Whenever you apply #rCombustion, apply #b2x as much."
     ]
   },
   "jaina:WizardArmorPower": {
