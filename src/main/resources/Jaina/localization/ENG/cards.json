@@ -92,8 +92,8 @@
   },
   "jaina:Counterspell": {
     "NAME": "Counter Spell",
-    "DESCRIPTION": "Ethereal. NL Choose one: NL Gain 1 Intangible, 1 jaina:Buffer or 1 Artifact. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose one: NL Gain 1 Intangible, 1 jaina:Buffer or 1 Artifact. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Choose one: NL Gain 1 Intangible, 1 jaina:Buffer, or 1 Artifact.",
+    "UPGRADE_DESCRIPTION": "Choose one: NL Gain 1 Intangible, 1 jaina:Buffer, or 1 Artifact."
   },
   "jaina:CramSession": {
     "NAME": "Cram Session",
@@ -156,7 +156,7 @@
   },
   "jaina:FlameWard": {
     "NAME": "Flame Ward",
-    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! jaina:Combustion to ALL enemies."
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked, apply !M! jaina:Combustion to ALL enemies."
   },
   "jaina:Flamecannon": {
     "NAME": "Flamecannon",
@@ -352,7 +352,7 @@
   },
   "jaina:SpringWater": {
     "NAME": "Spring Water",
-    "DESCRIPTION": "Draw !M! cards. NL Whenever you draw a Skill, gain [E]."
+    "DESCRIPTION": "Draw !M! cards. NL Whenever you draw a Skill, gain [E] ."
   },
   "jaina:Strike": {
     "NAME": "Strike",
@@ -368,9 +368,9 @@
   },
   "jaina:Vaporize": {
     "NAME": "Vaporize",
-    "DESCRIPTION": "Gain !B! Block. NL The next time you are attacked, deal that much damage to the attacker."
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked, deal that much damage to the attacker."
   },
-  "jaina:Wildfire": {                  
+  "jaina:Wildfire": {
     "NAME": "Wildfire",
     "DESCRIPTION": "Whenever you apply jaina:Combustion, apply 3 more.",
     "UPGRADE_DESCRIPTION": "Whenever you apply jaina:Combustion, apply twice as much."

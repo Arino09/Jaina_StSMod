@@ -82,7 +82,7 @@
   "jaina:VaporizePower": {
     "NAME": "Vaporize",
     "DESCRIPTIONS": [
-      "The next time you are attacked, deal that much damage to the attacker. Removed after a single hit.",
+      "Whenever you are attacked, deal that much damage to the attacker. Reduced by #b1 for each incoming hit.",
       "Vaporize+"
     ]
   },

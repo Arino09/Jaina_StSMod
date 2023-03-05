@@ -27,7 +27,7 @@
     ]
   },
   "jaina:FrozenPotion": {
-    "NAME": "Bottled Blizzard",
+    "NAME": "Freezing Potion",
     "DESCRIPTIONS": [
       "#yFreeze an enemy.",
       "#yFreeze an enemy, and freeze another random enemy."
