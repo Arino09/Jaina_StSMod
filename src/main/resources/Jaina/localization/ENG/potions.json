@@ -2,7 +2,7 @@
   "jaina:ArcanePotion": {
     "NAME": "Arcane Spell Potion",
     "DESCRIPTIONS": [
-      "#yDiscover #b1 #yArcane card. It cost #b0 this turn.",
+      "#yDiscover #b1 #yArcane card. It costs #b0 this turn.",
       "#yDiscover #b2 #yArcane cards. They cost #b0 this turn."
     ]
   },
@@ -15,7 +15,7 @@
   "jaina:FirePotion": {
     "NAME": "Fire Spell Potion",
     "DESCRIPTIONS": [
-      "#yDiscover #b1 #yFire card. It cost #b0 this turn.",
+      "#yDiscover #b1 #yFire card. It costs #b0 this turn.",
       "#yDiscover #b2 #yFire cards. They cost #b0 this turn."
     ]
   },
@@ -39,8 +39,8 @@
       "Choose %d cards from your draw pile. Add a copy of those cards with #yExhaust into your hand."
     ]
   },
-  "jaina:SpellDamagePotion": {
-    "NAME": "Spell Damage Potion",
+  "jaina:SpellForcePotion": {
+    "NAME": "Spell Force Potion",
     "DESCRIPTIONS": [
       "Gain #b%d #ySpell #yForce."
     ]

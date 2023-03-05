@@ -15,15 +15,15 @@ import jaina.modCore.Core;
 import jaina.modCore.IHelper;
 import jaina.powers.SpellDamagePower;
 
-public class SpellDamagePotion extends AbstractPotion {
+public class SpellForcePotion extends AbstractPotion {
 
-    public static final String ID = IHelper.makeID("SpellDamagePotion");
+    public static final String ID = IHelper.makeID("SpellForcePotion");
     public static final Color LIQUID_COLOR = CardHelper.getColor(99, 33, 183);
     public static final Color HYBRID_COLOR = CardHelper.getColor(221, 103, 237);
     private static final PotionStrings POTION_STRINGS = CardCrawlGame.languagePack.getPotionString(ID);
     private static final int POTENCY = 2;
 
-    public SpellDamagePotion() {
+    public SpellForcePotion() {
         super(POTION_STRINGS.NAME, ID, PotionRarity.UNCOMMON, PotionSize.S, PotionEffect.NONE, LIQUID_COLOR, HYBRID_COLOR, null);
         this.labOutlineColor = Core.COLOR;
     }
@@ -41,8 +41,8 @@ public class SpellDamagePotion extends AbstractPotion {
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(
-                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.localizeKeywordID("Spelldamage"))),
-                BaseMod.getKeywordDescription(IHelper.localizeKeywordID("Spelldamage"))
+                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.localizeKeywordID("spell_force"))),
+                BaseMod.getKeywordDescription(IHelper.localizeKeywordID("spell_force"))
         ));
     }
 
@@ -53,6 +53,6 @@ public class SpellDamagePotion extends AbstractPotion {
 
     @Override
     public AbstractPotion makeCopy() {
-        return new SpellDamagePotion();
+        return new SpellForcePotion();
     }
 }

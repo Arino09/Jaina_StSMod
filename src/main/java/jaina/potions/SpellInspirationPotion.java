@@ -44,8 +44,8 @@ public class SpellInspirationPotion extends AbstractPotion {
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(
-                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.localizeKeywordID("Spelldamage"))),
-                BaseMod.getKeywordDescription(IHelper.localizeKeywordID("Spelldamage"))
+                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.localizeKeywordID("spell_force"))),
+                BaseMod.getKeywordDescription(IHelper.localizeKeywordID("spell_force"))
         ));
     }
 

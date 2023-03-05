@@ -13,7 +13,7 @@
       "The first time you play an #yArcane card each turn, a random card in your hand costs #b0 that turn."
     ]
   },
-  "jaina:ArchmageStuff": {
+  "jaina:ArchmageStaff": {
     "NAME": "Archmage's Bygone Staff",
     "FLAVOR": "Nearly naught remains of the power once contained in this archmage's staff.",
     "DESCRIPTIONS": [
@@ -43,7 +43,7 @@
   },
   "jaina:RubySpellstone": {
     "NAME": "Ruby Spellstone",
-    "FLAVOR": "The final stone undid its master NL Spun into wards by nameless caster NL Azari wailed a savage roar NL Now sealed in nether, evermore.",
+    "FLAVOR": "The final stone undid its master. Spun into wards by nameless caster. Azari wailed a savage roar. Now sealed in nether, evermore.",
     "DESCRIPTIONS": [
       "Whenever your play #b3 spell cards of the same kind in a row, gain [E] ."
     ]

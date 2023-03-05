@@ -26,13 +26,13 @@
   "jaina:FlameWardPower": {
     "NAME": "Flame Ward",
     "DESCRIPTIONS": [
-      "Whenever you are attacked, apply %d #rCombustion to the attacker."
+      "Whenever you are attacked, apply #b%d #rCombustion to the attacker."
     ]
   },
   "jaina:FrostAffinityPower": {
     "NAME": "Frost Affinity",
     "DESCRIPTIONS": [
-      "The next #bFrost card you play costs #b2 less this turn."
+      "The next #yFrost card you play costs #b2 less this turn."
     ]
   },
   "jaina:FrozenPower": {
@@ -64,7 +64,7 @@
     "NAME": "Mana Bind",
     "DESCRIPTIONS": [
       "Your next #yArcane card is played twice this turn.",
-      "Your next #yArcane card is played twice this turn."
+      "Your next #b%d #yArcane cards are played twice this turn."
     ]
   },
   "jaina:SpellDamagePower": {
