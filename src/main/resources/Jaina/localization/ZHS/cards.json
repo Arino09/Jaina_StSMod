@@ -128,7 +128,10 @@
   "jaina:Duplicate": {
     "NAME": "复制",
     "DESCRIPTION": "将你手牌中的一张牌复制一张。 NL （不能复制 *复制 。）",
-    "UPGRADE_DESCRIPTION": "将你手牌中的一张牌复制两张。 NL （不能复制 *复制 。）"
+    "UPGRADE_DESCRIPTION": "将你手牌中的一张牌复制两张。 NL （不能复制 *复制 。）",
+    "EXTENDED_DESCRIPTION": [
+      "复制"
+    ]
   },
   "jaina:Evocation": {
     "NAME": "唤醒",
