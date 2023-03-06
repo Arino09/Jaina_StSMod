@@ -98,6 +98,7 @@
   "jaina:CramSession": {
     "NAME": "考前刷夜",
     "DESCRIPTION": "抽 !M! 张牌。 NL （受 jaina:法术强度 加成。）",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL （受 jaina:法术强度 加成。）",
     "EXTENDED_DESCRIPTION": [
       "（抽%d张牌。）",
       "（抽%d张牌。）"

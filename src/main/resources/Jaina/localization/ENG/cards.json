@@ -98,6 +98,7 @@
   "jaina:CramSession": {
     "NAME": "Cram Session",
     "DESCRIPTION": "Draw !M! card. NL (Affected by jaina:spell_force. )",
+    "UPGRADE_DESCRIPTION": "Draw !M! card. NL (Affected by jaina:spell_force. )",
     "EXTENDED_DESCRIPTION": [
       "(Draw %d cards.)",
       "(Draw %d card.)"

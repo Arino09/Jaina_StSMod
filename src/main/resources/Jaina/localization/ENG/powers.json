@@ -20,7 +20,7 @@
   "jaina:EvocationPower": {
     "NAME": "Evocation",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b%d #ySpelldamage."
+      "At the start of your turn, gain #b%d #ySpell #yForce."
     ]
   },
   "jaina:FlameWardPower": {
@@ -54,7 +54,7 @@
       "The first %d cards you play each turn cost 0."
     ]
   },
-  "jaina:LoseSpellDamagePower": {
+  "jaina:LoseSpellForcePower": {
     "NAME": "Spell Force Down",
     "DESCRIPTIONS": [
       "At the end of your turn, lose #b%d #ySpell #yForce."
@@ -67,7 +67,7 @@
       "Your next #b%d #yArcane cards are played twice this turn."
     ]
   },
-  "jaina:SpellDamagePower": {
+  "jaina:SpellForcePower": {
     "NAME": "Spell Force",
     "DESCRIPTIONS": [
       "Increases the effect of certain spell cards by #b%d."

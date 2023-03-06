@@ -37,12 +37,12 @@ public class ArcaneGatePower extends AbstractJainaPower {
             flashWithoutSound();
             if (m == null) {
                 if (card.target == AbstractCard.CardTarget.ALL_ENEMY) {
-                    addToBot(new DamageAllEnemiesAction(p, this.amount, DamageInfo.DamageType.NORMAL, AE));
+                    addToBot(new DamageAllEnemiesAction(p, this.amount, DamageInfo.DamageType.THORNS, AE));
                 } else {
-                    addToBot(new DamageRandomEnemyAction(new DamageInfo(p, amount, DamageInfo.DamageType.NORMAL), AE));
+                    addToBot(new DamageRandomEnemyAction(new DamageInfo(p, amount, DamageInfo.DamageType.THORNS), AE));
                 }
             } else {
-                addToBot(new DamageAction(m, new DamageInfo(p, amount, DamageInfo.DamageType.NORMAL), AE));
+                addToBot(new DamageAction(m, new DamageInfo(p, amount, DamageInfo.DamageType.THORNS), AE));
             }
         }
     }

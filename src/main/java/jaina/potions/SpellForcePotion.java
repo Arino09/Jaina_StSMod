@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import jaina.modCore.Core;
 import jaina.modCore.IHelper;
-import jaina.powers.SpellDamagePower;
+import jaina.powers.SpellForcePower;
 
 public class SpellForcePotion extends AbstractPotion {
 
@@ -31,7 +31,7 @@ public class SpellForcePotion extends AbstractPotion {
     @Override
     public void use(AbstractCreature abstractCreature) {
         this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new SpellDamagePower(AbstractDungeon.player, potency)));
+                new SpellForcePower(AbstractDungeon.player, potency)));
     }
 
     @Override

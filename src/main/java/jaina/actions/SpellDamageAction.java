@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import jaina.cards.ApexisBlast;
 import jaina.cards.CramSession;
 import jaina.modCore.JainaEnums;
-import jaina.powers.SpellDamagePower;
+import jaina.powers.SpellForcePower;
 
 import java.util.ArrayList;
 
@@ -16,8 +16,8 @@ public class SpellDamageAction extends AbstractGameAction {
     public void update() {
         int amount;
         // 更新所有地方的卡牌描述
-        if (AbstractDungeon.player.hasPower(SpellDamagePower.POWER_ID)) {
-            amount = AbstractDungeon.player.getPower(SpellDamagePower.POWER_ID).amount;
+        if (AbstractDungeon.player.hasPower(SpellForcePower.POWER_ID)) {
+            amount = AbstractDungeon.player.getPower(SpellForcePower.POWER_ID).amount;
             updateMagicCards(AbstractDungeon.player.hand.group, amount);
             updateMagicCards(AbstractDungeon.player.discardPile.group, amount);
             updateMagicCards(AbstractDungeon.player.drawPile.group, amount);

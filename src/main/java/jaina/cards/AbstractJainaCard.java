@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import jaina.powers.FrozenPower;
-import jaina.powers.SpellDamagePower;
+import jaina.powers.SpellForcePower;
 
 public abstract class AbstractJainaCard extends CustomCard {
 
@@ -261,16 +261,16 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param strings 本地化文本
      */
     public void updateDescription(CardStrings strings) {
-        if (AbstractDungeon.player.hasPower(SpellDamagePower.POWER_ID)) {
-            AbstractPower power = AbstractDungeon.player.getPower(SpellDamagePower.POWER_ID);
+        if (AbstractDungeon.player.hasPower(SpellForcePower.POWER_ID)) {
+            AbstractPower power = AbstractDungeon.player.getPower(SpellForcePower.POWER_ID);
             // 仅当法伤数值变化时才更新描述
             if (power.amount + baseMagicNumber > magicNumber) {
-                magicNumber = power.amount + baseMagicNumber;
-                rawDescription = strings.DESCRIPTION;
+                this.magicNumber = power.amount + baseMagicNumber;
+                this.rawDescription = strings.DESCRIPTION;
                 if (magicNumber > 1) {
-                    rawDescription += String.format(strings.EXTENDED_DESCRIPTION[0], magicNumber);
+                    this.rawDescription += String.format(strings.EXTENDED_DESCRIPTION[0], magicNumber);
                 } else {
-                    rawDescription += String.format(strings.EXTENDED_DESCRIPTION[1], magicNumber);
+                    this.rawDescription += String.format(strings.EXTENDED_DESCRIPTION[1], magicNumber);
                 }
                 initializeDescription();
             }

@@ -17,13 +17,13 @@ import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 import jaina.powers.unique.WizardArmorPower;
 
-public class SpellDamagePower extends AbstractJainaPower {
-    public static final String POWER_ID = IHelper.makeID("SpellDamagePower");
+public class SpellForcePower extends AbstractJainaPower {
+    public static final String POWER_ID = IHelper.makeID("SpellForcePower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public SpellDamagePower(AbstractCreature owner, int amount) {
+    public SpellForcePower(AbstractCreature owner, int amount) {
         super(POWER_ID, false, NAME, PowerType.BUFF);
         this.owner = owner;
         this.amount = amount;

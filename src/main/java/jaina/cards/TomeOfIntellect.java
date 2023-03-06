@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.SpellDamagePower;
+import jaina.powers.SpellForcePower;
 
 
 public class TomeOfIntellect extends AbstractArcaneCard {
@@ -33,7 +33,7 @@ public class TomeOfIntellect extends AbstractArcaneCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int amount = p.drawPile.size() / magicNumber;
         if (amount > 0) {
-            gainPower(new SpellDamagePower(p, amount));
+            gainPower(new SpellForcePower(p, amount));
         }
     }
 

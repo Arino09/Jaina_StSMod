@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import jaina.modCore.IHelper;
 import jaina.powers.AbstractJainaPower;
-import jaina.powers.SpellDamagePower;
+import jaina.powers.SpellForcePower;
 
 public class WizardArmorPower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("WizardArmorPower");
@@ -37,8 +37,8 @@ public class WizardArmorPower extends AbstractJainaPower {
 
     @Override
     public void onSpecificTrigger() {
-        if (owner.hasPower(SpellDamagePower.POWER_ID)) {
-            amount = baseAmount + owner.getPower(SpellDamagePower.POWER_ID).amount;
+        if (owner.hasPower(SpellForcePower.POWER_ID)) {
+            amount = baseAmount + owner.getPower(SpellForcePower.POWER_ID).amount;
         } else {
             amount = baseAmount;
         }

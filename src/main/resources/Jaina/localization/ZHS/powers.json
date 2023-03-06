@@ -20,7 +20,7 @@
   "jaina:EvocationPower": {
     "NAME": "法力唤醒",
     "DESCRIPTIONS": [
-      "回合开始时获得 #b%d 层 #y法术伤害 。"
+      "回合开始时获得 #b%d 层 #y法术强度 。"
     ]
   },
   "jaina:FlameWardPower": {
@@ -54,10 +54,10 @@
       "每回合打出的前 #b%d 张法术牌耗能变为 #b0 。"
     ]
   },
-  "jaina:LoseSpellDamagePower": {
-    "NAME": "法术伤害下降",
+  "jaina:LoseSpellForcePower": {
+    "NAME": "法术强度下降",
     "DESCRIPTIONS": [
-      "回合结束时失去 #b%d 层 #y法术伤害 。"
+      "回合结束时失去 #b%d 层 #y法术强度 。"
     ]
   },
   "jaina:ManaBindPower": {
@@ -67,8 +67,8 @@
       "在这个回合，你的下 #b%d 张 #y奥术 牌打出两次。"
     ]
   },
-  "jaina:SpellDamagePower": {
-    "NAME": "法术伤害",
+  "jaina:SpellForcePower": {
+    "NAME": "法术强度",
     "DESCRIPTIONS": [
       "法术的效果提高 #b%d 点。"
     ]
