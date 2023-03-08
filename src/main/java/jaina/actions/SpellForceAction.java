@@ -7,21 +7,25 @@ import jaina.cards.ApexisBlast;
 import jaina.cards.CramSession;
 import jaina.modCore.JainaEnums;
 import jaina.powers.SpellForcePower;
+import jaina.powers.unique.WizardArmorPower;
 
 import java.util.ArrayList;
 
-public class SpellDamageAction extends AbstractGameAction {
+public class SpellForceAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        int amount;
-        // 更新所有地方的卡牌描述
         if (AbstractDungeon.player.hasPower(SpellForcePower.POWER_ID)) {
-            amount = AbstractDungeon.player.getPower(SpellForcePower.POWER_ID).amount;
-            updateMagicCards(AbstractDungeon.player.hand.group, amount);
-            updateMagicCards(AbstractDungeon.player.discardPile.group, amount);
-            updateMagicCards(AbstractDungeon.player.drawPile.group, amount);
-            updateMagicCards(AbstractDungeon.player.exhaustPile.group, amount);
+            int forceAmt = AbstractDungeon.player.getPower(SpellForcePower.POWER_ID).amount;
+            // 更新所有地方的卡牌描述
+            updateMagicCards(AbstractDungeon.player.hand.group, forceAmt);
+            updateMagicCards(AbstractDungeon.player.discardPile.group, forceAmt);
+            updateMagicCards(AbstractDungeon.player.drawPile.group, forceAmt);
+            updateMagicCards(AbstractDungeon.player.exhaustPile.group, forceAmt);
+            // 更新法师护甲
+            if (AbstractDungeon.player.hasPower(WizardArmorPower.POWER_ID)) {
+                AbstractDungeon.player.getPower(WizardArmorPower.POWER_ID).onSpecificTrigger();
+            }
         }
         this.isDone = true;
     }

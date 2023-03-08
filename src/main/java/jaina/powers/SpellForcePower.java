@@ -6,16 +6,14 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import jaina.actions.SpellDamageAction;
+import jaina.actions.SpellForceAction;
 import jaina.cards.ApexisBlast;
 import jaina.cards.ArcaneBlast;
 import jaina.cards.CramSession;
 import jaina.cards.FontOfPower;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.unique.WizardArmorPower;
 
 public class SpellForcePower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("SpellForcePower");
@@ -50,10 +48,9 @@ public class SpellForcePower extends AbstractJainaPower {
         if (this.amount >= 999) {
             this.amount = 999;
         }
-        addToBot(new SpellDamageAction());
-        if (AbstractDungeon.player.hasPower(WizardArmorPower.POWER_ID)) {
-            AbstractDungeon.player.getPower(WizardArmorPower.POWER_ID).onSpecificTrigger();
-        }
+        // 更新法强在卡牌上的效果
+        addToBot(new SpellForceAction());
+
     }
 
     @Override
@@ -64,10 +61,8 @@ public class SpellForcePower extends AbstractJainaPower {
         if (this.amount <= 0) {
             addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
-        addToBot(new SpellDamageAction());
-        if (AbstractDungeon.player.hasPower(WizardArmorPower.POWER_ID)) {
-            AbstractDungeon.player.getPower(WizardArmorPower.POWER_ID).onSpecificTrigger();
-        }
+        addToBot(new SpellForceAction());
+
     }
 
     @Override
@@ -94,7 +89,7 @@ public class SpellForcePower extends AbstractJainaPower {
             if (card.upgraded) {
                 finalDamage += amount;
             }
-        } else if (IHelper.isSpellDamage(card)) {
+        } else if (IHelper.isSpell(card)) {
             finalDamage = damage + amount;
         }
         return super.atDamageGive(finalDamage, type, card);

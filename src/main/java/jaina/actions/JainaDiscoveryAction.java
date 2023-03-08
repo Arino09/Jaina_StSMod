@@ -74,7 +74,7 @@ public class JainaDiscoveryAction extends AbstractGameAction {
             }
             tickDuration();
         }
-        AbstractDungeon.actionManager.addToBottom(new SpellDamageAction());
+        AbstractDungeon.actionManager.addToBottom(new SpellForceAction());
         AbstractDungeon.player.hand.applyPowers();
     }
 }

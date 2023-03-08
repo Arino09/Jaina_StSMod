@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import jaina.actions.SpellDamageAction;
+import jaina.actions.SpellForceAction;
 import jaina.cards.ShiftingScroll;
 
 import java.util.ArrayList;
@@ -62,7 +62,7 @@ public interface IHelper {
      */
     static void getTempCard(AbstractCard card) {
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card));
-        AbstractDungeon.actionManager.addToBottom(new SpellDamageAction());
+        AbstractDungeon.actionManager.addToBottom(new SpellForceAction());
     }
 
     /**
@@ -98,12 +98,12 @@ public interface IHelper {
     }
 
     /**
-     * 判断卡牌是否受法术伤害影响
+     * 判断卡牌是否受法术强度影响
      *
      * @param card 卡牌
      * @return 是否受影响
      */
-    static boolean isSpellDamage(AbstractCard card) {
+    static boolean isSpell(AbstractCard card) {
         return card.hasTag(JainaEnums.CardTags.FIRE) || card.hasTag(JainaEnums.CardTags.FROST) || card.hasTag(JainaEnums.CardTags.ARCANE);
     }
 

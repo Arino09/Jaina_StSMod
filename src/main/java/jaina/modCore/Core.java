@@ -51,7 +51,8 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     public Core() {
         BaseMod.subscribe(this);
         BaseMod.addColor(JainaEnums.JAINA_COLOR, COLOR, COLOR, COLOR, COLOR, COLOR, COLOR, COLOR,
-                BG_ATTACK_512, BG_SKILL_512, BG_POWER_512, ENERGY_ORB, BG_ATTACK_1024, BG_SKILL_1024, BG_POWER_1024, BIG_ORB, SMALL_ORB);
+                BG_ATTACK_512, BG_SKILL_512, BG_POWER_512, ENERGY_ORB, BG_ATTACK_1024,
+                BG_SKILL_1024, BG_POWER_1024, BIG_ORB, SMALL_ORB);
     }
 
     public static void initialize() {
@@ -62,7 +63,8 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     @Override
     public void receiveEditCharacters() {
         // 添加角色
-        BaseMod.addCharacter(new JainaCharacter(CardCrawlGame.playerName), CHAR_BUTTON, CHAR_PORTRAIT, JainaEnums.JAINA_CLASS);
+        BaseMod.addCharacter(new JainaCharacter(CardCrawlGame.playerName),
+                CHAR_BUTTON, CHAR_PORTRAIT, JainaEnums.JAINA_CLASS);
         addPotions();
     }
 
@@ -116,7 +118,7 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
             lang = "ZHS";
         }
         BaseMod.loadCustomStringsFile(CharacterStrings.class, "jaina/localization/" + lang + "/character.json");
-        BaseMod.loadCustomStringsFile(CardStrings.class, "jaina/localization/" + lang + "/cards.json"); // 加载相应语言的卡牌本地化内容
+        BaseMod.loadCustomStringsFile(CardStrings.class, "jaina/localization/" + lang + "/cards.json");
         BaseMod.loadCustomStringsFile(RelicStrings.class, "jaina/localization/" + lang + "/relics.json");
         BaseMod.loadCustomStringsFile(PowerStrings.class, "jaina/localization/" + lang + "/powers.json");
         BaseMod.loadCustomStringsFile(PotionStrings.class, "jaina/localization/" + lang + "/potions.json");
@@ -223,7 +225,13 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
 
     public static boolean unlockEverything = false;
 
-    public static void registerUnlockSuiteAlternating(String bundle1card1, String bundle1card2, String bundle1card3, String bundle2relic1, String bundle2relic2, String bundle2relic3, String bundle3card1, String bundle3card2, String bundle3card3, String bundle4relic1, String bundle4relic2, String bundle4relic3, String bundle5card1, String bundle5card2, String bundle5card3, AbstractPlayer.PlayerClass player) {
+    public static void registerUnlockSuiteAlternating(String bundle1card1, String bundle1card2, String bundle1card3,
+                                                      String bundle2relic1, String bundle2relic2, String bundle2relic3,
+                                                      String bundle3card1, String bundle3card2, String bundle3card3,
+                                                      String bundle4relic1, String bundle4relic2, String bundle4relic3,
+                                                      String bundle5card1, String bundle5card2, String bundle5card3,
+                                                      AbstractPlayer.PlayerClass player) {
+
         registerUnlockCardBundle(player, 0, bundle1card1, bundle1card2, bundle1card3);
         registerUnlockRelicBundle(player, 1, bundle2relic1, bundle2relic2, bundle2relic3);
         registerUnlockCardBundle(player, 2, bundle3card1, bundle3card2, bundle3card3);
@@ -231,7 +239,8 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
         registerUnlockCardBundle(player, 4, bundle5card1, bundle5card2, bundle5card3);
     }
 
-    private static void registerUnlockCardBundle(AbstractPlayer.PlayerClass player, int index, String card1, String card2, String card3) {
+    private static void registerUnlockCardBundle(AbstractPlayer.PlayerClass player, int index,
+                                                 String card1, String card2, String card3) {
         CustomUnlockBundle currentBundle = new CustomUnlockBundle(card1, card2, card3);
         UnlockTracker.addCard(card1);
         UnlockTracker.addCard(card2);
@@ -244,7 +253,8 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
         }
     }
 
-    private static void registerUnlockRelicBundle(AbstractPlayer.PlayerClass player, int index, String relic1, String relic2, String relic3) {
+    private static void registerUnlockRelicBundle(AbstractPlayer.PlayerClass player, int index,
+                                                  String relic1, String relic2, String relic3) {
         CustomUnlockBundle currentBundle = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC, relic1, relic2, relic3);
         UnlockTracker.addRelic(relic1);
         UnlockTracker.addRelic(relic2);
