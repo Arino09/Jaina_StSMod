@@ -128,7 +128,7 @@
   "jaina:Duplicate": {
     "NAME": "Duplicate",
     "DESCRIPTION": "Choose a card. Add a copy of it into your hand. NL You may not choose another copy of this card to be copied.",
-    "UPGRADE_DESCRIPTION": "Choose a card. Add 2 copies of it into your hand. NL You may not choose another copy of this card to be copied."
+    "UPGRADE_DESCRIPTION": "Choose a card. Add 2 copies of it into your hand. NL You may not choose another copy of this card to be copied.",
     "EXTENDED_DESCRIPTION": [
       "duplicate"
     ]
