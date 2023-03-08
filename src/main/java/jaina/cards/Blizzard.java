@@ -39,7 +39,7 @@ public class Blizzard extends AbstractFrostCard {
             this.addToBot(new VFXAction(new BlizzardEffect(5, AbstractDungeon.getMonsters().shouldFlipVfx()), 1.0F));
         }
         dealAoeDamage(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        frozenAllEnemy();
+        frozenAllEnemy(1);
     }
 
     @Override

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import jaina.modCore.JainaEnums;
 import jaina.powers.FrozenPower;
 import jaina.powers.SpellForcePower;
 
@@ -241,18 +242,18 @@ public abstract class AbstractJainaCard extends CustomCard {
     /**
      * 冰冻所有敌人
      *
+     * @param amount 冻结层数
      * @return 被冻结的敌人数量
      */
-    public int frozenAllEnemy() {
-        int amount = 0;
+    public int frozenAllEnemy(int amount) {
+        int frozenAmt = 0;
         for (AbstractMonster m : (AbstractDungeon.getMonsters()).monsters) {
-            if (!m.isDead && !m.isDying && !m.hasPower(FrozenPower.POWER_ID)) {
-                this.addToBot(new ApplyPowerAction(m, AbstractDungeon.player,
-                        new FrozenPower(m), -1));
-                amount++;
+            if (!m.isDead && !m.isDying) {
+                this.addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new FrozenPower(m, amount)));
+                if (m.intent == JainaEnums.FROZEN) frozenAmt++;
             }
         }
-        return amount;
+        return frozenAmt;
     }
 
     /**
@@ -287,12 +288,12 @@ public abstract class AbstractJainaCard extends CustomCard {
     public void resetDescription(CardStrings strings) {
         rawDescription = strings.DESCRIPTION;
         if (upgraded) {
-            rawDescription = strings.UPGRADE_DESCRIPTION;
+            upgradeDescription(strings);
         }
         initializeDescription();
     }
 
-    //重写了升级方法，升级效果写在limitedUpgrade中即可
+    //重写了升级方法，升级效果写在upp中即可
     @Override
     public void upgrade() {
         if (!this.upgraded) {

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.FireBurstParticleEffect;
 import jaina.modCore.IHelper;
 
@@ -27,6 +28,18 @@ public class CombustionPower extends AbstractJainaPower {
     @Override
     public void onInitialApplication() {
         addToBot(new VFXAction(new FireBurstParticleEffect(owner.hb.x, owner.hb.y)));
+        // 如果目标具有冻结则移除冻结
+        if (owner.hasPower(FrozenPower.POWER_ID)) {
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, owner.getPower(FrozenPower.POWER_ID)));
+        }
+    }
+
+    @Override
+    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        if (power.ID.equals(FrozenPower.POWER_ID)) {
+            // 给予冻结时移除燃烧
+            addToBot(new RemoveSpecificPowerAction(target, target, this));
+        }
     }
 
     // 可以由外部触发

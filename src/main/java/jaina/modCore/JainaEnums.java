@@ -6,7 +6,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class JainaEnums {
+public enum JainaEnums {
+    ;
     @SpireEnum(name = "JAINA")
     public static AbstractCard.CardColor JAINA_COLOR;
     @SpireEnum(name = "JAINA")

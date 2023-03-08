@@ -29,7 +29,7 @@ public class FrostNova extends AbstractFrostCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        frozenAllEnemy();
+        frozenAllEnemy(1);
     }
 
     @Override

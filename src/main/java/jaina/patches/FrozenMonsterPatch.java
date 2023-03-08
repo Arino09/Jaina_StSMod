@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import jaina.powers.FrozenPower;
 import javassist.CannotCompileException;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
@@ -28,7 +29,12 @@ public class FrozenMonsterPatch {
         }
 
         public static SpireReturn<Void> Prefix(AbstractMonster __instance) {
-            return __instance.hasPower("jaina:FrozenPower") ? SpireReturn.Return((Void) null) : SpireReturn.Continue();
+            if (__instance.hasPower(FrozenPower.POWER_ID)) {
+                if (__instance.getPower(FrozenPower.POWER_ID).amount == 3) {
+                    return SpireReturn.Return(null);
+                }
+            }
+            return SpireReturn.Continue();
         }
     }
 
@@ -43,8 +49,10 @@ public class FrozenMonsterPatch {
         public static ExprEditor Instrument() {
             return new ExprEditor() {
                 public void edit(MethodCall m) throws CannotCompileException {
-                    if (m.getClassName().equals("com.megacrit.cardcrawl.monsters.AbstractMonster") && m.getMethodName().equals("takeTurn")) {
-                        m.replace("if (!m.hasPower(jaina.powers.FrozenPower.POWER_ID)) {$_ = $proceed($$);}");
+                    if (m.getClassName().equals("com.megacrit.cardcrawl.monsters.AbstractMonster")
+                            && m.getMethodName().equals("takeTurn")) {
+                        m.replace("if (!m.hasPower(\"jaina:FrozenPower\") || " +
+                                "m.getPower(\"jaina:FrozenPower\").amount != 3) {$_ = $proceed($$);}");
                     }
                 }
             };

@@ -38,7 +38,10 @@
   "jaina:FrozenPower": {
     "NAME": "冻结",
     "DESCRIPTIONS": [
-      "被 #y冻结 而无法行动。 NL #b冻结 效果不能叠加。"
+      "造成的伤害减少 25% 。 NL ",
+      "受到的伤害增加 25% 。 NL ",
+      "被 #y冻结 而无法行动。 NL ",
+      "#y冻结 效果最多叠加3层。"
     ]
   },
   "jaina:IceBlockPower": {

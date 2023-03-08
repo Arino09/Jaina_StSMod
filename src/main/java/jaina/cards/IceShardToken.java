@@ -2,6 +2,7 @@ package jaina.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -10,7 +11,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import jaina.actions.FrozenEnemyAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 import jaina.powers.FrozenPower;
@@ -51,7 +51,7 @@ public class IceShardToken extends CustomCard {
             this.addToBot(new DamageAction(m, new DamageInfo(AbstractDungeon.player, this.damage, this.damageTypeForTurn),
                     AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         } else {
-            this.addToBot(new FrozenEnemyAction(m, p));
+            this.addToBot(new ApplyPowerAction(m, p, new FrozenPower(m, 1)));
         }
     }
 
