@@ -31,7 +31,7 @@
       "freeze"
     ],
     "PROPER_NAME": "Frozen",
-    "DESCRIPTION": "1 stack: #yAttacks deal #b25% less damage. NL 2 stacks: Receive #b25% more damage from #yAttacks. NL 3 stacks: Stilled by ice and may not act. NL This effect stacks up to 3. NL Unfreeze when #yburning."
+    "DESCRIPTION": "A debuff that stacks up to #b3. NL At #b1 stack, the affected creature's attacks deal #b25% less damage. NL At #b2 stacks, the affected creature receives #b25% more damage from attacks. NL At #b3 stacks, the affected creature becomes completely frozen and may not act for one turn. NL Removed if #yBurning is applied to the same creature."
   },
   {
     "NAMES": [
@@ -47,7 +47,7 @@
       "burning"
     ],
     "PROPER_NAME": "Burning",
-    "DESCRIPTION": "#yBurning creatures will lose HP at the end of their turn. NL Removes when apply #yfrozen ."
+    "DESCRIPTION": "#yBurning creatures will lose HP at the end of their turn. NL Removed if #yFrozen is applied to the same creature."
   },
   {
     "NAMES": [

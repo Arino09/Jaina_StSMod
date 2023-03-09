@@ -22,8 +22,8 @@
   "jaina:FrostPotion": {
     "NAME": "Frost Spell Potion",
     "DESCRIPTIONS": [
-      " #yDiscover #b1 #yFrost card. It cost #b0 this turn.",
-      " #yDiscover #b2 #yFrost cards. It cost #b0 this turn."
+      " #yDiscover #b1 #yFrost card. It costs #b0 this turn.",
+      " #yDiscover #b2 #yFrost cards. They cost #b0 this turn."
     ]
   },
   "jaina:FrozenPotion": {

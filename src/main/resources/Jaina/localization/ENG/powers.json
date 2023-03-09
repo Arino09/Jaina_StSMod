@@ -14,7 +14,7 @@
   "jaina:BurningPower": {
     "NAME": "Burning",
     "DESCRIPTIONS": [
-      "At the end of turn, this creature loses #b%d HP."
+      "At the end of its turn, this creature loses #b%d HP. Will be removed if #yFrozen is applied to this creature."
     ]
   },
   "jaina:EvocationPower": {
@@ -26,7 +26,7 @@
   "jaina:FlameWardPower": {
     "NAME": "Flame Ward",
     "DESCRIPTIONS": [
-      "Whenever you are attacked, apply #b%d #yBurning  to the attacker."
+      "Whenever you are attacked, apply #b%d #yBurning to the attacker."
     ]
   },
   "jaina:FrostAffinityPower": {
@@ -38,11 +38,11 @@
   "jaina:FrozenPower": {
     "NAME": "Frozen",
     "DESCRIPTIONS": [
-      "#yAttacks deal #b25% less damage. NL ",
-      "Receive #b25% more damage from #yAttacks. NL ",
-      "Stilled by ice and may not act. NL ",
-      "This effect stacks up to 3. NL ",
-      "Removes when this creature's #yburning."
+      "This creature's attacks deal #b25% less damage. NL ",
+      "This creature receives #b25% more damage from #yAttacks. NL ",
+      "This creature is stilled by ice and may not act. NL ",
+      "This effect may stack up to #b3. NL ",
+      "Will be removed if #yBurning is applied to this creature."
     ]
   },
   "jaina:IceBlockPower": {
@@ -92,7 +92,7 @@
   "jaina:WildfirePower": {
     "NAME": "Wildfire",
     "DESCRIPTIONS": [
-      "Whenever you apply #yBurning , apply #b%d more."
+      "Whenever you apply #yBurning, apply #b%d more."
     ]
   },
   "jaina:WizardArmorPower": {

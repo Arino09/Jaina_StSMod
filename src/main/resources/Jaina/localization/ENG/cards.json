@@ -1,14 +1,14 @@
 {
   "jaina:ApexisBlast": {
     "NAME": "Apexis Blast",
-    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. (Affected by jaina:spell_force. ) NL Draw a card.",
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. (Affected by jaina:Spell_Force. ) NL Draw a card.",
     "EXTENDED_DESCRIPTION": [
-      "(Scry %d.)"
+      " NL (Scry %d.)"
     ]
   },
   "jaina:ArcaneBlast": {
     "NAME": "Arcane Blast",
-    "DESCRIPTION": "Deal !D! damage. NL jaina:spell_force affects this card !M! times."
+    "DESCRIPTION": "Deal !D! damage. NL jaina:Spell_Force affects this card !M! times."
   },
   "jaina:ArcaneBreath": {
     "NAME": "Arcane Breath",
@@ -16,7 +16,7 @@
   },
   "jaina:ArcaneBrilliance": {
     "NAME": "Arcane Brilliance",
-    "DESCRIPTION": "Gain !M! jaina:spell_force. NL At the end of your turn, lose !M! jaina:spell_force."
+    "DESCRIPTION": "Gain !M! jaina:Spell_Force. NL At the end of your turn, lose !M! jaina:Spell_Force."
   },
   "jaina:ArcaneExplosion": {
     "NAME": "Arcane Explosion",
@@ -46,7 +46,7 @@
   },
   "jaina:Blizzard": {
     "NAME": "Blizzard",
-    "DESCRIPTION": "Deal !D! damage and apply !M! jaina:frozen to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage and apply !M! jaina:Frozen to ALL enemies."
   },
   "jaina:BookOfSpecters": {
     "NAME": "Book of Specters",
@@ -54,7 +54,7 @@
   },
   "jaina:BreathOfSindragosa": {
     "NAME": "Breath of Sindragosa",
-    "DESCRIPTION": "Deal !D! damage and apply !M! jaina:frozen to a random enemy."
+    "DESCRIPTION": "Deal !D! damage and apply !M! jaina:Frozen to a random enemy."
   },
   "jaina:CabalistsTome": {
     "NAME": "Cabalist's Tome",
@@ -70,7 +70,7 @@
   },
   "jaina:ConeOfCold": {
     "NAME": "Cone of Cold",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !B! Block for every jaina:frozen enemy damaged this way."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !B! B
   },
   "jaina:ConjureManaBiscuit": {
     "NAME": "Conjure Mana Biscuit",
@@ -96,8 +96,8 @@
   },
   "jaina:CramSession": {
     "NAME": "Cram Session",
-    "DESCRIPTION": "Draw !M! card. NL (Affected by jaina:spell_force. )",
-    "UPGRADE_DESCRIPTION": "Draw !M! card. NL (Affected by jaina:spell_force. )",
+    "DESCRIPTION": "Draw !M! card. NL (Affected by jaina:Spell_Force. )",
+    "UPGRADE_DESCRIPTION": "Draw !M! card. NL (Affected by jaina:Spell_Force. )",
     "EXTENDED_DESCRIPTION": [
       "(Draw %d cards.)",
       "(Draw %d card.)"
@@ -109,7 +109,7 @@
   },
   "jaina:DeepFreeze": {
     "NAME": "Deep Freeze",
-    "DESCRIPTION": "Apply 3 jaina:frozen to ALL enemies. NL Whenever you apply 1 jaina:frozen to an enemy, gain [E] and draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Apply 3 jaina:Frozen to ALL enemies. NL For each enemy that is completely jaina:Frozen this way, gain [E] and draw 1 card. NL Exhaust."
   },
   "jaina:Defend": {
     "NAME": "Defend",
@@ -121,7 +121,7 @@
   },
   "jaina:DragonsBreath": {
     "NAME": "Dragon's Breath",
-    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if your hand has only jaina:Fire."
+    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if your hand has only jaina:Fire cards."
   },
   "jaina:DragonsFury": {
     "NAME": "Dragon's Fury",
@@ -137,11 +137,11 @@
   },
   "jaina:Evocation": {
     "NAME": "Evocation",
-    "DESCRIPTION": "At the start of your turn, gain !M! jaina:spell_force."
+    "DESCRIPTION": "At the start of your turn, gain !M! jaina:Spell_Force."
   },
   "jaina:ExplosiveRunes": {
     "NAME": "Explosive Runes",
-    "DESCRIPTION": "The next time you are attacked, deal !D! damage to the attacker and add this card into your discard pile."
+    "DESCRIPTION": "The next time you are attacked, deal !D! damage to the attacker and add a copy of this card to your discard pile."
   },
   "jaina:Fireball": {
     "NAME": "Fireball",
@@ -158,7 +158,7 @@
   },
   "jaina:FlameLance": {
     "NAME": "Flame Lance",
-    "DESCRIPTION": "Deal !D! damage. NL If this deals locked damage, apply !M! jaina:Burning as that much."
+    "DESCRIPTION": "Deal !D! damage. NL Apply jaina:Burning equal to blocked damage."
   },
   "jaina:FlameWard": {
     "NAME": "Flame Ward",
@@ -174,14 +174,14 @@
   },
   "jaina:FontOfPower": {
     "NAME": "Font of Power",
-    "DESCRIPTION": "Gain !M! [E] . NL (Affected by jaina:spell_force. ) NL Exhaust.",
+    "DESCRIPTION": "Gain !M! [E] . NL (Affected by jaina:Spell_Force. ) NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "(Gain %d [E] .)"
+      " NL (Gain %d [E] .)"
     ]
   },
   "jaina:ForbiddenFlame": {
     "NAME": "Forbidden Flame",
-    "DESCRIPTION": "Deal X times !D! damage. NL Apply X times !M! jaina:Burning."
+    "DESCRIPTION": "Deal !D!X damage. NL Apply !M!X jaina:Burning."
   },
   "jaina:FrostAffinity": {
     "NAME": "Frost Affinity",
@@ -208,9 +208,9 @@
   },
   "jaina:FrozenTouch": {
     "NAME": "Frozen Touch",
-    "DESCRIPTION": "Deal !D! damage and jaina:freeze an enemy. Exhausts after being played !M! times. NL Return to your hand after played.",
+    "DESCRIPTION": "Deal !D! damage and apply 1 jaina:Frozen. Returns to your hand after being played. NL Exhausts after being played !M! times.",
     "EXTENDED_DESCRIPTION": [
-      "(%d uses left.)"
+      " NL (%d uses left.)"
     ]
   },
   "jaina:GreaterArcaneMissiles": {
@@ -231,15 +231,15 @@
   },
   "jaina:IceLance": {
     "NAME": "Ice Lance",
-    "DESCRIPTION": "Deal !D! damage to a jaina:frozen enemy, else apply !M! jaina:Frozen to it and exhaust."
+    "DESCRIPTION": "Deal !D! damage to a jaina:Frozen enemy. If the enemy isn't already jaina:Frozen, instead apply !M! jaina:Frozen and exhaust."
   },
   "jaina:IceShard": {
     "NAME": "Ice Shard",
-    "DESCRIPTION": "Add !M! *Ice *Lance into your hand. NL Exhaust."
+    "DESCRIPTION": "Add !M! *Ice *Lances into your hand. NL Exhaust."
   },
   "jaina:IceShardToken": {
     "NAME": "Shard",
-    "DESCRIPTION": "Deal !D! damage to a jaina:frozen enemy. If the enemy is not jaina:frozen, jaina:freeze it instead. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a jaina:Frozen enemy. If the enemy is not jaina:Frozen, apply 1 jaina:Frozen instead. NL Exhaust."
   },
   "jaina:IceWall": {
     "NAME": "Ice Wall",
@@ -247,7 +247,7 @@
   },
   "jaina:Icicle": {
     "NAME": "Icicle",
-    "DESCRIPTION": "Deal !D! damage. NL Draw a card if the enemy is jaina:frozen."
+    "DESCRIPTION": "Deal !D! damage. NL Draw a card if the enemy is jaina:Frozen."
   },
   "jaina:Ignite": {
     "NAME": "Ignite",
@@ -287,8 +287,8 @@
   },
   "jaina:PrimordialStudies": {
     "NAME": "Primordial Studies",
-    "DESCRIPTION": "Gain !M! jaina:spell_force.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! jaina:spell_force."
+    "DESCRIPTION": "Gain !M! jaina:Spell_Force.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! jaina:Spell_Force."
   },
   "jaina:Pyroblast": {
     "NAME": "Pyroblast",
@@ -296,11 +296,11 @@
   },
   "jaina:RayOfFrost": {
     "NAME": "Ray of Frost",
-    "DESCRIPTION": "Deal !D! damage. NL If the target is jaina:frozen, apply !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL If the target is jaina:Frozen, apply !M! Vulnerable."
   },
   "jaina:Scorch": {
     "NAME": "Scorch",
-    "DESCRIPTION": "Apply !M! jaina:Burning. NL Increase the jaina:Burning of ALL *Scorches by 2 this combat."
+    "DESCRIPTION": "Apply !M! jaina:Burning. NL Increase jaina:Burning from ALL *Scorches by 2 this combat."
   },
   "jaina:ScrollOfWonder": {
     "NAME": "Scroll of Wonder",
@@ -348,7 +348,7 @@
   },
   "jaina:SpringWater": {
     "NAME": "Spring Water",
-    "DESCRIPTION": "Draw !M! cards. NL Whenever you draw a Skill, gain [E] ."
+    "DESCRIPTION": "Draw !M! cards. NL For each Skill drawn, gain [E] ."
   },
   "jaina:Strike": {
     "NAME": "Strike",
@@ -361,7 +361,7 @@
   },
   "jaina:TomeOfIntellect": {
     "NAME": "Tome of Intellect",
-    "DESCRIPTION": "Gain 1 jaina:spell_force for every !M! cards in your draw pile. NL Exhaust."
+    "DESCRIPTION": "Gain 1 jaina:Spell_Force for every !M! cards in your draw pile. NL Exhaust."
   },
   "jaina:Vaporize": {
     "NAME": "Vaporize",
@@ -377,6 +377,6 @@
   },
   "jaina:WizardArmor": {
     "NAME": "Wizard Armor",
-    "DESCRIPTION": "At the end of your turn, gain !M! Block. (Affected by jaina:spell_force. )"
+    "DESCRIPTION": "At the end of your turn, gain !M! Block. (Affected by jaina:Spell_Force. )"
   }
 }
