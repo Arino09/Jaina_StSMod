@@ -21,17 +21,17 @@
       "fire"
     ],
     "PROPER_NAME": "Fire",
-    "DESCRIPTION": "Fire spells generally deal high damage and may inflict #yCombustion."
+    "DESCRIPTION": "Fire spells generally deal high damage and may inflict #yBurning."
   },
   {
     "NAMES": [
       "Frozen",
       "frozen",
       "Freeze",
-      "freeze",
+      "freeze"
     ],
     "PROPER_NAME": "Frozen",
-    "DESCRIPTION": "A #bFrozen creature may not act. #bFrozen can NOT stack."
+    "DESCRIPTION": "A debuff that stacks up to #b3. NL At #b1 stack, the affected creature's attacks deal #b25% less damage. NL At #b2 stacks, the affected creature receives #b25% more damage from attacks. NL At #b3 stacks, the affected creature becomes completely frozen and may not act for one turn. NL Removed if #yBurning is applied to the same creature."
   },
   {
     "NAMES": [
@@ -43,11 +43,11 @@
   },
   {
     "NAMES": [
-      "Combustion",
-      "combustion"
+      "Burning",
+      "burning"
     ],
-    "PROPER_NAME": "Combustion",
-    "DESCRIPTION": "#rCombusting creatures will lose HP at the end of their turn."
+    "PROPER_NAME": "Burning",
+    "DESCRIPTION": "#yBurning creatures will lose HP at the end of their turn. NL Removed if #yFrozen is applied to the same creature."
   },
   {
     "NAMES": [
@@ -80,13 +80,5 @@
     ],
     "PROPER_NAME": "Discover",
     "DESCRIPTION": "Choose 1 of 3 cards to add into your hand."
-  },
-  {
-    "NAMES": [
-      "Burnt",
-      "burnt"
-    ],
-    "PROPER_NAME": "Burnt",
-    "DESCRIPTION": "Add a number of #rBurns to your discard pile."
   }
 ]

@@ -11,34 +11,38 @@
       "Gain %d Block whenever you play a #bFrost card."
     ]
   },
-  "jaina:CombustionPower": {
-    "NAME": "Combustion",
+  "jaina:BurningPower": {
+    "NAME": "Burning",
     "DESCRIPTIONS": [
-      "At the end of turn, this creature loses #b%d HP."
+      "At the end of its turn, this creature loses #b%d HP. Will be removed if #yFrozen is applied to this creature."
     ]
   },
   "jaina:EvocationPower": {
     "NAME": "Evocation",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b%d #ySpelldamage."
+      "At the start of your turn, gain #b%d #ySpell #yForce."
     ]
   },
   "jaina:FlameWardPower": {
     "NAME": "Flame Ward",
     "DESCRIPTIONS": [
-      "Whenever you are attacked, apply %d #rCombustion to the attacker."
+      "Whenever you are attacked, apply #b%d #yBurning to the attacker."
     ]
   },
   "jaina:FrostAffinityPower": {
     "NAME": "Frost Affinity",
     "DESCRIPTIONS": [
-      "The next #bFrost card you play costs #b2 less this turn."
+      "The next #yFrost card you play costs #b2 less this turn."
     ]
   },
   "jaina:FrozenPower": {
     "NAME": "Frozen",
     "DESCRIPTIONS": [
-      "Stilled by ice and may not act. This effect can NOT stack."
+      "This creature's attacks deal #b25% less damage. NL ",
+      "This creature receives #b25% more damage from #yAttacks. NL ",
+      "This creature is stilled by ice and may not act. NL ",
+      "This effect may stack up to #b3. NL ",
+      "Will be removed if #yBurning is applied to this creature."
     ]
   },
   "jaina:IceBlockPower": {
@@ -54,7 +58,7 @@
       "The first %d cards you play each turn cost 0."
     ]
   },
-  "jaina:LoseSpellDamagePower": {
+  "jaina:LoseSpellForcePower": {
     "NAME": "Spell Force Down",
     "DESCRIPTIONS": [
       "At the end of your turn, lose #b%d #ySpell #yForce."
@@ -64,10 +68,10 @@
     "NAME": "Mana Bind",
     "DESCRIPTIONS": [
       "Your next #yArcane card is played twice this turn.",
-      "Your next #yArcane card is played twice this turn."
+      "Your next #b%d #yArcane cards are played twice this turn."
     ]
   },
-  "jaina:SpellDamagePower": {
+  "jaina:SpellForcePower": {
     "NAME": "Spell Force",
     "DESCRIPTIONS": [
       "Increases the effect of certain spell cards by #b%d."
@@ -82,16 +86,13 @@
   "jaina:VaporizePower": {
     "NAME": "Vaporize",
     "DESCRIPTIONS": [
-      "Whenever you are attacked, deal that much damage to the attacker. Reduced by #b1 for each incoming hit.",
-      "Vaporize+"
+      "Whenever you are attacked, deal that much damage to the attacker. Reduced by #b1 for each incoming hit."
     ]
   },
   "jaina:WildfirePower": {
     "NAME": "Wildfire",
     "DESCRIPTIONS": [
-      "Whenever you apply #rCombustion, apply #b3 more.",
-      "Wildfire+",
-      "Whenever you apply #rCombustion, apply #b2x as much."
+      "Whenever you apply #yBurning, apply #b%d more."
     ]
   },
   "jaina:WizardArmorPower": {
