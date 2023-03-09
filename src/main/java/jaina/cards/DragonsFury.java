@@ -20,18 +20,19 @@ public class DragonsFury extends AbstractFireCard {
     public DragonsFury() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        setDamage(8);
+        setDamage(4);
+        setMagicNumber(4);
     }
 
     @Override
     public void upp() {
         upgradeDamage(2);
-        upgradeDescription(CARD_STRINGS);
+        upgradeMagicNumber(2);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DragonsFuryAction(p, this.damage, freeToPlayOnce, energyOnUse));
+        addToBot(new DragonsFuryAction(p, this.damage, this.magicNumber, freeToPlayOnce, energyOnUse));
     }
 
     @Override

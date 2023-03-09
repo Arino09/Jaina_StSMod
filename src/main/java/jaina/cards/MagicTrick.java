@@ -33,17 +33,15 @@ public class MagicTrick extends AbstractArcaneCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         ArrayList<AbstractCard> cardRng = new ArrayList<>();
         for (AbstractCard c : CardLibrary.getCardList(JainaEnums.JAINA_LIBRARY)) {
             //  发现一张耗费为1的非稀有卡
             boolean condition = c.rarity.equals(CardRarity.COMMON) || c.rarity.equals(CardRarity.UNCOMMON);
-            //  发现一张耗费为1的非普通卡
-            if (upgraded) condition = c.rarity.equals(CardRarity.UNCOMMON) || c.rarity.equals(CardRarity.RARE);
-            if (!c.hasTag(AbstractCard.CardTags.HEALING) && condition && c.cost == 1)
+            if (!c.hasTag(AbstractCard.CardTags.HEALING) && condition && c.cost == 1) {
                 cardRng.add(c);
+            }
         }
-        addToBot(new JainaDiscoveryAction(cardRng, true));
+        addToBot(new JainaDiscoveryAction(cardRng, true, true));
     }
 
     @Override

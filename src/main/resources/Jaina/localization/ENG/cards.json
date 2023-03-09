@@ -70,7 +70,7 @@
   },
   "jaina:ConeOfCold": {
     "NAME": "Cone of Cold",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !B! Block for every jaina:Frozen enemy damaged this way."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !B! B
   },
   "jaina:ConjureManaBiscuit": {
     "NAME": "Conjure Mana Biscuit",
@@ -208,7 +208,7 @@
   },
   "jaina:FrozenTouch": {
     "NAME": "Frozen Touch",
-    "DESCRIPTION": "Deal !D! damage and apply jaina:Frozen. Returns to your hand after being played. NL Exhausts after being played !M! times.",
+    "DESCRIPTION": "Deal !D! damage and apply 1 jaina:Frozen. Returns to your hand after being played. NL Exhausts after being played !M! times.",
     "EXTENDED_DESCRIPTION": [
       " NL (%d uses left.)"
     ]

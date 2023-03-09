@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.LoseSpellDamagePower;
-import jaina.powers.SpellDamagePower;
+import jaina.powers.SpellForcePower;
+import jaina.powers.unique.LoseSpellForcePower;
 
 
 public class ArcaneBrilliance extends AbstractArcaneCard {
@@ -31,8 +31,8 @@ public class ArcaneBrilliance extends AbstractArcaneCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new SpellDamagePower(p, magicNumber));
-        gainPower(new LoseSpellDamagePower(p, magicNumber));
+        gainPower(new SpellForcePower(p, magicNumber));
+        gainPower(new LoseSpellForcePower(p, magicNumber));
     }
 
     @Override

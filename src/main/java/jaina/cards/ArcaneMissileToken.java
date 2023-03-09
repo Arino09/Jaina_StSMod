@@ -28,7 +28,7 @@ public class ArcaneMissileToken extends AbstractArcaneCard {
 
     @Override
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
         this.name = CARD_STRINGS.UPGRADE_DESCRIPTION;
     }
 

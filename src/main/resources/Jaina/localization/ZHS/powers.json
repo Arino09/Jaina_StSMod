@@ -2,16 +2,16 @@
   "jaina:ArcaneGatePower": {
     "NAME": "奥术之门",
     "DESCRIPTIONS": [
-      "打出 #y奥术 牌时造成 #b%d 点伤害。"
+      "每次打出 #y奥术 牌时造成 #b%d 点伤害。"
     ]
   },
   "jaina:ArcticArmorPower": {
     "NAME": "寒甲术",
     "DESCRIPTIONS": [
-      "打出 #y冰霜 牌时获得 #b%d 点 #y格挡 。"
+      "每次打出 #y冰霜 牌时获得 #b%d 点 #y格挡 。"
     ]
   },
-  "jaina:CombustionPower": {
+  "jaina:BurningPower": {
     "NAME": "燃烧",
     "DESCRIPTIONS": [
       "回合结束时失去 #r%d 点生命值。"
@@ -20,7 +20,7 @@
   "jaina:EvocationPower": {
     "NAME": "法力唤醒",
     "DESCRIPTIONS": [
-      "回合开始时 #y法术伤害 + #b%d 。"
+      "回合开始时获得 #b%d 层 #y法术强度 。"
     ]
   },
   "jaina:FlameWardPower": {
@@ -38,13 +38,17 @@
   "jaina:FrozenPower": {
     "NAME": "冻结",
     "DESCRIPTIONS": [
-      "被 #y冻结 的角色失去他的下一次行动机会。 NL #b冻结 效果不能叠加。"
+      "#y攻击 造成的伤害减少 #b25% 。 NL ",
+      "从 #y攻击 受到的伤害增加 #b25% 。 NL ",
+      "被 #y冻结 而无法行动。 NL ",
+      "#y冻结 效果最多叠加3层。 NL",
+      "受到 #y燃烧 时移除。"
     ]
   },
   "jaina:IceBlockPower": {
     "NAME": "寒冰屏障",
     "DESCRIPTIONS": [
-      "防止你受到的下一次致命攻击。"
+      "防止你受到的下一次致命伤害。"
     ]
   },
   "jaina:IncantersPower": {
@@ -54,10 +58,10 @@
       "每回合打出的前 #b%d 张法术牌耗能变为 #b0 。"
     ]
   },
-  "jaina:LoseSpellDamagePower": {
-    "NAME": "法术伤害下降",
+  "jaina:LoseSpellForcePower": {
+    "NAME": "法术强度下降",
     "DESCRIPTIONS": [
-      "回合结束时 #y法术伤害 - #b%d 。"
+      "回合结束时失去 #b%d 层 #y法术强度 。"
     ]
   },
   "jaina:ManaBindPower": {
@@ -67,10 +71,10 @@
       "在这个回合，你的下 #b%d 张 #y奥术 牌打出两次。"
     ]
   },
-  "jaina:SpellDamagePower": {
-    "NAME": "法术伤害",
+  "jaina:SpellForcePower": {
+    "NAME": "法术强度",
     "DESCRIPTIONS": [
-      "#y法术伤害 + #b%d 。"
+      "法术的效果提高 #b%d 点。"
     ]
   },
   "jaina:SplittingImagePower": {
@@ -82,16 +86,13 @@
   "jaina:VaporizePower": {
     "NAME": "蒸发",
     "DESCRIPTIONS": [
-      "受到攻击时对攻击者造成相同的伤害。 NL 受到一次攻击仅触发一次。",
-      "蒸发+"
+      "受到攻击时对攻击者造成相同的伤害。 NL 每次受到攻击减少 #b1 层。"
     ]
   },
   "jaina:WildfirePower": {
     "NAME": "野火",
     "DESCRIPTIONS": [
-      "额外给予 #b3 层 #y燃烧 。",
-      "野火+",
-      "给予双倍的 #y燃烧 。"
+      "额外给予 #b%d 层 #y燃烧 。"
     ]
   },
   "jaina:WizardArmorPower": {

@@ -23,7 +23,7 @@ public class ManaBiscuit extends AbstractArcaneCard {
     public ManaBiscuit() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, CardColor.COLORLESS,
                 CardRarity.SPECIAL, CardTarget.NONE);
-        setMagicNumber(2);
+        setMagicNumber(1);
         this.exhaust = true;
         this.selfRetain = true;
     }

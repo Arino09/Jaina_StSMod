@@ -19,17 +19,18 @@ public class Wildfire extends AbstractFireCard {
 
     public Wildfire() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.SELF);
+                CardRarity.UNCOMMON, CardTarget.SELF);
+        setMagicNumber(3);
     }
 
     @Override
     public void upp() {
-        upgradeDescription(CARD_STRINGS);
+        upgradeMagicNumber(2);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new WildfirePower(p, upgraded));
+        gainPower(new WildfirePower(p, magicNumber));
     }
 
     @Override

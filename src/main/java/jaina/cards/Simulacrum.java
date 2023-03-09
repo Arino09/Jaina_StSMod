@@ -21,6 +21,7 @@ public class Simulacrum extends AbstractArcaneCard {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.NONE);
         setMagicNumber(1);
+        this.exhaust = true;
     }
 
     @Override

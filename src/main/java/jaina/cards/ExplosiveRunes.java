@@ -1,7 +1,5 @@
 package jaina.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,6 +7,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
+import jaina.powers.unique.ExplosiveRunesPower;
 
 
 public class ExplosiveRunes extends AbstractFireCard {
@@ -19,28 +18,19 @@ public class ExplosiveRunes extends AbstractFireCard {
     private static final int COST = 1;
 
     public ExplosiveRunes() {
-        super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.ENEMY);
-        setDamage(8);
+        super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
+                CardRarity.UNCOMMON, CardTarget.NONE);
+        setDamage(10);
     }
 
     @Override
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(5);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m.hasPower("Minion")) {
-            dealDamage(m, 2 * this.damage, AttackEffect.FIRE);
-            int overflow = m.currentHealth;
-            if (m.isDead) {
-                overflow = 2 * this.damage - overflow;
-                addToBot(new DamageAllEnemiesAction(p, overflow, damageTypeForTurn, AttackEffect.FIRE));
-            }
-        } else {
-            dealDamage(m, AttackEffect.FIRE);
-        }
+        gainPower(new ExplosiveRunesPower(p, damage));
     }
 
     @Override

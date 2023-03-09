@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import jaina.modCore.IHelper;
 import jaina.powers.AbstractJainaPower;
-import jaina.powers.SpellDamagePower;
+import jaina.powers.SpellForcePower;
 
 public class EvocationPower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("EvocationPower");
@@ -24,7 +24,7 @@ public class EvocationPower extends AbstractJainaPower {
     @Override
     public void atStartOfTurn() {
         flash();
-        addToBot(new ApplyPowerAction(owner, owner, new SpellDamagePower(owner, amount)));
+        addToBot(new ApplyPowerAction(owner, owner, new SpellForcePower(owner, amount)));
     }
 
     @Override

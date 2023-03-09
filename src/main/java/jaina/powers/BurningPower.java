@@ -8,16 +8,17 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.FireBurstParticleEffect;
 import jaina.modCore.IHelper;
 
-public class CombustionPower extends AbstractJainaPower {
-    public static final String POWER_ID = IHelper.makeID("CombustionPower");
+public class BurningPower extends AbstractJainaPower {
+    public static final String POWER_ID = IHelper.makeID("BurningPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public CombustionPower(AbstractCreature owner, int amount) {
+    public BurningPower(AbstractCreature owner, int amount) {
         super(POWER_ID, false, NAME, PowerType.DEBUFF);
         this.owner = owner;
         this.amount = amount;
@@ -27,6 +28,10 @@ public class CombustionPower extends AbstractJainaPower {
     @Override
     public void onInitialApplication() {
         addToBot(new VFXAction(new FireBurstParticleEffect(owner.hb.x, owner.hb.y)));
+        // 如果目标具有冻结则移除冻结
+        if (owner.hasPower(FrozenPower.POWER_ID)) {
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, owner.getPower(FrozenPower.POWER_ID)));
+        }
     }
 
     // 可以由外部触发

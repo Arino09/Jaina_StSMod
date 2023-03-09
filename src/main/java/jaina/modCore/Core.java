@@ -47,26 +47,40 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     private static final String BIG_ORB = "jaina/img/char/card_orb.png";
     // 小能量（用于描述等）
     private static final String SMALL_ORB = "jaina/img/char/small_orb.png";
-    // 解锁内容设置
-    public static boolean unlockEverything = false;
+    public static final boolean unlockEverything = false;
 
     public Core() {
         BaseMod.subscribe(this);
         BaseMod.addColor(JainaEnums.JAINA_COLOR, COLOR, COLOR, COLOR, COLOR, COLOR, COLOR, COLOR,
-                BG_ATTACK_512, BG_SKILL_512, BG_POWER_512, ENERGY_ORB, BG_ATTACK_1024, BG_SKILL_1024, BG_POWER_1024, BIG_ORB, SMALL_ORB);
+                BG_ATTACK_512, BG_SKILL_512, BG_POWER_512, ENERGY_ORB, BG_ATTACK_1024,
+                BG_SKILL_1024, BG_POWER_1024, BIG_ORB, SMALL_ORB);
     }
 
     public static void initialize() {
         new Core();
     }
 
-    // 解锁卡牌
-    private static void registerUnlockCardBundle(AbstractPlayer.PlayerClass player, int index, String card1, String card2, String card3) {
-        CustomUnlockBundle bundle = new CustomUnlockBundle(card1, card2, card3);
+    public static void registerUnlockSuiteAlternating(String bundle1card1, String bundle1card2, String bundle1card3,
+                                                      String bundle2relic1, String bundle2relic2, String bundle2relic3,
+                                                      String bundle3card1, String bundle3card2, String bundle3card3,
+                                                      String bundle4relic1, String bundle4relic2, String bundle4relic3,
+                                                      String bundle5card1, String bundle5card2, String bundle5card3,
+                                                      AbstractPlayer.PlayerClass player) {
+
+        registerUnlockCardBundle(player, 0, bundle1card1, bundle1card2, bundle1card3);
+        registerUnlockRelicBundle(player, 1, bundle2relic1, bundle2relic2, bundle2relic3);
+        registerUnlockCardBundle(player, 2, bundle3card1, bundle3card2, bundle3card3);
+        registerUnlockRelicBundle(player, 3, bundle4relic1, bundle4relic2, bundle4relic3);
+        registerUnlockCardBundle(player, 4, bundle5card1, bundle5card2, bundle5card3);
+    }
+
+    private static void registerUnlockCardBundle(AbstractPlayer.PlayerClass player, int index,
+                                                 String card1, String card2, String card3) {
+        CustomUnlockBundle currentBundle = new CustomUnlockBundle(card1, card2, card3);
         UnlockTracker.addCard(card1);
         UnlockTracker.addCard(card2);
         UnlockTracker.addCard(card3);
-        BaseMod.addUnlockBundle(bundle, player, index);
+        BaseMod.addUnlockBundle(currentBundle, player, index);
         if (unlockEverything || UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index + 1) {
             UnlockTracker.unlockCard(card1);
             UnlockTracker.unlockCard(card2);
@@ -74,13 +88,13 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
         }
     }
 
-    // 解锁遗物
-    private static void registerUnlockRelicBundle(AbstractPlayer.PlayerClass player, int index, String relic1, String relic2, String relic3) {
-        CustomUnlockBundle bundle = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC, relic1, relic2, relic3);
+    private static void registerUnlockRelicBundle(AbstractPlayer.PlayerClass player, int index,
+                                                  String relic1, String relic2, String relic3) {
+        CustomUnlockBundle currentBundle = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC, relic1, relic2, relic3);
         UnlockTracker.addRelic(relic1);
         UnlockTracker.addRelic(relic2);
         UnlockTracker.addRelic(relic3);
-        BaseMod.addUnlockBundle(bundle, player, index);
+        BaseMod.addUnlockBundle(currentBundle, player, index);
         if (unlockEverything || UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index) {
             while (UnlockTracker.lockedRelics.contains(relic1))
                 UnlockTracker.lockedRelics.remove(relic1);
@@ -98,7 +112,8 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     @Override
     public void receiveEditCharacters() {
         // 添加角色
-        BaseMod.addCharacter(new JainaCharacter(CardCrawlGame.playerName), CHAR_BUTTON, CHAR_PORTRAIT, JainaEnums.JAINA_CLASS);
+        BaseMod.addCharacter(new JainaCharacter(CardCrawlGame.playerName),
+                CHAR_BUTTON, CHAR_PORTRAIT, JainaEnums.JAINA_CLASS);
         addPotions();
     }
 
@@ -130,16 +145,6 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
                 });
     }
 
-    // 设置解锁内容
-    @Override
-    public void receiveSetUnlocks() {
-        registerUnlockCardBundle(JainaEnums.JAINA_CLASS, 0, IceLance.ID, BreathOfSindragosa.ID, IceShard.ID);
-        registerUnlockRelicBundle(JainaEnums.JAINA_CLASS, 1, ArcaniteCrystal.ID, RubySpellstone.ID, RobesOfGaudiness.ID);
-        registerUnlockCardBundle(JainaEnums.JAINA_CLASS, 2, TomeOfIntellect.ID, CabalistsTome.ID, ShiftingScroll.ID);
-        registerUnlockRelicBundle(JainaEnums.JAINA_CLASS, 3, AscendantScroll.ID, Aluneth.ID, BookOfWonders.ID);
-        registerUnlockCardBundle(JainaEnums.JAINA_CLASS, 4, FontOfPower.ID, Evocation.ID, Wish.ID);
-    }
-
     // 添加药水
     private void addPotions() {
         System.out.println("Adding Jaina potions: ");
@@ -162,7 +167,7 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
             lang = "ZHS";
         }
         BaseMod.loadCustomStringsFile(CharacterStrings.class, "jaina/localization/" + lang + "/character.json");
-        BaseMod.loadCustomStringsFile(CardStrings.class, "jaina/localization/" + lang + "/cards.json"); // 加载相应语言的卡牌本地化内容
+        BaseMod.loadCustomStringsFile(CardStrings.class, "jaina/localization/" + lang + "/cards.json");
         BaseMod.loadCustomStringsFile(RelicStrings.class, "jaina/localization/" + lang + "/relics.json");
         BaseMod.loadCustomStringsFile(PowerStrings.class, "jaina/localization/" + lang + "/powers.json");
         BaseMod.loadCustomStringsFile(PotionStrings.class, "jaina/localization/" + lang + "/potions.json");
@@ -193,7 +198,11 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
 
     @Override
     public void receiveAddAudio() {
-        BaseMod.addAudio(IHelper.makeID("select"), "jaina/sound/Select_voice.ogg");
+        if (Settings.language == Settings.GameLanguage.ZHS) {
+            BaseMod.addAudio(IHelper.makeID("pick"), "jaina/sound/pick_zhs.ogg");
+        } else {
+            BaseMod.addAudio(IHelper.makeID("pick"), "jaina/sound/pick_eng.ogg");
+        }
         // Beta测试阶段前不使用
 //        BaseMod.addAudio(IHelper.makeID("ArcaneFizzle"), "jaina/sound/Arcane_Fizzle.ogg");
 //        BaseMod.addAudio(IHelper.makeID("ArcaneImpact"), "jaina/sound/Arcane_Impact.ogg");
@@ -252,7 +261,14 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
 //        BaseMod.addAudio(IHelper.makeID("Secret_Birth"), "jaina/sound/Secret_Birth.ogg");
 //        BaseMod.addAudio(IHelper.makeID("Secret_Trigger"), "jaina/sound/Secret_Trigger.ogg");
 //        BaseMod.addAudio(IHelper.makeID("UnstablePortal"), "jaina/sound/UnstablePortal.ogg");
-
     }
 
+    @Override
+    public void receiveSetUnlocks() {
+        registerUnlockSuiteAlternating(IceLance.ID, BreathOfSindragosa.ID, IceShard.ID,
+                ArcaniteCrystal.ID, RubySpellstone.ID, RobesOfGaudiness.ID,
+                TomeOfIntellect.ID, CabalistsTome.ID, ShiftingScroll.ID,
+                AscendantScroll.ID, Aluneth.ID, BookOfWonders.ID,
+                FontOfPower.ID, Evocation.ID, Wish.ID, JainaEnums.JAINA_CLASS);
+    }
 }

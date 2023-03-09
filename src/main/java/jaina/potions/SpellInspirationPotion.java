@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import jaina.modCore.Core;
 import jaina.modCore.IHelper;
-import jaina.powers.LoseSpellDamagePower;
-import jaina.powers.SpellDamagePower;
+import jaina.powers.SpellForcePower;
+import jaina.powers.unique.LoseSpellForcePower;
 
 public class SpellInspirationPotion extends AbstractPotion {
 
@@ -32,9 +32,9 @@ public class SpellInspirationPotion extends AbstractPotion {
     @Override
     public void use(AbstractCreature abstractCreature) {
         this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new SpellDamagePower(AbstractDungeon.player, potency)));
+                new SpellForcePower(AbstractDungeon.player, potency)));
         this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new LoseSpellDamagePower(AbstractDungeon.player, potency)));
+                new LoseSpellForcePower(AbstractDungeon.player, potency)));
     }
 
     @Override
@@ -44,8 +44,8 @@ public class SpellInspirationPotion extends AbstractPotion {
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(
-                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.localizeKeywordID("Spelldamage"))),
-                BaseMod.getKeywordDescription(IHelper.localizeKeywordID("Spelldamage"))
+                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.localizeKeywordID("spell_force"))),
+                BaseMod.getKeywordDescription(IHelper.localizeKeywordID("spell_force"))
         ));
     }
 

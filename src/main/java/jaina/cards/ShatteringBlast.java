@@ -21,7 +21,7 @@ public class ShatteringBlast extends AbstractFrostCard {
 
     public ShatteringBlast() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+                CardRarity.COMMON, CardTarget.ALL_ENEMY);
         setDamage(8);
     }
 

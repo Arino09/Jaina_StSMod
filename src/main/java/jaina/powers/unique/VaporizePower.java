@@ -13,26 +13,20 @@ import jaina.powers.AbstractJainaPower;
 
 public class VaporizePower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("VaporizePower");
-    public static final String POWER_ID_P = IHelper.makeID("VaporizePowerP");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private final boolean upgraded;
 
     public VaporizePower(AbstractCreature owner, boolean upgraded) {
-        super(upgraded ? POWER_ID_P : POWER_ID, false, NAME, PowerType.BUFF);
+        super(POWER_ID, false, NAME, PowerType.BUFF);
         this.owner = owner;
         this.amount = 1;
-        this.upgraded = upgraded;
         updateDescription();
     }
 
     @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0];
-        if (upgraded) {
-            this.name = DESCRIPTIONS[1];
-        }
     }
 
     @Override

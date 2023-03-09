@@ -12,15 +12,13 @@ import jaina.modCore.JainaEnums;
 
 public class WishAction extends AbstractGameAction {
     private final AbstractPlayer p;
-    private final boolean upgraded;
 
-    public WishAction(int amount, boolean upgraded) {
+    public WishAction(int amount) {
         p = AbstractDungeon.player;
         setValues(p, AbstractDungeon.player);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_MED;
         this.amount = amount;
-        this.upgraded = upgraded;
     }
 
     @Override
@@ -30,9 +28,6 @@ public class WishAction extends AbstractGameAction {
             CardGroup library = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
             for (AbstractCard c : CardLibrary.getCardList(JainaEnums.JAINA_LIBRARY)) {
                 if (c.color == JainaEnums.JAINA_COLOR) {
-                    if (upgraded) {
-                        c.upgrade();
-                    }
                     library.addToBottom(c);
                 }
             }

@@ -1,8 +1,10 @@
 package jaina.powers;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -24,55 +26,82 @@ public class FrozenPower extends AbstractJainaPower {
     private Intent moveIntent;
     private EnemyMoveInfo move;
 
-    public FrozenPower(AbstractMonster owner) {
+    public FrozenPower(AbstractMonster owner, int amount) {
         super(POWER_ID, false, NAME, PowerType.DEBUFF);
         this.owner = owner;
         this.isTurnBased = true;
-        this.amount = -1;
+        this.amount = amount;
+        if (this.amount >= 3) {
+            this.amount = 3;
+        }
         updateDescription();
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+        // 最大只能叠加3层，叠到3层后触发冻结效果
+        if (this.amount >= 3) {
+            this.amount = 3;
+            AbstractDungeon.actionManager.addToBottom(new FreezeAction());
+        }
+    }
+
+    @Override
+    public void onInitialApplication() {
+        if (this.owner.hasPower(BurningPower.POWER_ID)) {
+            // 给予冻结时移除燃烧
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, owner.getPower(BurningPower.POWER_ID)));
+        }
+    }
+
+    // 如果是火焰伤害直接解除冻结
+    @Override
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+        if (card.hasTag(JainaEnums.CardTags.FIRE) && action.target == this.owner) {
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
+    }
+
+    // 1层及以上时触发减伤效果
+    @Override
+    public float atDamageGive(float damage, DamageInfo.DamageType type) {
+        if (type == DamageInfo.DamageType.NORMAL && this.amount >= 1) {
+            return damage * 0.75F;
+        }
+        return damage;
+    }
+
+    // 2层及以上时触发增伤效果
+    @Override
+    public float atDamageReceive(float damage, DamageInfo.DamageType type, AbstractCard card) {
+        if (type == DamageInfo.DamageType.NORMAL && this.amount >= 2) {
+            return damage * 1.25F;
+        }
+        return damage;
     }
 
     @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0];
+        if (amount >= 2) {
+            this.description += DESCRIPTIONS[1];
+        }
+        if (amount == 3) {
+            this.description += DESCRIPTIONS[2];
+        }
+        this.description += DESCRIPTIONS[3];
     }
 
     @Override
     public void atEndOfRound() {
-        if (this.amount <= 0) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 1));
-        }
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 
-    public void onInitialApplication() {
-        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-            public void update() {
-                if (FrozenPower.this.owner instanceof AbstractMonster) {
-                    FrozenPower.this.moveByte = ((AbstractMonster) FrozenPower.this.owner).nextMove;
-                    FrozenPower.this.moveIntent = ((AbstractMonster) FrozenPower.this.owner).intent;
-
-                    try {
-                        Field f = AbstractMonster.class.getDeclaredField("move");
-                        f.setAccessible(true);
-                        FrozenPower.this.move = (EnemyMoveInfo) f.get(FrozenPower.this.owner);
-
-                        EnemyMoveInfo frozenMove = new EnemyMoveInfo(FrozenPower.this.moveByte,
-                                JainaEnums.FROZEN, -1, 0, false);
-                        f.set(FrozenPower.this.owner, frozenMove);
-                        ((AbstractMonster) FrozenPower.this.owner).createIntent();
-                    } catch (NoSuchFieldException | IllegalAccessException e) {
-                        e.printStackTrace();
-                    }
-                }
-                this.isDone = true;
-            }
-        });
-    }
-
+    @Override
     public void onRemove() {
-        if (this.owner instanceof AbstractMonster) {
+        if (this.owner instanceof AbstractMonster && this.amount == 3) {
             AbstractMonster m = (AbstractMonster) this.owner;
             if (this.move != null) {
                 m.setMove(this.moveByte, this.moveIntent, this.move.baseDamage, this.move.multiplier, this.move.isMultiDamage);
@@ -81,6 +110,28 @@ public class FrozenPower extends AbstractJainaPower {
             }
             m.createIntent();
             m.applyPowers();
+        }
+    }
+
+    private class FreezeAction extends AbstractGameAction {
+        @Override
+        public void update() {
+            if ((FrozenPower.this.owner instanceof AbstractMonster)) {
+                moveByte = ((AbstractMonster) owner).nextMove;
+                moveIntent = ((AbstractMonster) owner).intent;
+                try {
+                    Field f = AbstractMonster.class.getDeclaredField("move");
+                    f.setAccessible(true);
+                    move = (EnemyMoveInfo) f.get(owner);
+                    EnemyMoveInfo frozenMove = new EnemyMoveInfo(moveByte, JainaEnums.FROZEN, -1, 0, false);
+                    f.set(owner, frozenMove);
+                    ((AbstractMonster) owner).createIntent();
+                    System.out.println("jaina: " + owner.name + " has been frozen.");
+                } catch (NoSuchFieldException | IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            }
+            this.isDone = true;
         }
     }
 }

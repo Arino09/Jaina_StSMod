@@ -25,7 +25,7 @@ import jaina.cards.Strike;
 import jaina.modCore.Core;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.relics.ArchmageStuff;
+import jaina.relics.ArchmageStaff;
 
 import java.util.ArrayList;
 
@@ -104,7 +104,7 @@ public class JainaCharacter extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> relics = new ArrayList<>();
-        relics.add(ArchmageStuff.ID);
+        relics.add(ArchmageStaff.ID);
         return relics;
     }
 
@@ -203,7 +203,7 @@ public class JainaCharacter extends CustomPlayer {
      */
     @Override
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.sound.play(IHelper.makeID("select"));
+        CardCrawlGame.sound.play(IHelper.makeID("pick"));
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, true);
     }
 

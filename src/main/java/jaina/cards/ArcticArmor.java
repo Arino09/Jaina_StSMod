@@ -25,7 +25,8 @@ public class ArcticArmor extends AbstractFrostCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        this.isInnate = true;
+        upgradeDescription(CARD_STRINGS);
     }
 
     @Override

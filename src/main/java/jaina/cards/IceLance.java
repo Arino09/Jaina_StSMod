@@ -1,12 +1,12 @@
 package jaina.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import jaina.actions.FrozenEnemyAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 import jaina.powers.FrozenPower;
@@ -22,6 +22,7 @@ public class IceLance extends AbstractFrostCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.ENEMY);
         setDamage(7);
+        setMagicNumber(1);
     }
 
     @Override
@@ -33,10 +34,10 @@ public class IceLance extends AbstractFrostCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // 对冻结的敌人造成伤害，或冻结未被冻结的敌人
         if (m.hasPower(FrozenPower.POWER_ID)) {
-            dealDamage(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+            dealDamage(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         } else {
             this.exhaust = true;
-            this.addToBot(new FrozenEnemyAction(m, p));
+            this.addToBot(new ApplyPowerAction(m, p, new FrozenPower(m, magicNumber)));
         }
     }
 

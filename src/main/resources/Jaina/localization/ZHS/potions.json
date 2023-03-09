@@ -39,16 +39,16 @@
       "复制你抽牌堆里的 #b%d 张牌放入你的手牌。这张牌具有 #y消耗 。"
     ]
   },
-  "jaina:SpellDamagePotion": {
-    "NAME": "法术伤害药水",
+  "jaina:SpellForcePotion": {
+    "NAME": "法力增强药水",
     "DESCRIPTIONS": [
-      "#y法术伤害 + #b%d 。"
+      "获得 #b%d 层 #y法术强度 。"
     ]
   },
   "jaina:SpellInspirationPotion": {
     "NAME": "法术灵感药水",
     "DESCRIPTIONS": [
-      "#y法术伤害 + #b%d 。你的回合结束时， #y法术伤害 - #b%d 。"
+      "获得 #b%d 层 #y法术强度 。你的回合结束时，失去 #b%d 层 #y法术强度 。"
     ]
   },
   "jaina:VolcanicPotion": {

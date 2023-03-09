@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import jaina.modCore.Core;
 import jaina.modCore.IHelper;
-import jaina.powers.CombustionPower;
+import jaina.powers.BurningPower;
 
 public class VolcanicPotion extends AbstractPotion {
 
@@ -37,15 +37,15 @@ public class VolcanicPotion extends AbstractPotion {
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(
-                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.localizeKeywordID("Combustion"))),
-                BaseMod.getKeywordDescription(IHelper.localizeKeywordID("Combustion"))
+                TipHelper.capitalize(BaseMod.getKeywordTitle(IHelper.localizeKeywordID("Burning"))),
+                BaseMod.getKeywordDescription(IHelper.localizeKeywordID("Burning"))
         ));
     }
 
     @Override
     public void use(AbstractCreature target) {
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-            addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new CombustionPower(m, POTENCY)));
+            addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new BurningPower(m, POTENCY)));
         }
     }
 

@@ -8,11 +8,11 @@ import jaina.modCore.IHelper;
 
 import java.util.ArrayList;
 
-public class ArchmageStuff extends AbstractJainaRelic {
-    public static final String ID = IHelper.makeID("ArchmageStuff");
+public class ArchmageStaff extends AbstractJainaRelic {
+    public static final String ID = IHelper.makeID("ArchmageStaff");
     private static final RelicStrings RELIC_STRINGS = CardCrawlGame.languagePack.getRelicStrings(ID);
 
-    public ArchmageStuff() {
+    public ArchmageStaff() {
         super(ID, false, RELIC_STRINGS, RelicTier.STARTER, LandingSound.MAGICAL);
     }
 
@@ -24,6 +24,6 @@ public class ArchmageStuff extends AbstractJainaRelic {
 
     @Override
     public AbstractRelic makeCopy() {
-        return new ArchmageStuff();
+        return new ArchmageStaff();
     }
 }

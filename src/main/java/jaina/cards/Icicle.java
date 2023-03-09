@@ -21,7 +21,7 @@ public class Icicle extends AbstractFrostCard {
     public Icicle() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.ENEMY);
-        setDamage(4);
+        setDamage(3);
     }
 
     @Override
@@ -31,9 +31,9 @@ public class Icicle extends AbstractFrostCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        drawCards(1);
+        dealDamage(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         if (m.hasPower(FrozenPower.POWER_ID)) {
-            dealDamage(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+            drawCards(1);
         }
     }
 

@@ -9,12 +9,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import jaina.modCore.IHelper;
 
-public class CounterCurse extends OptionCard {
-    private static final String ID = IHelper.makeID("CounterCurse");
+public class CounterMagic extends OptionCard {
+    private static final String ID = IHelper.makeID("CounterMagic");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public CounterCurse() {
-        super(ID, true, CARD_STRINGS, CardType.POWER);
+    public CounterMagic() {
+        super(ID, false, CARD_STRINGS, CardType.POWER);
     }
 
     @Override
@@ -29,6 +29,6 @@ public class CounterCurse extends OptionCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new CounterCurse();
+        return new CounterMagic();
     }
 }

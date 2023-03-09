@@ -29,7 +29,7 @@ public class FirePotion extends AbstractPotion {
     @Override
     public void use(AbstractCreature abstractCreature) {
         for (int i = 0; i < potency; i++)
-            addToBot(new JainaDiscoveryAction(JainaEnums.CardTags.FIRE, true));
+            addToBot(new JainaDiscoveryAction(JainaEnums.CardTags.FIRE, true, false));
     }
 
     @Override

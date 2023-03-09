@@ -4,42 +4,42 @@
       "奥术"
     ],
     "PROPER_NAME": "奥术",
-    "DESCRIPTION": "奥术法术是一种难以掌控充满随机性的法术，同时也能让你获得强大的能力。"
+    "DESCRIPTION": "奥术法术充满随机性并且难以掌控，但也能让你获得强大的力量。"
   },
   {
     "NAMES": [
       "冰霜"
     ],
     "PROPER_NAME": "冰霜",
-    "DESCRIPTION": "冰霜法术可以限制敌人的行动，将场面牢牢地掌控在自己手中。"
+    "DESCRIPTION": "冰霜法术可以通过 #y冻结 限制敌人的行动，掌控战场的局势。"
   },
   {
     "NAMES": [
       "火焰"
     ],
     "PROPER_NAME": "火焰",
-    "DESCRIPTION": "火焰法术能造成高额的伤害和燃烧效果，但小心伤到自己！"
+    "DESCRIPTION": "火焰法术通常能造成高额的伤害，还会造成 #y燃烧 效果。"
   },
   {
     "NAMES": [
       "冻结"
     ],
     "PROPER_NAME": "冻结",
-    "DESCRIPTION": "被 #b冻结 的角色失去他的下一次行动机会。 NL #b冻结 效果不能叠加。"
+    "DESCRIPTION": "1层： #y攻击 造成的伤害减少 #b25% ； NL 2层：从 #y攻击 受到的伤害增加 #b25% ； NL 3层：本回合无法行动。 NL #y冻结 效果最多叠加3层。 NL 受到 #y燃烧 时解冻。"
   },
   {
     "NAMES": [
-      "法术伤害"
+      "法术强度"
     ],
-    "PROPER_NAME": "法术伤害",
-    "DESCRIPTION": "提高法术造成的伤害和获得的格挡，或增强其他效应。"
+    "PROPER_NAME": "法术强度",
+    "DESCRIPTION": "提高法术造成的伤害和获得的格挡，或增强卡牌的其他效果。"
   },
   {
     "NAMES": [
       "燃烧"
     ],
     "PROPER_NAME": "燃烧",
-    "DESCRIPTION": "具有 #y燃烧 的敌人在回合结束时失去生命值。"
+    "DESCRIPTION": "具有 #y燃烧 的角色在回合结束时失去生命值。"
   },
   {
     "NAMES": [
@@ -68,12 +68,5 @@
     ],
     "PROPER_NAME": "发现",
     "DESCRIPTION": "从三张卡牌中选择一张加入你的手牌。"
-  },
-  {
-    "NAMES": [
-      "烧伤"
-    ],
-    "PROPER_NAME": "烧伤",
-    "DESCRIPTION": "将若干张 #y灼烧 放入你的弃牌堆中。"
   }
 ]

@@ -46,7 +46,8 @@ public class DuplicateAction extends AbstractGameAction {
                 }
             this.p.hand.group.removeAll(this.cannotDuplicate);
             if (this.p.hand.group.size() > 1) {
-                AbstractDungeon.handCardSelectScreen.open(IHelper.UI_STRINGS.TEXT[3], 1, false, false, false, false);
+                AbstractDungeon.handCardSelectScreen.open(Duplicate.CARD_STRINGS.EXTENDED_DESCRIPTION[0],
+                        1, false, false, false, false);
                 tickDuration();
                 return;
             }

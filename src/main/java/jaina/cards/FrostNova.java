@@ -18,6 +18,7 @@ public class FrostNova extends AbstractFrostCard {
     public FrostNova() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        setMagicNumber(1);
         this.exhaust = true;
     }
 
@@ -29,7 +30,7 @@ public class FrostNova extends AbstractFrostCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        frozenAllEnemy();
+        frozenAllEnemy(magicNumber);
     }
 
     @Override

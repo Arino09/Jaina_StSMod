@@ -29,7 +29,7 @@ public class ArcanePotion extends AbstractPotion {
     @Override
     public void use(AbstractCreature abstractCreature) {
         for (int i = 0; i < potency; i++)
-            addToBot(new JainaDiscoveryAction(JainaEnums.CardTags.ARCANE, true));
+            addToBot(new JainaDiscoveryAction(JainaEnums.CardTags.ARCANE, true, false));
     }
 
     @Override
