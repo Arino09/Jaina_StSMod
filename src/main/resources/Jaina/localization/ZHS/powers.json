@@ -11,7 +11,7 @@
       "每次打出 #y冰霜 牌时获得 #b%d 点 #y格挡 。"
     ]
   },
-  "jaina:CombustionPower": {
+  "jaina:BurningPower": {
     "NAME": "燃烧",
     "DESCRIPTIONS": [
       "回合结束时失去 #r%d 点生命值。"
@@ -38,10 +38,11 @@
   "jaina:FrozenPower": {
     "NAME": "冻结",
     "DESCRIPTIONS": [
-      "造成的伤害减少 25% 。 NL ",
-      "受到的伤害增加 25% 。 NL ",
+      "#y攻击 造成的伤害减少 #b25% 。 NL ",
+      "从 #y攻击 受到的伤害增加 #b25% 。 NL ",
       "被 #y冻结 而无法行动。 NL ",
-      "#y冻结 效果最多叠加3层。"
+      "#y冻结 效果最多叠加3层。 NL",
+      "受到 #y燃烧 时移除。"
     ]
   },
   "jaina:IceBlockPower": {
@@ -85,16 +86,13 @@
   "jaina:VaporizePower": {
     "NAME": "蒸发",
     "DESCRIPTIONS": [
-      "受到攻击时对攻击者造成相同的伤害。 NL 每次受到攻击减少 #b1 层。",
-      "蒸发+"
+      "受到攻击时对攻击者造成相同的伤害。 NL 每次受到攻击减少 #b1 层。"
     ]
   },
   "jaina:WildfirePower": {
     "NAME": "野火",
     "DESCRIPTIONS": [
-      "额外给予 #b3 层 #y燃烧 。",
-      "野火+",
-      "给予双倍的 #y燃烧 。"
+      "额外给予 #b%d 层 #y燃烧 。"
     ]
   },
   "jaina:WizardArmorPower": {

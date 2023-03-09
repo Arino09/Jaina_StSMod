@@ -3,8 +3,6 @@ package jaina.powers;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import jaina.powers.unique.VaporizePower;
-import jaina.powers.unique.WildfirePower;
 
 public class AbstractJainaPower extends AbstractPower {
 
@@ -15,13 +13,6 @@ public class AbstractJainaPower extends AbstractPower {
         if (useTestArt) {
             loadRegion("test");
             return;
-        }
-        // 处理【野火】和【蒸发】的ID
-        if (id.equals(WildfirePower.POWER_ID_P)) {
-            id = WildfirePower.POWER_ID;
-        }
-        if (id.equals(VaporizePower.POWER_ID_P)) {
-            id = VaporizePower.POWER_ID;
         }
         loadRegion(id.substring(6));
     }

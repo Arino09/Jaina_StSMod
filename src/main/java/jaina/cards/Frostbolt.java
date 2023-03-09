@@ -20,13 +20,14 @@ public class Frostbolt extends AbstractFrostCard {
     public Frostbolt() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.BASIC, CardTarget.ENEMY);
-        setDamage(3);
+        setDamage(5);
+        setMagicNumber(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealDamage(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        this.addToBot(new ApplyPowerAction(m, p, new FrozenPower(m, 1)));
+        this.addToBot(new ApplyPowerAction(m, p, new FrozenPower(m, magicNumber)));
     }
 
     @Override

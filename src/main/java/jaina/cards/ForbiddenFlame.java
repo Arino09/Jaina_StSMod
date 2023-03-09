@@ -20,17 +20,19 @@ public class ForbiddenFlame extends AbstractFireCard {
     public ForbiddenFlame() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.RARE, CardTarget.ENEMY);
-        setDamage(10);
+        setDamage(6);
+        setMagicNumber(6);
     }
 
     @Override
     public void upp() {
         upgradeDamage(3);
+        upgradeMagicNumber(3);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ForbiddenFlameAction(p, m, damage, freeToPlayOnce, energyOnUse));
+        addToBot(new ForbiddenFlameAction(p, m, damage, magicNumber, freeToPlayOnce, energyOnUse));
     }
 
     @Override

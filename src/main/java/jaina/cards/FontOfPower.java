@@ -25,8 +25,7 @@ public class FontOfPower extends AbstractArcaneCard {
 
     @Override
     public void upp() {
-        this.exhaust = false;
-        upgradeDescription(CARD_STRINGS);
+        upgradeBaseCost(0);
     }
 
     @Override

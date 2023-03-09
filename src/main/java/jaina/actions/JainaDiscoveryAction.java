@@ -15,15 +15,15 @@ public class JainaDiscoveryAction extends AbstractGameAction {
     private final ArrayList<AbstractCard> generatedCards;
     private boolean retrieveCard = false;
 
-    public JainaDiscoveryAction(boolean hasRare, boolean hasUncommon, boolean hasCommon, boolean free) {
-        this(IHelper.generateRandomJainaCards(hasRare, hasUncommon, hasCommon, true), free);
+    public JainaDiscoveryAction(boolean hasRare, boolean hasUncommon, boolean hasCommon, boolean free, boolean upgraded) {
+        this(IHelper.generateRandomJainaCards(hasRare, hasUncommon, hasCommon, true), free, upgraded);
     }
 
-    public JainaDiscoveryAction(AbstractCard.CardTags tags, boolean free) {
-        this(IHelper.generateTypeOfSpell(tags), free);
+    public JainaDiscoveryAction(AbstractCard.CardTags tags, boolean free, boolean upgraded) {
+        this(IHelper.generateTypeOfSpell(tags), free, upgraded);
     }
 
-    public JainaDiscoveryAction(ArrayList<AbstractCard> cards, boolean free) {
+    public JainaDiscoveryAction(ArrayList<AbstractCard> cards, boolean free, boolean upgraded) {
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
         this.amount = 1;
@@ -32,6 +32,11 @@ public class JainaDiscoveryAction extends AbstractGameAction {
             for (AbstractCard c : generatedCards) {
                 c.setCostForTurn(0);
                 c.freeToPlayOnce = true;
+            }
+        }
+        if (upgraded) {
+            for (AbstractCard c : generatedCards) {
+                c.upgrade();
             }
         }
     }

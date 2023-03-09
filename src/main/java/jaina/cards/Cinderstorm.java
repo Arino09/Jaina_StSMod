@@ -1,14 +1,15 @@
 package jaina.cards;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerToRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import jaina.actions.unique.CinderstormAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
+import jaina.powers.BurningPower;
 
 public class Cinderstorm extends AbstractFireCard {
 
@@ -20,8 +21,7 @@ public class Cinderstorm extends AbstractFireCard {
     public Cinderstorm() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.NONE);
-        setMagicNumber(1);
-        cardsToPreview = new Burn();
+        setMagicNumber(3);
     }
 
     @Override
@@ -31,7 +31,11 @@ public class Cinderstorm extends AbstractFireCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new CinderstormAction(magicNumber));
+        for (int i = 0; i < 5; i++) {
+            // 随机造成5次燃烧
+            addToBot(new ApplyPowerToRandomEnemyAction(
+                    p, new BurningPower(null, magicNumber), magicNumber, Settings.FAST_MODE));
+        }
     }
 
     @Override

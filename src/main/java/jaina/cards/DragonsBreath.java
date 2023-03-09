@@ -22,7 +22,7 @@ public class DragonsBreath extends AbstractFireCard {
     public DragonsBreath() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.ENEMY);
-        setDamage(12);
+        setDamage(14);
     }
 
     @Override

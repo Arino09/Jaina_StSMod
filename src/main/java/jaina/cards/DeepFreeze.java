@@ -25,8 +25,7 @@ public class DeepFreeze extends AbstractFrostCard {
 
     @Override
     public void upp() {
-        exhaust = false;
-        upgradeDescription(CARD_STRINGS);
+        upgradeBaseCost(2);
     }
 
     @Override

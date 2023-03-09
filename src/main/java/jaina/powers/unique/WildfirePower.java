@@ -6,44 +6,32 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import jaina.modCore.IHelper;
 import jaina.powers.AbstractJainaPower;
-import jaina.powers.CombustionPower;
+import jaina.powers.BurningPower;
 
 public class WildfirePower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("WildfirePower");
-    public static final String POWER_ID_P = IHelper.makeID("WildfirePowerP");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private final boolean upgraded;
-
-    public WildfirePower(AbstractCreature owner, boolean upgraded) {
-        super(upgraded ? POWER_ID_P : POWER_ID, false, NAME, PowerType.BUFF);
+    public WildfirePower(AbstractCreature owner, int amount) {
+        super(POWER_ID, false, NAME, PowerType.BUFF);
         this.owner = owner;
-        this.amount = -1;
-        this.upgraded = upgraded;
+        this.amount = amount;
         updateDescription();
     }
 
     @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power instanceof CombustionPower && !target.isPlayer) {
+        if (power instanceof BurningPower && !target.isPlayer) {
             flash();
-            if (upgraded) {
-                power.amount *= 2;
-            } else {
-                power.amount += 3;
-            }
+            power.amount += this.amount;
         }
     }
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
-        if (upgraded) {
-            this.name = DESCRIPTIONS[1];
-            this.description = DESCRIPTIONS[2];
-        }
+        this.description = String.format(DESCRIPTIONS[0], amount);
     }
 
 }

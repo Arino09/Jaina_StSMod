@@ -14,7 +14,7 @@ public class IceBlock extends AbstractFrostCard {
     public static final String ID = IHelper.makeID("IceBlock");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 3;
+    private static final int COST = 2;
 
     public IceBlock() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
@@ -23,7 +23,8 @@ public class IceBlock extends AbstractFrostCard {
 
     @Override
     public void upp() {
-        upgradeBaseCost(2);
+        this.isInnate = true;
+        upgradeDescription(CARD_STRINGS);
     }
 
     @Override

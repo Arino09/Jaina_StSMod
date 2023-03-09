@@ -26,7 +26,7 @@ public class TomeOfIntellect extends AbstractArcaneCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(-2);
+        upgradeMagicNumber(-1);
     }
 
     @Override

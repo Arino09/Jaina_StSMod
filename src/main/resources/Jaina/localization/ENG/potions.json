@@ -54,7 +54,7 @@
   "jaina:VolcanicPotion": {
     "NAME": "Volcanic Potion",
     "DESCRIPTIONS": [
-      "Apply #b%d #yCombustion to ALL enemies."
+      "Apply #b%d #yBurning to ALL enemies."
     ]
   }
 }

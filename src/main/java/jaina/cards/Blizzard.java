@@ -23,7 +23,8 @@ public class Blizzard extends AbstractFrostCard {
     public Blizzard() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        setDamage(5);
+        setDamage(4);
+        setMagicNumber(1);
     }
 
     @Override
@@ -39,7 +40,7 @@ public class Blizzard extends AbstractFrostCard {
             this.addToBot(new VFXAction(new BlizzardEffect(5, AbstractDungeon.getMonsters().shouldFlipVfx()), 1.0F));
         }
         dealAoeDamage(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        frozenAllEnemy(1);
+        frozenAllEnemy(magicNumber);
     }
 
     @Override

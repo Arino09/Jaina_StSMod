@@ -20,7 +20,7 @@ public class IceShard extends AbstractFrostCard {
                 CardRarity.RARE, CardTarget.NONE);
         setMagicNumber(3);
         this.exhaust = true;
-        cardsToPreview = new IceShardToken();
+        cardsToPreview = new IceLance();
     }
 
     @Override
@@ -31,7 +31,7 @@ public class IceShard extends AbstractFrostCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
-            IHelper.getTempCard(new IceShardToken());
+            IHelper.getTempCard(cardsToPreview);
         }
     }
 

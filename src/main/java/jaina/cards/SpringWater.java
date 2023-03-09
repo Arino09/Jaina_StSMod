@@ -19,13 +19,13 @@ public class SpringWater extends AbstractArcaneCard {
 
     public SpringWater() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.COMMON, CardTarget.NONE);
-        setMagicNumber(5);
+                CardRarity.UNCOMMON, CardTarget.NONE);
+        setMagicNumber(3);
     }
 
     @Override
     public void upp() {
-        upgradeBaseCost(2);
+        upgradeMagicNumber(1);
     }
 
     @Override

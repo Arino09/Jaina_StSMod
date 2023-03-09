@@ -2,13 +2,13 @@ package jaina.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
+import jaina.powers.BurningPower;
 
 public class Fireblast extends AbstractFireCard {
     public static final String ID = IHelper.makeID("Fireblast");
@@ -19,19 +19,20 @@ public class Fireblast extends AbstractFireCard {
     public Fireblast() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.BASIC, CardTarget.ENEMY);
-        setDamage(6);
-        cardsToPreview = new Burn();
+        setDamage(3);
+        setMagicNumber(3);
     }
 
     @Override
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(1);
+        upgradeMagicNumber(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealDamage(m, AbstractGameAction.AttackEffect.FIRE);
-        IHelper.getBurn(1);
+        givePower(new BurningPower(m, magicNumber), magicNumber);
     }
 
     @Override

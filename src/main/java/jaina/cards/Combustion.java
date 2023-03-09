@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.CombustionPower;
+import jaina.powers.BurningPower;
 
 
 public class Combustion extends AbstractFireCard {
@@ -22,23 +22,21 @@ public class Combustion extends AbstractFireCard {
     public Combustion() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.ENEMY);
-        setDamage(8);
-        setMagicNumber(4);
+        setDamage(7);
+        setMagicNumber(2);
     }
 
     @Override
     public void upp() {
-        upgradeDamage(2);
-        upgradeMagicNumber(2);
+        upgradeDamage(3);
+        upgradeMagicNumber(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster monster) {
         dealDamage(monster, AbstractGameAction.AttackEffect.FIRE);
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-            if (!m.equals(monster)) {
-                givePower(new CombustionPower(m, magicNumber), magicNumber);
-            }
+            givePower(new BurningPower(m, magicNumber), magicNumber);
         }
     }
 

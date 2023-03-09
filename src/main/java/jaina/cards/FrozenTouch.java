@@ -23,13 +23,15 @@ public class FrozenTouch extends AbstractFrostCard {
     public FrozenTouch() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.RARE, CardTarget.ENEMY);
-        setDamage(3);
+        setDamage(5);
         setMagicNumber(3);
         exhaustCount = magicNumber;
+        returnToHand = true;
     }
 
     @Override
     public void upp() {
+        upgradeDamage(2);
         upgradeMagicNumber(2);
     }
 

@@ -1,4 +1,4 @@
-package jaina.powers;
+package jaina.powers.unique;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import jaina.modCore.IHelper;
+import jaina.powers.AbstractJainaPower;
+import jaina.powers.SpellForcePower;
 
 public class LoseSpellForcePower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("LoseSpellForcePower");

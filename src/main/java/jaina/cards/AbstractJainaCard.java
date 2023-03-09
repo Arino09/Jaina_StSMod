@@ -267,7 +267,7 @@ public abstract class AbstractJainaCard extends CustomCard {
             // 仅当法伤数值变化时才更新描述
             if (power.amount + baseMagicNumber > magicNumber) {
                 this.magicNumber = power.amount + baseMagicNumber;
-                this.rawDescription = strings.DESCRIPTION;
+                resetDescription(strings);
                 if (magicNumber > 1) {
                     this.rawDescription += String.format(strings.EXTENDED_DESCRIPTION[0], magicNumber);
                 } else {

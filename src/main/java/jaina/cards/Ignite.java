@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.CombustionPower;
+import jaina.powers.BurningPower;
 
 
 public class Ignite extends AbstractFireCard {
@@ -32,8 +32,8 @@ public class Ignite extends AbstractFireCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // 触发所有敌人身上的燃烧
         for (AbstractMonster mon : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
-            if (!mon.isDeadOrEscaped() && mon.hasPower(CombustionPower.POWER_ID)) {
-                mon.getPower(CombustionPower.POWER_ID).onSpecificTrigger();
+            if (!mon.isDeadOrEscaped() && mon.hasPower(BurningPower.POWER_ID)) {
+                mon.getPower(BurningPower.POWER_ID).onSpecificTrigger();
             }
         }
     }

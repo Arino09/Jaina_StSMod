@@ -22,6 +22,7 @@ public class IceLance extends AbstractFrostCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.ENEMY);
         setDamage(7);
+        setMagicNumber(1);
     }
 
     @Override
@@ -33,10 +34,10 @@ public class IceLance extends AbstractFrostCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // 对冻结的敌人造成伤害，或冻结未被冻结的敌人
         if (m.hasPower(FrozenPower.POWER_ID)) {
-            dealDamage(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+            dealDamage(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         } else {
             this.exhaust = true;
-            this.addToBot(new ApplyPowerAction(m, p, new FrozenPower(m, 1)));
+            this.addToBot(new ApplyPowerAction(m, p, new FrozenPower(m, magicNumber)));
         }
     }
 

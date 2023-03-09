@@ -12,13 +12,13 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.FireBurstParticleEffect;
 import jaina.modCore.IHelper;
 
-public class CombustionPower extends AbstractJainaPower {
-    public static final String POWER_ID = IHelper.makeID("CombustionPower");
+public class BurningPower extends AbstractJainaPower {
+    public static final String POWER_ID = IHelper.makeID("BurningPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public CombustionPower(AbstractCreature owner, int amount) {
+    public BurningPower(AbstractCreature owner, int amount) {
         super(POWER_ID, false, NAME, PowerType.DEBUFF);
         this.owner = owner;
         this.amount = amount;
@@ -31,14 +31,6 @@ public class CombustionPower extends AbstractJainaPower {
         // 如果目标具有冻结则移除冻结
         if (owner.hasPower(FrozenPower.POWER_ID)) {
             addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, owner.getPower(FrozenPower.POWER_ID)));
-        }
-    }
-
-    @Override
-    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.ID.equals(FrozenPower.POWER_ID)) {
-            // 给予冻结时移除燃烧
-            addToBot(new RemoveSpecificPowerAction(target, target, this));
         }
     }
 

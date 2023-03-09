@@ -4,8 +4,8 @@
   "author_list": [
     "Arino"
   ],
-  "description": "加入了《炉石传说》中的法师——吉安娜·普罗德摩尔 包括75张卡牌，9个遗物，9种药水。Add Jaina Proudmoore in Hearthstone, including 75 cards, 9 unique relics and 9 unique potions.Added English localization.Improved English texts.",
-  "version": "0.3.2",
+  "description": "加入了《炉石传说》中的法师——吉安娜·普罗德摩尔 包括75张卡牌，9个遗物，9种药水。平衡性调整：削弱了冻结效果，加强了燃烧效果和火焰卡牌，以及其他平衡性调整。Add Jaina Proudmoore in Hearthstone, including 75 cards, 9 unique relics and 9 unique potions.Added English localization.Improved English texts.Balance change: weakened \"freeze\", strengthened \"burning\" (renamed from combustion) and fire cards.",
+  "version": "0.4.0",
   "sts_version": "12-18-2022",
   "mts_version": "3.30.1",
   "dependencies": [

@@ -47,6 +47,7 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     private static final String BIG_ORB = "jaina/img/char/card_orb.png";
     // 小能量（用于描述等）
     private static final String SMALL_ORB = "jaina/img/char/small_orb.png";
+    public static final boolean unlockEverything = false;
 
     public Core() {
         BaseMod.subscribe(this);
@@ -57,6 +58,54 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
 
     public static void initialize() {
         new Core();
+    }
+
+    public static void registerUnlockSuiteAlternating(String bundle1card1, String bundle1card2, String bundle1card3,
+                                                      String bundle2relic1, String bundle2relic2, String bundle2relic3,
+                                                      String bundle3card1, String bundle3card2, String bundle3card3,
+                                                      String bundle4relic1, String bundle4relic2, String bundle4relic3,
+                                                      String bundle5card1, String bundle5card2, String bundle5card3,
+                                                      AbstractPlayer.PlayerClass player) {
+
+        registerUnlockCardBundle(player, 0, bundle1card1, bundle1card2, bundle1card3);
+        registerUnlockRelicBundle(player, 1, bundle2relic1, bundle2relic2, bundle2relic3);
+        registerUnlockCardBundle(player, 2, bundle3card1, bundle3card2, bundle3card3);
+        registerUnlockRelicBundle(player, 3, bundle4relic1, bundle4relic2, bundle4relic3);
+        registerUnlockCardBundle(player, 4, bundle5card1, bundle5card2, bundle5card3);
+    }
+
+    private static void registerUnlockCardBundle(AbstractPlayer.PlayerClass player, int index,
+                                                 String card1, String card2, String card3) {
+        CustomUnlockBundle currentBundle = new CustomUnlockBundle(card1, card2, card3);
+        UnlockTracker.addCard(card1);
+        UnlockTracker.addCard(card2);
+        UnlockTracker.addCard(card3);
+        BaseMod.addUnlockBundle(currentBundle, player, index);
+        if (unlockEverything || UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index + 1) {
+            UnlockTracker.unlockCard(card1);
+            UnlockTracker.unlockCard(card2);
+            UnlockTracker.unlockCard(card3);
+        }
+    }
+
+    private static void registerUnlockRelicBundle(AbstractPlayer.PlayerClass player, int index,
+                                                  String relic1, String relic2, String relic3) {
+        CustomUnlockBundle currentBundle = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC, relic1, relic2, relic3);
+        UnlockTracker.addRelic(relic1);
+        UnlockTracker.addRelic(relic2);
+        UnlockTracker.addRelic(relic3);
+        BaseMod.addUnlockBundle(currentBundle, player, index);
+        if (unlockEverything || UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index) {
+            while (UnlockTracker.lockedRelics.contains(relic1))
+                UnlockTracker.lockedRelics.remove(relic1);
+            while (UnlockTracker.lockedRelics.contains(relic2))
+                UnlockTracker.lockedRelics.remove(relic2);
+            while (UnlockTracker.lockedRelics.contains(relic3))
+                UnlockTracker.lockedRelics.remove(relic3);
+            UnlockTracker.markRelicAsSeen(relic1);
+            UnlockTracker.markRelicAsSeen(relic2);
+            UnlockTracker.markRelicAsSeen(relic3);
+        }
     }
 
     // 当baseMod开始注册角色时，调用这个方法
@@ -221,55 +270,5 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
                 TomeOfIntellect.ID, CabalistsTome.ID, ShiftingScroll.ID,
                 AscendantScroll.ID, Aluneth.ID, BookOfWonders.ID,
                 FontOfPower.ID, Evocation.ID, Wish.ID, JainaEnums.JAINA_CLASS);
-    }
-
-    public static boolean unlockEverything = false;
-
-    public static void registerUnlockSuiteAlternating(String bundle1card1, String bundle1card2, String bundle1card3,
-                                                      String bundle2relic1, String bundle2relic2, String bundle2relic3,
-                                                      String bundle3card1, String bundle3card2, String bundle3card3,
-                                                      String bundle4relic1, String bundle4relic2, String bundle4relic3,
-                                                      String bundle5card1, String bundle5card2, String bundle5card3,
-                                                      AbstractPlayer.PlayerClass player) {
-
-        registerUnlockCardBundle(player, 0, bundle1card1, bundle1card2, bundle1card3);
-        registerUnlockRelicBundle(player, 1, bundle2relic1, bundle2relic2, bundle2relic3);
-        registerUnlockCardBundle(player, 2, bundle3card1, bundle3card2, bundle3card3);
-        registerUnlockRelicBundle(player, 3, bundle4relic1, bundle4relic2, bundle4relic3);
-        registerUnlockCardBundle(player, 4, bundle5card1, bundle5card2, bundle5card3);
-    }
-
-    private static void registerUnlockCardBundle(AbstractPlayer.PlayerClass player, int index,
-                                                 String card1, String card2, String card3) {
-        CustomUnlockBundle currentBundle = new CustomUnlockBundle(card1, card2, card3);
-        UnlockTracker.addCard(card1);
-        UnlockTracker.addCard(card2);
-        UnlockTracker.addCard(card3);
-        BaseMod.addUnlockBundle(currentBundle, player, index);
-        if (unlockEverything || UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index + 1) {
-            UnlockTracker.unlockCard(card1);
-            UnlockTracker.unlockCard(card2);
-            UnlockTracker.unlockCard(card3);
-        }
-    }
-
-    private static void registerUnlockRelicBundle(AbstractPlayer.PlayerClass player, int index,
-                                                  String relic1, String relic2, String relic3) {
-        CustomUnlockBundle currentBundle = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC, relic1, relic2, relic3);
-        UnlockTracker.addRelic(relic1);
-        UnlockTracker.addRelic(relic2);
-        UnlockTracker.addRelic(relic3);
-        BaseMod.addUnlockBundle(currentBundle, player, index);
-        if (unlockEverything || UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index) {
-            while (UnlockTracker.lockedRelics.contains(relic1))
-                UnlockTracker.lockedRelics.remove(relic1);
-            while (UnlockTracker.lockedRelics.contains(relic2))
-                UnlockTracker.lockedRelics.remove(relic2);
-            while (UnlockTracker.lockedRelics.contains(relic3))
-                UnlockTracker.lockedRelics.remove(relic3);
-            UnlockTracker.markRelicAsSeen(relic1);
-            UnlockTracker.markRelicAsSeen(relic2);
-            UnlockTracker.markRelicAsSeen(relic3);
-        }
     }
 }

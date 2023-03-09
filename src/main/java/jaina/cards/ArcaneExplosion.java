@@ -18,21 +18,16 @@ public class ArcaneExplosion extends AbstractArcaneCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.ALL_ENEMY);
         setDamage(5);
-        setMagicNumber(1);
+    }
+
+    @Override
+    public void upp() {
+        upgradeDamage(2);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealAoeDamage(AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        if (upgraded) {
-            drawCards(magicNumber);
-        }
-    }
-
-    @Override
-    public void upp() {
-        upgradeDamage(1);
-        upgradeDescription(CARD_STRINGS);
     }
 
     @Override
