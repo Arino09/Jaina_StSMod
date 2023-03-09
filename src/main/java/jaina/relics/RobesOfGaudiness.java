@@ -12,7 +12,7 @@ import jaina.modCore.IHelper;
 public class RobesOfGaudiness extends AbstractJainaRelic {
     public static final String ID = IHelper.makeID("RobesOfGaudiness");
     private static final RelicStrings RELIC_STRINGS = CardCrawlGame.languagePack.getRelicStrings(ID);
-    private static final int AMT = 3;
+    private static final int AMT = 5;
 
     public RobesOfGaudiness() {
         super(ID, false, RELIC_STRINGS, RelicTier.BOSS, LandingSound.MAGICAL);
@@ -39,7 +39,7 @@ public class RobesOfGaudiness extends AbstractJainaRelic {
     @Override
     public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
         if (this.counter < AMT) {
-            // 遗物计数小于3则打牌并且更新计数
+            // 遗物计数小于4则打牌并且更新计数
             addToBot(useCardAction);
             counter++;
             if (counter == AMT) {

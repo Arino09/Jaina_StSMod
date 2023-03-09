@@ -70,7 +70,7 @@
   },
   "jaina:ConeOfCold": {
     "NAME": "Cone of Cold",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !B! B
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !B! Block for every jaina:Frozen enemy damaged this way."
   },
   "jaina:ConjureManaBiscuit": {
     "NAME": "Conjure Mana Biscuit",
@@ -81,13 +81,13 @@
     "NAME": "Counter Attack",
     "DESCRIPTION": "Gain 1 Intangible."
   },
-  "jaina:CounterMagic": {
-    "NAME": "Counter Magic",
-    "DESCRIPTION": "Gain 1 Artifact."
-  },
   "jaina:CounterDamage": {
     "NAME": "Counter Damage",
     "DESCRIPTION": "Gain 1 jaina:Buffer."
+  },
+  "jaina:CounterMagic": {
+    "NAME": "Counter Magic",
+    "DESCRIPTION": "Gain 1 Artifact."
   },
   "jaina:Counterspell": {
     "NAME": "Counter Spell",

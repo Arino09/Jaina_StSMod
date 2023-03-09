@@ -2,7 +2,6 @@ package jaina.powers;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -53,14 +52,6 @@ public class FrozenPower extends AbstractJainaPower {
         if (this.owner.hasPower(BurningPower.POWER_ID)) {
             // 给予冻结时移除燃烧
             addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, owner.getPower(BurningPower.POWER_ID)));
-        }
-    }
-
-    // 如果是火焰伤害直接解除冻结
-    @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.hasTag(JainaEnums.CardTags.FIRE) && action.target == this.owner) {
-            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
     }
 

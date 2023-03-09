@@ -81,13 +81,13 @@
     "NAME": "攻击反制",
     "DESCRIPTION": "获得1层 无实体 。"
   },
-  "jaina:CounterMagic": {
-    "NAME": "魔咒反制",
-    "DESCRIPTION": "获得1层 人工制品 。"
-  },
   "jaina:CounterDamage": {
     "NAME": "伤害反制",
     "DESCRIPTION": "获得1层 jaina:缓冲 。"
+  },
+  "jaina:CounterMagic": {
+    "NAME": "魔咒反制",
+    "DESCRIPTION": "获得1层 人工制品 。"
   },
   "jaina:Counterspell": {
     "NAME": "法术反制",
@@ -108,7 +108,7 @@
   },
   "jaina:DeepFreeze": {
     "NAME": "深度冻结",
-    "DESCRIPTION": "给予所有敌人3层 jaina:冻结 。 NL 每冻结一名敌人，获得 [E] 并抽一张牌。 NL 消耗 。"
+    "DESCRIPTION": "给予所有敌人3层 jaina:冻结 。 NL 每完全 jaina:冻结 一名敌人，获得 [E] 并抽一张牌。 NL 消耗 。"
   },
   "jaina:Defend": {
     "NAME": "防御",
@@ -202,12 +202,12 @@
   },
   "jaina:FrozenClone": {
     "NAME": "寒冰克隆",
-    "DESCRIPTION": "如果目标的意图是攻击，则获得 格挡 X次，数值等于目标的攻击力。",
-    "UPGRADE_DESCRIPTION": "如果目标的意图是攻击，获得 格挡 X+1次，数值等于目标的攻击力。"
+    "DESCRIPTION": "如果目标的意图是攻击，则获得 格挡 X次，数值等于目标的攻击力。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "如果目标的意图是攻击，获得 格挡 X+1次，数值等于目标的攻击力。 NL 消耗 。"
   },
   "jaina:FrozenTouch": {
     "NAME": "冻寒之触",
-    "DESCRIPTION": "造成 !D! 点伤害并 jaina:冻结 敌人 。使用 !M! 次后 消耗 。 NL 打出后回到你的手牌。",
+    "DESCRIPTION": "造成 !D! 点伤害，给予1层 jaina:冻结 。打出 !M! 次后 消耗 。 NL 打出后回到你的手牌。",
     "EXTENDED_DESCRIPTION": [
       "（还剩%d次。）"
     ]

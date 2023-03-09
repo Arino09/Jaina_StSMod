@@ -21,6 +21,7 @@ public class FrozenClone extends AbstractFrostCard {
     public FrozenClone() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.ENEMY);
+        this.exhaust = true;
     }
 
     @Override

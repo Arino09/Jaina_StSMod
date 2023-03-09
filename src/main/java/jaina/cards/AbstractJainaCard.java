@@ -245,7 +245,7 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param amount 冻结层数
      * @return 被冻结的敌人数量
      */
-    public int frozenAllEnemy(int amount) {
+    public int freezeAllEnemy(int amount) {
         int frozenAmt = 0;
         for (AbstractMonster m : (AbstractDungeon.getMonsters()).monsters) {
             if (!m.isDead && !m.isDying) {

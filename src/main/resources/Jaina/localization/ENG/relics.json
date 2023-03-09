@@ -38,7 +38,7 @@
     "NAME": "Robes of Gaudiness",
     "FLAVOR": "Countless magical gems are embedded into this robe - yet few who have worn it can harness their power.",
     "DESCRIPTIONS": [
-      "All your spell cards cost 0. You may not play more than #b3 cards each turn. "
+      "All your spell cards cost 0. You may not play more than #b5 cards each turn. "
     ]
   },
   "jaina:RubySpellstone": {
