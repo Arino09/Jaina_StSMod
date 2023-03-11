@@ -67,7 +67,7 @@ public class DragonsBreath extends AbstractFireCard {
             if (!isCostModifiedForTurn || costForTurn != 0) {
                 lastCost = costForTurn;
                 setCostForTurn(0);
-                System.out.println("Cost reduced.");
+                logger.info(this.cardID + "cost reduced.");
             }
             // 如果被其他卡牌减到0费则直接结束判断
         } else {
@@ -76,7 +76,6 @@ public class DragonsBreath extends AbstractFireCard {
             if (costForTurn == COST) {
                 this.isCostModifiedForTurn = false;
             }
-            System.out.println("Cost restored.");
         }
     }
 }

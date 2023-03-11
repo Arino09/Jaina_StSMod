@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.IntangiblePower;
+import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import jaina.modCore.IHelper;
 
 public class CounterAttack extends OptionCard {
@@ -24,7 +24,7 @@ public class CounterAttack extends OptionCard {
 
     @Override
     public void onChoseThisOption() {
-        gainPower(new IntangiblePower(AbstractDungeon.player, 1));
+        gainPower(new IntangiblePlayerPower(AbstractDungeon.player, 1));
     }
 
     @Override

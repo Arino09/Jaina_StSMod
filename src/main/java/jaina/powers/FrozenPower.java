@@ -30,9 +30,6 @@ public class FrozenPower extends AbstractJainaPower {
         this.owner = owner;
         this.isTurnBased = true;
         this.amount = amount;
-        if (this.amount >= 3) {
-            this.amount = 3;
-        }
         updateDescription();
     }
 
@@ -43,12 +40,16 @@ public class FrozenPower extends AbstractJainaPower {
         // 最大只能叠加3层，叠到3层后触发冻结效果
         if (this.amount >= 3) {
             this.amount = 3;
-            AbstractDungeon.actionManager.addToBottom(new FreezeAction());
+            addToBot(new FreezeAction());
         }
     }
 
     @Override
     public void onInitialApplication() {
+        if (this.amount >= 3) {
+            this.amount = 3;
+            addToBot(new FreezeAction());
+        }
         if (this.owner.hasPower(BurningPower.POWER_ID)) {
             // 给予冻结时移除燃烧
             addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, owner.getPower(BurningPower.POWER_ID)));
@@ -87,7 +88,7 @@ public class FrozenPower extends AbstractJainaPower {
 
     @Override
     public void atEndOfRound() {
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 
     @Override
@@ -107,7 +108,8 @@ public class FrozenPower extends AbstractJainaPower {
     private class FreezeAction extends AbstractGameAction {
         @Override
         public void update() {
-            if ((FrozenPower.this.owner instanceof AbstractMonster)) {
+            if ((FrozenPower.this.owner instanceof AbstractMonster) &&
+                    (((AbstractMonster) FrozenPower.this.owner).intent != JainaEnums.FROZEN)) {
                 moveByte = ((AbstractMonster) owner).nextMove;
                 moveIntent = ((AbstractMonster) owner).intent;
                 try {
@@ -117,7 +119,7 @@ public class FrozenPower extends AbstractJainaPower {
                     EnemyMoveInfo frozenMove = new EnemyMoveInfo(moveByte, JainaEnums.FROZEN, -1, 0, false);
                     f.set(owner, frozenMove);
                     ((AbstractMonster) owner).createIntent();
-                    System.out.println("jaina: " + owner.name + " has been frozen.");
+                    logger.info(owner.name + " has been frozen.");
                 } catch (NoSuchFieldException | IllegalAccessException e) {
                     e.printStackTrace();
                 }

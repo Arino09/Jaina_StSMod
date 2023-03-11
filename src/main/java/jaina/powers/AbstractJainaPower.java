@@ -3,8 +3,12 @@ package jaina.powers;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class AbstractJainaPower extends AbstractPower {
+
+    protected static final Logger logger = LogManager.getLogger(AbstractJainaPower.class.getName());
 
     public AbstractJainaPower(String id, boolean useTestArt, String name, PowerType type) {
         this.ID = id;

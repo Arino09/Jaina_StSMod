@@ -30,7 +30,7 @@ public class FrostNova extends AbstractFrostCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        freezeAllEnemy(magicNumber);
+        freezeAllEnemies(magicNumber);
     }
 
     @Override

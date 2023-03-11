@@ -20,7 +20,8 @@ public class ExplosiveRunesPower extends AbstractJainaPower {
     private static int postfix = 0;
 
     public ExplosiveRunesPower(AbstractCreature owner, int damage) {
-        super(POWER_ID + postfix++, true, NAME, PowerType.BUFF);
+        super(POWER_ID, false, NAME, PowerType.BUFF);
+        this.ID = this.ID + postfix++;
         this.owner = owner;
         this.amount = damage;
         updateDescription();
@@ -41,7 +42,7 @@ public class ExplosiveRunesPower extends AbstractJainaPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = String.format(DESCRIPTIONS[0], amount);
     }
 
 }

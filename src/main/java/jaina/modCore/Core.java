@@ -20,6 +20,8 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import jaina.cards.*;
 import jaina.characters.JainaCharacter;
 import jaina.relics.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.nio.charset.StandardCharsets;
 
@@ -48,6 +50,7 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
     private static final String BIG_ORB = "jaina/img/char/card_orb.png";
     // 小能量（用于描述等）
     private static final String SMALL_ORB = "jaina/img/char/small_orb.png";
+    private static final Logger logger = LogManager.getLogger(Core.class.getName());
 
     public Core() {
         BaseMod.subscribe(this);
@@ -147,17 +150,17 @@ public class Core implements EditKeywordsSubscriber, EditCardsSubscriber, EditSt
 
     // 添加药水
     private void addPotions() {
-        System.out.println("Adding Jaina potions: ");
+        logger.info("Adding Jaina potions: ");
         new AutoAdd(MOD_ID)
                 .packageFilter("jaina.potions")
                 .any(AbstractPotion.class, (info, potion) -> addPotionToJaina(potion));
-        System.out.println("Jaina potions added.");
+        logger.info("Jaina potions added.");
     }
 
     private void addPotionToJaina(AbstractPotion potion) {
         String id = potion.ID;
         BaseMod.addPotion(potion.getClass(), null, null, null, id, JainaEnums.JAINA_CLASS);
-        System.out.println("Added potion: " + id.substring(6));
+        logger.info("Added potion: " + id.substring(6));
     }
 
     //加载本地化资源

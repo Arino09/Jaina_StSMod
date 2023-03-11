@@ -29,7 +29,7 @@ public class ConjureManaBiscuit extends AbstractArcaneCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        IHelper.getTempCard(new ManaBiscuit());
+        IHelper.getTempCard(cardsToPreview);
     }
 
     @Override

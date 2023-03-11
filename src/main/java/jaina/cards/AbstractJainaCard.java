@@ -11,8 +11,12 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import jaina.modCore.JainaEnums;
 import jaina.powers.FrozenPower;
 import jaina.powers.SpellForcePower;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public abstract class AbstractJainaCard extends CustomCard {
+
+    protected static final Logger logger = LogManager.getLogger(AbstractJainaCard.class.getName());
 
     /**
      * 构造函数
@@ -243,16 +247,17 @@ public abstract class AbstractJainaCard extends CustomCard {
      * 冰冻所有敌人
      *
      * @param amount 冻结层数
-     * @return 被冻结的敌人数量
+     * @return 被完全冻结的敌人数量
      */
-    public int freezeAllEnemy(int amount) {
+    public int freezeAllEnemies(int amount) {
         int frozenAmt = 0;
-        for (AbstractMonster m : (AbstractDungeon.getMonsters()).monsters) {
-            if (!m.isDead && !m.isDying) {
-                this.addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new FrozenPower(m, amount)));
-                if (m.intent == JainaEnums.FROZEN) frozenAmt++;
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+            if (!m.isDead && !m.isDying && m.intent != JainaEnums.FROZEN) {
+                    this.addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new FrozenPower(m, amount), amount));
+                    frozenAmt++;
             }
         }
+        logger.info(String.format("Freeze All: affected %d enemies.", frozenAmt));
         return frozenAmt;
     }
 

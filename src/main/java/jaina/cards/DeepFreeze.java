@@ -30,7 +30,7 @@ public class DeepFreeze extends AbstractFrostCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int amount = freezeAllEnemy(3);
+        int amount = freezeAllEnemies(3);
         drawCards(amount);
         addToBot(new GainEnergyAction(amount));
     }

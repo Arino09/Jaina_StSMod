@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.IntangiblePower;
+import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import jaina.modCore.IHelper;
 import jaina.powers.AbstractJainaPower;
 
@@ -28,10 +28,15 @@ public class SplittingImagePower extends AbstractJainaPower {
 
         if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner != this.owner) {
             flash();
-            addToBot(new ApplyPowerAction(owner, owner, new IntangiblePower(owner, amount)));
+            addToBot(new ApplyPowerAction(owner, owner, new IntangiblePlayerPower(owner, amount)));
             addToBot(new RemoveSpecificPowerAction(owner, owner, this));
         }
         return damage;
+    }
+
+    @Override
+    public void atStartOfTurn() {
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override
