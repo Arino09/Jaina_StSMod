@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import static com.megacrit.cardcrawl.core.Settings.GameLanguage.ENG;
+import static com.megacrit.cardcrawl.core.Settings.GameLanguage.ZHS;
 import static jaina.modCore.Core.MOD_ID;
 
 public interface IHelper {
@@ -39,8 +40,6 @@ public interface IHelper {
      * @return 当前语言的关键词ID
      */
     static String localizeKeywordID(String engKeyword) {
-        // 如果是英语直接返回当前关键词ID
-        if (Settings.language == ENG) return IHelper.makeID(engKeyword);
         // 在ui.json中保存有关键词映射表
         Map<String, String> keywords = CardCrawlGame.languagePack.getUIString(IHelper.makeID("keywords")).TEXT_DICT;
         return IHelper.makeID(keywords.get(engKeyword));

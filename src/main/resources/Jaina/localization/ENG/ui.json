@@ -22,5 +22,19 @@
       "Choose a card",
       "I can't #yplay any more cards!"
     ]
+  },
+  "jaina:keywords": {
+    "TEXT_DICT": {
+      "Arcane": "Arcane",
+      "Frost": "Frost",
+      "Fire": "Fire",
+      "Frozen": "Frozen",
+      "spell_force": "spell_force",
+      "Burning": "Burning",
+      "Purge": "Purge",
+      "Autoplay": "Autoplay",
+      "Buffer": "Buffer",
+      "Discover": "Discover"
+    }
   }
 }

@@ -344,7 +344,7 @@
   },
   "jaina:SplittingImage": {
     "NAME": "Splitting Image",
-    "DESCRIPTION": "After you are attacked, gain !M! Intangible."
+    "DESCRIPTION": "Until your next turn, after you are attacked, gain !M! Intangible."
   },
   "jaina:SpringWater": {
     "NAME": "Spring Water",

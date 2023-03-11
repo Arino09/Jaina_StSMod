@@ -340,7 +340,7 @@
   },
   "jaina:SplittingImage": {
     "NAME": "裂魂残像",
-    "DESCRIPTION": "在你下一次受到攻击后，获得 !M! 层 无实体 。"
+    "DESCRIPTION": "在你的下回合之前，你受到攻击后获得 !M! 层 无实体 。"
   },
   "jaina:SpringWater": {
     "NAME": "清凉的泉水",

@@ -23,6 +23,12 @@
       "回合开始时获得 #b%d 层 #y法术强度 。"
     ]
   },
+  "jaina:ExplosiveRunesPower": {
+    "NAME": "爆炸符文",
+    "DESCRIPTIONS": [
+      "受到攻击时对攻击者造成 #b%d 点伤害。"
+    ]
+  },
   "jaina:FlameWardPower": {
     "NAME": "火焰结界",
     "DESCRIPTIONS": [
@@ -80,7 +86,7 @@
   "jaina:SplittingImagePower": {
     "NAME": "裂魂残像",
     "DESCRIPTIONS": [
-      "受到攻击之后获得 #b%d 层 #y无实体 。"
+      "受到攻击之后获得 #b%d 层 #y无实体 。 NL 在你回合开始时消失。"
     ]
   },
   "jaina:VaporizePower": {

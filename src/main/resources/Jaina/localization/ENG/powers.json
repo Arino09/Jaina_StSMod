@@ -23,6 +23,12 @@
       "At the start of your turn, gain #b%d #ySpell #yForce."
     ]
   },
+  "jaina:ExplosiveRunesPower": {
+    "NAME": "Explosive Runes",
+    "DESCRIPTIONS": [
+      "Whenever you are attacked, deal #b%d damage to the attacker."
+    ]
+  },
   "jaina:FlameWardPower": {
     "NAME": "Flame Ward",
     "DESCRIPTIONS": [
@@ -80,7 +86,7 @@
   "jaina:SplittingImagePower": {
     "NAME": "Splitting Image",
     "DESCRIPTIONS": [
-      "Gain #b%d #yIntangible after being attacked."
+      "Gain #b%d #yIntangible after being attacked. NL Remove at the start of your turn."
     ]
   },
   "jaina:VaporizePower": {
