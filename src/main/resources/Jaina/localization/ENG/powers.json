@@ -48,7 +48,7 @@
       "This creature receives #b25% more damage from #yAttacks. NL ",
       "This creature is stilled by ice and may not act. NL ",
       "This effect may stack up to #b3. NL ",
-      "Will be removed if #yBurning is applied to this creature."
+      "Will be removed if this creature is #yBurning."
     ]
   },
   "jaina:IceBlockPower": {
