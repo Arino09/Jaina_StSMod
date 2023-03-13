@@ -15,17 +15,17 @@ public class WizardArmor extends AbstractArcaneCard {
     public static final String ID = IHelper.makeID("WizardArmor");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     public WizardArmor() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.SELF);
-        setMagicNumber(4);
+        setMagicNumber(3);
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 
     @Override

@@ -15,7 +15,7 @@ public class WizardArmorPower extends AbstractJainaPower {
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private final int baseAmount;
+    private int baseAmount;
 
     public WizardArmorPower(AbstractCreature owner, int amount) {
         super(POWER_ID, false, NAME, PowerType.BUFF);
@@ -25,13 +25,25 @@ public class WizardArmorPower extends AbstractJainaPower {
     }
 
     @Override
+    public void stackPower(int stackAmount) {
+        this.baseAmount += stackAmount;
+        this.amount = this.baseAmount;
+    }
+
+    @Override
     public void onInitialApplication() {
+        onSpecificTrigger();
+    }
+
+    @Override
+    public void atStartOfTurnPostDraw() {
         onSpecificTrigger();
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         flash();
+        onSpecificTrigger();
         addToBot(new GainBlockAction(owner, amount));
     }
 
