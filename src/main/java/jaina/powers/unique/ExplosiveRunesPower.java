@@ -32,10 +32,9 @@ public class ExplosiveRunesPower extends AbstractJainaPower {
         if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS
                 && info.owner != null && info.owner != this.owner) {
             flash();
-            addToTop(new DamageAction(info.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS),
-                    AbstractGameAction.AttackEffect.FIRE, true));
             addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-            addToBot(new MakeTempCardInDiscardAction(new ExplosiveRunes(), 1));
+            addToBot(new DamageAction(info.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS),
+                    AbstractGameAction.AttackEffect.FIRE, true));
         }
         return damageAmount;
     }
@@ -45,4 +44,8 @@ public class ExplosiveRunesPower extends AbstractJainaPower {
         this.description = String.format(DESCRIPTIONS[0], amount);
     }
 
+    @Override
+    public void onRemove() {
+        addToBot(new MakeTempCardInDiscardAction(new ExplosiveRunes(), 1));
+    }
 }

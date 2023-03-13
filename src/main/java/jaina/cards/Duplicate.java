@@ -19,7 +19,7 @@ public class Duplicate extends AbstractArcaneCard {
 
     public Duplicate() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
-                CardRarity.UNCOMMON, CardTarget.NONE);
+                CardRarity.RARE, CardTarget.NONE);
         setMagicNumber(1);
     }
 

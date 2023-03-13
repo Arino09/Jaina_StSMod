@@ -22,21 +22,23 @@ public class ConeOfCold extends AbstractFrostCard {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.ALL_ENEMY);
         setDamage(3);
-        setBlock(2);
+        setBlock(4);
     }
 
     @Override
     public void upp() {
-        upgradeDamage(2);
-        upgradeBlock(1);
+        upgradeDamage(1);
+        upgradeBlock(2);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster am : AbstractDungeon.getMonsters().monsters) {
-            // 每当对被冻结敌人造成伤害时获得格挡
-            dealDamage(am, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-            if (am.hasPower(FrozenPower.POWER_ID)) gainBlock();
+            // 每当对敌人造成伤害时获得格挡
+            if (!am.isDead && !am.isDying) {
+                dealDamage(am, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+                gainBlock();
+            }
         }
     }
 

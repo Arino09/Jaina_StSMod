@@ -24,7 +24,7 @@ public class Meteor extends AbstractFireCard {
 
     public Meteor() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
-                CardRarity.RARE, CardTarget.ENEMY);
+                CardRarity.UNCOMMON, CardTarget.ENEMY);
         setDamage(15);
         setMagicNumber(5);
     }

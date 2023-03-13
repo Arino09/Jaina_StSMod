@@ -52,7 +52,7 @@ public class JainaCharacter extends CustomPlayer {
     };
     // 每个图层的旋转速度
     private static final float[] LAYER_SPEED = new float[]{-40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F};
-    // 角色的本地化文本，如卡牌的本地化文本一样，如何书写见下
+    // 角色的本地化文本
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(IHelper.makeID("Jaina"));
     // 角色Spriter动画
     private static final SpriterAnimation ANIMATION = new SpriterAnimation("jaina/img/char/jainaAnime/jaina.scml");
@@ -78,7 +78,7 @@ public class JainaCharacter extends CustomPlayer {
     }
 
     /**
-     * 初始卡组的ID，可直接写或引用变量
+     * 设定初始卡组
      *
      * @return 初始卡组列表
      */
@@ -118,8 +118,8 @@ public class JainaCharacter extends CustomPlayer {
         return new CharSelectInfo(
                 characterStrings.NAMES[0], // 角色名字
                 characterStrings.TEXT[0], // 角色介绍
-                60, // 当前血量
-                60, // 最大血量
+                65, // 当前血量
+                65, // 最大血量
                 0, // 初始充能球栏位
                 99, // 初始携带金币
                 5, // 每回合抽牌数量
@@ -195,7 +195,7 @@ public class JainaCharacter extends CustomPlayer {
      */
     @Override
     public BitmapFont getEnergyNumFont() {
-        return FontHelper.energyNumFontBlue;
+        return FontHelper.energyNumFontPurple;
     }
 
     /**
@@ -220,7 +220,7 @@ public class JainaCharacter extends CustomPlayer {
     /**
      * 碎心胜利图片
      *
-     * @return 图片数组
+     * @return 图片列表
      */
     @Override
     public ArrayList<CutscenePanel> getCutscenePanels() {

@@ -19,21 +19,17 @@ public class Vaporize extends AbstractFireCard {
     public Vaporize() {
         super(ID, false, CARD_STRINGS, COST, CardType.SKILL, JainaEnums.JAINA_COLOR,
                 AbstractCard.CardRarity.UNCOMMON, CardTarget.SELF);
-        setBlock(4);
+        setBlock(5);
     }
 
     @Override
     public void upp() {
-        upgradeBlock(2);
+        upgradeBlock(3);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!upgraded) {
-            gainPower(new VaporizePower(p, false));
-        } else {
-            gainPower(new VaporizePower(p, true));
-        }
+        gainPower(new VaporizePower(p));
         gainBlock();
     }
 

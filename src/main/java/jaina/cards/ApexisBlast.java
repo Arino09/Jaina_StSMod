@@ -21,14 +21,14 @@ public class ApexisBlast extends AbstractArcaneCard {
     public ApexisBlast() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.ENEMY);
-        setDamage(8);
-        setMagicNumber(2);
+        setDamage(10);
+        setMagicNumber(3);
     }
 
     @Override
     public void upp() {
-        upgradeDamage(2);
-        upgradeMagicNumber(1);
+        upgradeDamage(3);
+        upgradeMagicNumber(2);
     }
 
     @Override

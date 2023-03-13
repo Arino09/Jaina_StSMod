@@ -32,6 +32,7 @@ public class SecondFlame extends AbstractFireCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealDamage(m, AbstractGameAction.AttackEffect.FIRE);
+        drawCards(1);
     }
 
     @Override

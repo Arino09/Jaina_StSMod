@@ -18,13 +18,13 @@ public class Flamestrike extends AbstractFireCard {
     public static final String ID = IHelper.makeID("Flamestrike");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     public Flamestrike() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        setDamage(4);
-        setMagicNumber(4);
+        setDamage(6);
+        setMagicNumber(3);
     }
 
     @Override
@@ -39,7 +39,7 @@ public class Flamestrike extends AbstractFireCard {
     @Override
     public void upp() {
         upgradeDamage(2);
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 
     @Override

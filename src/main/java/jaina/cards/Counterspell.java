@@ -19,12 +19,11 @@ public class Counterspell extends AbstractArcaneCard {
     public static final String ID = IHelper.makeID("Counterspell");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 2;
+    private static final int COST = 3;
 
     public Counterspell() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
                 CardRarity.RARE, CardTarget.SELF);
-        this.isEthereal = true;
     }
 
     @Override
@@ -40,9 +39,7 @@ public class Counterspell extends AbstractArcaneCard {
 
     @Override
     public void upp() {
-        upgradeDescription(CARD_STRINGS);
-        this.isEthereal = false;
-        this.exhaust = true;
+        upgradeBaseCost(2);
     }
 
     @Override

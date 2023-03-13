@@ -1,12 +1,14 @@
 package jaina.powers.unique;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import jaina.modCore.IHelper;
 import jaina.powers.AbstractJainaPower;
 import jaina.powers.BurningPower;
@@ -25,14 +27,10 @@ public class FlameWardPower extends AbstractJainaPower {
     }
 
     @Override
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner != this.owner) {
-            flash();
-            for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-                addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new BurningPower(m, amount)));
-            }
+    public void onApplyPower(AbstractPower p, AbstractCreature target, AbstractCreature source) {
+        if (p instanceof BurningPower && source.isPlayer) {
+            addToBot(new GainBlockAction(source, p.amount));
         }
-        return damageAmount;
     }
 
     @Override

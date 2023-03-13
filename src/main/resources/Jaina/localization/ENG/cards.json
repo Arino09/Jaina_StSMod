@@ -70,7 +70,7 @@
   },
   "jaina:ConeOfCold": {
     "NAME": "Cone of Cold",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !B! Block for every jaina:Frozen enemy damaged this way."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !B! Block for every enemy damaged this way."
   },
   "jaina:ConjureManaBiscuit": {
     "NAME": "Conjure Mana Biscuit",
@@ -162,7 +162,7 @@
   },
   "jaina:FlameWard": {
     "NAME": "Flame Ward",
-    "DESCRIPTION": "Whenever you are attacked, apply !M! jaina:Burning to ALL enemies."
+    "DESCRIPTION": "Whenever you apply 1 jaina:Burning to an enemy, gain 1 block."
   },
   "jaina:Flamecannon": {
     "NAME": "Flamecannon",
@@ -308,7 +308,7 @@
   },
   "jaina:SecondFlame": {
     "NAME": "Second Flame",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Draw a card. NL Exhaust."
   },
   "jaina:ShatteringBlast": {
     "NAME": "Shattering Blast",

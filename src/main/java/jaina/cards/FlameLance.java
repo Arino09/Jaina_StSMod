@@ -34,10 +34,10 @@ public class FlameLance extends AbstractFireCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageCallbackAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL),
-                AbstractGameAction.AttackEffect.FIRE, (c) ->
+                AbstractGameAction.AttackEffect.FIRE, (c) -> {
                 // 给予燃烧层数等于被格挡层数
-                givePower(new BurningPower(m, damage - c), damage - c)));
-        IHelper.getBurn(1);
+                if (damage - c > 0) givePower(new BurningPower(m, damage - c), damage - c);
+        }));
     }
 
     @Override

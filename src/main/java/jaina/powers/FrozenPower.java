@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster.Intent;
@@ -83,7 +82,7 @@ public class FrozenPower extends AbstractJainaPower {
         if (amount == 3) {
             this.description += DESCRIPTIONS[2];
         }
-        this.description += DESCRIPTIONS[3];
+        this.description += (DESCRIPTIONS[3] + DESCRIPTIONS[4]);
     }
 
     @Override

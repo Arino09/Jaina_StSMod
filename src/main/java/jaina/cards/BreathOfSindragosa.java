@@ -22,7 +22,7 @@ public class BreathOfSindragosa extends AbstractFrostCard {
     public BreathOfSindragosa() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.COMMON, CardTarget.NONE);
-        setDamage(4);
+        setDamage(7);
         setMagicNumber(1);
     }
 

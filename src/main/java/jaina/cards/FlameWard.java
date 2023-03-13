@@ -20,7 +20,6 @@ public class FlameWard extends AbstractFireCard {
     public FlameWard() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.SELF);
-        setMagicNumber(2);
     }
 
     @Override

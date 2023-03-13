@@ -17,7 +17,7 @@ public class VaporizePower extends AbstractJainaPower {
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public VaporizePower(AbstractCreature owner, boolean upgraded) {
+    public VaporizePower(AbstractCreature owner) {
         super(POWER_ID, false, NAME, PowerType.BUFF);
         this.owner = owner;
         this.amount = 1;
@@ -34,11 +34,11 @@ public class VaporizePower extends AbstractJainaPower {
         // 受到攻击时对目标造成伤害
         if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner != this.owner) {
             flash();
-            addToTop(new DamageAction(info.owner, new DamageInfo(this.owner, info.base,
+            addToTop(new DamageAction(info.owner, new DamageInfo(this.owner, info.output,
                     DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
             amount--;
             // 层数为0后立马解除能力
-            if (amount <= 0) {
+            if (amount == 0) {
                 this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
             }
             if (info.owner.isDying || info.owner.currentHealth <= 0 && !info.owner.halfDead) {
@@ -47,4 +47,5 @@ public class VaporizePower extends AbstractJainaPower {
         }
         return damageAmount;
     }
+
 }
