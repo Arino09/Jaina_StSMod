@@ -29,7 +29,7 @@ public class FlameWardPower extends AbstractJainaPower {
     @Override
     public void onApplyPower(AbstractPower p, AbstractCreature target, AbstractCreature source) {
         if (p instanceof BurningPower && source.isPlayer) {
-            addToBot(new GainBlockAction(source, p.amount));
+            addToBot(new GainBlockAction(source, p.amount * this.amount));
         }
     }
 

@@ -5,11 +5,13 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 import jaina.powers.FrozenPower;
+import jaina.powers.unique.FrostAffinityPower;
 
 
 public class FrozenTouch extends AbstractFrostCard {
@@ -33,6 +35,7 @@ public class FrozenTouch extends AbstractFrostCard {
     public void upp() {
         upgradeDamage(2);
         upgradeMagicNumber(2);
+        exhaustCount = magicNumber;
     }
 
     @Override
@@ -44,6 +47,14 @@ public class FrozenTouch extends AbstractFrostCard {
         }
         rawDescription = CARD_STRINGS.DESCRIPTION + String.format(CARD_STRINGS.EXTENDED_DESCRIPTION[0], exhaustCount);
         initializeDescription();
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        if (!AbstractDungeon.player.hasPower(FrostAffinityPower.POWER_ID)) {
+            resetAttributes();
+        }
     }
 
     @Override

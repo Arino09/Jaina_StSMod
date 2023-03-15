@@ -14,12 +14,12 @@ import jaina.modCore.Core;
 import jaina.modCore.IHelper;
 import jaina.powers.FrozenPower;
 
-public class FrozenPotion extends AbstractPotion {
+public class FreezingPotion extends AbstractPotion {
 
-    public static final String ID = IHelper.makeID("FrozenPotion");
+    public static final String ID = IHelper.makeID("FreezingPotion");
     private static final PotionStrings POTION_STRINGS = CardCrawlGame.languagePack.getPotionString(ID);
 
-    public FrozenPotion() {
+    public FreezingPotion() {
         super(POTION_STRINGS.NAME, ID, PotionRarity.COMMON, PotionSize.SPHERE, PotionColor.BLUE);
         this.isThrown = true;
         this.targetRequired = true;
@@ -38,11 +38,7 @@ public class FrozenPotion extends AbstractPotion {
     @Override
     public void initializeData() {
         this.potency = getPotency();
-        if (AbstractDungeon.player == null || !AbstractDungeon.player.hasRelic("SacredBark")) {
-            this.description = POTION_STRINGS.DESCRIPTIONS[0];
-        } else {
-            this.description = POTION_STRINGS.DESCRIPTIONS[1];
-        }
+        this.description = String.format(POTION_STRINGS.DESCRIPTIONS[0], potency);
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(
@@ -58,7 +54,7 @@ public class FrozenPotion extends AbstractPotion {
 
     @Override
     public AbstractPotion makeCopy() {
-        return new FrozenPotion();
+        return new FreezingPotion();
     }
 
 }

@@ -23,13 +23,14 @@ public class SplittingImagePower extends AbstractJainaPower {
         updateDescription();
     }
 
+
+
     @Override
     public int onAttacked(DamageInfo info, int damage) {
 
         if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner != this.owner) {
             flash();
-            addToBot(new ApplyPowerAction(owner, owner, new IntangiblePlayerPower(owner, amount)));
-            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+            addToTop(new RemoveSpecificPowerAction(owner, owner, this));
         }
         return damage;
     }
@@ -44,4 +45,8 @@ public class SplittingImagePower extends AbstractJainaPower {
         this.description = String.format(DESCRIPTIONS[0], amount);
     }
 
+    @Override
+    public void onRemove() {
+        addToBot(new ApplyPowerAction(owner, owner, new IntangiblePlayerPower(owner, amount)));
+    }
 }

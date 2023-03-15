@@ -26,11 +26,10 @@
       " #yDiscover #b2 #yFrost cards. They cost #b0 this turn."
     ]
   },
-  "jaina:FrozenPotion": {
+  "jaina:FreezingPotion": {
     "NAME": "Freezing Potion",
     "DESCRIPTIONS": [
-      "#yFreeze an enemy.",
-      "#yFreeze an enemy, and freeze another random enemy."
+      "Apply #b%d Freeze to an enemy."
     ]
   },
   "jaina:IllusionPotion": {

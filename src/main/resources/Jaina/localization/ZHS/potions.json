@@ -26,11 +26,10 @@
       "#y发现 #b2 张 #y冰霜 牌。这两张牌在本回合耗能变为 #b0 。"
     ]
   },
-  "jaina:FrozenPotion": {
+  "jaina:FreezingPotion": {
     "NAME": "冰冻药水",
     "DESCRIPTIONS": [
-      "#y冻结 一名敌人。",
-      "#y冻结 一名敌人，再随机冻结一名敌人。"
+      "给予一名敌人 #b%d 层 #y冻结 。"
     ]
   },
   "jaina:IllusionPotion": {
