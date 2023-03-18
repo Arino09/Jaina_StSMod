@@ -91,8 +91,7 @@
   },
   "jaina:Counterspell": {
     "NAME": "法术反制",
-    "DESCRIPTION": "虚无 。 NL 选择：获得1层 无实体 、1层 jaina:缓冲 或1层 人工制品 。",
-    "UPGRADE_DESCRIPTION": "选择：获得1层 无实体 、1层 jaina:缓冲 或者1层 人工制品 。"
+    "DESCRIPTION": "选择：获得1层 无实体 、1层 jaina:缓冲 或1层 人工制品 。"
   },
   "jaina:CramSession": {
     "NAME": "考前刷夜",

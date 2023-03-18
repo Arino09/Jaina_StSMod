@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import jaina.actions.ApplyBurningAction;
 
 public class DragonsFuryAction extends AbstractGameAction {
     private final AbstractPlayer p;

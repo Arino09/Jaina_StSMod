@@ -41,7 +41,7 @@ public class Meteor extends AbstractFireCard {
         dealDamage(m, AbstractGameAction.AttackEffect.NONE);
         for (AbstractMonster mon : AbstractDungeon.getMonsters().monsters) {
             addToBot(new VFXAction(new FireBurstParticleEffect(mon.hb_x, mon.hb_y)));
-            addToBot(new ApplyBurningAction(p, m, magicNumber));
+            addToBot(new ApplyBurningAction(p, mon, magicNumber));
         }
     }
 

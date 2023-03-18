@@ -91,8 +91,7 @@
   },
   "jaina:Counterspell": {
     "NAME": "Counter Spell",
-    "DESCRIPTION": "Ethereal. NL Choose one: NL Gain 1 Intangible, 1 jaina:Buffer, or 1 Artifact.",
-    "UPGRADE_DESCRIPTION": "Choose one: NL Gain 1 Intangible, 1 jaina:Buffer, or 1 Artifact."
+    "DESCRIPTION": "Choose one: NL Gain 1 Intangible, 1 jaina:Buffer, or 1 Artifact."
   },
   "jaina:CramSession": {
     "NAME": "Cram Session",

@@ -41,7 +41,7 @@ public class MagicTrick extends AbstractArcaneCard {
                 cardRng.add(c);
             }
         }
-        addToBot(new JainaDiscoveryAction(cardRng, true, true));
+        addToBot(new JainaDiscoveryAction(cardRng, true, upgraded));
     }
 
     @Override

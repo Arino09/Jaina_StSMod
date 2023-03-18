@@ -28,11 +28,7 @@ public class FreezingPotion extends AbstractPotion {
 
     @Override
     public void use(AbstractCreature target) {
-        addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new FrozenPower((AbstractMonster) target, 1)));
-        if (getPotency() > 1) {
-            addToBot(new ApplyPowerAction(AbstractDungeon.getRandomMonster((AbstractMonster) target),
-                    AbstractDungeon.player, new FrozenPower((AbstractMonster) target, 1)));
-        }
+        addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new FrozenPower((AbstractMonster) target, potency)));
     }
 
     @Override
