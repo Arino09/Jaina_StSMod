@@ -92,7 +92,7 @@
   "jaina:VaporizePower": {
     "NAME": "蒸发",
     "DESCRIPTIONS": [
-      "受到攻击时对攻击者造成相同的伤害。 NL 每次受到攻击减少 #b1 层。"
+      "受到攻击时给予攻击者相同数值的 #y燃烧 。 NL 每次受到攻击减少 #b1 层。"
     ]
   },
   "jaina:WildfirePower": {

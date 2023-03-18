@@ -92,7 +92,7 @@
   "jaina:VaporizePower": {
     "NAME": "Vaporize",
     "DESCRIPTIONS": [
-      "Whenever you are attacked, deal that much damage to the attacker. Reduced by #b1 for each incoming hit."
+      "Whenever you are attacked, apply #yBurning equals to the damage to the attacker. Reduced by #b1 for each incoming hit."
     ]
   },
   "jaina:WildfirePower": {
