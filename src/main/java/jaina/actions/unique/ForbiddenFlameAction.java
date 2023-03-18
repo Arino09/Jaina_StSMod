@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import jaina.powers.BurningPower;
+import jaina.actions.ApplyBurningAction;
 
 public class ForbiddenFlameAction extends AbstractGameAction {
     private final AbstractPlayer p;

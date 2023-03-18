@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
-import jaina.actions.unique.ApplyBurningAction;
+import jaina.actions.ApplyBurningAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
 

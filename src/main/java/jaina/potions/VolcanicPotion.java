@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
-import jaina.actions.unique.ApplyBurningAction;
+import jaina.actions.ApplyBurningAction;
 import jaina.modCore.Core;
 import jaina.modCore.IHelper;
 
