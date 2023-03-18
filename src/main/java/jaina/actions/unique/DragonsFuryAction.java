@@ -1,7 +1,6 @@
 package jaina.actions.unique;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,7 +8,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import jaina.powers.BurningPower;
 
 public class DragonsFuryAction extends AbstractGameAction {
     private final AbstractPlayer p;
@@ -44,7 +42,7 @@ public class DragonsFuryAction extends AbstractGameAction {
             for (int i = 0; i < effect; i++) {
                 for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
                     addToBot(new DamageAction(m, new DamageInfo(p, damage, damageType)));
-                    addToBot(new ApplyPowerAction(m, p, new BurningPower(m, amount)));
+                    addToBot(new ApplyBurningAction(p, m, amount));
                 }
             }
             if (!freeToPlayOnce) {

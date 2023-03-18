@@ -1,14 +1,12 @@
 package jaina.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import jaina.actions.unique.ApplyBurningAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
@@ -30,7 +28,6 @@ public class Flamestrike extends AbstractFireCard {
     public void use(AbstractPlayer p, AbstractMonster mon) {
         dealAoeDamage(AbstractGameAction.AttackEffect.FIRE);
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-            addToBot(new VFXAction(new FireballEffect(p.hb_x, p.hb_y, mon.hb_x, mon.hb_y)));
             addToBot(new ApplyBurningAction(p, m, magicNumber));
         }
     }

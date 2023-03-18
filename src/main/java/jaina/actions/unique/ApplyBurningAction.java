@@ -1,9 +1,11 @@
 package jaina.actions.unique;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.vfx.FireBurstParticleEffect;
 import jaina.powers.BurningPower;
 import jaina.powers.unique.FlameWardPower;
 import jaina.powers.unique.WildfirePower;
@@ -26,11 +28,12 @@ public class ApplyBurningAction extends AbstractGameAction {
             if (source.hasPower(WildfirePower.POWER_ID)) {
                 int extra = source.getPower(WildfirePower.POWER_ID).amount;
                 amount += extra;
-                addToBot(new ApplyPowerAction(target, source, new BurningPower(target, amount)));
             }
+            addToBot(new VFXAction(new FireBurstParticleEffect(target.hb_x, target.hb_y)));
+            addToBot(new ApplyPowerAction(target, source, new BurningPower(target, amount)));
             if (source.hasPower(FlameWardPower.POWER_ID)) {
                 int block = source.getPower(FlameWardPower.POWER_ID).amount;
-                addToBot(new GainBlockAction(source, block * amount));
+                addToBot(new GainBlockAction(source, Math.abs(block * amount)));
             }
         }
         this.isDone = true;
