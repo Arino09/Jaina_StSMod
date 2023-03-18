@@ -1,12 +1,11 @@
 package jaina.powers.unique;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import jaina.actions.ApplyBurningAction;
 import jaina.modCore.IHelper;
 import jaina.powers.AbstractJainaPower;
 
@@ -34,8 +33,7 @@ public class VaporizePower extends AbstractJainaPower {
         // 受到攻击时对目标造成伤害
         if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner != this.owner) {
             flash();
-            addToTop(new DamageAction(info.owner, new DamageInfo(this.owner, info.output,
-                    DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+            addToTop(new ApplyBurningAction(this.owner, info.owner, amount));
             amount--;
             // 层数为0后立马解除能力
             if (amount == 0) {

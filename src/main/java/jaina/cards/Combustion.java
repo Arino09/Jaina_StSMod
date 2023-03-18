@@ -22,13 +22,13 @@ public class Combustion extends AbstractFireCard {
     public Combustion() {
         super(ID, false, CARD_STRINGS, COST, CardType.ATTACK, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.ENEMY);
-        setDamage(7);
-        setMagicNumber(2);
+        setDamage(8);
+        setMagicNumber(3);
     }
 
     @Override
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(4);
         upgradeMagicNumber(1);
     }
 

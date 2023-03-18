@@ -1,7 +1,6 @@
 package jaina.actions.unique;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,7 +13,7 @@ public class ForbiddenFlameAction extends AbstractGameAction {
     private final AbstractPlayer p;
     private final boolean freeToPlayOnce;
     private final int energyOnUse;
-    private int damage;
+    private final int damage;
 
     public ForbiddenFlameAction(AbstractPlayer p, AbstractMonster m, int damage, int burningAmt, boolean freeToPlayOnce, int energyOnUse) {
         this.amount = burningAmt;
@@ -41,10 +40,10 @@ public class ForbiddenFlameAction extends AbstractGameAction {
         }
 
         if (effect > 0) {
-            damage *= effect;
-            amount *= effect;
-            addToBot(new DamageAction(target, new DamageInfo(p, this.damage), AttackEffect.FIRE));
-            addToBot(new ApplyPowerAction(target, p, new BurningPower(target, amount)));
+            for (int i = 0; i < effect; i++) {
+                addToBot(new DamageAction(target, new DamageInfo(p, this.damage), AttackEffect.FIRE));
+                addToBot(new ApplyBurningAction(p, target, amount));
+            }
             if (!freeToPlayOnce) {
                 p.energy.use(EnergyPanel.totalCount);
             }

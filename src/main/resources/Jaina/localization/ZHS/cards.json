@@ -180,7 +180,7 @@
   },
   "jaina:ForbiddenFlame": {
     "NAME": "禁忌烈焰",
-    "DESCRIPTION": "造成X倍 !D! 点伤害。 NL 给予X倍 jaina:燃烧 。"
+    "DESCRIPTION": "造成 !D! 点伤害并给予 !M! 层 jaina:燃烧 X次。"
   },
   "jaina:FrostAffinity": {
     "NAME": "冰霜亲和",
@@ -361,7 +361,7 @@
   },
   "jaina:Vaporize": {
     "NAME": "蒸发",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 受到攻击时对攻击者造成相同的伤害。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 受到攻击时给予攻击者相同数值的 jaina:燃烧 。"
   },
   "jaina:Wildfire": {
     "NAME": "野火",
