@@ -46,7 +46,8 @@ public class BurningPower extends AbstractJainaPower {
     @Override
     public void onSpecificTrigger() {
         if (!owner.isDying && !owner.isDeadOrEscaped()) {
-            addToTop(new DamageAction(owner, new DamageInfo(owner, amount, DamageInfo.DamageType.HP_LOSS),
+            flash();
+            addToBot(new DamageAction(owner, new DamageInfo(owner, amount, DamageInfo.DamageType.HP_LOSS),
                     AbstractGameAction.AttackEffect.FIRE));
         }
     }
