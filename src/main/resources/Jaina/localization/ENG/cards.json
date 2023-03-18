@@ -181,7 +181,7 @@
   },
   "jaina:ForbiddenFlame": {
     "NAME": "Forbidden Flame",
-    "DESCRIPTION": "Deal !D!X damage. NL Apply !M!X jaina:Burning."
+    "DESCRIPTION": "Deal !D! damage and apply !M! jaina:Burning X times."
   },
   "jaina:FrostAffinity": {
     "NAME": "Frost Affinity",
@@ -365,7 +365,7 @@
   },
   "jaina:Vaporize": {
     "NAME": "Vaporize",
-    "DESCRIPTION": "Gain !B! Block. NL The next time you are attacked, deal that much damage to the attacker."
+    "DESCRIPTION": "Gain !B! Block. NL The next time you are attacked, apply jaina:Burning equal to the damage to the attacker."
   },
   "jaina:Wildfire": {
     "NAME": "Wildfire",
