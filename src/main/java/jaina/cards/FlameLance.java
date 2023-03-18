@@ -8,9 +8,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import jaina.actions.unique.ApplyBurningAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.BurningPower;
 
 
 public class FlameLance extends AbstractFireCard {
@@ -35,8 +35,8 @@ public class FlameLance extends AbstractFireCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageCallbackAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL),
                 AbstractGameAction.AttackEffect.FIRE, (c) -> {
-                // 给予燃烧层数等于被格挡层数
-                if (damage - c > 0) givePower(new BurningPower(m, damage - c), damage - c);
+            // 给予燃烧层数等于被格挡层数
+            if (damage - c > 0) addToBot(new ApplyBurningAction(p, m, damage - c));
         }));
     }
 

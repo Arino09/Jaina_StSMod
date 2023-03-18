@@ -7,9 +7,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import jaina.actions.unique.ApplyBurningAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.BurningPower;
 
 
 public class Combustion extends AbstractFireCard {
@@ -36,7 +36,7 @@ public class Combustion extends AbstractFireCard {
     public void use(AbstractPlayer p, AbstractMonster monster) {
         dealDamage(monster, AbstractGameAction.AttackEffect.FIRE);
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-            givePower(new BurningPower(m, magicNumber), magicNumber);
+            addToBot(new ApplyBurningAction(p, m, magicNumber));
         }
     }
 

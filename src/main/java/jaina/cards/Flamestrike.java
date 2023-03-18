@@ -2,7 +2,6 @@ package jaina.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,9 +9,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
+import jaina.actions.unique.ApplyBurningAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.BurningPower;
 
 public class Flamestrike extends AbstractFireCard {
     public static final String ID = IHelper.makeID("Flamestrike");
@@ -28,11 +27,11 @@ public class Flamestrike extends AbstractFireCard {
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void use(AbstractPlayer p, AbstractMonster mon) {
         dealAoeDamage(AbstractGameAction.AttackEffect.FIRE);
-        for (AbstractMonster mon : AbstractDungeon.getMonsters().monsters) {
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
             addToBot(new VFXAction(new FireballEffect(p.hb_x, p.hb_y, mon.hb_x, mon.hb_y)));
-            addToBot(new ApplyPowerAction(mon, p, new BurningPower(mon, magicNumber)));
+            addToBot(new ApplyBurningAction(p, m, magicNumber));
         }
     }
 

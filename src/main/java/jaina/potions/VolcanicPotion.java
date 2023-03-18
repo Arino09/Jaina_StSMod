@@ -2,7 +2,6 @@ package jaina.potions;
 
 import basemod.BaseMod;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,9 +11,9 @@ import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
+import jaina.actions.unique.ApplyBurningAction;
 import jaina.modCore.Core;
 import jaina.modCore.IHelper;
-import jaina.powers.BurningPower;
 
 public class VolcanicPotion extends AbstractPotion {
 
@@ -45,7 +44,7 @@ public class VolcanicPotion extends AbstractPotion {
     @Override
     public void use(AbstractCreature target) {
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-            addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new BurningPower(m, POTENCY)));
+            addToBot(new ApplyBurningAction(AbstractDungeon.player, m, potency));
         }
     }
 

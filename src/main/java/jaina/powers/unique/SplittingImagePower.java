@@ -24,7 +24,6 @@ public class SplittingImagePower extends AbstractJainaPower {
     }
 
 
-
     @Override
     public int onAttacked(DamageInfo info, int damage) {
 

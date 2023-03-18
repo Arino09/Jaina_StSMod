@@ -7,9 +7,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import jaina.actions.unique.ApplyBurningAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.BurningPower;
 
 public class Flamecannon extends AbstractFireCard {
     public static final String ID = IHelper.makeID("Flamecannon");
@@ -28,7 +28,7 @@ public class Flamecannon extends AbstractFireCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractMonster randM = AbstractDungeon.getRandomMonster();
         dealDamage(randM, AbstractGameAction.AttackEffect.FIRE);
-        givePower(new BurningPower(randM, magicNumber), magicNumber);
+        addToBot(new ApplyBurningAction(p, randM, magicNumber));
     }
 
     @Override

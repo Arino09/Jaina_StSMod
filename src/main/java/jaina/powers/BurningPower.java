@@ -25,6 +25,15 @@ public class BurningPower extends AbstractJainaPower {
     }
 
     @Override
+    public void reducePower(int reduceAmount) {
+        super.reducePower(reduceAmount);
+        if (amount <= 0) {
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
+    }
+
+
+    @Override
     public void onInitialApplication() {
         addToBot(new VFXAction(new FireBurstParticleEffect(owner.hb.x, owner.hb.y)));
         // 如果目标具有冻结则移除冻结

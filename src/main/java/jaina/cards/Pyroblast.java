@@ -8,9 +8,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
+import jaina.actions.unique.ApplyBurningAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.BurningPower;
 
 public class Pyroblast extends AbstractFireCard {
 
@@ -36,7 +36,7 @@ public class Pyroblast extends AbstractFireCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
         dealDamage(m, AbstractGameAction.AttackEffect.NONE);
-        givePower(new BurningPower(m, magicNumber), magicNumber);
+        addToBot(new ApplyBurningAction(p, m, magicNumber));
     }
 
     @Override

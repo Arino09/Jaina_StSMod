@@ -32,7 +32,7 @@
   "jaina:FlameWardPower": {
     "NAME": "火焰结界",
     "DESCRIPTIONS": [
-      "受到攻击时，给予所有敌人 #b%d 层 #r燃烧 。"
+      "每当你给予1层 #y燃烧 ，就获得 #b%d 点 格挡 。"
     ]
   },
   "jaina:FrostAffinityPower": {

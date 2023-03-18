@@ -32,7 +32,7 @@
   "jaina:FlameWardPower": {
     "NAME": "Flame Ward",
     "DESCRIPTIONS": [
-      "Whenever you are attacked, apply #b%d #yBurning to the attacker."
+      "Whenever you apply 1 #yBurning, gain #b%d Block."
     ]
   },
   "jaina:FrostAffinityPower": {

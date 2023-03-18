@@ -18,10 +18,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import jaina.cards.Defend;
-import jaina.cards.Fireblast;
-import jaina.cards.Frostbolt;
-import jaina.cards.Strike;
+import jaina.cards.*;
 import jaina.modCore.Core;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
@@ -77,6 +74,26 @@ public class JainaCharacter extends CustomPlayer {
 
     }
 
+    public ArrayList<String> testBurning() {
+        ArrayList<String> deck = new ArrayList<>();
+        deck.add(Flamecannon.ID);
+        deck.add(DragonsFury.ID);
+        deck.add(ForbiddenFlame.ID);
+        deck.add(Cinderstorm.ID);
+        deck.add(Combustion.ID);
+        deck.add(Fireblast.ID);
+        deck.add(FlameLance.ID);
+        deck.add(Flamestrike.ID);
+        deck.add(HotStreak.ID);
+        deck.add(Ignite.ID);
+        deck.add(Meteor.ID);
+        deck.add(Pyroblast.ID);
+        deck.add(Scorch.ID);
+        deck.add(Wildfire.ID);
+        deck.add(FlameWard.ID);
+        return deck;
+    }
+
     /**
      * 设定初始卡组
      *
@@ -93,7 +110,7 @@ public class JainaCharacter extends CustomPlayer {
         }
         deck.add(Fireblast.ID);
         deck.add(Frostbolt.ID);
-        return deck;
+        return testBurning();
     }
 
     /**

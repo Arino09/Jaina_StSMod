@@ -6,9 +6,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import jaina.actions.unique.ApplyBurningAction;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
-import jaina.powers.BurningPower;
 
 public class Fireblast extends AbstractFireCard {
     public static final String ID = IHelper.makeID("Fireblast");
@@ -32,7 +32,7 @@ public class Fireblast extends AbstractFireCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealDamage(m, AbstractGameAction.AttackEffect.FIRE);
-        givePower(new BurningPower(m, magicNumber), magicNumber);
+        addToBot(new ApplyBurningAction(p, m, magicNumber));
     }
 
     @Override

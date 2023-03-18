@@ -166,7 +166,7 @@
   },
   "jaina:Flamecannon": {
     "NAME": "Flamecannon",
-    "DESCRIPTION": "Deal !D! damage and apply jaina:Burning to a random enemy."
+    "DESCRIPTION": "Deal !D! damage and apply !M! jaina:Burning to a random enemy."
   },
   "jaina:Flamestrike": {
     "NAME": "Flamestrike",

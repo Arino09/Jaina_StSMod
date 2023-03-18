@@ -253,8 +253,8 @@ public abstract class AbstractJainaCard extends CustomCard {
         int frozenAmt = 0;
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
             if (!m.isDead && !m.isDying && m.intent != JainaEnums.FROZEN) {
-                    this.addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new FrozenPower(m, amount), amount));
-                    frozenAmt++;
+                this.addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new FrozenPower(m, amount), amount));
+                frozenAmt++;
             }
         }
         logger.info(String.format("Freeze All: affected %d enemies.", frozenAmt));
