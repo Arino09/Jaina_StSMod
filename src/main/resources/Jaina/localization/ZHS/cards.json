@@ -139,7 +139,7 @@
   },
   "jaina:ExplosiveRunes": {
     "NAME": "爆炸符文",
-    "DESCRIPTION": "你下次受到攻击时，对攻击者造成 !D! 点伤害，并将一张 *爆炸符文 放入你的弃牌堆。"
+    "DESCRIPTION": "jaina:燃烧 改为造成攻击伤害，并在敌人的回合开始时触发。"
   },
   "jaina:Fireball": {
     "NAME": "火球术",

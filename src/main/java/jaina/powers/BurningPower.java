@@ -7,9 +7,12 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.FireBurstParticleEffect;
 import jaina.modCore.IHelper;
+import jaina.powers.unique.ExplosiveRunesPower;
 
 public class BurningPower extends AbstractJainaPower {
     public static final String POWER_ID = IHelper.makeID("BurningPower");
@@ -55,9 +58,32 @@ public class BurningPower extends AbstractJainaPower {
     //  回合结束时自动触发
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        flash();
         if (!isPlayer && !owner.isPlayer || isPlayer && owner.isPlayer) {
             onSpecificTrigger();
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
+
+    }
+
+    // 爆炸符文触发方法
+    public void explosiveTrigger(int explosiveAmt) {
+        if ((AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.COMBAT &&
+                !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            flash();
+            for (int i = 0; i < explosiveAmt; i++) {
+                addToBot(new DamageAction(owner, new DamageInfo(owner, amount, DamageInfo.DamageType.NORMAL),
+                        AbstractGameAction.AttackEffect.FIRE));
+            }
+            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+
+        }
+    }
+
+    // 玩家具有爆炸符文时改为攻击伤害
+    @Override
+    public void atStartOfTurn() {
+        if (AbstractDungeon.player.hasPower(ExplosiveRunesPower.POWER_ID)) {
+            explosiveTrigger(AbstractDungeon.player.getPower(ExplosiveRunesPower.POWER_ID).amount);
             addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
     }

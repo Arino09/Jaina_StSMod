@@ -140,7 +140,7 @@
   },
   "jaina:ExplosiveRunes": {
     "NAME": "Explosive Runes",
-    "DESCRIPTION": "The next time you are attacked, deal !D! damage to the attacker and add a copy of this card to your discard pile."
+    "DESCRIPTION": "jaina:Burning deals Attack damage instead and triggers at the start of enemies' turn."
   },
   "jaina:Fireball": {
     "NAME": "Fireball",

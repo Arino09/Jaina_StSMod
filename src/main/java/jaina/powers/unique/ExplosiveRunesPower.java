@@ -1,14 +1,8 @@
 package jaina.powers.unique;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import jaina.cards.ExplosiveRunes;
 import jaina.modCore.IHelper;
 import jaina.powers.AbstractJainaPower;
 
@@ -17,26 +11,12 @@ public class ExplosiveRunesPower extends AbstractJainaPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private static int postfix = 0;
 
-    public ExplosiveRunesPower(AbstractCreature owner, int damage) {
+    public ExplosiveRunesPower(AbstractCreature owner, int amount) {
         super(POWER_ID, false, NAME, PowerType.BUFF);
-        this.ID = this.ID + postfix++;
         this.owner = owner;
-        this.amount = damage;
+        this.amount = amount;
         updateDescription();
-    }
-
-    @Override
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS
-                && info.owner != null && info.owner != this.owner) {
-            flash();
-            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-            addToBot(new DamageAction(info.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS),
-                    AbstractGameAction.AttackEffect.FIRE, true));
-        }
-        return damageAmount;
     }
 
     @Override
@@ -44,8 +24,4 @@ public class ExplosiveRunesPower extends AbstractJainaPower {
         this.description = String.format(DESCRIPTIONS[0], amount);
     }
 
-    @Override
-    public void onRemove() {
-        addToBot(new MakeTempCardInDiscardAction(new ExplosiveRunes(), 1));
-    }
 }

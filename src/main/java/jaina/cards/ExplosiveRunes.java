@@ -15,22 +15,21 @@ public class ExplosiveRunes extends AbstractFireCard {
     public static final String ID = IHelper.makeID("ExplosiveRunes");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     public ExplosiveRunes() {
         super(ID, false, CARD_STRINGS, COST, CardType.POWER, JainaEnums.JAINA_COLOR,
                 CardRarity.UNCOMMON, CardTarget.NONE);
-        setDamage(10);
     }
 
     @Override
     public void upp() {
-        upgradeDamage(5);
+        upgradeBaseCost(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new ExplosiveRunesPower(p, damage));
+        gainPower(new ExplosiveRunesPower(p, 1));
     }
 
     @Override

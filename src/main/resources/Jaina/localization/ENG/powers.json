@@ -26,7 +26,7 @@
   "jaina:ExplosiveRunesPower": {
     "NAME": "Explosive Runes",
     "DESCRIPTIONS": [
-      "Whenever you are attacked, deal #b%d damage to the attacker."
+      "#yBurning deals Attack damage instead and triggers at the start of enemies' turn #b%d times."
     ]
   },
   "jaina:FlameWardPower": {
