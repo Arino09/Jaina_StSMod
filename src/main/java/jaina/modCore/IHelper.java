@@ -10,6 +10,7 @@ import jaina.actions.SpellForceAction;
 import jaina.cards.ShiftingScroll;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import static jaina.modCore.Core.MOD_ID;

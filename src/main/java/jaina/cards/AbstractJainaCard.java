@@ -4,6 +4,7 @@ import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -13,6 +14,9 @@ import jaina.powers.FrozenPower;
 import jaina.powers.SpellForcePower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class AbstractJainaCard extends CustomCard {
 
@@ -53,13 +57,24 @@ public abstract class AbstractJainaCard extends CustomCard {
     }
 
     /**
+     * 根据法术类型获得修饰词
+     * @param spellType 法术类型
+     * @return 修饰词列表
+     */
+    static List<String> getCardDescriptors(String spellType) {
+        List<String> descriptors = new ArrayList<>();
+        descriptors.add(CardCrawlGame.languagePack.getUIString(spellType).TEXT[0]);
+        return descriptors;
+    }
+
+    /**
      * 获取指定卡牌的图片路径
      *
      * @param type 卡牌类型
      * @param id   完整卡牌id
      * @return 图片路径
      */
-    public static String getImgPath(CardType type, String id) {
+    private static String getImgPath(CardType type, String id) {
         String t;
         switch (type) {
             case ATTACK:
@@ -89,7 +104,7 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param type 卡牌类型
      * @return 测试图片路径
      */
-    public static String getTestImgPath(CardType type) {
+    protected static String getTestImgPath(CardType type) {
         String t;
         switch (type) {
             case ATTACK:
@@ -181,8 +196,7 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param ae 伤害效果
      */
     public void dealDamage(AbstractMonster m, AbstractGameAction.AttackEffect ae) {
-
-        this.addToBot(new DamageAction(m, new DamageInfo(AbstractDungeon.player, this.damage, this.damageTypeForTurn), ae));
+        dealDamage(m, damage, ae);
     }
 
     /**
@@ -199,8 +213,7 @@ public abstract class AbstractJainaCard extends CustomCard {
      * 获得格挡
      */
     public void gainBlock() {
-        this.addToBot(new GainBlockAction(
-                AbstractDungeon.player, this.block));
+        gainBlock(block);
     }
 
     /**
@@ -223,24 +236,13 @@ public abstract class AbstractJainaCard extends CustomCard {
     }
 
     /**
-     * 给予玩家一层能力
-     *
-     * @param power 能力
-     */
-    public void gainPower(AbstractPower power) {
-        this.addToBot(new ApplyPowerAction(
-                AbstractDungeon.player, AbstractDungeon.player, power));
-    }
-
-    /**
      * 给予目标生物一个能力
      *
      * @param power  能力
-     * @param amount 能力层数
      */
-    public void givePower(AbstractPower power, int amount) {
+    public void applyPower(AbstractPower power) {
         this.addToBot(new ApplyPowerAction(power.owner,
-                AbstractDungeon.player, power, amount));
+                AbstractDungeon.player, power, power.amount));
     }
 
     /**
@@ -249,7 +251,7 @@ public abstract class AbstractJainaCard extends CustomCard {
      * @param amount 冻结层数
      * @return 被完全冻结的敌人数量
      */
-    public int freezeAllEnemies(int amount) {
+    public int freezeAll(int amount) {
         int frozenAmt = 0;
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
             if (!m.isDead && !m.isDying && m.intent != JainaEnums.FROZEN) {

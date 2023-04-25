@@ -30,7 +30,7 @@ public class FrostArmor extends AbstractFrostCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new PlatedArmorPower(p, magicNumber));
+        applyPower(new PlatedArmorPower(p, magicNumber));
     }
 
     @Override

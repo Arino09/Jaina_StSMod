@@ -24,7 +24,7 @@ public class CounterMagic extends OptionCard {
 
     @Override
     public void onChoseThisOption() {
-        gainPower(new ArtifactPower(AbstractDungeon.player, 1));
+        applyPower(new ArtifactPower(AbstractDungeon.player, 1));
     }
 
     @Override

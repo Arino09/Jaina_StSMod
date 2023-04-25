@@ -29,7 +29,7 @@ public class IncantersFlow extends AbstractArcaneCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new IncantersPower(p));
+        applyPower(new IncantersPower(p));
     }
 
     @Override

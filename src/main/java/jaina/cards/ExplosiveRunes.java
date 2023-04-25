@@ -29,7 +29,7 @@ public class ExplosiveRunes extends AbstractFireCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new ExplosiveRunesPower(p, 1));
+        applyPower(new ExplosiveRunesPower(p, 1));
     }
 
     @Override

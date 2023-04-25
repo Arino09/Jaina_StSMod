@@ -8,7 +8,7 @@ import java.util.List;
 
 public abstract class AbstractFireCard extends AbstractJainaCard {
 
-    public static final String ID = IHelper.makeID("Fire");
+    private static final String SPELL_TYPE = IHelper.makeID("Fire");
 
     /**
      * 构造函数
@@ -28,7 +28,6 @@ public abstract class AbstractFireCard extends AbstractJainaCard {
 
     @Override
     public List<String> getCardDescriptors() {
-        return ISpellCard.getCardDescriptors(ID);
+        return getCardDescriptors(SPELL_TYPE);
     }
-
 }

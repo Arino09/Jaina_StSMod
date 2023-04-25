@@ -6,14 +6,18 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import jaina.actions.unique.DragonsFuryAction;
+import jaina.modCore.Core;
 import jaina.modCore.IHelper;
 import jaina.modCore.JainaEnums;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 public class DragonsFury extends AbstractFireCard {
 
     public static final String ID = IHelper.makeID("DragonsFury");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final Logger logger = LogManager.getLogger(Core.class.getName());
 
     private static final int COST = -1;
 
@@ -37,7 +41,9 @@ public class DragonsFury extends AbstractFireCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new DragonsFury();
+        DragonsFury card = new DragonsFury();
+        card.energyOnUse = this.energyOnUse;
+        return card;
     }
 
 }

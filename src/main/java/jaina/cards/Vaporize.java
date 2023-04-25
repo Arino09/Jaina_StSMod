@@ -29,7 +29,7 @@ public class Vaporize extends AbstractFireCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new VaporizePower(p));
+        applyPower(new VaporizePower(p));
         gainBlock();
     }
 

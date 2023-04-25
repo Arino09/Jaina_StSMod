@@ -24,7 +24,7 @@ public class CounterAttack extends OptionCard {
 
     @Override
     public void onChoseThisOption() {
-        gainPower(new IntangiblePlayerPower(AbstractDungeon.player, 1));
+        applyPower(new IntangiblePlayerPower(AbstractDungeon.player, 1));
     }
 
     @Override

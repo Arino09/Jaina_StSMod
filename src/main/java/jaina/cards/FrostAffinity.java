@@ -31,7 +31,7 @@ public class FrostAffinity extends AbstractFrostCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new FrostAffinityPower(p));
+        applyPower(new FrostAffinityPower(p));
     }
 
     @Override

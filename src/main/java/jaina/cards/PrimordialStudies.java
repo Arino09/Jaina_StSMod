@@ -31,7 +31,7 @@ public class PrimordialStudies extends AbstractArcaneCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new SpellForcePower(p, magicNumber));
+        applyPower(new SpellForcePower(p, magicNumber));
     }
 
     @Override

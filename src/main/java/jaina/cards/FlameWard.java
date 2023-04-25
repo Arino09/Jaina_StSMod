@@ -30,7 +30,7 @@ public class FlameWard extends AbstractFireCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new FlameWardPower(p, magicNumber));
+        applyPower(new FlameWardPower(p, magicNumber));
     }
 
     @Override

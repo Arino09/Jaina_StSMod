@@ -31,7 +31,7 @@ public class ManaBind extends AbstractArcaneCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        givePower(new ManaBindPower(p, magicNumber), magicNumber);
+        applyPower(new ManaBindPower(p, magicNumber));
     }
 
     @Override

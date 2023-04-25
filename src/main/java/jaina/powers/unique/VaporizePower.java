@@ -33,7 +33,7 @@ public class VaporizePower extends AbstractJainaPower {
         // 受到攻击时对目标造成伤害
         if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner != this.owner) {
             flash();
-            addToTop(new ApplyBurningAction(this.owner, info.owner, amount));
+            addToTop(new ApplyBurningAction(this.owner, info.owner, info.output));
             amount--;
             // 层数为0后立马解除能力
             if (amount == 0) {

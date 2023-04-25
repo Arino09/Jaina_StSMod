@@ -37,7 +37,7 @@ public class DevolvingMissiles extends AbstractJainaCard {
         for (int i = 0; i < 3; i++) {
             AbstractMonster randM = AbstractDungeon.getRandomMonster();
             dealDamage(randM, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-            givePower(new WeakPower(randM, magicNumber, false), magicNumber);
+            applyPower(new WeakPower(randM, magicNumber, false));
         }
     }
 

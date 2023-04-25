@@ -68,7 +68,9 @@ public class FrozenClone extends AbstractFrostCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new FrozenClone();
+        FrozenClone card = new FrozenClone();
+        card.energyOnUse = this.energyOnUse;
+        return card;
     }
 
 }

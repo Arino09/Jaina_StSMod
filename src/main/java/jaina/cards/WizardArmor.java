@@ -30,7 +30,7 @@ public class WizardArmor extends AbstractArcaneCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new WizardArmorPower(p, magicNumber));
+        applyPower(new WizardArmorPower(p, magicNumber));
     }
 
     @Override

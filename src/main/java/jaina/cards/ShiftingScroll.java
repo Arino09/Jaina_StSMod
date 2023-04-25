@@ -47,7 +47,7 @@ public class ShiftingScroll extends AbstractArcaneCard {
     @Override
     public void atTurnStart() {
         ArrayList<AbstractCard> cardRng = IHelper.generateRandomJainaCards(true, true, true, false);
-        shiftCard = (AbstractJainaCard) IHelper.getFewCards(cardRng, 1, false).get(0);
+        shiftCard = (AbstractJainaCard) IHelper.getFewCards(cardRng, 1, false).get(0).makeStatEquivalentCopy();
         if (upgraded) {
             shiftCard.upp();
         }
@@ -92,6 +92,7 @@ public class ShiftingScroll extends AbstractArcaneCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        shiftCard.energyOnUse = this.energyOnUse;
         shiftCard.use(p, m);
     }
 

@@ -33,7 +33,7 @@ public class TomeOfIntellect extends AbstractArcaneCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int amount = p.drawPile.size() / magicNumber;
         if (amount > 0) {
-            gainPower(new SpellForcePower(p, amount));
+            applyPower(new SpellForcePower(p, amount));
         }
     }
 

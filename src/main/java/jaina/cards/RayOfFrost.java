@@ -48,7 +48,7 @@ public class RayOfFrost extends AbstractFrostCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dealDamage(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         if (m.hasPower(FrozenPower.POWER_ID)) {
-            givePower(new VulnerablePower(m, 2, false), 2);
+            applyPower(new VulnerablePower(m, 2, false));
         }
     }
 

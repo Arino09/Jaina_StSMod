@@ -24,7 +24,7 @@ public class CounterDamage extends OptionCard {
 
     @Override
     public void onChoseThisOption() {
-        gainPower(new BufferPower(AbstractDungeon.player, 1));
+        applyPower(new BufferPower(AbstractDungeon.player, 1));
     }
 
     @Override

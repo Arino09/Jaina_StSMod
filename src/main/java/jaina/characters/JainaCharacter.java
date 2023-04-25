@@ -110,7 +110,8 @@ public class JainaCharacter extends CustomPlayer {
         }
         deck.add(Fireblast.ID);
         deck.add(Frostbolt.ID);
-        return testBurning();
+        return deck;
+//        return testBurning();
     }
 
     /**

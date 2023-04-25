@@ -30,7 +30,7 @@ public class SplittingImage extends AbstractArcaneCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new SplittingImagePower(p, magicNumber));
+        applyPower(new SplittingImagePower(p, magicNumber));
     }
 
     @Override

@@ -8,7 +8,7 @@ import java.util.List;
 
 public abstract class AbstractArcaneCard extends AbstractJainaCard {
 
-    public static final String ID = IHelper.makeID("Arcane");
+    private static final String SPELL_TYPE = IHelper.makeID("Arcane");
 
     /**
      * 构造函数
@@ -28,7 +28,7 @@ public abstract class AbstractArcaneCard extends AbstractJainaCard {
 
     @Override
     public List<String> getCardDescriptors() {
-        return ISpellCard.getCardDescriptors(ID);
+        return getCardDescriptors(SPELL_TYPE);
     }
 
 }

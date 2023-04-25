@@ -29,7 +29,7 @@ public class IceBlock extends AbstractFrostCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new IceBlockPower(p));
+        applyPower(new IceBlockPower(p));
     }
 
     @Override

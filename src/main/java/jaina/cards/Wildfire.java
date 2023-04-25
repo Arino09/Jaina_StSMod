@@ -30,7 +30,7 @@ public class Wildfire extends AbstractFireCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new WildfirePower(p, magicNumber));
+        applyPower(new WildfirePower(p, magicNumber));
     }
 
     @Override

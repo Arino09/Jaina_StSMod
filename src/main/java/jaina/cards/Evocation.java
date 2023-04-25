@@ -29,7 +29,7 @@ public class Evocation extends AbstractArcaneCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new EvocationPower(p, magicNumber));
+        applyPower(new EvocationPower(p, magicNumber));
     }
 
     @Override

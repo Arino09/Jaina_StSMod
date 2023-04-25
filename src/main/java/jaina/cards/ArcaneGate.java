@@ -30,7 +30,7 @@ public class ArcaneGate extends AbstractArcaneCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gainPower(new ArcaneGatePower(p, magicNumber));
+        applyPower(new ArcaneGatePower(p, magicNumber));
     }
 
     @Override
