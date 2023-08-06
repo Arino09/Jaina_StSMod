@@ -1,0 +1,1 @@
+java.exe -jar mod-uploader.jar upload -w jaina

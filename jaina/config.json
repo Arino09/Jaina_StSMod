@@ -1,0 +1,16 @@
+{
+  "steamPublishedID": "2941110154",
+  "title": "Hearthstone Mage the Jaina Mod",
+  "description": "Added Jaina Proudmoore the mage from Hearthstone. Including 75 cards, 9 new relics and 9 unique potions.\nThis mod is developing and needs to be optimized. Wish to receive feedbacks on balancing and bugs. And this will be continually updating, thanks!\nNew mechanics:\nThree spell genres: Frost, Fire, Arcane, each with its own characteristics.\nFreeze: Frozen enemies may not act, use the powerful freezing mechanism to control the combat!\nCombustion: Enemies with combustion will take direct HP damage, let the raging fire devour your enemies!\nSpell Force: Increases attack damage and block, may also enhance other effects.\n[hr][/hr]\nEnglish localization: @SolarNougat\n[hr][/hr]\n[url=https://github.com/Arino09/Jaina_StSMod] Github Repository [/url]",
+  "visibility": "public",
+  "changeNote": "0.4.2 Bug fix & code refactor",
+  "tags": [
+    "Simplified Chinese",
+    "English",
+    "Character",
+    "Relics",
+    "Cards",
+    "Potions",
+    "Hearthstone"
+  ]
+}

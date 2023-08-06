@@ -1,0 +1,28 @@
+Added Jaina Proudmoore the mage from Hearthstone. Including 75 cards, 9 new relics and 9 unique potions.
+This mod is developing and needs to be optimized. Wish to receive feedbacks on balancing and bugs. And this will be continually updating, thanks!
+New mechanics:
+Three spell genres: Frost, Fire, Arcane, each with its own characteristics.
+Freeze: Frozen enemies may not act, use the powerful freezing mechanism to control the combat!
+Combustion: Enemies with combustion will take direct HP damage, let the raging fire devour your enemies!
+Spell Force: Increases attack damage and block, may also enhance other effects.
+[hr][/hr]
+English localization: @SolarNougat
+[hr][/hr]
+[url=https://github.com/Arino09/Jaina_StSMod] Github Repository [/url]
+
+
+
+炉石传说 法师吉安娜Mod
+
+加入了《炉石传说》中的法师——吉安娜·普罗德摩尔。包括75张卡牌，9个全新的遗物，9种独特的药水。
+全新机制：
+三种法术流派：冰霜、火焰、奥术，每个流派都有自己的特点。
+冻结：被冻结的敌人无法行动，用强大的冻结机制来掌控战局吧！
+燃烧：具有燃烧的敌人会直接受到生命值伤害，让熊熊烈火吞噬你的敌人吧！
+法术强度：提高攻击伤害和格挡，还有其他特殊的效果
+[hr][/hr]
+Mod正在开发阶段，还有很多地方需要优化（比如碎心图片和战败图片需要调整）。希望收到关于平衡性和bug的反馈，本Mod会持续更新，感谢支持！
+我知道现在冰霜流很强（笑），这段时间在准备春招，不一定很快更新，但还请继续期待火焰流的崛起~
+感谢 @SolarNougat 对英语本地化的改进！
+[hr][/hr]
+[url=https://github.com/Arino09/Jaina_StSMod] Github仓库 [/url]
