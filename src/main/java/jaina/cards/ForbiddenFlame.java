@@ -37,9 +37,7 @@ public class ForbiddenFlame extends AbstractFireCard {
 
     @Override
     public AbstractCard makeCopy() {
-        ForbiddenFlame card = new ForbiddenFlame();
-        card.energyOnUse = this.energyOnUse;
-        return card;
+        return new ForbiddenFlame();
     }
 
 }

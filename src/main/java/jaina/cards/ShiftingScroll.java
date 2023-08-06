@@ -46,25 +46,25 @@ public class ShiftingScroll extends AbstractArcaneCard {
 
     @Override
     public void atTurnStart() {
-        ArrayList<AbstractCard> cardRng = IHelper.generateRandomJainaCards(true, true, true, false);
-        shiftCard = (AbstractJainaCard) IHelper.getFewCards(cardRng, 1, false).get(0).makeStatEquivalentCopy();
-        if (upgraded) {
-            shiftCard.upp();
-        }
 
-        this.type = shiftCard.type;
-        this.name = CARD_STRINGS.EXTENDED_DESCRIPTION[0] + shiftCard.name;
+        ArrayList<AbstractCard> cardRng = IHelper.generateRandomJainaCards(true, true, true, false);
+        shiftCard = (AbstractJainaCard) IHelper.getFewCards(cardRng, 1, false).get(0).makeCopy();
+
+        if (shiftCard.cost == -1) this.energyOnUse = shiftCard.energyOnUse;
+        if (upgraded) shiftCard.upp();
         if (!shiftCard.selfRetain) {
             this.rawDescription = CARD_STRINGS.EXTENDED_DESCRIPTION[1] + shiftCard.rawDescription;
         } else {
             this.rawDescription = shiftCard.rawDescription;
         }
+
+        this.type = shiftCard.type;
+        this.name = CARD_STRINGS.EXTENDED_DESCRIPTION[0] + shiftCard.name;
         this.cost = this.costForTurn = shiftCard.cost;
         this.portrait = shiftCard.portrait;
         this.rarity = shiftCard.rarity;
         this.target = shiftCard.target;
         this.tags = shiftCard.tags;
-
         this.exhaust = shiftCard.exhaust;
         this.isEthereal = shiftCard.isEthereal;
         this.cardsToPreview = shiftCard.cardsToPreview;

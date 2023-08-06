@@ -3,6 +3,7 @@ package jaina.powers;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.IntangiblePower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

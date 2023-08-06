@@ -41,9 +41,7 @@ public class DragonsFury extends AbstractFireCard {
 
     @Override
     public AbstractCard makeCopy() {
-        DragonsFury card = new DragonsFury();
-        card.energyOnUse = this.energyOnUse;
-        return card;
+        return new DragonsFury();
     }
 
 }
